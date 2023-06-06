@@ -1,4 +1,4 @@
-## ShengYiPlus Documents
+## Intfocus Documents
 
 ```
 $ command -v http-server || npm install -g http-server
