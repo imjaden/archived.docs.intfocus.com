@@ -1,8 +1,7 @@
-<% var isIndex = page.path === 'index.html' %>
-
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
+    <% var isIndex = page.path === 'index.html' %>
     <title><%- page.title ? page.title + ' — ' : '' %>胜因学院</title>
     <meta charset="utf-8">
     <meta name="description" content="<%- theme.site_description %>">
@@ -48,6 +47,10 @@
     </div>
     <%- partial('partials/header') %>
     
+    <% if (isIndex) { %>
+      <%- partial('index') %>
+    <% } %>
+
     <% if (!isIndex) { %>
       <div id="main" class="fix-sidebar">
         <% if (page.blog_index) { %>

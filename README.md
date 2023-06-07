@@ -1,8 +1,14 @@
 # 胜因学院-在线文档平台
 
-该站点基于 [Hexo](https://hexo.io) 构建而成。网站内容在 `src` 文件夹内，格式为 Markdown。欢迎 issue 或 pull request。
+在线地址：[docs.intfocus.jaden.tech](https://docs.intfocus.jaden.tech)
 
-在线地址：[https://docs.idata.mobi](https://docs.idata.mobi)
+```
+$ cnpm install
+$ hexo server
+
+$ hexo clean && hexo generate
+$ http-server public
+```
 
 ## 贡献内容
 
@@ -35,7 +41,6 @@ $ cnpm run deploy
 $ cnpm run gap <type> <module> <message>
 
 # 9、 如果需要合并代码，提交成功后，登录 gitlab 发起合并请求，并截图给管理员，请求管理员合并
-
 
 # 提交 pull-request
 # 访问 https://docs.idata.mobi/
