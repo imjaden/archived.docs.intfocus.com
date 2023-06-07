@@ -1,8 +1,7 @@
-
-
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
+    
     <title>业务菜单规范 — 胜因学院</title>
     <meta charset="utf-8">
     <meta name="description" content="Vue.js - The Progressive JavaScript Framework">
@@ -32,7 +31,9 @@
     <link href="//code.bdstatic.com/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- main page styles -->
-    <link rel="stylesheet" href="/css/page.css">
+    
+<link rel="stylesheet" href="/css/page.css">
+
 
     <!-- this needs to be loaded before guide's inline scripts -->
     <script src="/js/vue.js"></script>
@@ -40,7 +41,7 @@
       Vue.config.productionTip = false
       window.PAGE_TYPE = "业务菜单规范"
     </script>
-  </head>
+  <meta name="generator" content="Hexo 6.3.0"></head>
   <body class="docs">
     <div id="mobile-bar" >
       <a class="menu-button"></a>
@@ -133,14 +134,31 @@
   </ul>
 </li>
 
-<li>
-  <a href="https://www.intfocus.com" target="_blank" class="nav-link team">官网</a>
-</li>
 
+<li class="nav-dropdown-container learn">
+  <a class="nav-link">外链导航</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li>
+    <a href="https://www.intfocus.com" target="_blank" class="nav-link team">胜因官网</a>
+    </li>
+    <li>
+    <a href="javascript:void(0)" onclick="Resume.open()" class="nav-link team">我的简历</a>
+    </li>
+  </ul>
+</li>
+<script>
+window.Resume = {
+  open: function() {
+    window.location.href = (window.innerWidth > window.innerHeight ? '//jaden.tech/resume-landscape-672cfe02a8443258f4892d518a61a963.pdf' : '//jaden.tech/resume-vertical-e8520975ff8f7ece244b97a5f3ad9494.pdf');
+  }
+}
+</script>
   </ul>
 </div>
 
     
+    
+
     
       <div id="main" class="fix-sidebar">
         
@@ -229,10 +247,25 @@
   </ul>
 </li>
 
-<li>
-  <a href="https://www.intfocus.com" target="_blank" class="nav-link team">官网</a>
-</li>
 
+<li class="nav-dropdown-container learn">
+  <a class="nav-link">外链导航</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li>
+    <a href="https://www.intfocus.com" target="_blank" class="nav-link team">胜因官网</a>
+    </li>
+    <li>
+    <a href="javascript:void(0)" onclick="Resume.open()" class="nav-link team">我的简历</a>
+    </li>
+  </ul>
+</li>
+<script>
+window.Resume = {
+  open: function() {
+    window.location.href = (window.innerWidth > window.innerHeight ? '//jaden.tech/resume-landscape-672cfe02a8443258f4892d518a61a963.pdf' : '//jaden.tech/resume-vertical-e8520975ff8f7ece244b97a5f3ad9494.pdf');
+  }
+}
+</script>
     </ul>
     <div class="list">
       
@@ -303,164 +336,162 @@
   
 
   
-    <h2 id="结构示意图"><a href="#结构示意图" class="headerlink" title="结构示意图"></a>结构示意图</h2><p><img src="/images/业务菜单结构图.png" alt="业务菜单结构图"></p>
-<p><em>注: attachments/xmind/业务菜单结构图.xmind</em></p>
+    <h2 id="结构示意图"><a href="#结构示意图" class="headerlink" title="结构示意图"></a>结构示意图</h2><p><img src="/images/%E4%B8%9A%E5%8A%A1%E8%8F%9C%E5%8D%95%E7%BB%93%E6%9E%84%E5%9B%BE.png" alt="业务菜单结构图"></p>
+<p><em>注: attachments&#x2F;xmind&#x2F;业务菜单结构图.xmind</em></p>
 <h2 id="菜单字段"><a href="#菜单字段" class="headerlink" title="菜单字段"></a>菜单字段</h2><table>
 <thead>
 <tr>
-<th style="text-align:left">列名</th>
-<th style="text-align:left">属性</th>
-<th style="text-align:left">备注</th>
+<th align="left">列名</th>
+<th align="left">属性</th>
+<th align="left">备注</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:left"><strong>id</strong></td>
-<td style="text-align:left"><code>int</code></td>
-<td style="text-align:left"></td>
+<tbody><tr>
+<td align="left"><strong>id</strong></td>
+<td align="left"><code>int</code></td>
+<td align="left"></td>
 </tr>
 <tr>
-<td style="text-align:left"><strong>uuid</strong></td>
-<td style="text-align:left"><code>varchar</code></td>
-<td style="text-align:left">菜单uuid</td>
+<td align="left"><strong>uuid</strong></td>
+<td align="left"><code>varchar</code></td>
+<td align="left">菜单uuid</td>
 </tr>
 <tr>
-<td style="text-align:left"><strong>category_name</strong></td>
-<td style="text-align:left"><code>varchar</code></td>
-<td style="text-align:left">分类名称</td>
+<td align="left"><strong>category_name</strong></td>
+<td align="left"><code>varchar</code></td>
+<td align="left">分类名称</td>
 </tr>
 <tr>
-<td style="text-align:left"><strong>category_icon</strong></td>
-<td style="text-align:left"><code>varchar</code></td>
-<td style="text-align:left">分类图标</td>
+<td align="left"><strong>category_icon</strong></td>
+<td align="left"><code>varchar</code></td>
+<td align="left">分类图标</td>
 </tr>
 <tr>
-<td style="text-align:left"><strong>category_order</strong></td>
-<td style="text-align:left"><code>int</code></td>
-<td style="text-align:left">分类排序</td>
+<td align="left"><strong>category_order</strong></td>
+<td align="left"><code>int</code></td>
+<td align="left">分类排序</td>
 </tr>
 <tr>
-<td style="text-align:left"><strong>group_name</strong></td>
-<td style="text-align:left"><code>varchar</code></td>
-<td style="text-align:left">分组名称</td>
+<td align="left"><strong>group_name</strong></td>
+<td align="left"><code>varchar</code></td>
+<td align="left">分组名称</td>
 </tr>
 <tr>
-<td style="text-align:left"><strong>group_icon</strong></td>
-<td style="text-align:left"><code>varchar</code></td>
-<td style="text-align:left">分组图标</td>
+<td align="left"><strong>group_icon</strong></td>
+<td align="left"><code>varchar</code></td>
+<td align="left">分组图标</td>
 </tr>
 <tr>
-<td style="text-align:left"><strong>group_order</strong></td>
-<td style="text-align:left"><code>int</code></td>
-<td style="text-align:left">分组排序</td>
+<td align="left"><strong>group_order</strong></td>
+<td align="left"><code>int</code></td>
+<td align="left">分组排序</td>
 </tr>
 <tr>
-<td style="text-align:left"><strong>name</strong></td>
-<td style="text-align:left"><code>varchar</code></td>
-<td style="text-align:left">菜单标题</td>
+<td align="left"><strong>name</strong></td>
+<td align="left"><code>varchar</code></td>
+<td align="left">菜单标题</td>
 </tr>
 <tr>
-<td style="text-align:left"><strong>icon</strong></td>
-<td style="text-align:left"><code>varchar</code></td>
-<td style="text-align:left">菜单图标</td>
+<td align="left"><strong>icon</strong></td>
+<td align="left"><code>varchar</code></td>
+<td align="left">菜单图标</td>
 </tr>
 <tr>
-<td style="text-align:left"><strong>order</strong></td>
-<td style="text-align:left"><code>int</code></td>
-<td style="text-align:left">菜单排序</td>
+<td align="left"><strong>order</strong></td>
+<td align="left"><code>int</code></td>
+<td align="left">菜单排序</td>
 </tr>
 <tr>
-<td style="text-align:left"><strong>publicly</strong></td>
-<td style="text-align:left"><code>tinyint</code></td>
-<td style="text-align:left">是否通用</td>
+<td align="left"><strong>publicly</strong></td>
+<td align="left"><code>tinyint</code></td>
+<td align="left">是否通用</td>
 </tr>
 <tr>
-<td style="text-align:left"><strong>delete_status</strong></td>
-<td style="text-align:left"><code>varchar</code></td>
-<td style="text-align:left">删除状态字段 0未删除 1已删除</td>
+<td align="left"><strong>delete_status</strong></td>
+<td align="left"><code>varchar</code></td>
+<td align="left">删除状态字段 0未删除 1已删除</td>
 </tr>
 <tr>
-<td style="text-align:left"><strong>description</strong></td>
-<td style="text-align:left"><code>varchar</code></td>
-<td style="text-align:left">描述</td>
+<td align="left"><strong>description</strong></td>
+<td align="left"><code>varchar</code></td>
+<td align="left">描述</td>
 </tr>
 <tr>
-<td style="text-align:left"><strong>platform</strong></td>
-<td style="text-align:left"><code>varchar</code></td>
-<td style="text-align:left">平台: pc/app/wxmp/tv</td>
+<td align="left"><strong>platform</strong></td>
+<td align="left"><code>varchar</code></td>
+<td align="left">平台: pc&#x2F;app&#x2F;wxmp&#x2F;tv</td>
 </tr>
 <tr>
-<td style="text-align:left"><strong>menu_type</strong></td>
-<td style="text-align:left"><code>varchar</code></td>
-<td style="text-align:left">菜单类型：工具箱/报表项/设置项</td>
+<td align="left"><strong>menu_type</strong></td>
+<td align="left"><code>varchar</code></td>
+<td align="left">菜单类型：工具箱&#x2F;报表项&#x2F;设置项</td>
 </tr>
 <tr>
-<td style="text-align:left"><strong>menu_object</strong></td>
-<td style="text-align:left"><code>varchar</code></td>
-<td style="text-align:left">菜单对象：wxmp/wxmp#config/report/link</td>
+<td align="left"><strong>menu_object</strong></td>
+<td align="left"><code>varchar</code></td>
+<td align="left">菜单对象：wxmp&#x2F;wxmp#config&#x2F;report&#x2F;link</td>
 </tr>
 <tr>
-<td style="text-align:left"><strong>menu_object_id</strong></td>
-<td style="text-align:left"><code>varchar</code></td>
-<td style="text-align:left">菜单关联的对象 当menu_object为report时，menu_object_id为report.id</td>
+<td align="left"><strong>menu_object_id</strong></td>
+<td align="left"><code>varchar</code></td>
+<td align="left">菜单关联的对象 当menu_object为report时，menu_object_id为report.id</td>
 </tr>
 <tr>
-<td style="text-align:left"><strong>menu_object_type</strong></td>
-<td style="text-align:left"><code>varchar</code></td>
-<td style="text-align:left">菜单关联的对象类型</td>
+<td align="left"><strong>menu_object_type</strong></td>
+<td align="left"><code>varchar</code></td>
+<td align="left">菜单关联的对象类型</td>
 </tr>
 <tr>
-<td style="text-align:left"><strong>menu_object_title</strong></td>
-<td style="text-align:left"><code>varchar</code></td>
-<td style="text-align:left">菜单关联的对象标题</td>
+<td align="left"><strong>menu_object_title</strong></td>
+<td align="left"><code>varchar</code></td>
+<td align="left">菜单关联的对象标题</td>
 </tr>
 <tr>
-<td style="text-align:left"><strong>menu_object_url</strong></td>
-<td style="text-align:left"><code>varchar</code></td>
-<td style="text-align:left">菜单关联的对象链接，menu_object为link时，menu_object_url为link，当menu_object为wxmp#config时，menu_object_url为home_path</td>
+<td align="left"><strong>menu_object_url</strong></td>
+<td align="left"><code>varchar</code></td>
+<td align="left">菜单关联的对象链接，menu_object为link时，menu_object_url为link，当menu_object为wxmp#config时，menu_object_url为home_path</td>
 </tr>
 <tr>
-<td style="text-align:left"><strong>menu_object_extension</strong></td>
-<td style="text-align:left"><code>varchar</code></td>
-<td style="text-align:left">菜单关联对象的扩展参数</td>
+<td align="left"><strong>menu_object_extension</strong></td>
+<td align="left"><code>varchar</code></td>
+<td align="left">菜单关联对象的扩展参数</td>
 </tr>
 <tr>
-<td style="text-align:left"><strong>menu_object_cdn</strong></td>
-<td style="text-align:left"><code>tinyint</code></td>
-<td style="text-align:left">是否为 CDN 状态</td>
+<td align="left"><strong>menu_object_cdn</strong></td>
+<td align="left"><code>tinyint</code></td>
+<td align="left">是否为 CDN 状态</td>
 </tr>
 <tr>
-<td style="text-align:left"><strong>menu_object_version</strong></td>
-<td style="text-align:left"><code>varchar</code></td>
-<td style="text-align:left">cdn版本号，menu_object_url为cdn链接</td>
+<td align="left"><strong>menu_object_version</strong></td>
+<td align="left"><code>varchar</code></td>
+<td align="left">cdn版本号，menu_object_url为cdn链接</td>
 </tr>
 <tr>
-<td style="text-align:left"><strong>menu_extension</strong></td>
-<td style="text-align:left"><code>varchar</code></td>
-<td style="text-align:left"></td>
+<td align="left"><strong>menu_extension</strong></td>
+<td align="left"><code>varchar</code></td>
+<td align="left"></td>
 </tr>
 <tr>
-<td style="text-align:left"><strong>create_user</strong></td>
-<td style="text-align:left"><code>int</code></td>
-<td style="text-align:left"></td>
+<td align="left"><strong>create_user</strong></td>
+<td align="left"><code>int</code></td>
+<td align="left"></td>
 </tr>
 <tr>
-<td style="text-align:left"><strong>update_user</strong></td>
-<td style="text-align:left"><code>int</code></td>
-<td style="text-align:left"></td>
+<td align="left"><strong>update_user</strong></td>
+<td align="left"><code>int</code></td>
+<td align="left"></td>
 </tr>
 <tr>
-<td style="text-align:left"><strong>created_time</strong></td>
-<td style="text-align:left"><code>datetime</code></td>
-<td style="text-align:left"></td>
+<td align="left"><strong>created_time</strong></td>
+<td align="left"><code>datetime</code></td>
+<td align="left"></td>
 </tr>
 <tr>
-<td style="text-align:left"><strong>updated_time</strong></td>
-<td style="text-align:left"><code>datetime</code></td>
-<td style="text-align:left"></td>
+<td align="left"><strong>updated_time</strong></td>
+<td align="left"><code>datetime</code></td>
+<td align="left"></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <h2 id="业务菜单层级"><a href="#业务菜单层级" class="headerlink" title="业务菜单层级"></a>业务菜单层级</h2><p>三级菜单 + 四维属性:</p>
 <ul>
 <li>一级菜单 <code>category_name</code></li>
@@ -547,7 +578,9 @@
 
     <!-- search -->
     <link href="//code.bdstatic.com/npm/docsearch.js@1.5.0/dist/cdn/docsearch.min.css" rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/css/search.css">
+    
+<link rel="stylesheet" href="/css/search.css">
+
     <script src="//code.bdstatic.com/npm/docsearch.js@1.5.0/dist/cdn/docsearch.min.js"></script>
     <script>
     [

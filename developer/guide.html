@@ -1,8 +1,7 @@
-
-
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
+    
     <title>规范指南 — 胜因学院</title>
     <meta charset="utf-8">
     <meta name="description" content="Vue.js - The Progressive JavaScript Framework">
@@ -32,7 +31,9 @@
     <link href="//code.bdstatic.com/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- main page styles -->
-    <link rel="stylesheet" href="/css/page.css">
+    
+<link rel="stylesheet" href="/css/page.css">
+
 
     <!-- this needs to be loaded before guide's inline scripts -->
     <script src="/js/vue.js"></script>
@@ -40,7 +41,7 @@
       Vue.config.productionTip = false
       window.PAGE_TYPE = "规范指南"
     </script>
-  </head>
+  <meta name="generator" content="Hexo 6.3.0"></head>
   <body class="docs">
     <div id="mobile-bar" >
       <a class="menu-button"></a>
@@ -133,14 +134,31 @@
   </ul>
 </li>
 
-<li>
-  <a href="https://www.intfocus.com" target="_blank" class="nav-link team">官网</a>
-</li>
 
+<li class="nav-dropdown-container learn">
+  <a class="nav-link">外链导航</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li>
+    <a href="https://www.intfocus.com" target="_blank" class="nav-link team">胜因官网</a>
+    </li>
+    <li>
+    <a href="javascript:void(0)" onclick="Resume.open()" class="nav-link team">我的简历</a>
+    </li>
+  </ul>
+</li>
+<script>
+window.Resume = {
+  open: function() {
+    window.location.href = (window.innerWidth > window.innerHeight ? '//jaden.tech/resume-landscape-672cfe02a8443258f4892d518a61a963.pdf' : '//jaden.tech/resume-vertical-e8520975ff8f7ece244b97a5f3ad9494.pdf');
+  }
+}
+</script>
   </ul>
 </div>
 
     
+    
+
     
       <div id="main" class="fix-sidebar">
         
@@ -229,10 +247,25 @@
   </ul>
 </li>
 
-<li>
-  <a href="https://www.intfocus.com" target="_blank" class="nav-link team">官网</a>
-</li>
 
+<li class="nav-dropdown-container learn">
+  <a class="nav-link">外链导航</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li>
+    <a href="https://www.intfocus.com" target="_blank" class="nav-link team">胜因官网</a>
+    </li>
+    <li>
+    <a href="javascript:void(0)" onclick="Resume.open()" class="nav-link team">我的简历</a>
+    </li>
+  </ul>
+</li>
+<script>
+window.Resume = {
+  open: function() {
+    window.location.href = (window.innerWidth > window.innerHeight ? '//jaden.tech/resume-landscape-672cfe02a8443258f4892d518a61a963.pdf' : '//jaden.tech/resume-vertical-e8520975ff8f7ece244b97a5f3ad9494.pdf');
+  }
+}
+</script>
     </ul>
     <div class="list">
       
@@ -305,7 +338,7 @@
   
     <h2 id="关于空格-amp-空行"><a href="#关于空格-amp-空行" class="headerlink" title="关于空格 &amp; 空行"></a>关于空格 &amp; 空行</h2><ol>
 <li>禁止使用<code>制表符</code>缩进，配置编辑器自动替换<code>制表符</code>为<code>空格</code>(2或4个)。</li>
-<li>赋值符 <code>=</code> 两侧各1个 <code>空格</code>, 参数、哈希等<code>逗号</code>、<code>冒号</code> 后跟1个空格，例: <code>fun(one, two); let hsh = {one: 1, two: 2}</code></li>
+<li>赋值符 <code>=</code> 两侧各1个 <code>空格</code>, 参数、哈希等<code>逗号</code>、<code>冒号</code> 后跟1个空格，例: <code>fun(one, two); let hsh = &#123;one: 1, two: 2&#125;</code></li>
 <li>多个变量声明时可在一行；多变量赋值时换行，并左对齐。</li>
 <li>单行或多行注释符后跟1个 <code>空格</code>。</li>
 <li>所有代码或文本中禁止两个及两个以上的空行。</li>
@@ -315,17 +348,17 @@
 <h2 id="关于团队协作"><a href="#关于团队协作" class="headerlink" title="关于团队协作"></a>关于团队协作</h2><ol>
 <li>申请 <a href="/corporate-culture/workplace-ceremony.html">职场共识</a> 培训</li>
 <li>申请 <a href="/corporate-culture/teamwork.html">团队协作</a> 培训<ul>
-<li>学习 <a href="/corporate-culture/teamwork.html#交流规范">交流规范</a></li>
-<li>学习 <a href="/corporate-culture/teamwork.html#交付规范">交付规范</a></li>
-<li>安装 <a href="/corporate-culture/teamwork.html#开发工具">开发工具</a></li>
+<li>学习 <a href="/corporate-culture/teamwork.html#%E4%BA%A4%E6%B5%81%E8%A7%84%E8%8C%83">交流规范</a></li>
+<li>学习 <a href="/corporate-culture/teamwork.html#%E4%BA%A4%E4%BB%98%E8%A7%84%E8%8C%83">交付规范</a></li>
+<li>安装 <a href="/corporate-culture/teamwork.html#%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7">开发工具</a></li>
 </ul>
 </li>
 <li>申请工作日志权限<ul>
 <li>学习 <a href="/corporate-culture/teamwork.html#Markdown">Markdown 语法</a></li>
-<li>学习 <a href="/corporate-culture/teamwork.html#工作日志">工作日志规范</a></li>
+<li>学习 <a href="/corporate-culture/teamwork.html#%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%97">工作日志规范</a></li>
 </ul>
 </li>
-<li>申请 <a href="https://gitlab.idata.mobi/" target="_blank" rel="noopener">Gtilab</a> 账号<ul>
+<li>申请 <a target="_blank" rel="noopener" href="https://gitlab.idata.mobi/">Gtilab</a> 账号<ul>
 <li>学习 <a href="/developer/style-guide/gitlab.html">Gitlab 提交规范</a><ol>
 <li>(<strong>禁止提交视频、音频甚至图片等大体积文件，请维护至 CDN</strong>)</li>
 <li>所有项目都需配置 <code>Readme.md</code></li>
@@ -338,7 +371,7 @@
 <li>学习 <a href="/developer/style-guide/cdn.html">CDN 运维规范</a></li>
 </ul>
 </li>
-<li>申请 <a href="https://jenkins.idata.mobi/" target="_blank" rel="noopener">Jenkins</a> 账号<ul>
+<li>申请 <a target="_blank" rel="noopener" href="https://jenkins.idata.mobi/">Jenkins</a> 账号<ul>
 <li>学习 <a href="/developer/jenkins-deploy.html">Jenkins 部署</a></li>
 </ul>
 </li>
@@ -358,7 +391,7 @@
 <li>前端同事学习 Chrome 控制台的基本使用</li>
 </ol>
 <h2 id="关于测试"><a href="#关于测试" class="headerlink" title="关于测试"></a>关于测试</h2><ol>
-<li>Java/数据工程师交付接口的 PostMan 测试实例</li>
+<li>Java&#x2F;数据工程师交付接口的 PostMan 测试实例</li>
 <li>前端遇到接口问题时，确认 API 路由、请求头、参数信息</li>
 </ol>
 
@@ -397,7 +430,9 @@
 
     <!-- search -->
     <link href="//code.bdstatic.com/npm/docsearch.js@1.5.0/dist/cdn/docsearch.min.css" rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/css/search.css">
+    
+<link rel="stylesheet" href="/css/search.css">
+
     <script src="//code.bdstatic.com/npm/docsearch.js@1.5.0/dist/cdn/docsearch.min.js"></script>
     <script>
     [

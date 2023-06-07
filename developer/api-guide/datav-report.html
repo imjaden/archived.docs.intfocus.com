@@ -1,8 +1,7 @@
-
-
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
+    
     <title>DataV报表流程 — 胜因学院</title>
     <meta charset="utf-8">
     <meta name="description" content="Vue.js - The Progressive JavaScript Framework">
@@ -32,7 +31,9 @@
     <link href="//code.bdstatic.com/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- main page styles -->
-    <link rel="stylesheet" href="/css/page.css">
+    
+<link rel="stylesheet" href="/css/page.css">
+
 
     <!-- this needs to be loaded before guide's inline scripts -->
     <script src="/js/vue.js"></script>
@@ -40,7 +41,7 @@
       Vue.config.productionTip = false
       window.PAGE_TYPE = "DataV报表流程md"
     </script>
-  </head>
+  <meta name="generator" content="Hexo 6.3.0"></head>
   <body class="docs">
     <div id="mobile-bar" >
       <a class="menu-button"></a>
@@ -133,14 +134,31 @@
   </ul>
 </li>
 
-<li>
-  <a href="https://www.intfocus.com" target="_blank" class="nav-link team">官网</a>
-</li>
 
+<li class="nav-dropdown-container learn">
+  <a class="nav-link">外链导航</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li>
+    <a href="https://www.intfocus.com" target="_blank" class="nav-link team">胜因官网</a>
+    </li>
+    <li>
+    <a href="javascript:void(0)" onclick="Resume.open()" class="nav-link team">我的简历</a>
+    </li>
+  </ul>
+</li>
+<script>
+window.Resume = {
+  open: function() {
+    window.location.href = (window.innerWidth > window.innerHeight ? '//jaden.tech/resume-landscape-672cfe02a8443258f4892d518a61a963.pdf' : '//jaden.tech/resume-vertical-e8520975ff8f7ece244b97a5f3ad9494.pdf');
+  }
+}
+</script>
   </ul>
 </div>
 
     
+    
+
     
       <div id="main" class="fix-sidebar">
         
@@ -229,10 +247,25 @@
   </ul>
 </li>
 
-<li>
-  <a href="https://www.intfocus.com" target="_blank" class="nav-link team">官网</a>
-</li>
 
+<li class="nav-dropdown-container learn">
+  <a class="nav-link">外链导航</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li>
+    <a href="https://www.intfocus.com" target="_blank" class="nav-link team">胜因官网</a>
+    </li>
+    <li>
+    <a href="javascript:void(0)" onclick="Resume.open()" class="nav-link team">我的简历</a>
+    </li>
+  </ul>
+</li>
+<script>
+window.Resume = {
+  open: function() {
+    window.location.href = (window.innerWidth > window.innerHeight ? '//jaden.tech/resume-landscape-672cfe02a8443258f4892d518a61a963.pdf' : '//jaden.tech/resume-vertical-e8520975ff8f7ece244b97a5f3ad9494.pdf');
+  }
+}
+</script>
     </ul>
     <div class="list">
       
@@ -310,254 +343,241 @@
 <h3 id="查到repCode-和keyword"><a href="#查到repCode-和keyword" class="headerlink" title="查到repCode 和keyword"></a>查到repCode 和keyword</h3><p><img src="https://s2.ax1x.com/2019/09/04/nVHbCQ.png" alt="nVHbCQ.png"></p>
 <h3 id="通过repCode找到对应的sql"><a href="#通过repCode找到对应的sql" class="headerlink" title="通过repCode找到对应的sql"></a>通过repCode找到对应的sql</h3><p><img src="https://s2.ax1x.com/2019/09/04/nVbSET.png" alt="nVbSET.png"><br><img src="https://s2.ax1x.com/2019/09/04/nVbPC4.png" alt="nVbPC4.png"></p>
 <h3 id="将keyword的值填到语句中执行"><a href="#将keyword的值填到语句中执行" class="headerlink" title="将keyword的值填到语句中执行"></a>将keyword的值填到语句中执行</h3><p>得到的sql语句是：</p>
-<pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">round</span>((t1.<span class="hljs-string">`value`</span>-t2.<span class="hljs-string">`value`</span>)/t2.<span class="hljs-string">`value`</span>*<span class="hljs-number">100</span>,<span class="hljs-number">2</span>) <span class="hljs-keyword">as</span> <span class="hljs-string">`value`</span> <span class="hljs-keyword">FROM</span>
-  (<span class="hljs-keyword">SELECT</span> average_year <span class="hljs-keyword">as</span> <span class="hljs-string">`value`</span> <span class="hljs-keyword">FROM</span> kpi_baidu_index_month_summary
-  <span class="hljs-keyword">WHERE</span> search_year = <span class="hljs-keyword">year</span>(<span class="hljs-keyword">now</span>()) <span class="hljs-keyword">AND</span> keyword = <span class="hljs-string">'微整'</span> 
-  <span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> keyword ) <span class="hljs-keyword">as</span> t1
-<span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> 
-  (<span class="hljs-keyword">SELECT</span> average_year <span class="hljs-keyword">as</span> <span class="hljs-string">`value`</span> <span class="hljs-keyword">FROM</span> kpi_baidu_index_month_summary
-  <span class="hljs-keyword">WHERE</span> search_year = <span class="hljs-keyword">year</span>(<span class="hljs-keyword">now</span>())<span class="hljs-number">-1</span> <span class="hljs-keyword">AND</span> keyword = <span class="hljs-string">'微整'</span> 
-  <span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> keyword) <span class="hljs-keyword">as</span> t2
-<span class="hljs-keyword">on</span> <span class="hljs-number">1</span>=<span class="hljs-number">1</span></code></pre>
+<figure class="highlight sql"><table><tr><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> round((t1.`<span class="hljs-keyword">value</span>`<span class="hljs-operator">-</span>t2.`<span class="hljs-keyword">value</span>`)<span class="hljs-operator">/</span>t2.`<span class="hljs-keyword">value</span>`<span class="hljs-operator">*</span><span class="hljs-number">100</span>,<span class="hljs-number">2</span>) <span class="hljs-keyword">as</span> `<span class="hljs-keyword">value</span>` <span class="hljs-keyword">FROM</span><br>  (<span class="hljs-keyword">SELECT</span> average_year <span class="hljs-keyword">as</span> `<span class="hljs-keyword">value</span>` <span class="hljs-keyword">FROM</span> kpi_baidu_index_month_summary<br>  <span class="hljs-keyword">WHERE</span> search_year <span class="hljs-operator">=</span> <span class="hljs-keyword">year</span>(now()) <span class="hljs-keyword">AND</span> keyword <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;微整&#x27;</span> <br>  <span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> keyword ) <span class="hljs-keyword">as</span> t1<br><span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> <br>  (<span class="hljs-keyword">SELECT</span> average_year <span class="hljs-keyword">as</span> `<span class="hljs-keyword">value</span>` <span class="hljs-keyword">FROM</span> kpi_baidu_index_month_summary<br>  <span class="hljs-keyword">WHERE</span> search_year <span class="hljs-operator">=</span> <span class="hljs-keyword">year</span>(now())<span class="hljs-number">-1</span> <span class="hljs-keyword">AND</span> keyword <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;微整&#x27;</span> <br>  <span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> keyword) <span class="hljs-keyword">as</span> t2<br><span class="hljs-keyword">on</span> <span class="hljs-number">1</span><span class="hljs-operator">=</span><span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
+
 <h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p>得到-27.04与报表一致</p>
 <h2 id="与粉毒、衡力、Botox的竞品分析"><a href="#与粉毒、衡力、Botox的竞品分析" class="headerlink" title="与粉毒、衡力、Botox的竞品分析"></a>与粉毒、衡力、Botox的竞品分析</h2><h3 id="报表展示-1"><a href="#报表展示-1" class="headerlink" title="报表展示"></a>报表展示</h3><p><img src="https://s2.ax1x.com/2019/09/04/nZSJqH.png" alt="nZSJqH.png"></p>
 <h3 id="与上个案例一样找到url"><a href="#与上个案例一样找到url" class="headerlink" title="与上个案例一样找到url"></a>与上个案例一样找到url</h3><p><img src="https://s2.ax1x.com/2019/09/04/nZSrQS.png" alt="nZSrQS.png"></p>
 <h3 id="根据repCode找到sql语句"><a href="#根据repCode找到sql语句" class="headerlink" title="根据repCode找到sql语句"></a>根据repCode找到sql语句</h3><p><img src="https://s2.ax1x.com/2019/09/04/nZSfJ0.png" alt="nZSfJ0.png"></p>
-<h3 id="将keyword的值填入sql中执行"><a href="#将keyword的值填入sql中执行" class="headerlink" title="将keyword的值填入sql中执行"></a>将keyword的值填入sql中执行</h3><p>得到的sql语句：<br><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">concat</span>(t1.<span class="hljs-string">`month`</span>,<span class="hljs-string">'月'</span>) <span class="hljs-keyword">as</span> x,<span class="hljs-keyword">ifnull</span>(t2.average_month,<span class="hljs-number">0</span>) <span class="hljs-keyword">as</span> y,t1.month_en_short,t3.keyword <span class="hljs-keyword">as</span> s
-<span class="hljs-keyword">FROM</span> (<span class="hljs-keyword">select</span> * <span class="hljs-keyword">from</span> dim_date <span class="hljs-keyword">WHERE</span> time_type = <span class="hljs-string">'month'</span> <span class="hljs-keyword">and</span> <span class="hljs-string">`year`</span> = <span class="hljs-keyword">year</span>(<span class="hljs-keyword">now</span>())) <span class="hljs-keyword">AS</span> t1
-<span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span>(<span class="hljs-keyword">SELECT</span> keyword <span class="hljs-keyword">FROM</span> dim_baidu_index_keyword <span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">LOCATE</span>(keyword,<span class="hljs-string">'粉毒,衡力,botox'</span>) &gt; <span class="hljs-number">0</span>) <span class="hljs-keyword">as</span> t3
-<span class="hljs-keyword">on</span> <span class="hljs-number">1</span>=<span class="hljs-number">1</span>
-<span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> (<span class="hljs-keyword">SELECT</span> * <span class="hljs-keyword">from</span> kpi_baidu_index_month_summary <span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">LOCATE</span>(keyword,<span class="hljs-string">'粉毒,衡力,botox'</span>) &gt; <span class="hljs-number">0</span>) <span class="hljs-keyword">AS</span> t2
-  <span class="hljs-keyword">ON</span> t1.<span class="hljs-string">`year`</span> = t2.search_year <span class="hljs-keyword">AND</span> t1.<span class="hljs-string">`month`</span> = t2.search_month <span class="hljs-keyword">AND</span> t2.keyword = t3.keyword
-<span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> t1.<span class="hljs-string">`month`</span>;</code></pre></p>
+<h3 id="将keyword的值填入sql中执行"><a href="#将keyword的值填入sql中执行" class="headerlink" title="将keyword的值填入sql中执行"></a>将keyword的值填入sql中执行</h3><p>得到的sql语句：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> concat(t1.`<span class="hljs-keyword">month</span>`,<span class="hljs-string">&#x27;月&#x27;</span>) <span class="hljs-keyword">as</span> x,ifnull(t2.average_month,<span class="hljs-number">0</span>) <span class="hljs-keyword">as</span> y,t1.month_en_short,t3.keyword <span class="hljs-keyword">as</span> s<br><span class="hljs-keyword">FROM</span> (<span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> dim_date <span class="hljs-keyword">WHERE</span> time_type <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;month&#x27;</span> <span class="hljs-keyword">and</span> `<span class="hljs-keyword">year</span>` <span class="hljs-operator">=</span> <span class="hljs-keyword">year</span>(now())) <span class="hljs-keyword">AS</span> t1<br><span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span>(<span class="hljs-keyword">SELECT</span> keyword <span class="hljs-keyword">FROM</span> dim_baidu_index_keyword <span class="hljs-keyword">WHERE</span> LOCATE(keyword,<span class="hljs-string">&#x27;粉毒,衡力,botox&#x27;</span>) <span class="hljs-operator">&gt;</span> <span class="hljs-number">0</span>) <span class="hljs-keyword">as</span> t3<br><span class="hljs-keyword">on</span> <span class="hljs-number">1</span><span class="hljs-operator">=</span><span class="hljs-number">1</span><br><span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> (<span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> kpi_baidu_index_month_summary <span class="hljs-keyword">WHERE</span> LOCATE(keyword,<span class="hljs-string">&#x27;粉毒,衡力,botox&#x27;</span>) <span class="hljs-operator">&gt;</span> <span class="hljs-number">0</span>) <span class="hljs-keyword">AS</span> t2<br>  <span class="hljs-keyword">ON</span> t1.`<span class="hljs-keyword">year</span>` <span class="hljs-operator">=</span> t2.search_year <span class="hljs-keyword">AND</span> t1.`<span class="hljs-keyword">month</span>` <span class="hljs-operator">=</span> t2.search_month <span class="hljs-keyword">AND</span> t2.keyword <span class="hljs-operator">=</span> t3.keyword<br><span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> t1.`<span class="hljs-keyword">month</span>`;<br></code></pre></td></tr></table></figure>
+
 <h3 id="结果-1"><a href="#结果-1" class="headerlink" title="结果"></a>结果</h3><table>
 <thead>
 <tr>
 <th>月份</th>
-<th style="text-align:center">y轴</th>
-<th style="text-align:center">月份简写</th>
-<th style="text-align:right">竞品</th>
+<th align="center">y轴</th>
+<th align="center">月份简写</th>
+<th align="right">竞品</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>1月</td>
-<td style="text-align:center">121</td>
-<td style="text-align:center">Jan</td>
-<td style="text-align:right">衡力</td>
-</tr>
-<tr>
-<td>1月</td>
-<td style="text-align:center">419</td>
-<td style="text-align:center">Jan</td>
-<td style="text-align:right">Botox</td>
+<td align="center">121</td>
+<td align="center">Jan</td>
+<td align="right">衡力</td>
 </tr>
 <tr>
 <td>1月</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">Jan</td>
-<td style="text-align:right">粉毒</td>
+<td align="center">419</td>
+<td align="center">Jan</td>
+<td align="right">Botox</td>
+</tr>
+<tr>
+<td>1月</td>
+<td align="center">0</td>
+<td align="center">Jan</td>
+<td align="right">粉毒</td>
 </tr>
 <tr>
 <td>2月</td>
-<td style="text-align:center">355</td>
-<td style="text-align:center">Feb</td>
-<td style="text-align:right">Botox</td>
+<td align="center">355</td>
+<td align="center">Feb</td>
+<td align="right">Botox</td>
 </tr>
 <tr>
 <td>2月</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">Feb</td>
-<td style="text-align:right">粉毒</td>
+<td align="center">0</td>
+<td align="center">Feb</td>
+<td align="right">粉毒</td>
 </tr>
 <tr>
 <td>2月</td>
-<td style="text-align:center">121</td>
-<td style="text-align:center">Feb</td>
-<td style="text-align:right">衡力</td>
+<td align="center">121</td>
+<td align="center">Feb</td>
+<td align="right">衡力</td>
 </tr>
 <tr>
 <td>3月</td>
-<td style="text-align:center">361</td>
-<td style="text-align:center">Mar</td>
-<td style="text-align:right">Botox</td>
+<td align="center">361</td>
+<td align="center">Mar</td>
+<td align="right">Botox</td>
 </tr>
 <tr>
 <td>3月</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">Mar</td>
-<td style="text-align:right">粉毒</td>
+<td align="center">0</td>
+<td align="center">Mar</td>
+<td align="right">粉毒</td>
 </tr>
 <tr>
 <td>3月</td>
-<td style="text-align:center">123</td>
-<td style="text-align:center">Mar</td>
-<td style="text-align:right">衡力</td>
+<td align="center">123</td>
+<td align="center">Mar</td>
+<td align="right">衡力</td>
 </tr>
 <tr>
 <td>4月</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">Apr</td>
-<td style="text-align:right">Botox</td>
+<td align="center">0</td>
+<td align="center">Apr</td>
+<td align="right">Botox</td>
 </tr>
 <tr>
 <td>4月</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">Apr</td>
-<td style="text-align:right">衡力</td>
+<td align="center">0</td>
+<td align="center">Apr</td>
+<td align="right">衡力</td>
 </tr>
 <tr>
 <td>4月</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">Apr</td>
-<td style="text-align:right">粉毒</td>
+<td align="center">0</td>
+<td align="center">Apr</td>
+<td align="right">粉毒</td>
 </tr>
 <tr>
 <td>5月</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">May</td>
-<td style="text-align:right">Botox</td>
+<td align="center">0</td>
+<td align="center">May</td>
+<td align="right">Botox</td>
 </tr>
 <tr>
 <td>5月</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">May</td>
-<td style="text-align:right">衡力</td>
+<td align="center">0</td>
+<td align="center">May</td>
+<td align="right">衡力</td>
 </tr>
 <tr>
 <td>5月</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">May</td>
-<td style="text-align:right">粉毒</td>
+<td align="center">0</td>
+<td align="center">May</td>
+<td align="right">粉毒</td>
 </tr>
 <tr>
 <td>6月</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">June</td>
-<td style="text-align:right">Botox</td>
+<td align="center">0</td>
+<td align="center">June</td>
+<td align="right">Botox</td>
 </tr>
 <tr>
 <td>6月</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">June</td>
-<td style="text-align:right">衡力</td>
+<td align="center">0</td>
+<td align="center">June</td>
+<td align="right">衡力</td>
 </tr>
 <tr>
 <td>6月</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">June</td>
-<td style="text-align:right">粉毒</td>
+<td align="center">0</td>
+<td align="center">June</td>
+<td align="right">粉毒</td>
 </tr>
 <tr>
 <td>7月</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">July</td>
-<td style="text-align:right">Botox</td>
+<td align="center">0</td>
+<td align="center">July</td>
+<td align="right">Botox</td>
 </tr>
 <tr>
 <td>7月</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">July</td>
-<td style="text-align:right">衡力</td>
+<td align="center">0</td>
+<td align="center">July</td>
+<td align="right">衡力</td>
 </tr>
 <tr>
 <td>7月</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">July</td>
-<td style="text-align:right">粉毒</td>
+<td align="center">0</td>
+<td align="center">July</td>
+<td align="right">粉毒</td>
 </tr>
 <tr>
 <td>8月</td>
-<td style="text-align:center">13</td>
-<td style="text-align:center">Aug</td>
-<td style="text-align:right">粉毒</td>
+<td align="center">13</td>
+<td align="center">Aug</td>
+<td align="right">粉毒</td>
 </tr>
 <tr>
 <td>8月</td>
-<td style="text-align:center">129</td>
-<td style="text-align:center">Aug</td>
-<td style="text-align:right">衡力</td>
+<td align="center">129</td>
+<td align="center">Aug</td>
+<td align="right">衡力</td>
 </tr>
 <tr>
 <td>8月</td>
-<td style="text-align:center">361</td>
-<td style="text-align:center">Aug</td>
-<td style="text-align:right">Botox</td>
+<td align="center">361</td>
+<td align="center">Aug</td>
+<td align="right">Botox</td>
 </tr>
 <tr>
 <td>9月</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">Sept</td>
-<td style="text-align:right">粉毒</td>
+<td align="center">0</td>
+<td align="center">Sept</td>
+<td align="right">粉毒</td>
 </tr>
 <tr>
 <td>9月</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">Sept</td>
-<td style="text-align:right">Botox</td>
+<td align="center">0</td>
+<td align="center">Sept</td>
+<td align="right">Botox</td>
 </tr>
 <tr>
 <td>9月</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">Sept</td>
-<td style="text-align:right">衡力</td>
+<td align="center">0</td>
+<td align="center">Sept</td>
+<td align="right">衡力</td>
 </tr>
 <tr>
 <td>10月</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">Oct</td>
-<td style="text-align:right">粉毒</td>
+<td align="center">0</td>
+<td align="center">Oct</td>
+<td align="right">粉毒</td>
 </tr>
 <tr>
 <td>10月</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">Oct</td>
-<td style="text-align:right">Botox</td>
+<td align="center">0</td>
+<td align="center">Oct</td>
+<td align="right">Botox</td>
 </tr>
 <tr>
 <td>10月</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">Oct</td>
-<td style="text-align:right">衡力</td>
+<td align="center">0</td>
+<td align="center">Oct</td>
+<td align="right">衡力</td>
 </tr>
 <tr>
 <td>11月</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">Nov</td>
-<td style="text-align:right">粉毒</td>
+<td align="center">0</td>
+<td align="center">Nov</td>
+<td align="right">粉毒</td>
 </tr>
 <tr>
 <td>11月</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">Nov</td>
-<td style="text-align:right">Botox</td>
+<td align="center">0</td>
+<td align="center">Nov</td>
+<td align="right">Botox</td>
 </tr>
 <tr>
 <td>11月</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">Nov</td>
-<td style="text-align:right">衡力</td>
+<td align="center">0</td>
+<td align="center">Nov</td>
+<td align="right">衡力</td>
 </tr>
 <tr>
 <td>12月</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">Dec</td>
-<td style="text-align:right">粉毒</td>
+<td align="center">0</td>
+<td align="center">Dec</td>
+<td align="right">粉毒</td>
 </tr>
 <tr>
 <td>12月</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">Dec</td>
-<td style="text-align:right">Botox</td>
+<td align="center">0</td>
+<td align="center">Dec</td>
+<td align="right">Botox</td>
 </tr>
 <tr>
 <td>12月</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">Dec</td>
-<td style="text-align:right">衡力</td>
+<td align="center">0</td>
+<td align="center">Dec</td>
+<td align="right">衡力</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <h3 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h3><p>与报表显示一致</p>
 
   
@@ -595,7 +615,9 @@
 
     <!-- search -->
     <link href="//code.bdstatic.com/npm/docsearch.js@1.5.0/dist/cdn/docsearch.min.css" rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/css/search.css">
+    
+<link rel="stylesheet" href="/css/search.css">
+
     <script src="//code.bdstatic.com/npm/docsearch.js@1.5.0/dist/cdn/docsearch.min.js"></script>
     <script>
     [

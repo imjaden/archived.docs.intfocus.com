@@ -1,8 +1,7 @@
-
-
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
+    
     <title>环境规范 — 胜因学院</title>
     <meta charset="utf-8">
     <meta name="description" content="Vue.js - The Progressive JavaScript Framework">
@@ -32,7 +31,9 @@
     <link href="//code.bdstatic.com/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- main page styles -->
-    <link rel="stylesheet" href="/css/page.css">
+    
+<link rel="stylesheet" href="/css/page.css">
+
 
     <!-- this needs to be loaded before guide's inline scripts -->
     <script src="/js/vue.js"></script>
@@ -40,7 +41,7 @@
       Vue.config.productionTip = false
       window.PAGE_TYPE = "环境规范"
     </script>
-  </head>
+  <meta name="generator" content="Hexo 6.3.0"></head>
   <body class="docs">
     <div id="mobile-bar" >
       <a class="menu-button"></a>
@@ -133,14 +134,31 @@
   </ul>
 </li>
 
-<li>
-  <a href="https://www.intfocus.com" target="_blank" class="nav-link team">官网</a>
-</li>
 
+<li class="nav-dropdown-container learn">
+  <a class="nav-link">外链导航</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li>
+    <a href="https://www.intfocus.com" target="_blank" class="nav-link team">胜因官网</a>
+    </li>
+    <li>
+    <a href="javascript:void(0)" onclick="Resume.open()" class="nav-link team">我的简历</a>
+    </li>
+  </ul>
+</li>
+<script>
+window.Resume = {
+  open: function() {
+    window.location.href = (window.innerWidth > window.innerHeight ? '//jaden.tech/resume-landscape-672cfe02a8443258f4892d518a61a963.pdf' : '//jaden.tech/resume-vertical-e8520975ff8f7ece244b97a5f3ad9494.pdf');
+  }
+}
+</script>
   </ul>
 </div>
 
     
+    
+
     
       <div id="main" class="fix-sidebar">
         
@@ -229,10 +247,25 @@
   </ul>
 </li>
 
-<li>
-  <a href="https://www.intfocus.com" target="_blank" class="nav-link team">官网</a>
-</li>
 
+<li class="nav-dropdown-container learn">
+  <a class="nav-link">外链导航</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li>
+    <a href="https://www.intfocus.com" target="_blank" class="nav-link team">胜因官网</a>
+    </li>
+    <li>
+    <a href="javascript:void(0)" onclick="Resume.open()" class="nav-link team">我的简历</a>
+    </li>
+  </ul>
+</li>
+<script>
+window.Resume = {
+  open: function() {
+    window.location.href = (window.innerWidth > window.innerHeight ? '//jaden.tech/resume-landscape-672cfe02a8443258f4892d518a61a963.pdf' : '//jaden.tech/resume-vertical-e8520975ff8f7ece244b97a5f3ad9494.pdf');
+  }
+}
+</script>
     </ul>
     <div class="list">
       
@@ -330,11 +363,11 @@
 <h2 id="软件部署规范"><a href="#软件部署规范" class="headerlink" title="软件部署规范"></a>软件部署规范</h2><ul>
 <li>项目目录: <code>~/WorkSpace</code></li>
 <li>依赖包目录: <code>~/SourceSpace</code></li>
-<li><a href="https://pan.baidu.com/s/1P4yx7eHwJp29nfbnQ4qFEQ&amp;shfl=shareset" target="_blank" rel="noopener">工具包下载</a>, 提取码: js5q</li>
+<li><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1P4yx7eHwJp29nfbnQ4qFEQ&shfl=shareset">工具包下载</a>, 提取码: js5q</li>
 </ul>
 <p>软件安装规范(所有设备统一安装目录、配置档位置): 开发工具列表</p>
 <ul>
-<li>iterm2/homebrew/sypctl</li>
+<li>iterm2&#x2F;homebrew&#x2F;sypctl</li>
 <li>Maven, <code>~/SourceSpace/Maven3.6.2</code></li>
 <li>Zookeeper, <code>~/SourceSpace/Zookeeper3.4.10</code></li>
 <li>ActiveMQ, <code>~/SourceSpace/ActiveMQ5.15.5</code></li>
@@ -342,7 +375,7 @@
 <li>MacDown, Markdown 文件: <code>~/SourceSpace/Markdown</code></li>
 <li>NaviCat, 操作SQL 存储: <code>~/SourceSpace/NaviCat</code></li>
 <li>Java</li>
-<li>Redis/RDM</li>
+<li>Redis&#x2F;RDM</li>
 <li>MySQL</li>
 <li>IDEA</li>
 <li>Chrome</li>
@@ -352,56 +385,58 @@
 </ul>
 <h2 id="线上环境规范"><a href="#线上环境规范" class="headerlink" title="线上环境规范"></a>线上环境规范</h2><p>关于线上资源事项：</p>
 <ul>
-<li>本地环境开发、调试时必须连接本地资源(MySQL/Redis/Mongo/Zookeeper等资源)</li>
-<li>临时调试线上问题时，允许连接云上数据资源(MySQL/Redis/Mongo/Zookeeper等资源), </li>
+<li>本地环境开发、调试时必须连接本地资源(MySQL&#x2F;Redis&#x2F;Mongo&#x2F;Zookeeper等资源)</li>
+<li>临时调试线上问题时，允许连接云上数据资源(MySQL&#x2F;Redis&#x2F;Mongo&#x2F;Zookeeper等资源),</li>
 </ul>
 <p>关于项目部署规范:</p>
 <ul>
 <li><p>目录规范:</p>
 <ul>
-<li>FTP: <code>/data/ftp</code></li>
-<li>备份: <code>/data/backup</code></li>
-<li>Web: <code>/data/work/www</code><ul>
+<li><p>FTP: <code>/data/ftp</code></p>
+</li>
+<li><p>备份: <code>/data/backup</code></p>
+</li>
+<li><p>Web: <code>/data/work/www</code></p>
+<ul>
 <li>Java 运营平台</li>
 <li>JAVA API</li>
 <li>JAVA API Service</li>
 <li>前端资源</li>
 </ul>
 </li>
-<li>脚本: <code>/data/work/scripts</code><ul>
+<li><p>脚本: <code>/data/work/scripts</code></p>
+<ul>
 <li>定时任务脚本</li>
-<li>Kettle ETL/Jobs 脚本</li>
+<li>Kettle ETL&#x2F;Jobs 脚本</li>
 </ul>
 </li>
-<li>配置项: <code>/data/work/config</code></li>
+<li><p>配置项: <code>/data/work/config</code></p>
+</li>
 <li><p>工具: <code>/data/work/tools</code></p>
-<pre><code class="hljs undefined">/bin/java -&gt; /data/work/tools/jdk-1.8.0_192/jre/bin/java
-/bin/kitchen -&gt; /data/work/tools/kettle-8.2.0.0_342/kitchen.sh
-/bin/kettle -&gt; /data/work/tools/kettle-8.2.0.0_342/spoon.sh
-/bin/spoon -&gt; /data/work/tools/kettle-8.2.0.0_342/spoon.sh
-/bin/ruby -&gt; /root/.rbenv/shims/ruby</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">/bin/java -&gt; /data/work/tools/jdk-1.8.0_192/jre/bin/java<br>/bin/kitchen -&gt; /data/work/tools/kettle-8.2.0.0_342/kitchen.sh<br>/bin/kettle -&gt; /data/work/tools/kettle-8.2.0.0_342/spoon.sh<br>/bin/spoon -&gt; /data/work/tools/kettle-8.2.0.0_342/spoon.sh<br>/bin/ruby -&gt; /root/.rbenv/shims/ruby<br></code></pre></td></tr></table></figure>
 </li>
 <li><p>日志项: <code>/data/work/logs</code></p>
 </li>
 </ul>
-<pre><code class="hljs undefined">$ mkdir -p /data/&#123;ftp,backup,work/&#123;www,tools,scripts,config,logs&#125;&#125;</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">$ mkdir -p /data/&#123;ftp,backup,work/&#123;www,tools,scripts,config,logs&#125;&#125;<br></code></pre></td></tr></table></figure>
 </li>
-</ul>
+<li><p>Linux 系统运维账号</p>
 <ul>
-<li>Linux 系统运维账号<ul>
 <li>Root: <code>sy-user</code></li>
 <li>FTP: <code>sy-ftp-user</code></li>
 <li>Web: <code>sy-www-user</code></li>
 <li>其他: <code>sy-devops-user</code></li>
 </ul>
 </li>
-<li>MySQL 运维账号(DDL/DDM权限)<ul>
+<li><p>MySQL 运维账号(DDL&#x2F;DDM权限)</p>
+<ul>
 <li>线上账号: <code>sy-user</code></li>
 <li>线下开发: <code>sy-dev-user</code></li>
 <li>客户账号: <code>sy-guest-user</code></li>
 </ul>
 </li>
-<li>Redis 运维账号: <code>sy-user</code></li>
+<li><p>Redis 运维账号: <code>sy-user</code></p>
+</li>
 </ul>
 
   
@@ -439,7 +474,9 @@
 
     <!-- search -->
     <link href="//code.bdstatic.com/npm/docsearch.js@1.5.0/dist/cdn/docsearch.min.css" rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/css/search.css">
+    
+<link rel="stylesheet" href="/css/search.css">
+
     <script src="//code.bdstatic.com/npm/docsearch.js@1.5.0/dist/cdn/docsearch.min.js"></script>
     <script>
     [

@@ -1,8 +1,7 @@
-
-
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
+    
     <title>运营平台添加模块 — 胜因学院</title>
     <meta charset="utf-8">
     <meta name="description" content="Vue.js - The Progressive JavaScript Framework">
@@ -32,7 +31,9 @@
     <link href="//code.bdstatic.com/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- main page styles -->
-    <link rel="stylesheet" href="/css/page.css">
+    
+<link rel="stylesheet" href="/css/page.css">
+
 
     <!-- this needs to be loaded before guide's inline scripts -->
     <script src="/js/vue.js"></script>
@@ -40,7 +41,7 @@
       Vue.config.productionTip = false
       window.PAGE_TYPE = "运营平台添加模块"
     </script>
-  </head>
+  <meta name="generator" content="Hexo 6.3.0"></head>
   <body class="docs">
     <div id="mobile-bar" >
       <a class="menu-button"></a>
@@ -133,14 +134,31 @@
   </ul>
 </li>
 
-<li>
-  <a href="https://www.intfocus.com" target="_blank" class="nav-link team">官网</a>
-</li>
 
+<li class="nav-dropdown-container learn">
+  <a class="nav-link">外链导航</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li>
+    <a href="https://www.intfocus.com" target="_blank" class="nav-link team">胜因官网</a>
+    </li>
+    <li>
+    <a href="javascript:void(0)" onclick="Resume.open()" class="nav-link team">我的简历</a>
+    </li>
+  </ul>
+</li>
+<script>
+window.Resume = {
+  open: function() {
+    window.location.href = (window.innerWidth > window.innerHeight ? '//jaden.tech/resume-landscape-672cfe02a8443258f4892d518a61a963.pdf' : '//jaden.tech/resume-vertical-e8520975ff8f7ece244b97a5f3ad9494.pdf');
+  }
+}
+</script>
   </ul>
 </div>
 
     
+    
+
     
       <div id="main" class="fix-sidebar">
         
@@ -229,10 +247,25 @@
   </ul>
 </li>
 
-<li>
-  <a href="https://www.intfocus.com" target="_blank" class="nav-link team">官网</a>
-</li>
 
+<li class="nav-dropdown-container learn">
+  <a class="nav-link">外链导航</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li>
+    <a href="https://www.intfocus.com" target="_blank" class="nav-link team">胜因官网</a>
+    </li>
+    <li>
+    <a href="javascript:void(0)" onclick="Resume.open()" class="nav-link team">我的简历</a>
+    </li>
+  </ul>
+</li>
+<script>
+window.Resume = {
+  open: function() {
+    window.location.href = (window.innerWidth > window.innerHeight ? '//jaden.tech/resume-landscape-672cfe02a8443258f4892d518a61a963.pdf' : '//jaden.tech/resume-vertical-e8520975ff8f7ece244b97a5f3ad9494.pdf');
+  }
+}
+</script>
     </ul>
     <div class="list">
       
@@ -312,72 +345,17 @@
 </ol>
 <h2 id="企业管理菜单"><a href="#企业管理菜单" class="headerlink" title="企业管理菜单"></a>企业管理菜单</h2><h3 id="添加溯源码列"><a href="#添加溯源码列" class="headerlink" title="添加溯源码列"></a>添加溯源码列</h3><ul>
 <li><p>修改 SaasEnterpriseMapper.xml 文件中id为 queryList 的SQL语句，添加查询结果字段 qrCodeUuid 以及添加对应的关联表 </p>
-<pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span>  ae.*, ar.role_name ,
-  ag.group_name ,
-  sqced.uuid <span class="hljs-keyword">AS</span> qrCodeUuid
-<span class="hljs-keyword">FROM</span> sup_enterprises <span class="hljs-keyword">AS</span> ae
-<span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> app_roles <span class="hljs-keyword">AS</span> ar <span class="hljs-keyword">ON</span> ar.id = ae.role_id
-<span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> app_groups <span class="hljs-keyword">AS</span> ag <span class="hljs-keyword">ON</span> ag.group_id = ae.group_id
-<span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span>(
-  <span class="hljs-keyword">SELECT</span>
-    <span class="hljs-keyword">max</span>(<span class="hljs-keyword">uuid</span>) <span class="hljs-keyword">AS</span> <span class="hljs-keyword">uuid</span> ,
-    enterprise_uuid
-  <span class="hljs-keyword">FROM</span>
-    sup_qr_code_business_data
-  <span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span>
-    enterprise_uuid
-) <span class="hljs-keyword">AS</span> sqced <span class="hljs-keyword">ON</span> sqced.enterprise_uuid = ae.uuid
-<span class="hljs-keyword">WHERE</span> ae.is_delete = <span class="hljs-number">0</span>
-.....</code></pre>
+<figure class="highlight sql"><table><tr><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span>  ae.<span class="hljs-operator">*</span>, ar.role_name ,<br>  ag.group_name ,<br>  sqced.uuid <span class="hljs-keyword">AS</span> qrCodeUuid<br><span class="hljs-keyword">FROM</span> sup_enterprises <span class="hljs-keyword">AS</span> ae<br><span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> app_roles <span class="hljs-keyword">AS</span> ar <span class="hljs-keyword">ON</span> ar.id <span class="hljs-operator">=</span> ae.role_id<br><span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> app_groups <span class="hljs-keyword">AS</span> ag <span class="hljs-keyword">ON</span> ag.group_id <span class="hljs-operator">=</span> ae.group_id<br><span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span>(<br>  <span class="hljs-keyword">SELECT</span><br>    <span class="hljs-built_in">max</span>(uuid) <span class="hljs-keyword">AS</span> uuid ,<br>    enterprise_uuid<br>  <span class="hljs-keyword">FROM</span><br>    sup_qr_code_business_data<br>  <span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span><br>    enterprise_uuid<br>) <span class="hljs-keyword">AS</span> sqced <span class="hljs-keyword">ON</span> sqced.enterprise_uuid <span class="hljs-operator">=</span> ae.uuid<br><span class="hljs-keyword">WHERE</span> ae.is_delete <span class="hljs-operator">=</span> <span class="hljs-number">0</span><br>.....<br></code></pre></td></tr></table></figure>
 </li>
 <li><p>在saasenterprise.js中添企业朔源码列</p>
-<pre><code class="hljs javascript">&#123;
-  <span class="hljs-attr">label</span>: <span class="hljs-string">'企业朔源码'</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">'qrCodeUuid'</span>, <span class="hljs-attr">index</span>: <span class="hljs-string">'qrCodeUuid'</span>, <span class="hljs-attr">width</span>: <span class="hljs-number">60</span>,
-&#125;</code></pre>
-</li>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript">&#123;<br>  <span class="hljs-attr">label</span>: <span class="hljs-string">&#x27;企业朔源码&#x27;</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;qrCodeUuid&#x27;</span>, <span class="hljs-attr">index</span>: <span class="hljs-string">&#x27;qrCodeUuid&#x27;</span>, <span class="hljs-attr">width</span>: <span class="hljs-number">60</span>,<br>&#125;<br></code></pre></td></tr></table></figure></li>
 </ul>
 <h3 id="检查朔源码按钮"><a href="#检查朔源码按钮" class="headerlink" title="检查朔源码按钮"></a>检查朔源码按钮</h3><ul>
 <li><p>在 SaasEnterpriseMapper.xml 中添加 id 为queryListByNoParams 的SQL，实现无参数获取企业信息</p>
-<pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span>  ae.*, ar.role_name ,
-  ag.group_name ,
-  sqced.uuid <span class="hljs-keyword">AS</span> qrCodeUuid
-<span class="hljs-keyword">FROM</span> sup_enterprises <span class="hljs-keyword">AS</span> ae
-<span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> app_roles <span class="hljs-keyword">AS</span> ar <span class="hljs-keyword">ON</span> ar.id = ae.role_id
-<span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> app_groups <span class="hljs-keyword">AS</span> ag <span class="hljs-keyword">ON</span> ag.group_id = ae.group_id
-<span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span>(
-  <span class="hljs-keyword">SELECT</span>
-    <span class="hljs-keyword">max</span>(<span class="hljs-keyword">uuid</span>) <span class="hljs-keyword">AS</span> <span class="hljs-keyword">uuid</span> ,
-    enterprise_uuid
-  <span class="hljs-keyword">FROM</span>
-    sup_qr_code_business_data
-  <span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span>
-    enterprise_uuid
-) <span class="hljs-keyword">AS</span> sqced <span class="hljs-keyword">ON</span> sqced.enterprise_uuid = ae.uuid
-<span class="hljs-keyword">WHERE</span> ae.is_delete = <span class="hljs-number">0</span></code></pre>
+<figure class="highlight sql"><table><tr><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span>  ae.<span class="hljs-operator">*</span>, ar.role_name ,<br>  ag.group_name ,<br>  sqced.uuid <span class="hljs-keyword">AS</span> qrCodeUuid<br><span class="hljs-keyword">FROM</span> sup_enterprises <span class="hljs-keyword">AS</span> ae<br><span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> app_roles <span class="hljs-keyword">AS</span> ar <span class="hljs-keyword">ON</span> ar.id <span class="hljs-operator">=</span> ae.role_id<br><span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> app_groups <span class="hljs-keyword">AS</span> ag <span class="hljs-keyword">ON</span> ag.group_id <span class="hljs-operator">=</span> ae.group_id<br><span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span>(<br>  <span class="hljs-keyword">SELECT</span><br>    <span class="hljs-built_in">max</span>(uuid) <span class="hljs-keyword">AS</span> uuid ,<br>    enterprise_uuid<br>  <span class="hljs-keyword">FROM</span><br>    sup_qr_code_business_data<br>  <span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span><br>    enterprise_uuid<br>) <span class="hljs-keyword">AS</span> sqced <span class="hljs-keyword">ON</span> sqced.enterprise_uuid <span class="hljs-operator">=</span> ae.uuid<br><span class="hljs-keyword">WHERE</span> ae.is_delete <span class="hljs-operator">=</span> <span class="hljs-number">0</span><br></code></pre></td></tr></table></figure>
 </li>
 <li><p>在 SaasEnterpriseMapper.xml 中添加 id 为 insertQrCodeUuid 的SQL，向朔源码信息表 sup_qr_code_business_data 中添加 qrCodeUuid 以及对应的企业信息</p>
-<pre><code class="hljs sql"><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> sup_qr_code_business_data(
-            <span class="hljs-keyword">uuid</span> ,
-            enterprise_name ,
-            enterprise_code ,
-            enterprise_uuid ,
-            target_url ,
-            data_json ,
-            remark ,
-            create_user ,
-            update_user
-        )
-<span class="hljs-keyword">VALUES</span> (
-            #&#123;param1&#125; ,
-            #&#123;param2&#125; ,
-            #&#123;param3&#125; ,
-            #&#123;param4&#125; ,
-            <span class="hljs-literal">null</span> ,
-            #&#123;param5&#125; ,
-            <span class="hljs-literal">null</span> ,
-            #&#123;param6&#125; ,
-            <span class="hljs-literal">null</span>
-        )</code></pre>
+<figure class="highlight sql"><table><tr><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> sup_qr_code_business_data(<br>            uuid ,<br>            enterprise_name ,<br>            enterprise_code ,<br>            enterprise_uuid ,<br>            target_url ,<br>            data_json ,<br>            remark ,<br>            create_user ,<br>            update_user<br>        )<br><span class="hljs-keyword">VALUES</span> (<br>            #&#123;param1&#125; ,<br>            #&#123;param2&#125; ,<br>            #&#123;param3&#125; ,<br>            #&#123;param4&#125; ,<br>            <span class="hljs-keyword">null</span> ,<br>            #&#123;param5&#125; ,<br>            <span class="hljs-keyword">null</span> ,<br>            #&#123;param6&#125; ,<br>            <span class="hljs-keyword">null</span><br>        )<br></code></pre></td></tr></table></figure>
 </li>
 <li><p>在 SaasEnterpriseService、SaasEnterpriseServiceImpl和SaasEnterpriseMapper.java 中添加对应的 queryEnterpriseService 和 insertQrCodeuuid 方法</p>
 </li>
@@ -394,45 +372,10 @@
 </ul>
 </li>
 <li><p>saasenterprise.js 中添加 createEnterpriseTackingCode 方法，需要传入参数 createUser ，通过弹窗输入值，方法调用 <code>../saas-enterprise/tracking-code/createEnterpriseTackingCode</code> 接口，补全所有企业朔源码，成功后刷新页面列表</p>
-<pre><code class="hljs javascript">methods&#123;
-    <span class="hljs-attr">createEnterpriseTackingCode</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;
-            <span class="hljs-keyword">var</span> htmlStr = <span class="hljs-string">'&lt;span style="color: red; text-align: center;display:block;"&gt;生成企业朔源码，请耐心等待&lt;/span&gt;'</span>;
-            htmlStr = htmlStr + <span class="hljs-string">'&lt;input type="text" id="createUser" style="text-align: center; width: 280px;" placeholder="请输入创建人：小明（15200000000）"/&gt;'</span>;
-
-            <span class="hljs-keyword">var</span> indexConfirm = layer.confirm(htmlStr, &#123;
-                <span class="hljs-attr">btn</span>: [
-                    <span class="hljs-string">'确认'</span>, <span class="hljs-string">'取消'</span>
-                ],
-                <span class="hljs-attr">btnAlign</span>: <span class="hljs-string">'c'</span>,
-                <span class="hljs-attr">title</span>: <span class="hljs-string">"批量添加企业朔源码"</span>
-            &#125;, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;
-                <span class="hljs-keyword">var</span> createUser = $(<span class="hljs-string">"#createUser"</span>).val();
-                    $.ajax(&#123;
-                        <span class="hljs-attr">type</span>: <span class="hljs-string">"GET"</span>,
-                        <span class="hljs-attr">url</span>: <span class="hljs-string">"../saas-enterprise/tracking-code/createEnterpriseTackingCode"</span>,
-                        <span class="hljs-attr">data</span>: &#123;
-                            <span class="hljs-attr">createUser</span>: createUser
-                        &#125;,
-                        <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">r</span>) </span>&#123;
-                            <span class="hljs-keyword">if</span> (r.code == <span class="hljs-number">0</span>) &#123;
-                                alert(<span class="hljs-string">'操作成功'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;   $(<span class="hljs-string">"#jqGrid"</span>).trigger(<span class="hljs-string">"reloadGrid"</span>);
-                                &#125;);
-                                vm.reload();
-                            &#125; <span class="hljs-keyword">else</span> &#123;
-                                alert(r.msg);
-                            &#125;
-                        &#125;
-                    &#125;);
-                layer.close(indexConfirm);
-            &#125;, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;
-                layer.close(indexConfirm);
-            &#125;);
-        &#125;,
-&#125;</code></pre>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript">methods&#123;<br>    <span class="hljs-attr">createEnterpriseTackingCode</span>: <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>            <span class="hljs-keyword">var</span> htmlStr = <span class="hljs-string">&#x27;&lt;span style=&quot;color: red; text-align: center;display:block;&quot;&gt;生成企业朔源码，请耐心等待&lt;/span&gt;&#x27;</span>;<br>            htmlStr = htmlStr + <span class="hljs-string">&#x27;&lt;input type=&quot;text&quot; id=&quot;createUser&quot; style=&quot;text-align: center; width: 280px;&quot; placeholder=&quot;请输入创建人：小明（15200000000）&quot;/&gt;&#x27;</span>;<br><br>            <span class="hljs-keyword">var</span> indexConfirm = layer.<span class="hljs-title function_">confirm</span>(htmlStr, &#123;<br>                <span class="hljs-attr">btn</span>: [<br>                    <span class="hljs-string">&#x27;确认&#x27;</span>, <span class="hljs-string">&#x27;取消&#x27;</span><br>                ],<br>                <span class="hljs-attr">btnAlign</span>: <span class="hljs-string">&#x27;c&#x27;</span>,<br>                <span class="hljs-attr">title</span>: <span class="hljs-string">&quot;批量添加企业朔源码&quot;</span><br>            &#125;, <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>                <span class="hljs-keyword">var</span> createUser = $(<span class="hljs-string">&quot;#createUser&quot;</span>).<span class="hljs-title function_">val</span>();<br>                    $.<span class="hljs-title function_">ajax</span>(&#123;<br>                        <span class="hljs-attr">type</span>: <span class="hljs-string">&quot;GET&quot;</span>,<br>                        <span class="hljs-attr">url</span>: <span class="hljs-string">&quot;../saas-enterprise/tracking-code/createEnterpriseTackingCode&quot;</span>,<br>                        <span class="hljs-attr">data</span>: &#123;<br>                            <span class="hljs-attr">createUser</span>: createUser<br>                        &#125;,<br>                        <span class="hljs-attr">success</span>: <span class="hljs-keyword">function</span> (<span class="hljs-params">r</span>) &#123;<br>                            <span class="hljs-keyword">if</span> (r.<span class="hljs-property">code</span> == <span class="hljs-number">0</span>) &#123;<br>                                <span class="hljs-title function_">alert</span>(<span class="hljs-string">&#x27;操作成功&#x27;</span>, <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;   $(<span class="hljs-string">&quot;#jqGrid&quot;</span>).<span class="hljs-title function_">trigger</span>(<span class="hljs-string">&quot;reloadGrid&quot;</span>);<br>                                &#125;);<br>                                vm.<span class="hljs-title function_">reload</span>();<br>                            &#125; <span class="hljs-keyword">else</span> &#123;<br>                                <span class="hljs-title function_">alert</span>(r.<span class="hljs-property">msg</span>);<br>                            &#125;<br>                        &#125;<br>                    &#125;);<br>                layer.<span class="hljs-title function_">close</span>(indexConfirm);<br>            &#125;, <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>                layer.<span class="hljs-title function_">close</span>(indexConfirm);<br>            &#125;);<br>        &#125;,<br>&#125;<br></code></pre></td></tr></table></figure>
 </li>
 <li><p>在 saasenterprise.html 中添加一个点击事件</p>
-<pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-primary"</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"createEnterpriseTackingCode"</span>&gt;</span>补全朔源码<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></code></pre>
-</li>
+<figure class="highlight html"><table><tr><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn btn-primary&quot;</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">&quot;createEnterpriseTackingCode&quot;</span>&gt;</span>补全朔源码<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><br></code></pre></td></tr></table></figure></li>
 </ul>
 <h3 id="查看朔源码按钮"><a href="#查看朔源码按钮" class="headerlink" title="查看朔源码按钮"></a>查看朔源码按钮</h3><ul>
 <li><p>在 SaasEnterpriseController 中添加 show 方法，需要参数 id ，这个 id 是页面展示的行id</p>
@@ -451,32 +394,10 @@
 </ul>
 </li>
 <li><p>在 saasenterprise.js 中添加 showTackingCode 方法，在 data 下 添加参数 qrCodeuuid:””</p>
-<pre><code class="hljs javascript">&lt;!--添加参数变量--&gt;
-data:&#123;
-  <span class="hljs-attr">showList</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">show</span>: <span class="hljs-number">1</span>,
-  <span class="hljs-attr">title</span>: <span class="hljs-literal">null</span>,
-  <span class="hljs-attr">saasEnterprise</span>: &#123;&#125;,
-  <span class="hljs-attr">qrCodeUuid</span>: <span class="hljs-string">""</span>
-&#125;
-
-&lt;!--添加方法--&gt;
-methods:&#123;<span class="hljs-attr">showTackingCode</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;
-            <span class="hljs-keyword">var</span> id = getSelectedRow();
-            $.get(<span class="hljs-string">"../saas-enterprise/show/"</span> + id, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">r</span>) </span>&#123;
-                vm.qrCodeUuid = r.qrCodeUuid;
-                <span class="hljs-keyword">if</span> (vm.qrCodeUuid == <span class="hljs-literal">null</span> || <span class="hljs-string">""</span>==vm.qrCodeUuid) &#123;
-                    <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
-                &#125; <span class="hljs-keyword">else</span> &#123;
-                    alert(<span class="hljs-string">"&lt;img src='http://qr.topscan.com/api.php?&amp;w=300&amp;text="</span> + vm.qrCodeUuid + <span class="hljs-string">"'/&gt;"</span>);
-                &#125;
-            &#125;);
-        &#125;,
-        &#125;</code></pre>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript">&lt;!--添加参数变量--&gt;<br><span class="hljs-attr">data</span>:&#123;<br>  <span class="hljs-attr">showList</span>: <span class="hljs-literal">true</span>,<br>  <span class="hljs-attr">show</span>: <span class="hljs-number">1</span>,<br>  <span class="hljs-attr">title</span>: <span class="hljs-literal">null</span>,<br>  <span class="hljs-attr">saasEnterprise</span>: &#123;&#125;,<br>  <span class="hljs-attr">qrCodeUuid</span>: <span class="hljs-string">&quot;&quot;</span><br>&#125;<br><br>&lt;!--添加方法--&gt;<br><span class="hljs-attr">methods</span>:&#123;<span class="hljs-attr">showTackingCode</span>: <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>            <span class="hljs-keyword">var</span> id = <span class="hljs-title function_">getSelectedRow</span>();<br>            $.<span class="hljs-title function_">get</span>(<span class="hljs-string">&quot;../saas-enterprise/show/&quot;</span> + id, <span class="hljs-keyword">function</span> (<span class="hljs-params">r</span>) &#123;<br>                vm.<span class="hljs-property">qrCodeUuid</span> = r.<span class="hljs-property">qrCodeUuid</span>;<br>                <span class="hljs-keyword">if</span> (vm.<span class="hljs-property">qrCodeUuid</span> == <span class="hljs-literal">null</span> || <span class="hljs-string">&quot;&quot;</span>==vm.<span class="hljs-property">qrCodeUuid</span>) &#123;<br>                    <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;<br>                &#125; <span class="hljs-keyword">else</span> &#123;<br>                    <span class="hljs-title function_">alert</span>(<span class="hljs-string">&quot;&lt;img src=&#x27;http://qr.topscan.com/api.php?&amp;w=300&amp;text=&quot;</span> + vm.<span class="hljs-property">qrCodeUuid</span> + <span class="hljs-string">&quot;&#x27;/&gt;&quot;</span>);<br>                &#125;<br>            &#125;);<br>        &#125;,<br>        &#125;<br></code></pre></td></tr></table></figure>
 </li>
 <li><p>在 saasenterprise.html 中添加单击事件</p>
-<pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-primary"</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"showTackingCode"</span>&gt;</span>查看朔源码<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></code></pre>
-</li>
+<figure class="highlight html"><table><tr><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn btn-primary&quot;</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">&quot;showTackingCode&quot;</span>&gt;</span>查看朔源码<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><br></code></pre></td></tr></table></figure></li>
 </ul>
 
   
@@ -514,7 +435,9 @@ methods:&#123;<span class="hljs-attr">showTackingCode</span>: <span class="hljs-
 
     <!-- search -->
     <link href="//code.bdstatic.com/npm/docsearch.js@1.5.0/dist/cdn/docsearch.min.css" rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/css/search.css">
+    
+<link rel="stylesheet" href="/css/search.css">
+
     <script src="//code.bdstatic.com/npm/docsearch.js@1.5.0/dist/cdn/docsearch.min.js"></script>
     <script>
     [

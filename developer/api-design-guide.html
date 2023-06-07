@@ -1,8 +1,7 @@
-
-
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
+    
     <title>API 设计 — 胜因学院</title>
     <meta charset="utf-8">
     <meta name="description" content="Vue.js - The Progressive JavaScript Framework">
@@ -32,7 +31,9 @@
     <link href="//code.bdstatic.com/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- main page styles -->
-    <link rel="stylesheet" href="/css/page.css">
+    
+<link rel="stylesheet" href="/css/page.css">
+
 
     <!-- this needs to be loaded before guide's inline scripts -->
     <script src="/js/vue.js"></script>
@@ -40,7 +41,7 @@
       Vue.config.productionTip = false
       window.PAGE_TYPE = "API 设计"
     </script>
-  </head>
+  <meta name="generator" content="Hexo 6.3.0"></head>
   <body class="docs">
     <div id="mobile-bar" >
       <a class="menu-button"></a>
@@ -133,14 +134,31 @@
   </ul>
 </li>
 
-<li>
-  <a href="https://www.intfocus.com" target="_blank" class="nav-link team">官网</a>
-</li>
 
+<li class="nav-dropdown-container learn">
+  <a class="nav-link">外链导航</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li>
+    <a href="https://www.intfocus.com" target="_blank" class="nav-link team">胜因官网</a>
+    </li>
+    <li>
+    <a href="javascript:void(0)" onclick="Resume.open()" class="nav-link team">我的简历</a>
+    </li>
+  </ul>
+</li>
+<script>
+window.Resume = {
+  open: function() {
+    window.location.href = (window.innerWidth > window.innerHeight ? '//jaden.tech/resume-landscape-672cfe02a8443258f4892d518a61a963.pdf' : '//jaden.tech/resume-vertical-e8520975ff8f7ece244b97a5f3ad9494.pdf');
+  }
+}
+</script>
   </ul>
 </div>
 
     
+    
+
     
       <div id="main" class="fix-sidebar">
         
@@ -229,10 +247,25 @@
   </ul>
 </li>
 
-<li>
-  <a href="https://www.intfocus.com" target="_blank" class="nav-link team">官网</a>
-</li>
 
+<li class="nav-dropdown-container learn">
+  <a class="nav-link">外链导航</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li>
+    <a href="https://www.intfocus.com" target="_blank" class="nav-link team">胜因官网</a>
+    </li>
+    <li>
+    <a href="javascript:void(0)" onclick="Resume.open()" class="nav-link team">我的简历</a>
+    </li>
+  </ul>
+</li>
+<script>
+window.Resume = {
+  open: function() {
+    window.location.href = (window.innerWidth > window.innerHeight ? '//jaden.tech/resume-landscape-672cfe02a8443258f4892d518a61a963.pdf' : '//jaden.tech/resume-vertical-e8520975ff8f7ece244b97a5f3ad9494.pdf');
+  }
+}
+</script>
     </ul>
     <div class="list">
       
@@ -303,7 +336,7 @@
   
 
   
-    <h2 id="RESTFul-理念"><a href="#RESTFul-理念" class="headerlink" title="RESTFul 理念"></a>RESTFul 理念</h2><p><img src="/images/RESTFul-API.gif" alt=""></p>
+    <h2 id="RESTFul-理念"><a href="#RESTFul-理念" class="headerlink" title="RESTFul 理念"></a>RESTFul 理念</h2><p><img src="/images/RESTFul-API.gif"></p>
 <blockquote>
 <p>我这篇文章的写作目的，就是想在符合架构原理的前提下，理解和评估以网络为基础的应用软件的架构设计，得到一个功能强、性能好、适宜通信的架构。REST指的是一组架构约束条件和原则。- 2000, Roy Fielding</p>
 </blockquote>
@@ -328,10 +361,14 @@
 </li>
 <li><p>使用连字符 <code>-</code> 而不是 <code>_</code> 来提高 URI 的可读性</p>
 </li>
-<li>URI 中使用小写字母</li>
-<li>URI 结尾不要使用文件扩展名</li>
-<li>不要在末尾使用 <code>/</code></li>
-<li>不要通过 URI 隐式传参(推荐显式传参 <code>?username=restful</code>)</li>
+<li><p>URI 中使用小写字母</p>
+</li>
+<li><p>URI 结尾不要使用文件扩展名</p>
+</li>
+<li><p>不要在末尾使用 <code>/</code></p>
+</li>
+<li><p>不要通过 URI 隐式传参(推荐显式传参 <code>?username=restful</code>)</p>
+</li>
 <li><p>使用 Http Status 定义 API 执行结果</p>
 <ul>
 <li>1xx：信息, 通信传输协议级信息。</li>
@@ -344,17 +381,13 @@
 <li><p>API 版本定义</p>
 <ul>
 <li><p>URI 版本控制（推荐）</p>
-<pre><code class="hljs undefined">http://api.example.com/v1
-http://apiv1.example.com</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">http://api.example.com/v1<br>http://apiv1.example.com<br></code></pre></td></tr></table></figure>
 </li>
 <li><p>自定义请求标头进行版本控制</p>
-<pre><code class="hljs undefined">Accept-version：v1
-Accept-version：v2</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">Accept-version：v1<br>Accept-version：v2<br></code></pre></td></tr></table></figure>
 </li>
 <li><p>Accept header 进行版本控制</p>
-<pre><code class="hljs undefined">Accept:application / vnd.example.v1 + json
-Accept:application / vnd.example + json; version = 1.0</code></pre>
-</li>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">Accept:application / vnd.example.v1 + json<br>Accept:application / vnd.example + json; version = 1.0<br></code></pre></td></tr></table></figure></li>
 </ul>
 </li>
 </ul>
@@ -394,7 +427,9 @@ Accept:application / vnd.example + json; version = 1.0</code></pre>
 
     <!-- search -->
     <link href="//code.bdstatic.com/npm/docsearch.js@1.5.0/dist/cdn/docsearch.min.css" rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/css/search.css">
+    
+<link rel="stylesheet" href="/css/search.css">
+
     <script src="//code.bdstatic.com/npm/docsearch.js@1.5.0/dist/cdn/docsearch.min.js"></script>
     <script>
     [

@@ -1,8 +1,7 @@
-
-
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
+    
     <title>胜因学院(小程序) — 胜因学院</title>
     <meta charset="utf-8">
     <meta name="description" content="Vue.js - The Progressive JavaScript Framework">
@@ -32,7 +31,9 @@
     <link href="//code.bdstatic.com/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- main page styles -->
-    <link rel="stylesheet" href="/css/page.css">
+    
+<link rel="stylesheet" href="/css/page.css">
+
 
     <!-- this needs to be loaded before guide's inline scripts -->
     <script src="/js/vue.js"></script>
@@ -40,7 +41,7 @@
       Vue.config.productionTip = false
       window.PAGE_TYPE = "胜因学院(小程序)"
     </script>
-  </head>
+  <meta name="generator" content="Hexo 6.3.0"></head>
   <body class="docs">
     <div id="mobile-bar" >
       <a class="menu-button"></a>
@@ -133,14 +134,31 @@
   </ul>
 </li>
 
-<li>
-  <a href="https://www.intfocus.com" target="_blank" class="nav-link team">官网</a>
-</li>
 
+<li class="nav-dropdown-container learn">
+  <a class="nav-link">外链导航</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li>
+    <a href="https://www.intfocus.com" target="_blank" class="nav-link team">胜因官网</a>
+    </li>
+    <li>
+    <a href="javascript:void(0)" onclick="Resume.open()" class="nav-link team">我的简历</a>
+    </li>
+  </ul>
+</li>
+<script>
+window.Resume = {
+  open: function() {
+    window.location.href = (window.innerWidth > window.innerHeight ? '//jaden.tech/resume-landscape-672cfe02a8443258f4892d518a61a963.pdf' : '//jaden.tech/resume-vertical-e8520975ff8f7ece244b97a5f3ad9494.pdf');
+  }
+}
+</script>
   </ul>
 </div>
 
     
+    
+
     
       <div id="main" class="fix-sidebar">
         
@@ -229,10 +247,25 @@
   </ul>
 </li>
 
-<li>
-  <a href="https://www.intfocus.com" target="_blank" class="nav-link team">官网</a>
-</li>
 
+<li class="nav-dropdown-container learn">
+  <a class="nav-link">外链导航</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li>
+    <a href="https://www.intfocus.com" target="_blank" class="nav-link team">胜因官网</a>
+    </li>
+    <li>
+    <a href="javascript:void(0)" onclick="Resume.open()" class="nav-link team">我的简历</a>
+    </li>
+  </ul>
+</li>
+<script>
+window.Resume = {
+  open: function() {
+    window.location.href = (window.innerWidth > window.innerHeight ? '//jaden.tech/resume-landscape-672cfe02a8443258f4892d518a61a963.pdf' : '//jaden.tech/resume-vertical-e8520975ff8f7ece244b97a5f3ad9494.pdf');
+  }
+}
+</script>
     </ul>
     <div class="list">
       
@@ -303,36 +336,36 @@
   
 
   
-    <h2 id="业务流程图"><a href="#业务流程图" class="headerlink" title="业务流程图"></a>业务流程图</h2><p><img src="/images/胜因学院-业务流程图.png" alt="胜因学院-业务流程图"></p>
-<p><em>注: attachments/xmind/胜因学院-业务流程图.xmind</em></p>
-<h2 id="业务效果图"><a href="#业务效果图" class="headerlink" title="业务效果图"></a>业务效果图</h2><p><img src="/images/胜因学院-小程序业务效果图.png" alt="胜因学院小程序-业务效果图"></p>
-<p><em>注: attachments/axure/胜因学院业务效果图.rp</em></p>
-<h2 id="业务模块框架"><a href="#业务模块框架" class="headerlink" title="业务模块框架"></a>业务模块框架</h2><p><img src="/images/胜因学院-小程序模块框架图.png" alt="胜因学院小程序-业务流程"></p>
-<p><em>注: attachments/xmind/胜因学院-小程序功能框架图.xmind</em></p>
+    <h2 id="业务流程图"><a href="#业务流程图" class="headerlink" title="业务流程图"></a>业务流程图</h2><p><img src="/images/%E8%83%9C%E5%9B%A0%E5%AD%A6%E9%99%A2-%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E5%9B%BE.png" alt="胜因学院-业务流程图"></p>
+<p><em>注: attachments&#x2F;xmind&#x2F;胜因学院-业务流程图.xmind</em></p>
+<h2 id="业务效果图"><a href="#业务效果图" class="headerlink" title="业务效果图"></a>业务效果图</h2><p><img src="/images/%E8%83%9C%E5%9B%A0%E5%AD%A6%E9%99%A2-%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%B8%9A%E5%8A%A1%E6%95%88%E6%9E%9C%E5%9B%BE.png" alt="胜因学院小程序-业务效果图"></p>
+<p><em>注: attachments&#x2F;axure&#x2F;胜因学院业务效果图.rp</em></p>
+<h2 id="业务模块框架"><a href="#业务模块框架" class="headerlink" title="业务模块框架"></a>业务模块框架</h2><p><img src="/images/%E8%83%9C%E5%9B%A0%E5%AD%A6%E9%99%A2-%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%A8%A1%E5%9D%97%E6%A1%86%E6%9E%B6%E5%9B%BE.png" alt="胜因学院小程序-业务流程"></p>
+<p><em>注: attachments&#x2F;xmind&#x2F;胜因学院-小程序功能框架图.xmind</em></p>
 <p>接口文档: <a href="/developer/api-guide/syp-wxmp.html">登录模块</a></p>
-<h2 id="积分流程图"><a href="#积分流程图" class="headerlink" title="积分流程图"></a>积分流程图</h2><p><img src="/images/小程序积分说明.png" alt="小程序积分说明"></p>
-<p><em>注: attachments/xmind/胜因学院-小程序用户与微信账户的关联.xmind</em></p>
-<p><a href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/template-message.html" target="_blank" rel="noopener">模板消息-微信小程序官方</a>:</p>
+<h2 id="积分流程图"><a href="#积分流程图" class="headerlink" title="积分流程图"></a>积分流程图</h2><p><img src="/images/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%A7%AF%E5%88%86%E8%AF%B4%E6%98%8E.png" alt="小程序积分说明"></p>
+<p><em>注: attachments&#x2F;xmind&#x2F;胜因学院-小程序用户与微信账户的关联.xmind</em></p>
+<p><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/template-message.html">模板消息-微信小程序官方</a>:</p>
 <blockquote>
 <p>步骤一：获取模板 ID<br>步骤二：页面的 form 组件，属性 report-submit 为 true 时，可以声明为需要发送模板消息，此时点击按钮提交表单可以获取 formId，用于发送模板消息。或者当用户完成 支付行为，可以获取 prepay_id 用于发送模板消息。<br>步骤三：调用接口下发模板消息</p>
 </blockquote>
 <h2 id="积分5W1H"><a href="#积分5W1H" class="headerlink" title="积分5W1H"></a>积分5W1H</h2><h3 id="WHERE"><a href="#WHERE" class="headerlink" title="WHERE"></a>WHERE</h3><ul>
 <li>胜因学院-我的-积分</li>
 </ul>
-<p><img src="/images/胜因学院-我的-积分.png" alt="胜因学院-我的-积分"></p>
+<p><img src="/images/%E8%83%9C%E5%9B%A0%E5%AD%A6%E9%99%A2-%E6%88%91%E7%9A%84-%E7%A7%AF%E5%88%86.png" alt="胜因学院-我的-积分"></p>
 <h3 id="WHAT"><a href="#WHAT" class="headerlink" title="WHAT"></a>WHAT</h3><ul>
 <li>这里的积分，其实就是formID,每一个积分代表一个formID</li>
 <li>formID用于给用户推送模板消息，每一个formID可推送一条模板消息</li>
 <li>模板消息就是小程序的服务通知，只有在业务有需要的时候才会给用户推送</li>
 </ul>
-<p><img src="/images/推送消息.png" alt="推送消息"></p>
+<p><img src="/images/%E6%8E%A8%E9%80%81%E6%B6%88%E6%81%AF.png" alt="推送消息"></p>
 <h3 id="WHEN"><a href="#WHEN" class="headerlink" title="WHEN"></a>WHEN</h3><ul>
 <li>每一位微信用户有其唯一识别的openID，每一个openID可对应多个formID</li>
 <li>根据业务需要，我们会在某些特定的表单处埋点，当用户提交这些表单，即可获取该用户的formID，一次提交行为对应一个formID</li>
 <li>用户通过提交表单向服务器提交数据，这是真正意义上的表单；但是在胜因学院小程序中，用户点击这些button（如下图所示），向服务器提交的数据为空值，也可算作一次提交表单行为，也可获取一个formID</li>
 <li>只有在业务有需要的时候才会消耗用户的formID推送模板消息，所以formID可能会有富余，而且formID的有效期是7天，只可使用7天内的formID，多余或过期的 formID 作废</li>
 </ul>
-<p><img src="/images/提交表单.jpeg" alt="提交表单"></p>
+<p><img src="/images/%E6%8F%90%E4%BA%A4%E8%A1%A8%E5%8D%95.jpeg" alt="提交表单"></p>
 <h3 id="WHY"><a href="#WHY" class="headerlink" title="WHY"></a>WHY</h3><ul>
 <li>这里的积分数量主要是为了提示客户当前能推送多少条模板消息，避免相互追责</li>
 </ul>
@@ -375,7 +408,9 @@
 
     <!-- search -->
     <link href="//code.bdstatic.com/npm/docsearch.js@1.5.0/dist/cdn/docsearch.min.css" rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/css/search.css">
+    
+<link rel="stylesheet" href="/css/search.css">
+
     <script src="//code.bdstatic.com/npm/docsearch.js@1.5.0/dist/cdn/docsearch.min.js"></script>
     <script>
     [

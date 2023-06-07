@@ -1,8 +1,7 @@
-
-
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
+    
     <title>Gitlab提交规范 — 胜因学院</title>
     <meta charset="utf-8">
     <meta name="description" content="Vue.js - The Progressive JavaScript Framework">
@@ -32,7 +31,9 @@
     <link href="//code.bdstatic.com/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- main page styles -->
-    <link rel="stylesheet" href="/css/page.css">
+    
+<link rel="stylesheet" href="/css/page.css">
+
 
     <!-- this needs to be loaded before guide's inline scripts -->
     <script src="/js/vue.js"></script>
@@ -40,7 +41,7 @@
       Vue.config.productionTip = false
       window.PAGE_TYPE = "Gitlab提交规范"
     </script>
-  </head>
+  <meta name="generator" content="Hexo 6.3.0"></head>
   <body class="docs">
     <div id="mobile-bar" >
       <a class="menu-button"></a>
@@ -133,14 +134,31 @@
   </ul>
 </li>
 
-<li>
-  <a href="https://www.intfocus.com" target="_blank" class="nav-link team">官网</a>
-</li>
 
+<li class="nav-dropdown-container learn">
+  <a class="nav-link current">外链导航</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li>
+    <a href="https://www.intfocus.com" target="_blank" class="nav-link team">胜因官网</a>
+    </li>
+    <li>
+    <a href="javascript:void(0)" onclick="Resume.open()" class="nav-link team">我的简历</a>
+    </li>
+  </ul>
+</li>
+<script>
+window.Resume = {
+  open: function() {
+    window.location.href = (window.innerWidth > window.innerHeight ? '//jaden.tech/resume-landscape-672cfe02a8443258f4892d518a61a963.pdf' : '//jaden.tech/resume-vertical-e8520975ff8f7ece244b97a5f3ad9494.pdf');
+  }
+}
+</script>
   </ul>
 </div>
 
     
+    
+
     
       <div id="main" class="fix-sidebar">
         
@@ -229,10 +247,25 @@
   </ul>
 </li>
 
-<li>
-  <a href="https://www.intfocus.com" target="_blank" class="nav-link team">官网</a>
-</li>
 
+<li class="nav-dropdown-container learn">
+  <a class="nav-link current">外链导航</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li>
+    <a href="https://www.intfocus.com" target="_blank" class="nav-link team">胜因官网</a>
+    </li>
+    <li>
+    <a href="javascript:void(0)" onclick="Resume.open()" class="nav-link team">我的简历</a>
+    </li>
+  </ul>
+</li>
+<script>
+window.Resume = {
+  open: function() {
+    window.location.href = (window.innerWidth > window.innerHeight ? '//jaden.tech/resume-landscape-672cfe02a8443258f4892d518a61a963.pdf' : '//jaden.tech/resume-vertical-e8520975ff8f7ece244b97a5f3ad9494.pdf');
+  }
+}
+</script>
     </ul>
     <div class="list">
       
@@ -303,11 +336,11 @@
   
 
   
-    <h2 id="思维导图"><a href="#思维导图" class="headerlink" title="思维导图"></a>思维导图</h2><p><img src="/images/Gitlab协作规范.png" alt="Gitlab协作规范"></p>
+    <h2 id="思维导图"><a href="#思维导图" class="headerlink" title="思维导图"></a>思维导图</h2><p><img src="/images/Gitlab%E5%8D%8F%E4%BD%9C%E8%A7%84%E8%8C%83.png" alt="Gitlab协作规范"></p>
 <h2 id="提交格式"><a href="#提交格式" class="headerlink" title="提交格式"></a>提交格式</h2><blockquote>
 <p>type@version(scope): subject</p>
 </blockquote>
-<p>示例：<a href="mailto:`style@0.1.1" target="_blank" rel="noopener">`style@0.1.1</a>/1(commit): 声明团队提交规范`<br>字段解释：</p>
+<p>示例：<code>style@0.1.1/1(commit): 声明团队提交规范</code><br>字段解释：</p>
 <ul>
 <li><p>type: 必写，可用下述标签: </p>
 <ul>
@@ -318,10 +351,10 @@
 <li>refactor：重构（即不是新增功能，也不是修改 bug 的代码变动） </li>
 <li>perf：性能改善（A code change that improves performance）</li>
 <li>test：增加测试 </li>
-<li>chore：构建过程或辅助工具的变动 </li>
+<li>chore：构建过程或辅助工具的变动</li>
 </ul>
 </li>
-<li><p>version: 版本号，例 0.1.2/3</p>
+<li><p>version: 版本号，例 0.1.2&#x2F;3</p>
 <ul>
 <li>0: 产品版本，默认 0</li>
 <li>1: 阶段版本，默认 1</li>
@@ -331,7 +364,8 @@
 </li>
 <li><p>scope: 模块，本次提交代码关联的模块名称</p>
 </li>
-<li>subject: 日志，本次提交的业务说明，多条日志时使用分号 <code>;</code> 分隔</li>
+<li><p>subject: 日志，本次提交的业务说明，多条日志时使用分号 <code>;</code> 分隔</p>
+</li>
 </ul>
 <h2 id="项目应用"><a href="#项目应用" class="headerlink" title="项目应用"></a>项目应用</h2><p>项目根目录下会版本记录文件：<code>version.js</code> 或 <code>version.json</code>。</p>
 <ul>
@@ -341,20 +375,8 @@
 <h2 id="gap-命令"><a href="#gap-命令" class="headerlink" title="gap 命令"></a><code>gap</code> 命令</h2><ol>
 <li>所有项目源码根目录下都有版本配置档 <code>version.json</code></li>
 </ol>
-<pre><code class="hljs undefined">&#123;
-    &quot;name&quot;: &quot;胜因学院在线文档&quot;,
-    &quot;major:description&quot;: &quot;产品版本&quot;,
-    &quot;minor:description&quot;: &quot;业务版本&quot;,
-    &quot;tiny:description&quot;: &quot;线上版本，每次发布上线时 +1&quot;,
-    &quot;commit:description&quot;: &quot;开发版本，每次 commit 时 +1&quot;,
-    &quot;major&quot;: 0,
-    &quot;minor&quot;: 1,
-    &quot;tiny&quot;: 1,
-    &quot;commit&quot;: 3,
-    &quot;pro_mini_version&quot;: &quot;0.1.1&quot;,
-    &quot;pro_version&quot;: &quot;0.1.1/3&quot;,
-    &quot;dev_version&quot;: &quot;0.1.3&quot;
-&#125;</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">&#123;<br>    &quot;name&quot;: &quot;胜因学院在线文档&quot;,<br>    &quot;major:description&quot;: &quot;产品版本&quot;,<br>    &quot;minor:description&quot;: &quot;业务版本&quot;,<br>    &quot;tiny:description&quot;: &quot;线上版本，每次发布上线时 +1&quot;,<br>    &quot;commit:description&quot;: &quot;开发版本，每次 commit 时 +1&quot;,<br>    &quot;major&quot;: 0,<br>    &quot;minor&quot;: 1,<br>    &quot;tiny&quot;: 1,<br>    &quot;commit&quot;: 3,<br>    &quot;pro_mini_version&quot;: &quot;0.1.1&quot;,<br>    &quot;pro_version&quot;: &quot;0.1.1/3&quot;,<br>    &quot;dev_version&quot;: &quot;0.1.3&quot;<br>&#125;<br></code></pre></td></tr></table></figure>
+
 <ol start="2">
 <li>使用 <code>gap</code> 操作的 commit 行为都会修改 <code>version.json</code> 中 <code>commit</code> +1</li>
 <li>所有项目都支持 <code>gap</code> 命令 <code>./tool.sh gap &lt;type&gt; &lt;module&gt; &lt;message&gt;</code></li>
@@ -362,7 +384,7 @@
 </ol>
 <h2 id="Gitlab-请求合并"><a href="#Gitlab-请求合并" class="headerlink" title="Gitlab 请求合并"></a>Gitlab 请求合并</h2><ol>
 <li>本地代码使用 <code>gap</code> 命令提交</li>
-<li>打开并登录 <a href="https://gitlab.idata.mobi" target="_blank" rel="noopener">gitlab.idata.mobi</a></li>
+<li>打开并登录 <a target="_blank" rel="noopener" href="https://gitlab.idata.mobi/">gitlab.idata.mobi</a></li>
 <li>点击页面 [Merge Request]，点击按钮 [New Merge Request]</li>
 <li>选择自己的分支及要提交的目标分支<ul>
 <li>要提交的源码分支(Source Branch)，一般分支名称是自己名称</li>
@@ -415,7 +437,9 @@
 
     <!-- search -->
     <link href="//code.bdstatic.com/npm/docsearch.js@1.5.0/dist/cdn/docsearch.min.css" rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/css/search.css">
+    
+<link rel="stylesheet" href="/css/search.css">
+
     <script src="//code.bdstatic.com/npm/docsearch.js@1.5.0/dist/cdn/docsearch.min.js"></script>
     <script>
     [

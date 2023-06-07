@@ -1,8 +1,7 @@
-
-
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
+    
     <title>Javascript 编程规范 — 胜因学院</title>
     <meta charset="utf-8">
     <meta name="description" content="Vue.js - The Progressive JavaScript Framework">
@@ -32,7 +31,9 @@
     <link href="//code.bdstatic.com/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- main page styles -->
-    <link rel="stylesheet" href="/css/page.css">
+    
+<link rel="stylesheet" href="/css/page.css">
+
 
     <!-- this needs to be loaded before guide's inline scripts -->
     <script src="/js/vue.js"></script>
@@ -40,7 +41,7 @@
       Vue.config.productionTip = false
       window.PAGE_TYPE = "Javascript 编程规范"
     </script>
-  </head>
+  <meta name="generator" content="Hexo 6.3.0"></head>
   <body class="docs">
     <div id="mobile-bar" >
       <a class="menu-button"></a>
@@ -133,14 +134,31 @@
   </ul>
 </li>
 
-<li>
-  <a href="https://www.intfocus.com" target="_blank" class="nav-link team">官网</a>
-</li>
 
+<li class="nav-dropdown-container learn">
+  <a class="nav-link current">外链导航</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li>
+    <a href="https://www.intfocus.com" target="_blank" class="nav-link team">胜因官网</a>
+    </li>
+    <li>
+    <a href="javascript:void(0)" onclick="Resume.open()" class="nav-link team">我的简历</a>
+    </li>
+  </ul>
+</li>
+<script>
+window.Resume = {
+  open: function() {
+    window.location.href = (window.innerWidth > window.innerHeight ? '//jaden.tech/resume-landscape-672cfe02a8443258f4892d518a61a963.pdf' : '//jaden.tech/resume-vertical-e8520975ff8f7ece244b97a5f3ad9494.pdf');
+  }
+}
+</script>
   </ul>
 </div>
 
     
+    
+
     
       <div id="main" class="fix-sidebar">
         
@@ -229,10 +247,25 @@
   </ul>
 </li>
 
-<li>
-  <a href="https://www.intfocus.com" target="_blank" class="nav-link team">官网</a>
-</li>
 
+<li class="nav-dropdown-container learn">
+  <a class="nav-link current">外链导航</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li>
+    <a href="https://www.intfocus.com" target="_blank" class="nav-link team">胜因官网</a>
+    </li>
+    <li>
+    <a href="javascript:void(0)" onclick="Resume.open()" class="nav-link team">我的简历</a>
+    </li>
+  </ul>
+</li>
+<script>
+window.Resume = {
+  open: function() {
+    window.location.href = (window.innerWidth > window.innerHeight ? '//jaden.tech/resume-landscape-672cfe02a8443258f4892d518a61a963.pdf' : '//jaden.tech/resume-vertical-e8520975ff8f7ece244b97a5f3ad9494.pdf');
+  }
+}
+</script>
     </ul>
     <div class="list">
       
@@ -310,25 +343,13 @@
 <li>常量全大写，用下划线连接构造函数，大写第一个字母</li>
 <li>JQuery 对象必须以 $ 开头命名</li>
 </ul>
-<pre><code class="hljs undefined">let thisIsMyName;
-let goodID;
-let reportURL;
-let AndroidVersion;
-let iOSVersion;
-let MAX_COUNT = 10;
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">let thisIsMyName;<br>let goodID;<br>let reportURL;<br>let AndroidVersion;<br>let iOSVersion;<br>let MAX_COUNT = 10;<br><br>function Person(name) &#123;<br>    this.name = name;<br>&#125;<br>// 不推荐<br>let body = $(&#x27;body&#x27;);<br>// 推荐<br>let $body = $(&#x27;body&#x27;);<br></code></pre></td></tr></table></figure>
 
-function Person(name) &#123;
-    this.name = name;
-&#125;
-// 不推荐
-let body = $(&apos;body&apos;);
-// 推荐
-let $body = $(&apos;body&apos;);</code></pre>
 <h2 id="函数命名"><a href="#函数命名" class="headerlink" title="函数命名"></a>函数命名</h2><blockquote>
 <p>小驼峰命名法，可使用常见动词约定：</p>
 </blockquote>
 <ul>
-<li><code>{ctl}{Event}</code>, 控件的操作事件，示例: <code>radioChange</code>, <code>btnSaveClick</code></li>
+<li><code>&#123;ctl&#125;&#123;Event&#125;</code>, 控件的操作事件，示例: <code>radioChange</code>, <code>btnSaveClick</code></li>
 <li>canXXX 判断是否可执行某个动作，函数返回布尔值。true：可执行；false：不可执行</li>
 <li>hasXXX 判断是否含有某个值， 函数返回布尔值。true：含有此值；false：不含有此值</li>
 <li>isXXX 判断是否为某个值，函数返回布尔值。true：为某个值；false：不为某个值</li>
@@ -341,1397 +362,565 @@ let $body = $(&apos;body&apos;);</code></pre>
 </ul>
 </li>
 </ul>
-<pre><code class="hljs undefined">// 是否有权限
-function hasPermission() &#123;
- return true;
-&#125;
-// 获取权限列表
-function getPermissinList() &#123;
- return this.permissinList;
-&#125;</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 是否有权限<br>function hasPermission() &#123;<br> return true;<br>&#125;<br>// 获取权限列表<br>function getPermissinList() &#123;<br> return this.permissinList;<br>&#125;<br></code></pre></td></tr></table></figure>
+
 <h2 id="引用-References"><a href="#引用-References" class="headerlink" title="引用 References"></a>引用 References</h2><ol>
-<li><p>对所有的引用使用 const；不要使用 var。</p>
+<li>对所有的引用使用 const；不要使用 var。</li>
+</ol>
 <blockquote>
 <p>eslint: prefer-const, no-const-assign</p>
 </blockquote>
-<p>这可以确保你无法对引用重新分配，重新分配可能会导致 bug 和难以理解的代码。</p>
-<pre><code class="hljs undefined">// 批评
-var a = 1;
-var b = 2;
-// 推荐
-const a = 1;
-const b = 2;</code></pre>
-</li>
-<li><p>如果一定需要可变动的引用，使用 let 代替 var 。</p>
+<p>  这可以确保你无法对引用重新分配，重新分配可能会导致 bug 和难以理解的代码。</p>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 批评<br>var a = 1;<br>var b = 2;<br>// 推荐<br>const a = 1;<br>const b = 2;<br></code></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>如果一定需要可变动的引用，使用 let 代替 var 。</li>
+</ol>
 <blockquote>
 <p>eslint: no-var jscs: disallowVar</p>
 </blockquote>
-<pre><code class="hljs undefined">// 不推荐
-var count = 1;
-if (true) &#123;
-    count += 1;
-&#125;
-// 推荐
-let count = 1;
-if (true) &#123;
-    count += 1;
-&#125;</code></pre>
-</li>
-</ol>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>var count = 1;<br>if (true) &#123;<br>    count += 1;<br>&#125;<br>// 推荐<br>let count = 1;<br>if (true) &#123;<br>    count += 1;<br>&#125;<br></code></pre></td></tr></table></figure>
+
 <h2 id="对象-Objects"><a href="#对象-Objects" class="headerlink" title="对象 Objects"></a>对象 Objects</h2><ol>
-<li><p>使用字面量语法创建对象。</p>
+<li>使用字面量语法创建对象。</li>
+</ol>
 <blockquote>
 <p>eslint: no-new-object</p>
 </blockquote>
-<pre><code class="hljs undefined">// 不推荐
-const item = new Object();
-// 推荐
-const item = &#123;&#125;;</code></pre>
-</li>
-<li><p>创建带有动态属性名称的对象时使用计算的属性名称。</p>
-<p>它们允许你在一个地方定义一个对象的所有属性。</p>
-<pre><code class="hljs undefined">function getKey(k) &#123;
-    return `a-key-named-k`;
-&#125;
-// 不推荐
-const obj = &#123;
-    id: 5,
-    name: &apos;San Francisco&apos;,
-&#125;;
-obj[getKey(&apos;enabled&apos;)] = true;
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>const item = new Object();<br>// 推荐<br>const item = &#123;&#125;;<br></code></pre></td></tr></table></figure>
 
-// 推荐
-const obj = &#123;
-    id: 5,
-    name: &apos;San Francisco&apos;,
-    [getKey(&apos;enabled&apos;)]: true,
-&#125;;</code></pre>
-</li>
-<li><p>使用对象方法速记语法。</p>
+<ol start="2">
+<li>创建带有动态属性名称的对象时使用计算的属性名称。</li>
+</ol>
+<p>  它们允许你在一个地方定义一个对象的所有属性。</p>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">function getKey(k) &#123;<br>    return `a-key-named-k`;<br>&#125;<br>// 不推荐<br>const obj = &#123;<br>    id: 5,<br>    name: &#x27;San Francisco&#x27;,<br>&#125;;<br>obj[getKey(&#x27;enabled&#x27;)] = true;<br><br>// 推荐<br>const obj = &#123;<br>    id: 5,<br>    name: &#x27;San Francisco&#x27;,<br>    [getKey(&#x27;enabled&#x27;)]: true,<br>&#125;;<br></code></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>使用对象方法速记语法。</li>
+</ol>
 <blockquote>
 <p>eslint: object-shorthand jscs: requireEnhancedObjectLiterals</p>
 </blockquote>
-<pre><code class="hljs undefined">// 不推荐
-const atom = &#123;
-  value: 1,
-  addValue: function (value) &#123;
-      return atom.value + value;
-  &#125;
-&#125;;
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>const atom = &#123;<br>  value: 1,<br>  addValue: function (value) &#123;<br>      return atom.value + value;<br>  &#125;<br>&#125;;<br><br>// 推荐<br>const atom = &#123;<br>  value: 1,<br>  addValue(value) &#123;<br>      return atom.value + value;<br>  &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
 
-// 推荐
-const atom = &#123;
-  value: 1,
-  addValue(value) &#123;
-      return atom.value + value;
-  &#125;
-&#125;;</code></pre>
-</li>
-<li><p>使用对象属性速记语法。</p>
+<ol start="4">
+<li>使用对象属性速记语法。</li>
+</ol>
 <blockquote>
 <p>eslint: object-shorthand jscs: requireEnhancedObjectLiterals</p>
 </blockquote>
-<pre><code class="hljs undefined">const lukeSkywalker = &apos;Luke Skywalker&apos;;
-// 不推荐
-const obj = &#123;
-    lukeSkywalker: lukeSkywalker,
-&#125;;
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">const lukeSkywalker = &#x27;Luke Skywalker&#x27;;<br>// 不推荐<br>const obj = &#123;<br>    lukeSkywalker: lukeSkywalker,<br>&#125;;<br><br>// 推荐<br>const obj = &#123;<br>    lukeSkywalker,<br>&#125;;<br></code></pre></td></tr></table></figure>
 
-// 推荐
-const obj = &#123;
-    lukeSkywalker,
-&#125;;</code></pre>
-</li>
-<li><p>将速记属性分组写在对象声明的开始处</p>
-<p>更容易看出哪些属性在使用速记语法</p>
-<pre><code class="hljs undefined">const anakinSkywalker = &apos;Anakin Skywalker&apos;;
-const lukeSkywalker = &apos;Luke Skywalker&apos;;
-// 不推荐
-const obj = &#123;
-    episodeOne: 1,
-    twoJediWalkIntoACantina: 2,
-    lukeSkywalker,
-    episodeThree: 3,
-    mayTheFourth: 4,
-    anakinSkywalker,
-&#125;;
-// 推荐
-const obj = &#123;
-    lukeSkywalker,
-    anakinSkywalker,
-    episodeOne: 1,
-    twoJediWalkIntoACantina: 2,
-    episodeThree: 3,
-    mayTheFourth: 4,
-&#125;;</code></pre>
-</li>
-<li><p>仅无效标识符的属性使用引号</p>
+<ol start="5">
+<li>将速记属性分组写在对象声明的开始处</li>
+</ol>
+<p>  更容易看出哪些属性在使用速记语法</p>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">const anakinSkywalker = &#x27;Anakin Skywalker&#x27;;<br>const lukeSkywalker = &#x27;Luke Skywalker&#x27;;<br>// 不推荐<br>const obj = &#123;<br>    episodeOne: 1,<br>    twoJediWalkIntoACantina: 2,<br>    lukeSkywalker,<br>    episodeThree: 3,<br>    mayTheFourth: 4,<br>    anakinSkywalker,<br>&#125;;<br>// 推荐<br>const obj = &#123;<br>    lukeSkywalker,<br>    anakinSkywalker,<br>    episodeOne: 1,<br>    twoJediWalkIntoACantina: 2,<br>    episodeThree: 3,<br>    mayTheFourth: 4,<br>&#125;;<br></code></pre></td></tr></table></figure>
+
+<ol start="6">
+<li>仅无效标识符的属性使用引号</li>
+</ol>
 <blockquote>
 <p>eslint: quote-props jscs: disallowQuotedKeysInObjects</p>
 </blockquote>
-<p>比较容易阅读。它改进了语法高亮显示，并且更容易被许多JS引擎优化。</p>
-<pre><code class="hljs undefined">// 不推荐
-const bad = &#123;
-    &apos;foo&apos;: 3,
-    &apos;bar&apos;: 4,
-    &apos;data-blah&apos;: 5
-&#125;;
+<p>  比较容易阅读。它改进了语法高亮显示，并且更容易被许多JS引擎优化。</p>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>const bad = &#123;<br>    &#x27;foo&#x27;: 3,<br>    &#x27;bar&#x27;: 4,<br>    &#x27;data-blah&#x27;: 5<br>&#125;;<br><br>// 推荐<br>const good = &#123;<br>    foo: 3,<br>    bar: 4,<br>    &#x27;data-blah&#x27;: 5<br>&#125;;<br></code></pre></td></tr></table></figure>
 
-// 推荐
-const good = &#123;
-    foo: 3,
-    bar: 4,
-    &apos;data-blah&apos;: 5
-&#125;;</code></pre>
-</li>
-<li><p>用对象展开操作符浅复制对象，优先于Object.assign。</p>
-<p>使用对象剩余操作符来获得一个省略某些属性的新对象。</p>
-<pre><code class="hljs undefined">// 批评
-const original = &#123; a: 1, b: 2 &#125;;
-const copy = Object.assign(original, &#123; c: 3 &#125;); //  `original` 是可变的
-delete copy.a; // so does this
-
-// 不推荐
-const original = &#123; a: 1, b: 2 &#125;;
-const copy = Object.assign(&#123;&#125;, original, &#123; c: 3 &#125;); // copy =&gt; &#123; a: 1, b: 2, c: 3 &#125;
-
-// 推荐
-const original = &#123; a: 1, b: 2 &#125;;
-const copy = &#123; ...original, c: 3 &#125;; // copy =&gt; &#123; a: 1, b: 2, c: 3 &#125;
-const &#123; a, ...noA &#125; = copy; // noA =&gt; &#123; b: 2, c: 3 &#125;</code></pre>
-</li>
+<ol start="7">
+<li>用对象展开操作符浅复制对象，优先于Object.assign。</li>
 </ol>
+<p>  使用对象剩余操作符来获得一个省略某些属性的新对象。</p>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 批评<br>const original = &#123; a: 1, b: 2 &#125;;<br>const copy = Object.assign(original, &#123; c: 3 &#125;); //  `original` 是可变的<br>delete copy.a; // so does this<br><br>// 不推荐<br>const original = &#123; a: 1, b: 2 &#125;;<br>const copy = Object.assign(&#123;&#125;, original, &#123; c: 3 &#125;); // copy =&gt; &#123; a: 1, b: 2, c: 3 &#125;<br><br>// 推荐<br>const original = &#123; a: 1, b: 2 &#125;;<br>const copy = &#123; ...original, c: 3 &#125;; // copy =&gt; &#123; a: 1, b: 2, c: 3 &#125;<br>const &#123; a, ...noA &#125; = copy; // noA =&gt; &#123; b: 2, c: 3 &#125;<br></code></pre></td></tr></table></figure>
+
 <h2 id="数组-Arrays"><a href="#数组-Arrays" class="headerlink" title="数组 Arrays"></a>数组 Arrays</h2><ol>
-<li><p>使用字面量创建数组。</p>
+<li>使用字面量创建数组。</li>
+</ol>
 <blockquote>
 <p>eslint: no-array-constructor</p>
 </blockquote>
-<pre><code class="hljs undefined">// 不推荐
-const items = new Array();
-// 推荐
-const items = [];</code></pre>
-</li>
-<li><p>使用数组展开操作符<code>...</code>复制数组。</p>
-<pre><code class="hljs undefined">// 不推荐
-const len = items.length;
-const itemsCopy = [];
-let i;
-for (i = 0; i &lt; len; i += 1) &#123;
-    itemsCopy[i] = items[i];
-&#125;
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>const items = new Array();<br>// 推荐<br>const items = [];<br></code></pre></td></tr></table></figure>
 
-// 推荐
-const itemsCopy = [...items];</code></pre>
-</li>
-<li><p>使用展开操作符<code>...</code>代替 Array.from，将类数组(array-like) 对象转换成数组。</p>
-<pre><code class="hljs undefined">const foo = document.querySelectorAll(&apos;.foo&apos;);
-// 推荐
-const nodes = Array.from(foo);
-// 高效
-const nodes = [...foo];</code></pre>
-</li>
-<li><p>使用 Array.from 代替展开操作符<code>...</code>来映射迭代，它避免了创建媒介数组。</p>
-<pre><code class="hljs undefined">// 不推荐
-const baz = [...foo].map(bar);
-// 推荐
-const baz = Array.from(foo, bar);</code></pre>
-</li>
+<ol start="2">
+<li>使用数组展开操作符<code>...</code>复制数组。</li>
 </ol>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>const len = items.length;<br>const itemsCopy = [];<br>let i;<br>for (i = 0; i &lt; len; i += 1) &#123;<br>    itemsCopy[i] = items[i];<br>&#125;<br><br>// 推荐<br>const itemsCopy = [...items];<br></code></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>使用展开操作符<code>...</code>代替 Array.from，将类数组(array-like) 对象转换成数组。</li>
+</ol>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">const foo = document.querySelectorAll(&#x27;.foo&#x27;);<br>// 推荐<br>const nodes = Array.from(foo);<br>// 高效<br>const nodes = [...foo];<br></code></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>使用 Array.from 代替展开操作符<code>...</code>来映射迭代，它避免了创建媒介数组。</li>
+</ol>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>const baz = [...foo].map(bar);<br>// 推荐<br>const baz = Array.from(foo, bar);<br></code></pre></td></tr></table></figure>
+
 <h2 id="解构-Destructuring"><a href="#解构-Destructuring" class="headerlink" title="解构 Destructuring"></a>解构 Destructuring</h2><ol>
-<li><p>当访问和使用对象的多个属性时，请使用对象解构。</p>
+<li>当访问和使用对象的多个属性时，请使用对象解构。</li>
+</ol>
 <blockquote>
 <p>eslint: prefer-destructuring jscs: requireObjectDestructuring</p>
 </blockquote>
-<pre><code class="hljs undefined">// 不推荐
-function getFullName(user) &#123;
-    const firstName = user.firstName;
-    const lastName = user.lastName;
-    return `firstName lastName`;
-&#125;
-// 推荐
-function getFullName(user) &#123;
-    const &#123; firstName, lastName &#125; = user;
-    return `firstName lastName`;
-&#125;
-// 高效
-function getFullName(&#123; firstName, lastName &#125;) &#123;
-    return `firstName lastName`;
-&#125;</code></pre>
-</li>
-<li><p>使用数组解构。</p>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>function getFullName(user) &#123;<br>    const firstName = user.firstName;<br>    const lastName = user.lastName;<br>    return `firstName lastName`;<br>&#125;<br>// 推荐<br>function getFullName(user) &#123;<br>    const &#123; firstName, lastName &#125; = user;<br>    return `firstName lastName`;<br>&#125;<br>// 高效<br>function getFullName(&#123; firstName, lastName &#125;) &#123;<br>    return `firstName lastName`;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>使用数组解构。</li>
+</ol>
 <blockquote>
 <p>eslint: prefer-destructuring jscs: requireArrayDestructuring</p>
 </blockquote>
-<pre><code class="hljs undefined">const arr = [1, 2, 3, 4];
-// 不推荐
-const first = arr[0];
-const second = arr[1];
-// 推荐
-const [first, second] = arr;
-const [first, second, ...other] = arr;</code></pre>
-</li>
-<li><p>使用对象解构来实现多个返回值，而不是数组解构。</p>
-<p>随着时间的推移添加新的属性或更改排序，而不会改变调用时的位置。</p>
-<pre><code class="hljs undefined">// 不推荐
-function processInput(input) &#123;
-    return [left, right, top, bottom];
-&#125;
-const [left, __, top] = processInput(input); // 需考虑返回数据的顺序
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">const arr = [1, 2, 3, 4];<br>// 不推荐<br>const first = arr[0];<br>const second = arr[1];<br>// 推荐<br>const [first, second] = arr;<br>const [first, second, ...other] = arr;<br></code></pre></td></tr></table></figure>
 
-// 推荐
-function processInput(input) &#123;
-    return &#123; left, right, top, bottom &#125;;
-&#125;
-const &#123; left, top &#125; = processInput(input); // 只选择需要的数据</code></pre>
-</li>
+<ol start="3">
+<li>使用对象解构来实现多个返回值，而不是数组解构。</li>
 </ol>
+<p>  随着时间的推移添加新的属性或更改排序，而不会改变调用时的位置。</p>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>function processInput(input) &#123;<br>    return [left, right, top, bottom];<br>&#125;<br>const [left, __, top] = processInput(input); // 需考虑返回数据的顺序<br><br>// 推荐<br>function processInput(input) &#123;<br>    return &#123; left, right, top, bottom &#125;;<br>&#125;<br>const &#123; left, top &#125; = processInput(input); // 只选择需要的数据<br></code></pre></td></tr></table></figure>
+
 <h2 id="字符串-Strings"><a href="#字符串-Strings" class="headerlink" title="字符串 Strings"></a>字符串 Strings</h2><ol>
-<li><p>字符串使用单引号 ‘’。</p>
+<li>字符串使用单引号 ‘’。</li>
+</ol>
 <blockquote>
 <p>eslint: quotes jscs: validateQuoteMarks</p>
 </blockquote>
-<pre><code class="hljs undefined">// 不推荐
-const name = &quot;Capt. Janeway&quot;;
-// 不推荐 - 模板字面量应该包含插值或换行符
-const name = `Capt. Janeway`;
-// 推荐
-const name = &apos;Capt. Janeway&apos;;</code></pre>
-</li>
-<li><p>构建字符串时，使用模板字符串。</p>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>const name = &quot;Capt. Janeway&quot;;<br>// 不推荐 - 模板字面量应该包含插值或换行符<br>const name = `Capt. Janeway`;<br>// 推荐<br>const name = &#x27;Capt. Janeway&#x27;;<br></code></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>构建字符串时，使用模板字符串。</li>
+</ol>
 <blockquote>
 <p>eslint: prefer-template template-curly-spacing jscs: requireTemplateStrings</p>
 </blockquote>
-<pre><code class="hljs undefined">// 不推荐
-function sayHi(name) &#123;
-    return &apos;How are you, &apos; + name + &apos;?&apos;;
-&#125;
-// 不推荐
-function sayHi(name) &#123;
-    return [&apos;How are you, &apos;, name, &apos;?&apos;].join();
-&#125;
-// 不推荐
-function sayHi(name) &#123;
-    return `How are you, $&#123; name &#125;?`;
-&#125;
-// 推荐
-function sayHi(name) &#123;
-     return `How are you, $&#123;name&#125;?`;
-&#125;</code></pre>
-</li>
-<li><p>永远不要在字符串上使用 eval() ，它会打开太多的漏洞。</p>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>function sayHi(name) &#123;<br>    return &#x27;How are you, &#x27; + name + &#x27;?&#x27;;<br>&#125;<br>// 不推荐<br>function sayHi(name) &#123;<br>    return [&#x27;How are you, &#x27;, name, &#x27;?&#x27;].join();<br>&#125;<br>// 不推荐<br>function sayHi(name) &#123;<br>    return `How are you, $&#123; name &#125;?`;<br>&#125;<br>// 推荐<br>function sayHi(name) &#123;<br>     return `How are you, $&#123;name&#125;?`;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>永远不要在字符串上使用 eval() ，它会打开太多的漏洞。</li>
+</ol>
 <blockquote>
 <p>eslint: no-eval</p>
 </blockquote>
-</li>
-</ol>
 <h2 id="函数-Functions"><a href="#函数-Functions" class="headerlink" title="函数 Functions"></a>函数 Functions</h2><ol>
-<li><p>使用命名函数表达式而不是函数声明。</p>
+<li>使用命名函数表达式而不是函数声明。</li>
+</ol>
 <blockquote>
 <p>eslint: func-style jscs: disallowFunctionDeclarations</p>
 </blockquote>
-<p>函数声明很容易被提升（Hoisting）,这对可读性和可维护性来说都是不利的;</p>
-<pre><code class="hljs undefined">// 不推荐
-function foo() &#123;
-  // ...
-&#125;
-// 不推荐
-const foo = function () &#123;
-  // ...
-&#125;;
-// 推荐
-// 用明显区别于变量引用调用的词汇命名
-const short = function longUniqueMoreDescriptiveLexicalFoo() &#123;
-  // ...
-&#125;;</code></pre>
-</li>
-<li><p>用圆括号包裹立即调用函数表达式 (IIFE)。</p>
+<p>  函数声明很容易被提升（Hoisting）,这对可读性和可维护性来说都是不利的;</p>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>function foo() &#123;<br>  // ...<br>&#125;<br>// 不推荐<br>const foo = function () &#123;<br>  // ...<br>&#125;;<br>// 推荐<br>// 用明显区别于变量引用调用的词汇命名<br>const short = function longUniqueMoreDescriptiveLexicalFoo() &#123;<br>  // ...<br>&#125;;<br></code></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>用圆括号包裹立即调用函数表达式 (IIFE)。</li>
+</ol>
 <blockquote>
 <p>eslint: wrap-iife jscs: requireParenthesesAroundIIFE</p>
 </blockquote>
-<p>一个立即调用函数表达式是一个单独的单元 – 将函数表达式包裹在括号中，后面再跟一个调用括号，这看上去很紧凑。</p>
-<pre><code class="hljs undefined">// 立即调用函数表达式 (IIFE)
-(function () &#123;
-  console.log(&apos;Welcome to the Internet. Please follow me.&apos;);
-&#125;());</code></pre>
-</li>
-<li><p>不要使用 arguments。可以选择 rest 语法 <code>...</code> 替代。</p>
-<p>使用 <code>...</code> 能明确要传入的参数。另外 rest（剩余）参数是一个真正的数组，而 arguments 是一个类数组（Array-like）。</p>
-<pre><code class="hljs undefined">// 不推荐
-function concatenateAll() &#123;
-  const args = Array.prototype.slice.call(arguments);
-  return args.join(&apos;&apos;);
-&#125;
-// 推荐
-function concatenateAll(...args) &#123;
-  return args.join(&apos;&apos;);
-&#125;</code></pre>
-</li>
-<li><p>使用默认参数语法，而不要使用一个变化的函数参数</p>
-<pre><code class="hljs undefined">// 不推荐
-function handleThings(opts) &#123;
-  // 更加糟糕: 如果参数 opts 是 falsy(假值) 的话，它将被设置为一个对象，
-  // 这可能是你想要的，但它可以引起一些小的错误。
-  opts = opts || &#123;&#125;;
-  // ...
-&#125;
-// 不推荐
-function handleThings(opts) &#123;
-  if (opts === void 0) &#123;
-      opts = &#123;&#125;;
-  &#125;
-  // ...
-&#125;
-// 推荐
-function handleThings(opts = &#123;&#125;) &#123;
-  // ...
-&#125;</code></pre>
-</li>
-<li><p>始终将默认参数放在最后。</p>
-<pre><code class="hljs undefined">// 不推荐
-function handleThings(opts = &#123;&#125;, name) &#123;
-  // ...
-&#125;
-// 推荐
-function handleThings(name, opts = &#123;&#125;) &#123;
-  // ...
-&#125;</code></pre>
-</li>
-<li><p>隔开函数签名，括号两边用空格隔开。</p>
-<pre><code class="hljs undefined">// 不推荐
-const f = function()&#123;&#125;;
-const g = function ()&#123;&#125;;
-const h = function() &#123;&#125;;
-// 推荐
-const x = function () &#123;&#125;;
-const y = function a() &#123;&#125;;</code></pre>
-</li>
-<li><p>不要改变参数(?)。</p>
+<p>  一个立即调用函数表达式是一个单独的单元 – 将函数表达式包裹在括号中，后面再跟一个调用括号，这看上去很紧凑。</p>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 立即调用函数表达式 (IIFE)<br>(function () &#123;<br>  console.log(&#x27;Welcome to the Internet. Please follow me.&#x27;);<br>&#125;());<br></code></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>不要使用 arguments。可以选择 rest 语法 <code>...</code> 替代。</li>
+</ol>
+<p>  使用 <code>...</code> 能明确要传入的参数。另外 rest（剩余）参数是一个真正的数组，而 arguments 是一个类数组（Array-like）。</p>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>function concatenateAll() &#123;<br>  const args = Array.prototype.slice.call(arguments);<br>  return args.join(&#x27;&#x27;);<br>&#125;<br>// 推荐<br>function concatenateAll(...args) &#123;<br>  return args.join(&#x27;&#x27;);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>使用默认参数语法，而不要使用一个变化的函数参数</li>
+</ol>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>function handleThings(opts) &#123;<br>  // 更加糟糕: 如果参数 opts 是 falsy(假值) 的话，它将被设置为一个对象，<br>  // 这可能是你想要的，但它可以引起一些小的错误。<br>  opts = opts || &#123;&#125;;<br>  // ...<br>&#125;<br>// 不推荐<br>function handleThings(opts) &#123;<br>  if (opts === void 0) &#123;<br>      opts = &#123;&#125;;<br>  &#125;<br>  // ...<br>&#125;<br>// 推荐<br>function handleThings(opts = &#123;&#125;) &#123;<br>  // ...<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<ol start="5">
+<li>始终将默认参数放在最后。</li>
+</ol>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>function handleThings(opts = &#123;&#125;, name) &#123;<br>  // ...<br>&#125;<br>// 推荐<br>function handleThings(name, opts = &#123;&#125;) &#123;<br>  // ...<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<ol start="6">
+<li>隔开函数签名，括号两边用空格隔开。</li>
+</ol>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>const f = function()&#123;&#125;;<br>const g = function ()&#123;&#125;;<br>const h = function() &#123;&#125;;<br>// 推荐<br>const x = function () &#123;&#125;;<br>const y = function a() &#123;&#125;;<br></code></pre></td></tr></table></figure>
+
+<ol start="7">
+<li>不要改变参数(?)。</li>
+</ol>
 <blockquote>
 <p>eslint: no-param-reassign</p>
 </blockquote>
-<p><em>操作</em>作为参数传入的对象，可能会在调用原始对象时造成不必要的变量副作用。（对象是引用类型）</p>
-<pre><code class="hljs undefined">// 不推荐
-function f1(obj) &#123;
-    obj.key = 1;
-&#125;
-// 推荐
-function f2(obj) &#123;
-    const key = Object.prototype.hasOwnProperty.call(obj, &apos;key&apos;) ? obj.key : 1;
-&#125;</code></pre>
-</li>
-</ol>
+<p>  <em>操作</em>作为参数传入的对象，可能会在调用原始对象时造成不必要的变量副作用。（对象是引用类型）</p>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>function f1(obj) &#123;<br>    obj.key = 1;<br>&#125;<br>// 推荐<br>function f2(obj) &#123;<br>    const key = Object.prototype.hasOwnProperty.call(obj, &#x27;key&#x27;) ? obj.key : 1;<br>&#125;<br></code></pre></td></tr></table></figure>
+
 <h2 id="箭头函数-Arrow-Functions"><a href="#箭头函数-Arrow-Functions" class="headerlink" title="箭头函数 Arrow Functions"></a>箭头函数 Arrow Functions</h2><ol>
-<li><p>当必须使用匿名函数（如在传递一个内联回调时），请使用箭头函数表示法。</p>
+<li>当必须使用匿名函数（如在传递一个内联回调时），请使用箭头函数表示法。</li>
+</ol>
 <blockquote>
 <p>eslint: prefer-arrow-callback, arrow-spacing jscs: requireArrowFunctions</p>
 </blockquote>
-<p>它创建了一个在 this 上下文中执行的函数的版本，这通常是你想要的，而且这样的写法更为简洁。</p>
-<pre><code class="hljs undefined">// 不推荐
-[1, 2, 3].map(function (x) &#123;
-    const y = x + 1;
-    return x * y;
-&#125;);
-// 不推荐
-[1, 2, 3].map( _ =&gt; &#123;
+<p>  它创建了一个在 this 上下文中执行的函数的版本，这通常是你想要的，而且这样的写法更为简洁。</p>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>[1, 2, 3].map(function (x) &#123;<br>    const y = x + 1;<br>    return x * y;<br>&#125;);<br>// 不推荐<br>[1, 2, 3].map( _ =&gt; &#123;<br><br>    return 0;<br>&#125;);<br>// 推荐<br>[1, 2, 3].map((x) =&gt; &#123;<br>    const y = x + 1;<br>    return x * y;<br>&#125;);<br>// 推荐<br>[1, 2, 3].map(() =&gt; &#123;<br>    return 0;<br>&#125;);<br></code></pre></td></tr></table></figure>
 
-    return 0;
-&#125;);
-// 推荐
-[1, 2, 3].map((x) =&gt; &#123;
-    const y = x + 1;
-    return x * y;
-&#125;);
-// 推荐
-[1, 2, 3].map(() =&gt; &#123;
-    return 0;
-&#125;);</code></pre>
-</li>
-<li><p>无副作用的单行语句</p>
-<p>如果函数体由一个返回无副作用(side effect)的expression(表达式)的单行语句组成，那么可以省略大括号并使用隐式返回。否则，保留大括号并使用 return 语句</p>
-<pre><code class="hljs undefined">// 不推荐
-[1, 2, 3].map(number =&gt; &#123;
-    const nextNumber = number + 1;
-    return `A string containing the $&#123;nextNumber&#125;.`;
-&#125;);
-// 推荐
-[1, 2, 3].map(number =&gt; `A string containing the $&#123;number&#125;.`);</code></pre>
-</li>
-<li><p>如果表达式跨多行，将其包裹在括号中，可以提高可读性。</p>
-<pre><code class="hljs undefined">// 不推荐
-[&apos;get&apos;, &apos;post&apos;, &apos;put&apos;].map(httpMethod =&gt; Object.prototype.hasOwnProperty.call(
-    httpMagicObjectWithAVeryLongName,
-    httpMethod
-  )
-);
-// 推荐
-[&apos;get&apos;, &apos;post&apos;, &apos;put&apos;].map(httpMethod =&gt; (
-    Object.prototype.hasOwnProperty.call(
-      httpMagicObjectWithAVeryLongName,
-      httpMethod
-    )
-  )
-);</code></pre>
-</li>
-<li><p>如果函数只有一个参数并且不使用大括号，则可以省略参数括号。否则，为了清晰和一致性，总是给参数加上括号。</p>
-<pre><code class="hljs undefined">// 不推荐
-[1, 2, 3].map((x) =&gt; x * x);
-// 推荐
-[1, 2, 3].map(x =&gt; x * x);
-// 推荐
-[1, 2, 3].map(number =&gt; (
-  `A long string with the number. It’s so long that we don’t want it to take up space on the .map line!`
-));
-// 不推荐
-[1, 2, 3].map(x =&gt; &#123;
-  const y = x + 1;
-  return x * y;
-&#125;);
-// 推荐
-[1, 2, 3].map((x) =&gt; &#123;
-  const y = x + 1;
-  return x * y;
-&#125;);</code></pre>
-</li>
-<li><p>避免使用比较运算符(&lt; =, &gt;=)时，混淆箭头函数语法(=&gt;)。</p>
-<pre><code class="hljs undefined">// 不推荐
-const itemHeight = item =&gt; item.height &gt; 256 ? item.largeSize : item.smallSize;
-// 不推荐
-const itemHeight = (item) =&gt; item.height &gt; 256 ? item.largeSize : item.smallSize;
-// 推荐
-const itemHeight = item =&gt; (item.height &gt; 256 ? item.largeSize : item.smallSize);
-// 推荐
-const itemHeight = (item) =&gt; &#123;
-  const &#123; height, largeSize, smallSize &#125; = item;
-  return height &gt; 256 ? largeSize : smallSize;
-&#125;;</code></pre>
-</li>
+<ol start="2">
+<li>无副作用的单行语句</li>
 </ol>
+<p>  如果函数体由一个返回无副作用(side effect)的expression(表达式)的单行语句组成，那么可以省略大括号并使用隐式返回。否则，保留大括号并使用 return 语句</p>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>[1, 2, 3].map(number =&gt; &#123;<br>    const nextNumber = number + 1;<br>    return `A string containing the $&#123;nextNumber&#125;.`;<br>&#125;);<br>// 推荐<br>[1, 2, 3].map(number =&gt; `A string containing the $&#123;number&#125;.`);<br></code></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>如果表达式跨多行，将其包裹在括号中，可以提高可读性。</li>
+</ol>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>[&#x27;get&#x27;, &#x27;post&#x27;, &#x27;put&#x27;].map(httpMethod =&gt; Object.prototype.hasOwnProperty.call(<br>    httpMagicObjectWithAVeryLongName,<br>    httpMethod<br>  )<br>);<br>// 推荐<br>[&#x27;get&#x27;, &#x27;post&#x27;, &#x27;put&#x27;].map(httpMethod =&gt; (<br>    Object.prototype.hasOwnProperty.call(<br>      httpMagicObjectWithAVeryLongName,<br>      httpMethod<br>    )<br>  )<br>);<br></code></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>如果函数只有一个参数并且不使用大括号，则可以省略参数括号。否则，为了清晰和一致性，总是给参数加上括号。</li>
+</ol>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>[1, 2, 3].map((x) =&gt; x * x);<br>// 推荐<br>[1, 2, 3].map(x =&gt; x * x);<br>// 推荐<br>[1, 2, 3].map(number =&gt; (<br>  `A long string with the number. It’s so long that we don’t want it to take up space on the .map line!`<br>));<br>// 不推荐<br>[1, 2, 3].map(x =&gt; &#123;<br>  const y = x + 1;<br>  return x * y;<br>&#125;);<br>// 推荐<br>[1, 2, 3].map((x) =&gt; &#123;<br>  const y = x + 1;<br>  return x * y;<br>&#125;);<br></code></pre></td></tr></table></figure>
+
+<ol start="5">
+<li>避免使用比较运算符(&lt; &#x3D;, &gt;&#x3D;)时，混淆箭头函数语法(&#x3D;&gt;)。</li>
+</ol>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>const itemHeight = item =&gt; item.height &gt; 256 ? item.largeSize : item.smallSize;<br>// 不推荐<br>const itemHeight = (item) =&gt; item.height &gt; 256 ? item.largeSize : item.smallSize;<br>// 推荐<br>const itemHeight = item =&gt; (item.height &gt; 256 ? item.largeSize : item.smallSize);<br>// 推荐<br>const itemHeight = (item) =&gt; &#123;<br>  const &#123; height, largeSize, smallSize &#125; = item;<br>  return height &gt; 256 ? largeSize : smallSize;<br>&#125;;<br></code></pre></td></tr></table></figure>
+
 <h2 id="类-Classes-amp-构造函数-Constructors"><a href="#类-Classes-amp-构造函数-Constructors" class="headerlink" title="类 Classes &amp; 构造函数 Constructors"></a>类 Classes &amp; 构造函数 Constructors</h2><ol>
-<li><p>总是使用 class。避免直接操作 prototype 。</p>
-<pre><code class="hljs undefined">// 不推荐
-function Queue(contents = []) &#123;
-    this.queue = [...contents];
-&#125;
-Queue.prototype.pop = function () &#123;
-    const value = this.queue[0];
-    this.queue.splice(0, 1);
-    return value;
-&#125;;
-// 推荐
-class Queue &#123;
-    constructor(contents = []) &#123;
-        this.queue = [...contents];
-    &#125;
-    pop() &#123;
-        const value = this.queue[0];
-        this.queue.splice(0, 1);
-        return value;
-    &#125;
-&#125;</code></pre>
-</li>
-<li><p>使用 extends 继承。</p>
-<p>extends 是一个内置的原型继承方法并且不会破坏 instanceof。</p>
-<pre><code class="hljs undefined">// 不推荐
-const inherits = require(&apos;inherits&apos;);
-    function PeekableQueue(contents) &#123;
-    Queue.apply(this, contents);
-&#125;
+<li>总是使用 class。避免直接操作 prototype 。</li>
+</ol>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>function Queue(contents = []) &#123;<br>    this.queue = [...contents];<br>&#125;<br>Queue.prototype.pop = function () &#123;<br>    const value = this.queue[0];<br>    this.queue.splice(0, 1);<br>    return value;<br>&#125;;<br>// 推荐<br>class Queue &#123;<br>    constructor(contents = []) &#123;<br>        this.queue = [...contents];<br>    &#125;<br>    pop() &#123;<br>        const value = this.queue[0];<br>        this.queue.splice(0, 1);<br>        return value;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-inherits(PeekableQueue, Queue);
-PeekableQueue.prototype.peek = function () &#123;
-    return this.queue[0];
-&#125;;
+<ol start="2">
+<li>使用 extends 继承。</li>
+</ol>
+<p>  extends 是一个内置的原型继承方法并且不会破坏 instanceof。</p>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>const inherits = require(&#x27;inherits&#x27;);<br>    function PeekableQueue(contents) &#123;<br>    Queue.apply(this, contents);<br>&#125;<br><br>inherits(PeekableQueue, Queue);<br>PeekableQueue.prototype.peek = function () &#123;<br>    return this.queue[0];<br>&#125;;<br><br>// 推荐<br>class PeekableQueue extends Queue &#123;<br>    peek() &#123;<br>        return this.queue[0];<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-// 推荐
-class PeekableQueue extends Queue &#123;
-    peek() &#123;
-        return this.queue[0];
-    &#125;
-&#125;</code></pre>
-</li>
-<li><p>如果没有指定，类有一个默认的构造函数。一个空的构造函数或者只是委托给父类则不是必须的(?)。</p>
+<ol start="3">
+<li>如果没有指定，类有一个默认的构造函数。一个空的构造函数或者只是委托给父类则不是必须的(?)。</li>
+</ol>
 <blockquote>
 <p>eslint: no-useless-constructor</p>
 </blockquote>
-<pre><code class="hljs undefined">// 不推荐
-class Jedi &#123;
-    constructor() &#123;&#125;
-        getName() &#123;
-        return this.name;
-    &#125;
-&#125;
-// 不推荐
-class Rey extends Jedi &#123;
-    constructor(...args) &#123;
-        super(...args);
-    &#125;
-&#125;
-// 推荐
-class Rey extends Jedi &#123;
-    constructor(...args) &#123;
-        super(...args);
-        this.name = &apos;Rey&apos;;
-    &#125;
-&#125;</code></pre>
-</li>
-<li><p>避免重复类成员(?)。</p>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>class Jedi &#123;<br>    constructor() &#123;&#125;<br>        getName() &#123;<br>        return this.name;<br>    &#125;<br>&#125;<br>// 不推荐<br>class Rey extends Jedi &#123;<br>    constructor(...args) &#123;<br>        super(...args);<br>    &#125;<br>&#125;<br>// 推荐<br>class Rey extends Jedi &#123;<br>    constructor(...args) &#123;<br>        super(...args);<br>        this.name = &#x27;Rey&#x27;;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>避免重复类成员(?)。</li>
+</ol>
 <blockquote>
 <p>eslint: no-dupe-class-members</p>
 </blockquote>
-<pre><code class="hljs undefined">// 不推荐
-class Foo &#123;
-  bar() &#123; return 1; &#125;
-  bar() &#123; return 2; &#125;
-&#125;
-// 推荐
-class Foo &#123;
-  bar() &#123; return 1; &#125;
-&#125;
-// 推荐
-class Foo &#123;
-  bar() &#123; return 2; &#125;
-&#125;</code></pre>
-</li>
-</ol>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>class Foo &#123;<br>  bar() &#123; return 1; &#125;<br>  bar() &#123; return 2; &#125;<br>&#125;<br>// 推荐<br>class Foo &#123;<br>  bar() &#123; return 1; &#125;<br>&#125;<br>// 推荐<br>class Foo &#123;<br>  bar() &#123; return 2; &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
 <h2 id="模块-Modules"><a href="#模块-Modules" class="headerlink" title="模块 Modules"></a>模块 Modules</h2><ol>
-<li><p>使用模块 (import/export) 而不是其他非标准模块系统。</p>
-<pre><code class="hljs undefined">// 不推荐
-const JavascriptStyleGuide = require(&apos;./JavascriptStyleGuide&apos;);
-module.exports = JavascriptStyleGuide.es6;
-// 一般
-import JavascriptStyleGuide from &apos;./JavascriptStyleGuide&apos;;
-export default JavascriptStyleGuide.es6;
-// 推荐
-import &#123; es6 &#125; from &apos;./JavascriptStyleGuide&apos;;
-export default es6;</code></pre>
-</li>
-<li><p>不要使用通配符 import(导入)。</p>
-<p>这样能确保你只有一个默认 export(导出)。</p>
-<pre><code class="hljs undefined">// 不推荐
-import * as JavascriptStyleGuide from &apos;./JavascriptStyleGuide&apos;;
-// 推荐
-import JavascriptStyleGuide from &apos;./JavascriptStyleGuide&apos;;</code></pre>
-</li>
-<li><p>不要从 import(导入) 中直接 export(导出)。</p>
-<p>虽然一行代码简洁明了，但有一个明确的 import(导入) 方法和一个明确的 export(导出) 方法，使事情能保持一致。</p>
-<pre><code class="hljs undefined">// 不推荐
-export &#123; es6 as default &#125; from &apos;./JavascriptStyleGuide&apos;;
-
-// 推荐
-import &#123; es6 &#125; from &apos;./JavascriptStyleGuide&apos;;
-export default es6;</code></pre>
-</li>
-<li><p>一个地方只在一个路径中 import(导入) 。</p>
-<pre><code class="hljs undefined">// 不推荐
-import foo from &apos;foo&apos;;
-import &#123; named1, named2 &#125; from &apos;foo&apos;;
-
-// 推荐
-import foo, &#123; named1, named2 &#125; from &apos;foo&apos;;</code></pre>
-</li>
-<li><p>不要 export(导出) 可变绑定。</p>
-<blockquote>
-<p>eslint: import/no-mutable-exports</p>
-</blockquote>
-<p>一般应该避免可变性，特别是在导出可变绑定时。虽然一些特殊情况下，可能需要这种技术，但是一般而言，只应该导出常量引用。</p>
-<pre><code class="hljs undefined">// 不推荐
-let foo = 3;
-export &#123; foo &#125;;
-// 推荐
-const foo = 3;
-export &#123; foo &#125;;</code></pre>
-</li>
-<li><p>在只有单个导出的模块中，默认 export(导出) 优于命名 export(导出)。</p>
-<blockquote>
-<p>eslint: import/prefer-default-export</p>
-</blockquote>
-<p>为了鼓励更多的文件只有一个 export(导出)，这有利于模块的可读性和可维护性。</p>
-<pre><code class="hljs undefined">// 不推荐
-export function foo() &#123;&#125;
-// 推荐
-export default function foo() &#123;&#125;</code></pre>
-</li>
-<li><p>将所有 import 导入放在非导入语句的上面。</p>
-<blockquote>
-<p>eslint: import/first</p>
-</blockquote>
-<p>由于 import 被提升，保持他们在顶部，防止意外的行为。</p>
-<pre><code class="hljs undefined">// 不推荐
-import foo from &apos;foo&apos;;
-foo.init();
-import bar from &apos;bar&apos;;
-
-// 推荐
-import foo from &apos;foo&apos;;
-import bar from &apos;bar&apos;;
-foo.init();</code></pre>
-</li>
-<li><p>多行导入应该像多行数组和对象字面量一样进行缩进。</p>
-<pre><code class="hljs undefined">// 不推荐
-import &#123;longNameA, longNameB, longNameC, longNameD, longNameE&#125; from &apos;path&apos;;
-// 推荐
-import &#123;
-    longNameA,
-    longNameB,
-    longNameC,
-    longNameD,
-    longNameE,
-&#125; from &apos;path&apos;;</code></pre>
-</li>
+<li>使用模块 (import&#x2F;export) 而不是其他非标准模块系统。</li>
 </ol>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>const JavascriptStyleGuide = require(&#x27;./JavascriptStyleGuide&#x27;);<br>module.exports = JavascriptStyleGuide.es6;<br>// 一般<br>import JavascriptStyleGuide from &#x27;./JavascriptStyleGuide&#x27;;<br>export default JavascriptStyleGuide.es6;<br>// 推荐<br>import &#123; es6 &#125; from &#x27;./JavascriptStyleGuide&#x27;;<br>export default es6;<br></code></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>不要使用通配符 import(导入)。</li>
+</ol>
+<p>  这样能确保你只有一个默认 export(导出)。</p>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>import * as JavascriptStyleGuide from &#x27;./JavascriptStyleGuide&#x27;;<br>// 推荐<br>import JavascriptStyleGuide from &#x27;./JavascriptStyleGuide&#x27;;<br></code></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>不要从 import(导入) 中直接 export(导出)。</li>
+</ol>
+<p>  虽然一行代码简洁明了，但有一个明确的 import(导入) 方法和一个明确的 export(导出) 方法，使事情能保持一致。</p>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>export &#123; es6 as default &#125; from &#x27;./JavascriptStyleGuide&#x27;;<br><br>// 推荐<br>import &#123; es6 &#125; from &#x27;./JavascriptStyleGuide&#x27;;<br>export default es6;<br></code></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>一个地方只在一个路径中 import(导入) 。</li>
+</ol>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>import foo from &#x27;foo&#x27;;<br>import &#123; named1, named2 &#125; from &#x27;foo&#x27;;<br><br>// 推荐<br>import foo, &#123; named1, named2 &#125; from &#x27;foo&#x27;;<br></code></pre></td></tr></table></figure>
+
+<ol start="5">
+<li>不要 export(导出) 可变绑定。</li>
+</ol>
+<blockquote>
+<p>eslint: import&#x2F;no-mutable-exports</p>
+</blockquote>
+<p>  一般应该避免可变性，特别是在导出可变绑定时。虽然一些特殊情况下，可能需要这种技术，但是一般而言，只应该导出常量引用。</p>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>let foo = 3;<br>export &#123; foo &#125;;<br>// 推荐<br>const foo = 3;<br>export &#123; foo &#125;;<br></code></pre></td></tr></table></figure>
+
+<ol start="6">
+<li>在只有单个导出的模块中，默认 export(导出) 优于命名 export(导出)。</li>
+</ol>
+<blockquote>
+<p>eslint: import&#x2F;prefer-default-export</p>
+</blockquote>
+<p>  为了鼓励更多的文件只有一个 export(导出)，这有利于模块的可读性和可维护性。</p>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>export function foo() &#123;&#125;<br>// 推荐<br>export default function foo() &#123;&#125;<br></code></pre></td></tr></table></figure>
+
+<ol start="7">
+<li>将所有 import 导入放在非导入语句的上面。</li>
+</ol>
+<blockquote>
+<p>eslint: import&#x2F;first</p>
+</blockquote>
+<p>  由于 import 被提升，保持他们在顶部，防止意外的行为。</p>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>import foo from &#x27;foo&#x27;;<br>foo.init();<br>import bar from &#x27;bar&#x27;;<br><br>// 推荐<br>import foo from &#x27;foo&#x27;;<br>import bar from &#x27;bar&#x27;;<br>foo.init();<br></code></pre></td></tr></table></figure>
+
+<ol start="8">
+<li>多行导入应该像多行数组和对象字面量一样进行缩进。</li>
+</ol>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>import &#123;longNameA, longNameB, longNameC, longNameD, longNameE&#125; from &#x27;path&#x27;;<br>// 推荐<br>import &#123;<br>    longNameA,<br>    longNameB,<br>    longNameC,<br>    longNameD,<br>    longNameE,<br>&#125; from &#x27;path&#x27;;<br></code></pre></td></tr></table></figure>
+
 <h2 id="变量-Variables"><a href="#变量-Variables" class="headerlink" title="变量 Variables"></a>变量 Variables</h2><ol>
-<li><p>总是使用 const 或 let 来声明变量。 </p>
-<p>var 声明变量会导致产生全局变量，避免污染全局命名空间。</p>
+<li>总是使用 const 或 let 来声明变量。</li>
+</ol>
+<p>  var 声明变量会导致产生全局变量，避免污染全局命名空间。</p>
 <blockquote>
 <p>eslint: no-undef prefer-const</p>
 </blockquote>
-<pre><code class="hljs undefined">// 不推荐
-superPower = new SuperPower();
-// 推荐
-const superPower = new SuperPower();</code></pre>
-</li>
-<li><p>将所有的 const 和 let 分组 。</p>
-<pre><code class="hljs undefined">// 不推荐
-let i, len, dragonball,
-items = getItems(),
-goSportsTeam = true;
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>superPower = new SuperPower();<br>// 推荐<br>const superPower = new SuperPower();<br></code></pre></td></tr></table></figure>
 
-// 不推荐
-let i;
-const items = getItems();
-let dragonball;
-const goSportsTeam = true;
-let len;
+<ol start="2">
+<li>将所有的 const 和 let 分组 。</li>
+</ol>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>let i, len, dragonball,<br>items = getItems(),<br>goSportsTeam = true;<br><br>// 不推荐<br>let i;<br>const items = getItems();<br>let dragonball;<br>const goSportsTeam = true;<br>let len;<br><br>// 推荐<br>const goSportsTeam = true;<br>const items = getItems();<br>let dragonball;<br>let i;<br>let length;<br></code></pre></td></tr></table></figure>
 
-// 推荐
-const goSportsTeam = true;
-const items = getItems();
-let dragonball;
-let i;
-let length;</code></pre>
-</li>
-<li><p>变量不要链式赋值。</p>
+<ol start="3">
+<li>变量不要链式赋值。</li>
+</ol>
 <blockquote>
 <p>eslint: no-multi-assign</p>
 </blockquote>
-<pre><code class="hljs undefined">// 不推荐
-(function example() &#123;
-  // JavaScript 将其解析为
-  // let a = ( b = ( c = 1 ) );
-  // let关键字只适用于变量a;
-  // 变量b和c变成了全局变量。
-  let a = b = c = 1;
-&#125;());
-console.log(a); // 抛出 ReferenceError（引用错误）
-console.log(b); // 1
-console.log(c); // 1
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>(function example() &#123;<br>  // JavaScript 将其解析为<br>  // let a = ( b = ( c = 1 ) );<br>  // let关键字只适用于变量a;<br>  // 变量b和c变成了全局变量。<br>  let a = b = c = 1;<br>&#125;());<br>console.log(a); // 抛出 ReferenceError（引用错误）<br>console.log(b); // 1<br>console.log(c); // 1<br><br>// 推荐<br>(function example() &#123;<br>  let a = 1;<br>  let b = a;<br>  let c = a;<br>  // 同样适用于 `const`<br>&#125;());<br>console.log(a); // 抛出 ReferenceError（引用错误）<br>console.log(b); // 抛出 ReferenceError（引用错误）<br>console.log(c); // 抛出 ReferenceError（引用错误）<br></code></pre></td></tr></table></figure>
 
-// 推荐
-(function example() &#123;
-  let a = 1;
-  let b = a;
-  let c = a;
-  // 同样适用于 `const`
-&#125;());
-console.log(a); // 抛出 ReferenceError（引用错误）
-console.log(b); // 抛出 ReferenceError（引用错误）
-console.log(c); // 抛出 ReferenceError（引用错误）</code></pre>
-</li>
-<li><p>避免使用一元递增和递减运算符(++, -–)。</p>
-<p>根据 eslint 文档，一元递增和递减语句会受到自动插入分号的影响，并可能导致应用程序中的值递增或递减，从而导致无提示错误。</p>
-<p>使用像 num += 1 而不是 num++ 或 num ++ 这样的语句来改变你的值也更具有表现力。</p>
-<p>不允许一元递增和递减语句也会阻止您无意中预先递增/递减值，这也会导致程序中的意外行为。</p>
-<pre><code class="hljs undefined">// 不推荐
-const array = [1, 2, 3];
-let num = 1;
-num++;
---num;
-let sum = 0;
-let truthyCount = 0;
-for (let i = 0; i &lt; array.length; i++) &#123; 
-  let value = array[i]; 
-  sum += value;
-   if (value) &#123;
-      truthyCount++; 
-    &#125; 
- &#125;
-
-// 推荐
-const array = [1, 2, 3]; 
-let num = 1; num += 1; num -= 1; 
-const sum = array.reduce((a, b) =&gt; a + b, 0);
-const truthyCount = array.filter(Boolean).length;</code></pre>
-</li>
+<ol start="4">
+<li>避免使用一元递增和递减运算符(++, -–)。</li>
 </ol>
+<p>  根据 eslint 文档，一元递增和递减语句会受到自动插入分号的影响，并可能导致应用程序中的值递增或递减，从而导致无提示错误。</p>
+<p>  使用像 num +&#x3D; 1 而不是 num++ 或 num ++ 这样的语句来改变你的值也更具有表现力。</p>
+<p>  不允许一元递增和递减语句也会阻止您无意中预先递增&#x2F;递减值，这也会导致程序中的意外行为。</p>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>const array = [1, 2, 3];<br>let num = 1;<br>num++;<br>--num;<br>let sum = 0;<br>let truthyCount = 0;<br>for (let i = 0; i &lt; array.length; i++) &#123; <br>  let value = array[i]; <br>  sum += value;<br>   if (value) &#123;<br>      truthyCount++; <br>    &#125; <br> &#125;<br><br>// 推荐<br>const array = [1, 2, 3]; <br>let num = 1; num += 1; num -= 1; <br>const sum = array.reduce((a, b) =&gt; a + b, 0);<br>const truthyCount = array.filter(Boolean).length;<br></code></pre></td></tr></table></figure>
+
 <h2 id="比较运算符-Comparison-Operators-和-等号-Equality"><a href="#比较运算符-Comparison-Operators-和-等号-Equality" class="headerlink" title="比较运算符 Comparison Operators 和 等号 Equality"></a>比较运算符 Comparison Operators 和 等号 Equality</h2><ol>
-<li><p>使用 === 和 !== 优先于 == 和 !=。</p>
+<li>使用 &#x3D;&#x3D;&#x3D; 和 !&#x3D;&#x3D; 优先于 &#x3D;&#x3D; 和 !&#x3D;。</li>
+</ol>
 <blockquote>
 <p>eslint: eqeqeq</p>
 </blockquote>
-</li>
-<li><p>对于布尔值使用简写，但对于字符串和数字使用显式比较。</p>
-<pre><code class="hljs undefined">// 不推荐
-if (isValid === true) &#123;
-  // ...
-&#125;
-// 推荐
-if (isValid) &#123;
-  // ...
-&#125;
+<ol start="2">
+<li>对于布尔值使用简写，但对于字符串和数字使用显式比较。</li>
+</ol>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>if (isValid === true) &#123;<br>  // ...<br>&#125;<br>// 推荐<br>if (isValid) &#123;<br>  // ...<br>&#125;<br><br>// 不推荐<br>if (name) &#123;<br>  // ...<br>&#125;<br>// 推荐<br>if (name !== &#x27;&#x27;) &#123;<br>  // ...<br>&#125;<br><br>// 不推荐<br>if (collection.length) &#123;<br>  // ...<br>&#125;<br>// 推荐<br>if (collection.length &gt; 0) &#123;<br>  // ...<br>&#125;<br></code></pre></td></tr></table></figure>
 
-// 不推荐
-if (name) &#123;
-  // ...
-&#125;
-// 推荐
-if (name !== &apos;&apos;) &#123;
-  // ...
-&#125;
-
-// 不推荐
-if (collection.length) &#123;
-  // ...
-&#125;
-// 推荐
-if (collection.length &gt; 0) &#123;
-  // ...
-&#125;</code></pre>
-</li>
-<li><p>在 case 和 default 子句中，使用大括号来创建包含词法声明的语句块(例如 let, const, function, 和 class).</p>
+<ol start="3">
+<li>在 case 和 default 子句中，使用大括号来创建包含词法声明的语句块(例如 let, const, function, 和 class).</li>
+</ol>
 <blockquote>
 <p>eslint: no-case-declarations</p>
 </blockquote>
-<pre><code class="hljs undefined">// 不推荐
-switch (foo) &#123;
-  case 1:
-    let x = 1;
-  break;
-  case 2:
-    const y = 2;
-  break;
-  case 3:
-    function f() &#123;
-      // ...
-    &#125;
-  break;
-default:
-  class C &#123;&#125;
-&#125;
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>switch (foo) &#123;<br>  case 1:<br>    let x = 1;<br>  break;<br>  case 2:<br>    const y = 2;<br>  break;<br>  case 3:<br>    function f() &#123;<br>      // ...<br>    &#125;<br>  break;<br>default:<br>  class C &#123;&#125;<br>&#125;<br><br>// 推荐<br>switch (foo) &#123;<br>  case 1: &#123;<br>    let x = 1;<br>    break;<br>  &#125;<br>  case 2: &#123;<br>    const y = 2;<br>    break;<br>  &#125;<br>  case 3: &#123;<br>    function f() &#123;<br>      // ...<br>    &#125;<br>    break;<br>  &#125;<br>  case 4:<br>    bar();<br>    break;<br>  default: &#123;<br>    class C &#123;&#125;<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-// 推荐
-switch (foo) &#123;
-  case 1: &#123;
-    let x = 1;
-    break;
-  &#125;
-  case 2: &#123;
-    const y = 2;
-    break;
-  &#125;
-  case 3: &#123;
-    function f() &#123;
-      // ...
-    &#125;
-    break;
-  &#125;
-  case 4:
-    bar();
-    break;
-  default: &#123;
-    class C &#123;&#125;
-  &#125;
-&#125;</code></pre>
-</li>
-<li><p>三元表达式不应该嵌套，通常写成单行表达式。</p>
+<ol start="4">
+<li>三元表达式不应该嵌套，通常写成单行表达式。</li>
+</ol>
 <blockquote>
 <p>eslint: no-nested-ternary</p>
 </blockquote>
-<pre><code class="hljs undefined">// 不推荐
-const foo = maybe1 &gt; maybe2
-? &quot;bar&quot;
-: value1 &gt; value2 ? &quot;baz&quot; : null;
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>const foo = maybe1 &gt; maybe2<br>? &quot;bar&quot;<br>: value1 &gt; value2 ? &quot;baz&quot; : null;<br><br>// 推荐<br>const maybeNull = value1 &gt; value2 ? &#x27;baz&#x27; : null;<br>const foo = maybe1 &gt; maybe2 ? &#x27;bar&#x27; : maybeNull;<br></code></pre></td></tr></table></figure>
 
-// 推荐
-const maybeNull = value1 &gt; value2 ? &apos;baz&apos; : null;
-const foo = maybe1 &gt; maybe2 ? &apos;bar&apos; : maybeNull;</code></pre>
-</li>
-<li><p>避免不必要的三元表达式语句。</p>
+<ol start="5">
+<li>避免不必要的三元表达式语句。</li>
+</ol>
 <blockquote>
 <p>eslint: no-unneeded-ternary</p>
 </blockquote>
-<pre><code class="hljs undefined">// 不推荐
-const foo = a ? a : b;
-const bar = c ? true : false;
-const baz = c ? false : true;
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>const foo = a ? a : b;<br>const bar = c ? true : false;<br>const baz = c ? false : true;<br><br>// 推荐<br>const foo = a || b;<br>const bar = !!c;<br>const baz = !c;<br></code></pre></td></tr></table></figure>
 
-// 推荐
-const foo = a || b;
-const bar = !!c;
-const baz = !c;</code></pre>
-</li>
-<li><p>当运算符混合在一个语句中时，请将其放在括号内。</p>
+<ol start="6">
+<li>当运算符混合在一个语句中时，请将其放在括号内。</li>
+</ol>
 <blockquote>
 <p>eslint: no-mixed-operators</p>
 </blockquote>
-<p>混合算术运算符时，不要将 * 和 % 与 + ， -，，/ 混合在一起。</p>
-<p>提高可读性，并清晰展现开发者的意图。</p>
-<pre><code class="hljs undefined">// 不推荐
-const foo = a &amp;&amp; b &lt; 0 || c &gt; 0 || d + 1 === 0;
-// 不推荐
-const bar = a ** b - 5 % d;
-// 不推荐
-if (a || b &amp;&amp; c) &#123;
-  return d;
-&#125;
-// 推荐
-const foo = (a &amp;&amp; b &lt; 0) || c &gt; 0 || (d + 1 === 0);
-// 推荐
-const bar = (a ** b) - (5 % d);
-// 推荐
-if ((a || b) &amp;&amp; c) &#123;
-  return d;
-&#125;
-// 推荐
-const bar = a + b / c * d;</code></pre>
-</li>
-</ol>
+<p>  混合算术运算符时，不要将 * 和 % 与 + ， -，，&#x2F; 混合在一起。</p>
+<p>  提高可读性，并清晰展现开发者的意图。</p>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>const foo = a &amp;&amp; b &lt; 0 || c &gt; 0 || d + 1 === 0;<br>// 不推荐<br>const bar = a ** b - 5 % d;<br>// 不推荐<br>if (a || b &amp;&amp; c) &#123;<br>  return d;<br>&#125;<br>// 推荐<br>const foo = (a &amp;&amp; b &lt; 0) || c &gt; 0 || (d + 1 === 0);<br>// 推荐<br>const bar = (a ** b) - (5 % d);<br>// 推荐<br>if ((a || b) &amp;&amp; c) &#123;<br>  return d;<br>&#125;<br>// 推荐<br>const bar = a + b / c * d;<br></code></pre></td></tr></table></figure>
+
 <h2 id="代码块-Blocks"><a href="#代码块-Blocks" class="headerlink" title="代码块 Blocks"></a>代码块 Blocks</h2><ol>
-<li><p>使用大括号包裹所有的多行代码块</p>
+<li>使用大括号包裹所有的多行代码块</li>
+</ol>
 <blockquote>
 <p>eslint: nonblock-statement-body-position</p>
 </blockquote>
-<pre><code class="hljs undefined">// 不推荐
-if (test)
-  return false;
-// 推荐
-if (test) return false;
-// 推荐
-if (test) &#123;
-  return false;
-&#125;
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>if (test)<br>  return false;<br>// 推荐<br>if (test) return false;<br>// 推荐<br>if (test) &#123;<br>  return false;<br>&#125;<br><br>// 不推荐<br>function foo() &#123; return false; &#125;<br>// 推荐<br>function bar() &#123;<br>  return false;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-// 不推荐
-function foo() &#123; return false; &#125;
-// 推荐
-function bar() &#123;
-  return false;
-&#125;</code></pre>
-</li>
-<li><p>如果通过 if 和 else 使用多行代码块，把 else 放在 if 代码块闭合括号的同一行。</p>
+<ol start="2">
+<li>如果通过 if 和 else 使用多行代码块，把 else 放在 if 代码块闭合括号的同一行。</li>
+</ol>
 <blockquote>
 <p>eslint: brace-style</p>
 </blockquote>
-<pre><code class="hljs undefined">// 不推荐
-if (test) &#123;
-  thing1();
-  thing2();
-&#125;
-else &#123;
-  thing3();
-&#125;
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>if (test) &#123;<br>  thing1();<br>  thing2();<br>&#125;<br>else &#123;<br>  thing3();<br>&#125;<br><br>// 推荐<br>if (test) &#123;<br>  thing1();<br>  thing2();<br>&#125; else &#123;<br>  thing3();<br>&#125;<br></code></pre></td></tr></table></figure>
 
-// 推荐
-if (test) &#123;
-  thing1();
-  thing2();
-&#125; else &#123;
-  thing3();
-&#125;</code></pre>
-</li>
-<li><p>如果一个 if 块总是执行一个 return 语句，后面的 else 块是不必要的。在 else if 块中的 return，可以分成多个 if 块来 return 。</p>
+<ol start="3">
+<li>如果一个 if 块总是执行一个 return 语句，后面的 else 块是不必要的。在 else if 块中的 return，可以分成多个 if 块来 return 。</li>
+</ol>
 <blockquote>
 <p>eslint: no-else-return</p>
 </blockquote>
-<pre><code class="hljs undefined">// 不推荐
-function foo() &#123;
-  if (x) &#123;
-    return x;
-  &#125; else &#123;
-    return y;
-  &#125;
-&#125;
-// 不推荐
-function cats() &#123;
-  if (x) &#123;
-    return x;
-  &#125; else if (y) &#123;
-    return y;
-  &#125;
-&#125;
-// 不推荐
-function dogs() &#123;
-  if (x) &#123;
-    return x;
-  &#125; else &#123;
-    if (y) &#123;
-      return y;
-    &#125;
-  &#125;
-&#125;
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>function foo() &#123;<br>  if (x) &#123;<br>    return x;<br>  &#125; else &#123;<br>    return y;<br>  &#125;<br>&#125;<br>// 不推荐<br>function cats() &#123;<br>  if (x) &#123;<br>    return x;<br>  &#125; else if (y) &#123;<br>    return y;<br>  &#125;<br>&#125;<br>// 不推荐<br>function dogs() &#123;<br>  if (x) &#123;<br>    return x;<br>  &#125; else &#123;<br>    if (y) &#123;<br>      return y;<br>    &#125;<br>  &#125;<br>&#125;<br><br>// 推荐<br>function foo() &#123;<br>  if (x) &#123;<br>    return x;<br>  &#125;<br>  return y;<br>&#125;<br>// 推荐<br>function cats() &#123;<br>  if (x) &#123;<br>    return x;<br>  &#125;<br>  if (y) &#123;<br>    return y;<br>  &#125;<br>&#125;<br>// 推荐<br>function dogs(x) &#123;<br>  if (x) &#123;<br>    if (z) &#123;<br>      return y;<br>    &#125;<br>  &#125; else &#123;<br>    return z;<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-// 推荐
-function foo() &#123;
-  if (x) &#123;
-    return x;
-  &#125;
-  return y;
-&#125;
-// 推荐
-function cats() &#123;
-  if (x) &#123;
-    return x;
-  &#125;
-  if (y) &#123;
-    return y;
-  &#125;
-&#125;
-// 推荐
-function dogs(x) &#123;
-  if (x) &#123;
-    if (z) &#123;
-      return y;
-    &#125;
-  &#125; else &#123;
-    return z;
-  &#125;
-&#125;</code></pre>
-</li>
-</ol>
 <h2 id="控制语句-Control-Statements"><a href="#控制语句-Control-Statements" class="headerlink" title="控制语句 Control Statements"></a>控制语句 Control Statements</h2><ol>
-<li><p>如果控制语句(if, while 的)太长或超过最大行长度，那么每个（分组）条件可以放单独一行。逻辑运算符应该放在每行起始处。</p>
-<pre><code class="hljs undefined">// 不推荐
-if ((foo === 123 || bar === &apos;abc&apos;) &amp;&amp; doesItLookGoodWhenItBecomesThatLong() &amp;&amp; isThisReallyHappening()) &#123;
- thing1();
-&#125;
-// 不推荐
-if (foo === 123 &amp;&amp;
-  bar === &apos;abc&apos;) &#123;
-  thing1();
-&#125;
-// 不推荐
-if (foo === 123
-  &amp;&amp; bar === &apos;abc&apos;) &#123;
-  thing1();
-&#125;
-// 不推荐
-if (
-  foo === 123 &amp;&amp;
-  bar === &apos;abc&apos;
-) &#123;
-  thing1();
-&#125;
-
-// 推荐
-if (
-  foo === 123
-  &amp;&amp; bar === &apos;abc&apos;
-) &#123;
-  thing1();
-&#125;
-// 推荐
-if (
-  (foo === 123 || bar === &quot;abc&quot;)
-  &amp;&amp; doesItLookGoodWhenItBecomesThatLong()
-  &amp;&amp; isThisReallyHappening()
-) &#123;
-  thing1();
-&#125;
-// 推荐
-if (foo === 123 &amp;&amp; bar === &apos;abc&apos;) &#123;
-  thing1();
-&#125;</code></pre>
-</li>
+<li>如果控制语句(if, while 的)太长或超过最大行长度，那么每个（分组）条件可以放单独一行。逻辑运算符应该放在每行起始处。</li>
 </ol>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>if ((foo === 123 || bar === &#x27;abc&#x27;) &amp;&amp; doesItLookGoodWhenItBecomesThatLong() &amp;&amp; isThisReallyHappening()) &#123;<br> thing1();<br>&#125;<br>// 不推荐<br>if (foo === 123 &amp;&amp;<br>  bar === &#x27;abc&#x27;) &#123;<br>  thing1();<br>&#125;<br>// 不推荐<br>if (foo === 123<br>  &amp;&amp; bar === &#x27;abc&#x27;) &#123;<br>  thing1();<br>&#125;<br>// 不推荐<br>if (<br>  foo === 123 &amp;&amp;<br>  bar === &#x27;abc&#x27;<br>) &#123;<br>  thing1();<br>&#125;<br><br>// 推荐<br>if (<br>  foo === 123<br>  &amp;&amp; bar === &#x27;abc&#x27;<br>) &#123;<br>  thing1();<br>&#125;<br>// 推荐<br>if (<br>  (foo === 123 || bar === &quot;abc&quot;)<br>  &amp;&amp; doesItLookGoodWhenItBecomesThatLong()<br>  &amp;&amp; isThisReallyHappening()<br>) &#123;<br>  thing1();<br>&#125;<br>// 推荐<br>if (foo === 123 &amp;&amp; bar === &#x27;abc&#x27;) &#123;<br>  thing1();<br>&#125;<br></code></pre></td></tr></table></figure>
+
 <h2 id="注释-Comments"><a href="#注释-Comments" class="headerlink" title="注释 Comments"></a>注释 Comments</h2><ol>
-<li><p>多行注释使用 <code>/.../</code>。</p>
-<pre><code class="hljs undefined">/**
-* @param &#123;Grid&#125; grid 需要合并的Grid
-* @param &#123;Array&#125; cols 需要合并列的Index(序号)数组；从0开始计数，序号也包含。
-* @param &#123;Boolean&#125; isAllSome 是否2个tr的cols必须完成一样才能进行合并。true：完成一样；false(默认)：不完全一样
-* @return void
-* @author XXX 2019/09/09
-*/
-function mergeCells(grid, cols, isAllSome) &#123;
-    // Do Something
-&#125;</code></pre>
-</li>
-<li><p>单行注释使用 <code>//</code>。将单行注释放在需注释的语句上方。在注释之前放置一个空行，除非它位于代码块的第一行。</p>
-<pre><code class="hljs undefined">// 不推荐
-const active = true;  // is current tab
-// 推荐
-// is current tab
-const active = true;
+<li>多行注释使用 <code>/.../</code>。</li>
+</ol>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">/**<br>* @param &#123;Grid&#125; grid 需要合并的Grid<br>* @param &#123;Array&#125; cols 需要合并列的Index(序号)数组；从0开始计数，序号也包含。<br>* @param &#123;Boolean&#125; isAllSome 是否2个tr的cols必须完成一样才能进行合并。true：完成一样；false(默认)：不完全一样<br>* @return void<br>* @author XXX 2019/09/09<br>*/<br>function mergeCells(grid, cols, isAllSome) &#123;<br>    // Do Something<br>&#125;<br></code></pre></td></tr></table></figure>
 
-// 不推荐
-function getType() &#123;
-  console.log(&apos;fetching type...&apos;);
-  // set the default type to &apos;no type&apos;
-  const type = this.type || &apos;no type&apos;;
-  return type;
-&#125;
-// 推荐
-function getType() &#123;
-  console.log(&apos;fetching type...&apos;);
+<ol start="2">
+<li>单行注释使用 <code>//</code>。将单行注释放在需注释的语句上方。在注释之前放置一个空行，除非它位于代码块的第一行。</li>
+</ol>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>const active = true;  // is current tab<br>// 推荐<br>// is current tab<br>const active = true;<br><br>// 不推荐<br>function getType() &#123;<br>  console.log(&#x27;fetching type...&#x27;);<br>  // set the default type to &#x27;no type&#x27;<br>  const type = this.type || &#x27;no type&#x27;;<br>  return type;<br>&#125;<br>// 推荐<br>function getType() &#123;<br>  console.log(&#x27;fetching type...&#x27;);<br><br>  // set the default type to &#x27;no type&#x27;<br>  const type = this.type || &#x27;no type&#x27;;<br>  return type;<br>&#125;<br>// 推荐<br>function getType() &#123;<br>  // set the default type to &#x27;no type&#x27;<br>  const type = this.type || &#x27;no type&#x27;;<br>  return type;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-  // set the default type to &apos;no type&apos;
-  const type = this.type || &apos;no type&apos;;
-  return type;
-&#125;
-// 推荐
-function getType() &#123;
-  // set the default type to &apos;no type&apos;
-  const type = this.type || &apos;no type&apos;;
-  return type;
-&#125;</code></pre>
-</li>
-<li><p>所有注释符和注释内容用一个空格隔开，让它更容易阅读。</p>
+<ol start="3">
+<li>所有注释符和注释内容用一个空格隔开，让它更容易阅读。</li>
+</ol>
 <blockquote>
 <p>eslint: spaced-comment</p>
 </blockquote>
-<pre><code class="hljs undefined">// 不推荐
-//is current tab
-const active = true;
-// 推荐
-// is current tab
-const active = true;
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>//is current tab<br>const active = true;<br>// 推荐<br>// is current tab<br>const active = true;<br><br>// 不推荐<br>/**<br>*make() returns a new element<br>*based on the passed-in tag name<br>*/<br>function make(tag) &#123;<br>  // ...<br>  return element;<br>&#125;<br>// 推荐<br>/**<br>* make() returns a new element<br>* based on the passed-in tag name<br>*/<br>function make(tag) &#123;<br>  // ...<br>  return element;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-// 不推荐
-/**
-*make() returns a new element
-*based on the passed-in tag name
-*/
-function make(tag) &#123;
-  // ...
-  return element;
-&#125;
-// 推荐
-/**
-* make() returns a new element
-* based on the passed-in tag name
-*/
-function make(tag) &#123;
-  // ...
-  return element;
-&#125;</code></pre>
-</li>
-<li><p>给注释增加 FIXME 或 TODO 的前缀</p>
-<p>帮助其他开发者快速了解这个是否是一个需要重新复查的问题，或是你正在为需要解决的问题提出解决方案。这将有别于常规注释，因为它们是可操作的。</p>
-<p>使用 <code>FIXME – need to figure this out</code> 或者 <code>TODO – need to implement</code>。</p>
-<p>使用 <code>// FIXME:</code> 来标识需要修正的问题。</p>
-<p>注：如果代码中有该标识，说明标识处代码需要修正，甚至代码是错误的，不能工作，需要修复，如何修正会在说明中简略说明。</p>
-<pre><code class="hljs undefined">lass Calculator extends Abacus &#123;
-  constructor() &#123;
-    super();
-    // FIXME: shouldn’t use a global here
-    total = 0;
-  &#125;
-&#125;</code></pre>
-<p>使用 <code>// TODO:</code> 来标识需要实现的问题。</p>
-<p>注：如果代码中有该标识，说明在标识处有功能代码待编写，待实现的功能在说明中会简略说明。</p>
-<pre><code class="hljs undefined">class Calculator extends Abacus &#123;
-  constructor() &#123;
-    super();
-    // TODO: total should be configurable by an options param
-    this.total = 0;
-  &#125;
-&#125;</code></pre>
-</li>
+<ol start="4">
+<li>给注释增加 FIXME 或 TODO 的前缀</li>
 </ol>
+<p>  帮助其他开发者快速了解这个是否是一个需要重新复查的问题，或是你正在为需要解决的问题提出解决方案。这将有别于常规注释，因为它们是可操作的。</p>
+<p>  使用 <code>FIXME – need to figure this out</code> 或者 <code>TODO – need to implement</code>。</p>
+<p>  使用 <code>// FIXME: </code> 来标识需要修正的问题。</p>
+<p>  注：如果代码中有该标识，说明标识处代码需要修正，甚至代码是错误的，不能工作，需要修复，如何修正会在说明中简略说明。</p>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">lass Calculator extends Abacus &#123;<br>  constructor() &#123;<br>    super();<br>    // FIXME: shouldn’t use a global here<br>    total = 0;<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>  使用 <code>// TODO:</code> 来标识需要实现的问题。</p>
+<p>  注：如果代码中有该标识，说明在标识处有功能代码待编写，待实现的功能在说明中会简略说明。</p>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">class Calculator extends Abacus &#123;<br>  constructor() &#123;<br>    super();<br>    // TODO: total should be configurable by an options param<br>    this.total = 0;<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
 <h2 id="空格-Whitespace"><a href="#空格-Whitespace" class="headerlink" title="空格 Whitespace"></a>空格 Whitespace</h2><ol>
-<li><p>使用 2 个空格作为缩进</p>
-<pre><code class="hljs undefined">// 推荐
-function baz() &#123;
-  let name;
-&#125;</code></pre>
-</li>
-<li><p>在大括号前放置 1 个空格。</p>
+<li>使用 2 个空格作为缩进</li>
+</ol>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 推荐<br>function baz() &#123;<br>  let name;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>在大括号前放置 1 个空格。</li>
+</ol>
 <blockquote>
 <p>eslint: space-before-blocks jscs: requireSpaceBeforeBlockStatements</p>
 </blockquote>
-<pre><code class="hljs undefined">// 不推荐
-function test()&#123;
-  console.log(&apos;test&apos;);
-&#125;
-// 推荐
-function test() &#123;
-  console.log(&apos;test&apos;);
-&#125;
-// 不推荐
-dog.set(&apos;attr&apos;,&#123;
-  age: &apos;1 year&apos;,
-  breed: &apos;Bernese Mountain Dog&apos;,
-&#125;);
-// 推荐
-dog.set(&apos;attr&apos;, &#123;
-  age: &apos;1 year&apos;,
-  breed: &apos;Bernese Mountain Dog&apos;,
-&#125;);</code></pre>
-</li>
-<li><p>在控制语句（if、while 等）的小括号前放一个空格。在函数调用及声明中，不在函数的参数列表前加空格。</p>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>function test()&#123;<br>  console.log(&#x27;test&#x27;);<br>&#125;<br>// 推荐<br>function test() &#123;<br>  console.log(&#x27;test&#x27;);<br>&#125;<br>// 不推荐<br>dog.set(&#x27;attr&#x27;,&#123;<br>  age: &#x27;1 year&#x27;,<br>  breed: &#x27;Bernese Mountain Dog&#x27;,<br>&#125;);<br>// 推荐<br>dog.set(&#x27;attr&#x27;, &#123;<br>  age: &#x27;1 year&#x27;,<br>  breed: &#x27;Bernese Mountain Dog&#x27;,<br>&#125;);<br></code></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>在控制语句（if、while 等）的小括号前放一个空格。在函数调用及声明中，不在函数的参数列表前加空格。</li>
+</ol>
 <blockquote>
 <p>eslint: keyword-spacing jscs: requireSpaceAfterKeywords</p>
 </blockquote>
-<pre><code class="hljs undefined">// 不推荐
-if(isJedi) &#123;
-  fight ();
-&#125;
-// 推荐
-if (isJedi) &#123;
-  fight();
-&#125;
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>if(isJedi) &#123;<br>  fight ();<br>&#125;<br>// 推荐<br>if (isJedi) &#123;<br>  fight();<br>&#125;<br><br>// 不推荐<br>function fight () &#123;<br>  console.log (&#x27;Swooosh!&#x27;);<br>&#125;<br>// 推荐<br>function fight() &#123;<br>  console.log(&#x27;Swooosh!&#x27;);<br>&#125;<br></code></pre></td></tr></table></figure>
 
-// 不推荐
-function fight () &#123;
-  console.log (&apos;Swooosh!&apos;);
-&#125;
-// 推荐
-function fight() &#123;
-  console.log(&apos;Swooosh!&apos;);
-&#125;</code></pre>
-</li>
-<li><p>使用空格把运算符隔开。</p>
+<ol start="4">
+<li>使用空格把运算符隔开。</li>
+</ol>
 <blockquote>
 <p>eslint: space-infix-ops jscs: requireSpaceBeforeBinaryOperators, requireSpaceAfterBinaryOperators</p>
 </blockquote>
-<pre><code class="hljs undefined">// 不推荐
-const x=y+5;
-// 推荐
-const x = y + 5;</code></pre>
-</li>
-<li><p>在文件末尾插入一个空行。</p>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>const x=y+5;<br>// 推荐<br>const x = y + 5;<br></code></pre></td></tr></table></figure>
+
+<ol start="5">
+<li>在文件末尾插入一个空行。</li>
+</ol>
 <blockquote>
 <p>eslint: eol-last</p>
 </blockquote>
-<pre><code class="hljs undefined">// 不推荐
-import &#123; es6 &#125; from &apos;./JavascriptStyleGuide&apos;;
-// ...
-export default es6;
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>import &#123; es6 &#125; from &#x27;./JavascriptStyleGuide&#x27;;<br>// ...<br>export default es6;<br><br>// 推荐<br>import &#123; es6 &#125; from &#x27;./JavascriptStyleGuide&#x27;;<br>// ...<br>export default es6;<br><br></code></pre></td></tr></table></figure>
 
-// 推荐
-import &#123; es6 &#125; from &apos;./JavascriptStyleGuide&apos;;
-// ...
-export default es6;</code></pre>
-</li>
-<li><p>长方法链式调用时使用缩进（2个以上的方法链式调用）。使用一个点 . 开头，强调该行是一个方法调用，不是一个新的声明。</p>
+<ol start="6">
+<li>长方法链式调用时使用缩进（2个以上的方法链式调用）。使用一个点 . 开头，强调该行是一个方法调用，不是一个新的声明。</li>
+</ol>
 <blockquote>
 <p>eslint: newline-per-chained-call no-whitespace-before-property</p>
 </blockquote>
-<pre><code class="hljs undefined">// 不推荐
-$(&apos;#items&apos;).find(&apos;.selected&apos;).highlight().end().find(&apos;.open&apos;).updateCount();
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>$(&#x27;#items&#x27;).find(&#x27;.selected&#x27;).highlight().end().find(&#x27;.open&#x27;).updateCount();<br><br>// 不推荐<br>$(&#x27;#items&#x27;).<br>find(&#x27;.selected&#x27;).<br>highlight().<br>end().<br>find(&#x27;.open&#x27;).<br>updateCount();<br><br>// 推荐<br>$(&#x27;#items&#x27;)<br>  .find(&#x27;.selected&#x27;)<br>  .highlight()<br>  .end()<br>  .find(&#x27;.open&#x27;)<br>  .updateCount();<br><br>// 不推荐<br>const leds = stage.selectAll(&#x27;.led&#x27;).data(data).enter().append(&#x27;svg:svg&#x27;).classed(&#x27;led&#x27;, true)<br>.attr(&#x27;width&#x27;, (radius + margin) * 2).append(&#x27;svg:g&#x27;)<br>.attr(&#x27;transform&#x27;, `translate($&#123;radius + margin&#125;,$&#123;radius + margin&#125;)`)<br>.call(tron.led);<br><br>// 推荐<br>const leds = stage.selectAll(&#x27;.led&#x27;)<br>  .data(data)<br>  .enter().append(&#x27;svg:svg&#x27;)<br>  .classed(&#x27;led&#x27;, true)<br>  .attr(&#x27;width&#x27;, (radius + margin) * 2)<br>  .append(&#x27;svg:g&#x27;)<br>  .attr(&#x27;transform&#x27;, `translate($&#123;radius + margin&#125;,$&#123;radius + margin&#125;)`)<br>  .call(tron.led);<br>// 推荐<br>const leds = stage.selectAll(&#x27;.led&#x27;).data(data);<br></code></pre></td></tr></table></figure>
 
-// 不推荐
-$(&apos;#items&apos;).
-find(&apos;.selected&apos;).
-highlight().
-end().
-find(&apos;.open&apos;).
-updateCount();
+<ol start="7">
+<li>不要在圆括号内加空格。</li>
+</ol>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>function bar( foo ) &#123;<br>  return foo;<br>&#125;<br>// 推荐<br>function bar(foo) &#123;<br>  return foo;<br>&#125;<br>// 不推荐<br>if ( foo ) &#123;<br>  console.log(foo);<br>&#125;<br>// 推荐<br>if (foo) &#123;<br>  console.log(foo);<br>&#125;<br></code></pre></td></tr></table></figure>
 
-// 推荐
-$(&apos;#items&apos;)
-  .find(&apos;.selected&apos;)
-  .highlight()
-  .end()
-  .find(&apos;.open&apos;)
-  .updateCount();
-
-// 不推荐
-const leds = stage.selectAll(&apos;.led&apos;).data(data).enter().append(&apos;svg:svg&apos;).classed(&apos;led&apos;, true)
-.attr(&apos;width&apos;, (radius + margin) * 2).append(&apos;svg:g&apos;)
-.attr(&apos;transform&apos;, `translate($&#123;radius + margin&#125;,$&#123;radius + margin&#125;)`)
-.call(tron.led);
-
-// 推荐
-const leds = stage.selectAll(&apos;.led&apos;)
-  .data(data)
-  .enter().append(&apos;svg:svg&apos;)
-  .classed(&apos;led&apos;, true)
-  .attr(&apos;width&apos;, (radius + margin) * 2)
-  .append(&apos;svg:g&apos;)
-  .attr(&apos;transform&apos;, `translate($&#123;radius + margin&#125;,$&#123;radius + margin&#125;)`)
-  .call(tron.led);
-// 推荐
-const leds = stage.selectAll(&apos;.led&apos;).data(data);</code></pre>
-</li>
-<li><p>不要在圆括号内加空格。</p>
-<pre><code class="hljs undefined">// 不推荐
-function bar( foo ) &#123;
-  return foo;
-&#125;
-// 推荐
-function bar(foo) &#123;
-  return foo;
-&#125;
-// 不推荐
-if ( foo ) &#123;
-  console.log(foo);
-&#125;
-// 推荐
-if (foo) &#123;
-  console.log(foo);
-&#125;</code></pre>
-</li>
-<li><p>添加/不添加空格。</p>
+<ol start="8">
+<li>添加&#x2F;不添加空格。</li>
+</ol>
 <blockquote>
 <p>eslint: array-bracket-spacing jscs: disallowSpacesInsideArrayBrackets</p>
 </blockquote>
-<pre><code class="hljs undefined">// 不推荐
-const foo = [ 1, 2, 3 ];
-console.log(foo[ 0 ]);
-// 推荐(内部分隔符号后有空格)
-const foo = [1, 2, 3];
-console.log(foo[0]);
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>const foo = [ 1, 2, 3 ];<br>console.log(foo[ 0 ]);<br>// 推荐(内部分隔符号后有空格)<br>const foo = [1, 2, 3];<br>console.log(foo[0]);<br><br>// 不推荐<br>const foo = &#123; clark:&#x27;kent&#x27; &#125;;<br>// 推荐(内部分隔符号后有空格)<br>const foo = &#123;clark: &#x27;kent&#x27;&#125;;<br></code></pre></td></tr></table></figure>
 
-// 不推荐
-const foo = &#123; clark:&apos;kent&apos; &#125;;
-// 推荐(内部分隔符号后有空格)
-const foo = &#123;clark: &apos;kent&apos;&#125;;</code></pre>
-</li>
-</ol>
 <h2 id="类型转换-Type-Casting-amp-Coercion"><a href="#类型转换-Type-Casting-amp-Coercion" class="headerlink" title="类型转换 Type Casting &amp; Coercion"></a>类型转换 Type Casting &amp; Coercion</h2><ol>
-<li><p>在声明语句的开始处就执行强制类型转换.</p>
-<p>字符串：</p>
+<li>在声明语句的开始处就执行强制类型转换.</li>
+</ol>
+<p>  字符串：</p>
 <blockquote>
 <p>eslint: no-new-wrappers</p>
 </blockquote>
-<pre><code class="hljs undefined">// =&gt; this.reviewScore = 9;
-// 不推荐
-const totalScore = new String(this.reviewScore); // typeof totalScore 是 &quot;object&quot; 而不是 &quot;string&quot;
-// 不推荐
-const totalScore = this.reviewScore + &apos;&apos;; // 调用 this.reviewScore.valueOf()
-// 不推荐
-const totalScore = this.reviewScore.toString(); // 不能保证返回一个字符串
-// 推荐
-const totalScore = String(this.reviewScore);</code></pre>
-<p>数字：使用 Number 进行转换，而 parseInt 则始终以基数解析字串。</p>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// =&gt; this.reviewScore = 9;<br>// 不推荐<br>const totalScore = new String(this.reviewScore); // typeof totalScore 是 &quot;object&quot; 而不是 &quot;string&quot;<br>// 不推荐<br>const totalScore = this.reviewScore + &#x27;&#x27;; // 调用 this.reviewScore.valueOf()<br>// 不推荐<br>const totalScore = this.reviewScore.toString(); // 不能保证返回一个字符串<br>// 推荐<br>const totalScore = String(this.reviewScore);<br></code></pre></td></tr></table></figure>
+
+<p>  数字：使用 Number 进行转换，而 parseInt 则始终以基数解析字串。</p>
 <blockquote>
 <p>eslint: radix no-new-wrappers</p>
 </blockquote>
-<pre><code class="hljs undefined">const inputValue = &apos;4&apos;;
-// 不推荐
-const val = new Number(inputValue);
-// 不推荐
-const val = +inputValue;
-// 不推荐
-const val = inputValue &gt;&gt; 0;
-// 不推荐
-const val = parseInt(inputValue);
-// 推荐
-const val = Number(inputValue);
-// 推荐
-const val = parseInt(inputValue, 10);</code></pre>
-<p>布尔值:</p>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">const inputValue = &#x27;4&#x27;;<br>// 不推荐<br>const val = new Number(inputValue);<br>// 不推荐<br>const val = +inputValue;<br>// 不推荐<br>const val = inputValue &gt;&gt; 0;<br>// 不推荐<br>const val = parseInt(inputValue);<br>// 推荐<br>const val = Number(inputValue);<br>// 推荐<br>const val = parseInt(inputValue, 10);<br></code></pre></td></tr></table></figure>
+
+<p>  布尔值:</p>
 <blockquote>
 <p>eslint: no-new-wrappers</p>
 </blockquote>
-<pre><code class="hljs undefined">const age = 0;
-// 不推荐
-const hasAge = new Boolean(age);
-// 推荐
-const hasAge = Boolean(age);
-// 强烈推荐
-const hasAge = !!age;</code></pre>
-</li>
-</ol>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">const age = 0;<br>// 不推荐<br>const hasAge = new Boolean(age);<br>// 推荐<br>const hasAge = Boolean(age);<br>// 强烈推荐<br>const hasAge = !!age;<br></code></pre></td></tr></table></figure>
+
 <h2 id="命名规则-Naming-Conventions"><a href="#命名规则-Naming-Conventions" class="headerlink" title="命名规则 Naming Conventions"></a>命名规则 Naming Conventions</h2><ol>
-<li><p>避免使用单字母名称，命名应具有描述性。</p>
+<li>避免使用单字母名称，命名应具有描述性。</li>
+</ol>
 <blockquote>
 <p>eslint: id-length</p>
 </blockquote>
-<pre><code class="hljs undefined">// 不推荐
-function q() &#123;
-  // ...
-&#125;
-// 推荐
-function query() &#123;
-  // ...
-&#125;</code></pre>
-</li>
-<li><p>当命名对象，函数和实例时使用驼峰式命名。</p>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>function q() &#123;<br>  // ...<br>&#125;<br>// 推荐<br>function query() &#123;<br>  // ...<br>&#125;<br></code></pre></td></tr></table></figure>
+<ol start="2">
+<li>当命名对象，函数和实例时使用驼峰式命名。</li>
+</ol>
 <blockquote>
 <p>eslint: camelcase jscs: requireCamelCaseOrUpperCaseIdentifiers</p>
 </blockquote>
-<pre><code class="hljs undefined">// 不推荐
-const OBJEcttsssss = &#123;&#125;;
-const this_is_my_object = &#123;&#125;;
-function c() &#123;&#125;
-// 推荐
-const thisIsMyObject = &#123;&#125;;
-function thisIsMyFunction() &#123;&#125;</code></pre>
-</li>
-<li><p>当命名构造函数或类的时候使用 PascalCase 式命名，（注：即单词首字母大写）。</p>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>const OBJEcttsssss = &#123;&#125;;<br>const this_is_my_object = &#123;&#125;;<br>function c() &#123;&#125;<br>// 推荐<br>const thisIsMyObject = &#123;&#125;;<br>function thisIsMyFunction() &#123;&#125;<br></code></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>当命名构造函数或类的时候使用 PascalCase 式命名，（注：即单词首字母大写）。</li>
+</ol>
 <blockquote>
 <p>eslint: new-cap</p>
 </blockquote>
-<pre><code class="hljs undefined">// 不推荐
-function user(options) &#123;
-  this.name = options.name;
-&#125;
-const bad = new user(&#123;
-  name: &apos;nope&apos;,
-&#125;);
-// 推荐
-class User &#123;
-  constructor(options) &#123;
-    this.name = options.name;
-  &#125;
-&#125;
-const good = new User(&#123;
-  name: &apos;yup&apos;,
-&#125;);</code></pre>
-</li>
-<li><p>当导出(export) 一个默认函数时使用驼峰式命名。你的文件名应该和你的函数的名字一致。</p>
-<pre><code class="hljs undefined">function makeStyleGuide() &#123;
-  // ...
-&#125;
-export default makeStyleGuide;</code></pre>
-</li>
-<li><p>当导出一个构造函数/类/单例/函数库/纯对象时使用 PascalCase 式命名。</p>
-<pre><code class="hljs undefined">const JavascriptStyleGuide = &#123;
-  es6: &#123;
-  &#125;,
-&#125;;
-export default JavascriptStyleGuide;</code></pre>
-</li>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>function user(options) &#123;<br>  this.name = options.name;<br>&#125;<br>const bad = new user(&#123;<br>  name: &#x27;nope&#x27;,<br>&#125;);<br>// 推荐<br>class User &#123;<br>  constructor(options) &#123;<br>    this.name = options.name;<br>  &#125;<br>&#125;<br>const good = new User(&#123;<br>  name: &#x27;yup&#x27;,<br>&#125;);<br></code></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>当导出(export) 一个默认函数时使用驼峰式命名。你的文件名应该和你的函数的名字一致。</li>
 </ol>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">function makeStyleGuide() &#123;<br>  // ...<br>&#125;<br>export default makeStyleGuide;<br></code></pre></td></tr></table></figure>
+
+<ol start="5">
+<li>当导出一个构造函数&#x2F;类&#x2F;单例&#x2F;函数库&#x2F;纯对象时使用 PascalCase 式命名。</li>
+</ol>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">const JavascriptStyleGuide = &#123;<br>  es6: &#123;<br>  &#125;,<br>&#125;;<br>export default JavascriptStyleGuide;<br></code></pre></td></tr></table></figure>
+
 <h2 id="存取器-Accessors"><a href="#存取器-Accessors" class="headerlink" title="存取器 Accessors"></a>存取器 Accessors</h2><p>属性的存取器函数不是必须的。</p>
 <ol>
-<li><p>別使用 JavaScript 的 getters/setters，因为它们会导致意想不到的副作用，而且很难测试，维护和理解。相反，如果要使用存取器函数，使用 getVal() 及 setVal(‘hello’)。</p>
-<pre><code class="hljs undefined">// 不推荐
-class Dragon &#123;
-  get age() &#123;
-    // ...
-  &#125;
-  set age(value) &#123;
-    // ...
-  &#125;
-&#125;
-// 推荐
-class Dragon &#123;
-  getAge() &#123;
-    // ...
-  &#125;
-  setAge(value) &#123;
-    // ...
-  &#125;
-&#125;</code></pre>
-</li>
-<li><p>如果属性/方法是一个 boolean, 使用 isVal() 或 hasVal() 方法。</p>
-<pre><code class="hljs undefined">// 不推荐
-if (!dragon.age()) &#123;
-  return false;
-&#125;
-// 推荐
-if (!dragon.hasAge()) &#123;
-  return false;
-&#125;</code></pre>
-</li>
+<li>別使用 JavaScript 的 getters&#x2F;setters，因为它们会导致意想不到的副作用，而且很难测试，维护和理解。相反，如果要使用存取器函数，使用 getVal() 及 setVal(‘hello’)。</li>
 </ol>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>class Dragon &#123;<br>  get age() &#123;<br>    // ...<br>  &#125;<br>  set age(value) &#123;<br>    // ...<br>  &#125;<br>&#125;<br>// 推荐<br>class Dragon &#123;<br>  getAge() &#123;<br>    // ...<br>  &#125;<br>  setAge(value) &#123;<br>    // ...<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>如果属性&#x2F;方法是一个 boolean, 使用 isVal() 或 hasVal() 方法。</li>
+</ol>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">// 不推荐<br>if (!dragon.age()) &#123;<br>  return false;<br>&#125;<br>// 推荐<br>if (!dragon.hasAge()) &#123;<br>  return false;<br>&#125;<br></code></pre></td></tr></table></figure>
+
 <h2 id="If-Else优化方案"><a href="#If-Else优化方案" class="headerlink" title="If-Else优化方案"></a>If-Else优化方案</h2><p><a href="/developer/style-guide/if-else-optimize-solutions.html">If-Else优化方案</a></p>
 <h2 id="整洁代码"><a href="#整洁代码" class="headerlink" title="整洁代码"></a>整洁代码</h2><p><a href="/developer/style-guide/tips-to-keep-javascript-code-clean.html">整洁代码的建议列表</a></p>
 <h2 id="摘自文章"><a href="#摘自文章" class="headerlink" title="摘自文章"></a>摘自文章</h2><ul>
-<li><a href="https://cloud.tencent.com/developer/article/1404290" target="_blank" rel="noopener">JavaScript 编程规范(一)</a></li>
-<li><a href="https://cloud.tencent.com/developer/article/1404381" target="_blank" rel="noopener">JavaScript 编程规范(二)</a></li>
+<li><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1404290">JavaScript 编程规范(一)</a></li>
+<li><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1404381">JavaScript 编程规范(二)</a></li>
 </ul>
 
   
@@ -1769,7 +958,9 @@ if (!dragon.hasAge()) &#123;
 
     <!-- search -->
     <link href="//code.bdstatic.com/npm/docsearch.js@1.5.0/dist/cdn/docsearch.min.css" rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/css/search.css">
+    
+<link rel="stylesheet" href="/css/search.css">
+
     <script src="//code.bdstatic.com/npm/docsearch.js@1.5.0/dist/cdn/docsearch.min.js"></script>
     <script>
     [

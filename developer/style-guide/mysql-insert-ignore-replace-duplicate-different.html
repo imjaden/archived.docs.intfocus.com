@@ -1,8 +1,7 @@
-
-
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
+    
     <title>MySQL Insert 注意事项 — 胜因学院</title>
     <meta charset="utf-8">
     <meta name="description" content="Vue.js - The Progressive JavaScript Framework">
@@ -32,7 +31,9 @@
     <link href="//code.bdstatic.com/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- main page styles -->
-    <link rel="stylesheet" href="/css/page.css">
+    
+<link rel="stylesheet" href="/css/page.css">
+
 
     <!-- this needs to be loaded before guide's inline scripts -->
     <script src="/js/vue.js"></script>
@@ -40,7 +41,7 @@
       Vue.config.productionTip = false
       window.PAGE_TYPE = "MySQL Insert 注意事项"
     </script>
-  </head>
+  <meta name="generator" content="Hexo 6.3.0"></head>
   <body class="docs">
     <div id="mobile-bar" >
       <a class="menu-button"></a>
@@ -133,14 +134,31 @@
   </ul>
 </li>
 
-<li>
-  <a href="https://www.intfocus.com" target="_blank" class="nav-link team">官网</a>
-</li>
 
+<li class="nav-dropdown-container learn">
+  <a class="nav-link current">外链导航</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li>
+    <a href="https://www.intfocus.com" target="_blank" class="nav-link team">胜因官网</a>
+    </li>
+    <li>
+    <a href="javascript:void(0)" onclick="Resume.open()" class="nav-link team">我的简历</a>
+    </li>
+  </ul>
+</li>
+<script>
+window.Resume = {
+  open: function() {
+    window.location.href = (window.innerWidth > window.innerHeight ? '//jaden.tech/resume-landscape-672cfe02a8443258f4892d518a61a963.pdf' : '//jaden.tech/resume-vertical-e8520975ff8f7ece244b97a5f3ad9494.pdf');
+  }
+}
+</script>
   </ul>
 </div>
 
     
+    
+
     
       <div id="main" class="fix-sidebar">
         
@@ -229,10 +247,25 @@
   </ul>
 </li>
 
-<li>
-  <a href="https://www.intfocus.com" target="_blank" class="nav-link team">官网</a>
-</li>
 
+<li class="nav-dropdown-container learn">
+  <a class="nav-link current">外链导航</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li>
+    <a href="https://www.intfocus.com" target="_blank" class="nav-link team">胜因官网</a>
+    </li>
+    <li>
+    <a href="javascript:void(0)" onclick="Resume.open()" class="nav-link team">我的简历</a>
+    </li>
+  </ul>
+</li>
+<script>
+window.Resume = {
+  open: function() {
+    window.location.href = (window.innerWidth > window.innerHeight ? '//jaden.tech/resume-landscape-672cfe02a8443258f4892d518a61a963.pdf' : '//jaden.tech/resume-vertical-e8520975ff8f7ece244b97a5f3ad9494.pdf');
+  }
+}
+</script>
     </ul>
     <div class="list">
       
@@ -303,137 +336,25 @@
   
 
   
-    <h2 id="Create-Table"><a href="#Create-Table" class="headerlink" title="Create Table"></a>Create Table</h2><pre><code class="hljs undefined">create table if not exists `tbl_insert_ignore_replace_duplicate` (
-  `id` int(11) not null auto_increment comment &apos;自增主键&apos;,
-  `label` varchar(20) not null comment &apos;唯一标识&apos;,
-  `data_update_time` timestamp not null default current_timestamp comment &apos;数据更新时间&apos;,
-  primary key (`id`),
-  unique index `inx_label` (`label`)
-) engine=innodb default charset=utf8 row_format=dynamic comment=&apos;测试insert/ignore/replace/duplicate功能&apos;;</code></pre>
-<h2 id="Insert-Into"><a href="#Insert-Into" class="headerlink" title="Insert Into"></a>Insert Into</h2><pre><code class="hljs undefined">mysql &gt; insert into tbl_insert_ignore_replace_duplicate(label) value (&apos;insert&apos;), (&apos;replace&apos;), (&apos;duplicate&apos;);
+    <h2 id="Create-Table"><a href="#Create-Table" class="headerlink" title="Create Table"></a>Create Table</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">create table if not exists `tbl_insert_ignore_replace_duplicate` (<br>  `id` int(11) not null auto_increment comment &#x27;自增主键&#x27;,<br>  `label` varchar(20) not null comment &#x27;唯一标识&#x27;,<br>  `data_update_time` timestamp not null default current_timestamp comment &#x27;数据更新时间&#x27;,<br>  primary key (`id`),<br>  unique index `inx_label` (`label`)<br>) engine=innodb default charset=utf8 row_format=dynamic comment=&#x27;测试insert/ignore/replace/duplicate功能&#x27;;<br></code></pre></td></tr></table></figure>
 
-Query OK, 3 rows affected (0.01 sec)
-Records: 3  Duplicates: 0  Warnings: 0
+<h2 id="Insert-Into"><a href="#Insert-Into" class="headerlink" title="Insert Into"></a>Insert Into</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">mysql &gt; insert into tbl_insert_ignore_replace_duplicate(label) value (&#x27;insert&#x27;), (&#x27;replace&#x27;), (&#x27;duplicate&#x27;);<br><br>Query OK, 3 rows affected (0.01 sec)<br>Records: 3  Duplicates: 0  Warnings: 0<br><br>mysql&gt; select * from tbl_insert_ignore_replace_duplicate;<br>+----+-----------+---------------------+<br>| id | label     | data_update_time    |<br>+----+-----------+---------------------+<br>|  1 | insert    | 2019-10-16 23:22:21 |<br>|  2 | replace   | 2019-10-16 23:22:21 |<br>|  3 | duplicate | 2019-10-16 23:22:21 |<br>+----+-----------+---------------------+<br></code></pre></td></tr></table></figure>
 
-mysql&gt; select * from tbl_insert_ignore_replace_duplicate;
-+----+-----------+---------------------+
-| id | label     | data_update_time    |
-+----+-----------+---------------------+
-|  1 | insert    | 2019-10-16 23:22:21 |
-|  2 | replace   | 2019-10-16 23:22:21 |
-|  3 | duplicate | 2019-10-16 23:22:21 |
-+----+-----------+---------------------+</code></pre>
 <p>普通 <code>insert into</code> 当主键或唯一索引冲突时，MySQL 会异常报错中断执行。</p>
-<pre><code class="hljs undefined">mysql&gt; mysql &gt; insert into tbl_insert_ignore_replace_duplicate(label) value (&apos;insert&apos;);
-ERROR 1062 (23000): Duplicate entry &apos;insert&apos; for key &apos;inx_label&apos;
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">mysql&gt; mysql &gt; insert into tbl_insert_ignore_replace_duplicate(label) value (&#x27;insert&#x27;);<br>ERROR 1062 (23000): Duplicate entry &#x27;insert&#x27; for key &#x27;inx_label&#x27;<br><br>mysql&gt; show create table tbl_insert_ignore_replace_duplicate;<br><br>CREATE TABLE `tbl_insert_ignore_replace_duplicate` (<br>  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT &#x27;自增主键&#x27;,<br>  `label` varchar(20) NOT NULL COMMENT &#x27;唯一标识&#x27;,<br>  `data_update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT &#x27;数据更新时间&#x27;,<br>  PRIMARY KEY (`id`),<br>  UNIQUE KEY `inx_label` (`label`)<br>) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT=&#x27;测试insert/ignore/replace/duplicate功能&#x27;<br></code></pre></td></tr></table></figure>
 
-mysql&gt; show create table tbl_insert_ignore_replace_duplicate;
-
-CREATE TABLE `tbl_insert_ignore_replace_duplicate` (
-  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT &apos;自增主键&apos;,
-  `label` varchar(20) NOT NULL COMMENT &apos;唯一标识&apos;,
-  `data_update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT &apos;数据更新时间&apos;,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `inx_label` (`label`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT=&apos;测试insert/ignore/replace/duplicate功能&apos;</code></pre>
-<p>虽然插入失败，但占用了一次 id+1 机会，即把 id=4 使用了，下次 id 从 5 开始。</p>
+<p>虽然插入失败，但占用了一次 id+1 机会，即把 id&#x3D;4 使用了，下次 id 从 5 开始。</p>
 <p><em>TODO: 待确认 master-slave 集群时，slave 库中表的 <code>AUTO_INCREMENT</code> 值与 master 相同</em></p>
 <h2 id="Replace-Into-禁用"><a href="#Replace-Into-禁用" class="headerlink" title="Replace Into (禁用)"></a>Replace Into (禁用)</h2><p><code>replace into</code> 操作时，当主键或唯一索引冲突时就是普通的 <code>insert into</code> 效果。</p>
 <p><strong>但是</strong>，当有主键或唯一索引冲突时，会删除冲突行，重新插入，从而 <code>id</code> 自动 <code>+1</code>.</p>
-<pre><code class="hljs undefined">mysql&gt; select version();
-+-----------+
-| version() |
-+-----------+
-| 5.7.25    |
-+-----------+
-1 row in set (0.01 sec)
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">mysql&gt; select version();<br>+-----------+<br>| version() |<br>+-----------+<br>| 5.7.25    |<br>+-----------+<br>1 row in set (0.01 sec)<br><br>mysql&gt; select * from tbl_insert_ignore_replace_duplicate;<br>+----+-----------+---------------------+<br>| id | label     | data_update_time    |<br>+----+-----------+---------------------+<br>|  1 | insert    | 2019-10-16 23:22:21 |<br>|  2 | replace   | 2019-10-16 23:22:21 |<br>|  3 | duplicate | 2019-10-16 23:22:21 |<br>+----+-----------+---------------------+<br>3 rows in set (0.00 sec)<br><br>mysql&gt; replace into tbl_insert_ignore_replace_duplicate(label) value (&#x27;replace&#x27;);<br>Query OK, 2 rows affected (0.00 sec)<br><br># 上面 insert into 冲突时，造成了 id=(旧id最大值+1)=4<br>mysql&gt; select * from tbl_insert_ignore_replace_duplicate;<br>+----+-----------+---------------------+<br>| id | label     | data_update_time    |<br>+----+-----------+---------------------+<br>|  1 | insert    | 2019-10-16 23:22:21 |<br>|  3 | duplicate | 2019-10-16 23:22:21 |<br>|  5 | replace   | 2019-10-16 23:27:50 |<br>+----+-----------+---------------------+<br>3 rows in set (0.00 sec)<br><br>mysql&gt; replace into tbl_insert_ignore_replace_duplicate(label) value (&#x27;replace&#x27;);<br>Query OK, 2 rows affected (0.00 sec)<br><br>mysql&gt; select * from tbl_insert_ignore_replace_duplicate;<br>+----+-----------+---------------------+<br>| id | label     | data_update_time    |<br>+----+-----------+---------------------+<br>|  1 | insert    | 2019-10-16 23:22:21 |<br>|  3 | duplicate | 2019-10-16 23:22:21 |<br>|  6 | replace   | 2019-10-16 23:28:35 |<br>+----+-----------+---------------------+<br>3 rows in set (0.00 sec)<br><br>mysql&gt; show create table tbl_insert_ignore_replace_duplicate;<br><br>CREATE TABLE `tbl_insert_ignore_replace_duplicate` (<br>  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT &#x27;自增主键&#x27;,<br>  `label` varchar(20) NOT NULL COMMENT &#x27;唯一标识&#x27;,<br>  `data_update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT &#x27;数据更新时间&#x27;,<br>  PRIMARY KEY (`id`),<br>  UNIQUE KEY `inx_label` (`label`)<br>) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT=&#x27;测试insert/ignore/replace/duplicate功能&#x27;<br></code></pre></td></tr></table></figure>
 
-mysql&gt; select * from tbl_insert_ignore_replace_duplicate;
-+----+-----------+---------------------+
-| id | label     | data_update_time    |
-+----+-----------+---------------------+
-|  1 | insert    | 2019-10-16 23:22:21 |
-|  2 | replace   | 2019-10-16 23:22:21 |
-|  3 | duplicate | 2019-10-16 23:22:21 |
-+----+-----------+---------------------+
-3 rows in set (0.00 sec)
-
-mysql&gt; replace into tbl_insert_ignore_replace_duplicate(label) value (&apos;replace&apos;);
-Query OK, 2 rows affected (0.00 sec)
-
-# 上面 insert into 冲突时，造成了 id=(旧id最大值+1)=4
-mysql&gt; select * from tbl_insert_ignore_replace_duplicate;
-+----+-----------+---------------------+
-| id | label     | data_update_time    |
-+----+-----------+---------------------+
-|  1 | insert    | 2019-10-16 23:22:21 |
-|  3 | duplicate | 2019-10-16 23:22:21 |
-|  5 | replace   | 2019-10-16 23:27:50 |
-+----+-----------+---------------------+
-3 rows in set (0.00 sec)
-
-mysql&gt; replace into tbl_insert_ignore_replace_duplicate(label) value (&apos;replace&apos;);
-Query OK, 2 rows affected (0.00 sec)
-
-mysql&gt; select * from tbl_insert_ignore_replace_duplicate;
-+----+-----------+---------------------+
-| id | label     | data_update_time    |
-+----+-----------+---------------------+
-|  1 | insert    | 2019-10-16 23:22:21 |
-|  3 | duplicate | 2019-10-16 23:22:21 |
-|  6 | replace   | 2019-10-16 23:28:35 |
-+----+-----------+---------------------+
-3 rows in set (0.00 sec)
-
-mysql&gt; show create table tbl_insert_ignore_replace_duplicate;
-
-CREATE TABLE `tbl_insert_ignore_replace_duplicate` (
-  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT &apos;自增主键&apos;,
-  `label` varchar(20) NOT NULL COMMENT &apos;唯一标识&apos;,
-  `data_update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT &apos;数据更新时间&apos;,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `inx_label` (`label`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT=&apos;测试insert/ignore/replace/duplicate功能&apos;</code></pre>
-<p>若配置了主从同步，则此时 slave 库中 tbl_insert_ignore_replace_duplicate 表的 AUTO_INCREMENT = 4。</p>
+<p>若配置了主从同步，则此时 slave 库中 tbl_insert_ignore_replace_duplicate 表的 AUTO_INCREMENT &#x3D; 4。</p>
 <p>当 master 库压力过大或其他情况，需要把 slave 库转为 master 库时，造成 id 在 4-6 区间的数据无法同步到旧 master 库(出现 duplicate key error)</p>
 <p><em>TODO: 待实践确认</em></p>
-<h2 id="Insert-Ignore-Into"><a href="#Insert-Ignore-Into" class="headerlink" title="Insert Ignore Into"></a>Insert Ignore Into</h2><pre><code class="hljs undefined">mysql&gt; insert ignore into tbl_insert_ignore_replace_duplicate(label) value (&apos;insert&apos;);
-Query OK, 0 rows affected, 1 warning (0.00 sec)
+<h2 id="Insert-Ignore-Into"><a href="#Insert-Ignore-Into" class="headerlink" title="Insert Ignore Into"></a>Insert Ignore Into</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">mysql&gt; insert ignore into tbl_insert_ignore_replace_duplicate(label) value (&#x27;insert&#x27;);<br>Query OK, 0 rows affected, 1 warning (0.00 sec)<br><br># 无任何<br>mysql&gt; select * from tbl_insert_ignore_replace_duplicate;<br>+----+-----------+---------------------+<br>| id | label     | data_update_time    |<br>+----+-----------+---------------------+<br>|  1 | insert    | 2019-10-16 23:22:21 |<br>|  3 | duplicate | 2019-10-16 23:22:21 |<br>|  6 | replace   | 2019-10-16 23:28:35 |<br>+----+-----------+---------------------+<br>4 rows in set (0.00 sec)<br><br># AUTO_INCREMENT 还是 +1 了！<br>mysql&gt; show create table tbl_insert_ignore_replace_duplicate;<br><br>CREATE TABLE `tbl_insert_ignore_replace_duplicate` (<br>  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT &#x27;自增主键&#x27;,<br>  `label` varchar(20) NOT NULL COMMENT &#x27;唯一标识&#x27;,<br>  `data_update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT &#x27;数据更新时间&#x27;,<br>  PRIMARY KEY (`id`),<br>  UNIQUE KEY `inx_label` (`label`)<br>) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT=&#x27;测试insert/ignore/replace/duplicate功能&#x27;<br></code></pre></td></tr></table></figure>
 
-# 无任何
-mysql&gt; select * from tbl_insert_ignore_replace_duplicate;
-+----+-----------+---------------------+
-| id | label     | data_update_time    |
-+----+-----------+---------------------+
-|  1 | insert    | 2019-10-16 23:22:21 |
-|  3 | duplicate | 2019-10-16 23:22:21 |
-|  6 | replace   | 2019-10-16 23:28:35 |
-+----+-----------+---------------------+
-4 rows in set (0.00 sec)
-
-# AUTO_INCREMENT 还是 +1 了！
-mysql&gt; show create table tbl_insert_ignore_replace_duplicate;
-
-CREATE TABLE `tbl_insert_ignore_replace_duplicate` (
-  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT &apos;自增主键&apos;,
-  `label` varchar(20) NOT NULL COMMENT &apos;唯一标识&apos;,
-  `data_update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT &apos;数据更新时间&apos;,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `inx_label` (`label`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT=&apos;测试insert/ignore/replace/duplicate功能&apos;</code></pre>
-<h2 id="On-Duplicate-Key-Update"><a href="#On-Duplicate-Key-Update" class="headerlink" title="On Duplicate Key Update"></a>On Duplicate Key Update</h2><pre><code class="hljs undefined">mysql&gt; insert into tbl_insert_ignore_replace_duplicate(label) value (&apos;duplicate&apos;) on duplicate key update data_update_time = now();
-Query OK, 2 rows affected (0.01 sec)
-
-# label = duplicate 行更新了 data_update_time 列
-mysql&gt; select * from tbl_insert_ignore_replace_duplicate;
-+----+-----------+---------------------+
-| id | label     | data_update_time    |
-+----+-----------+---------------------+
-|  1 | insert    | 2019-10-16 23:22:21 |
-|  3 | duplicate | 2019-10-16 23:38:33 |
-|  6 | replace   | 2019-10-16 23:28:35 |
-+----+-----------+---------------------+
-4 rows in set (0.00 sec)</code></pre>
+<h2 id="On-Duplicate-Key-Update"><a href="#On-Duplicate-Key-Update" class="headerlink" title="On Duplicate Key Update"></a>On Duplicate Key Update</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">mysql&gt; insert into tbl_insert_ignore_replace_duplicate(label) value (&#x27;duplicate&#x27;) on duplicate key update data_update_time = now();<br>Query OK, 2 rows affected (0.01 sec)<br><br># label = duplicate 行更新了 data_update_time 列<br>mysql&gt; select * from tbl_insert_ignore_replace_duplicate;<br>+----+-----------+---------------------+<br>| id | label     | data_update_time    |<br>+----+-----------+---------------------+<br>|  1 | insert    | 2019-10-16 23:22:21 |<br>|  3 | duplicate | 2019-10-16 23:38:33 |<br>|  6 | replace   | 2019-10-16 23:28:35 |<br>+----+-----------+---------------------+<br>4 rows in set (0.00 sec)<br></code></pre></td></tr></table></figure>
 
   
   
@@ -470,7 +391,9 @@ mysql&gt; select * from tbl_insert_ignore_replace_duplicate;
 
     <!-- search -->
     <link href="//code.bdstatic.com/npm/docsearch.js@1.5.0/dist/cdn/docsearch.min.css" rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/css/search.css">
+    
+<link rel="stylesheet" href="/css/search.css">
+
     <script src="//code.bdstatic.com/npm/docsearch.js@1.5.0/dist/cdn/docsearch.min.js"></script>
     <script>
     [

@@ -1,8 +1,7 @@
-
-
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
+    
     <title>SypCtl 工具 — 胜因学院</title>
     <meta charset="utf-8">
     <meta name="description" content="Vue.js - The Progressive JavaScript Framework">
@@ -32,7 +31,9 @@
     <link href="//code.bdstatic.com/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- main page styles -->
-    <link rel="stylesheet" href="/css/page.css">
+    
+<link rel="stylesheet" href="/css/page.css">
+
 
     <!-- this needs to be loaded before guide's inline scripts -->
     <script src="/js/vue.js"></script>
@@ -40,7 +41,7 @@
       Vue.config.productionTip = false
       window.PAGE_TYPE = "SypCtl 工具"
     </script>
-  </head>
+  <meta name="generator" content="Hexo 6.3.0"></head>
   <body class="docs">
     <div id="mobile-bar" >
       <a class="menu-button"></a>
@@ -133,14 +134,31 @@
   </ul>
 </li>
 
-<li>
-  <a href="https://www.intfocus.com" target="_blank" class="nav-link team">官网</a>
-</li>
 
+<li class="nav-dropdown-container learn">
+  <a class="nav-link">外链导航</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li>
+    <a href="https://www.intfocus.com" target="_blank" class="nav-link team">胜因官网</a>
+    </li>
+    <li>
+    <a href="javascript:void(0)" onclick="Resume.open()" class="nav-link team">我的简历</a>
+    </li>
+  </ul>
+</li>
+<script>
+window.Resume = {
+  open: function() {
+    window.location.href = (window.innerWidth > window.innerHeight ? '//jaden.tech/resume-landscape-672cfe02a8443258f4892d518a61a963.pdf' : '//jaden.tech/resume-vertical-e8520975ff8f7ece244b97a5f3ad9494.pdf');
+  }
+}
+</script>
   </ul>
 </div>
 
     
+    
+
     
       <div id="main" class="fix-sidebar">
         
@@ -229,10 +247,25 @@
   </ul>
 </li>
 
-<li>
-  <a href="https://www.intfocus.com" target="_blank" class="nav-link team">官网</a>
-</li>
 
+<li class="nav-dropdown-container learn">
+  <a class="nav-link">外链导航</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li>
+    <a href="https://www.intfocus.com" target="_blank" class="nav-link team">胜因官网</a>
+    </li>
+    <li>
+    <a href="javascript:void(0)" onclick="Resume.open()" class="nav-link team">我的简历</a>
+    </li>
+  </ul>
+</li>
+<script>
+window.Resume = {
+  open: function() {
+    window.location.href = (window.innerWidth > window.innerHeight ? '//jaden.tech/resume-landscape-672cfe02a8443258f4892d518a61a963.pdf' : '//jaden.tech/resume-vertical-e8520975ff8f7ece244b97a5f3ad9494.pdf');
+  }
+}
+</script>
     </ul>
     <div class="list">
       
@@ -305,61 +338,30 @@
   
     <p><code>SypCtl</code> 是为了实现对八爪鱼项目及团队其他依赖的技术框架进行环境部署、版本管理、快捷调度、服务守护、日志监控、异常通知、数据备份等一系列围绕提升团队开发效率、加固运维能力、提升服务稳定能力而定制的运维工具。</p>
 <h2 id="一键部署"><a href="#一键部署" class="headerlink" title="一键部署"></a>一键部署</h2><ul>
-<li>兼容性：当前版本仅兼容适配 Darwin/CentOS7</li>
+<li>兼容性：当前版本仅兼容适配 Darwin&#x2F;CentOS7</li>
 <li>编程语言: <code>ruby</code>, <code>Bash Shell</code></li>
 </ul>
-<pre><code class="hljs undefined"># Linux
-$ curl -sS http://gitlab.idata.mobi/syp-apps/sypctl/raw/dev-0.1-master/env.sh | bash
-# Darwin
-$ curl -sS http://gitlab.idata.mobi/syp-apps/sypctl/raw/dev-0.1-master/darwin-env.sh | bash</code></pre>
-<h2 id="使用手册"><a href="#使用手册" class="headerlink" title="使用手册"></a>使用手册</h2><pre><code class="hljs undefined">$ sypctl help
-Usage: sypctl &lt;command&gt; [args]
-
-常规操作:
-sypctl help              帮助说明
-sypctl upgrade           更新源码
-sypctl upgrade:force     强制更新
-sypctl deploy            部署服务引导（删除会自动部署）
-sypctl deployed          查看已部署服务
-sypctl report            设备/MySQL状态
-sypctl sync:device       更新重新提交设备信息
-
-sypctl agent   help      #代理# 配置
-sypctl toolkit help      #工具# 箱
-sypctl service help      #服务# 管理
-sypctl backup:file  help #备份文件# 工具
-sypctl backup:mysql help #备份MySQL# 工具
-sypctl sync:mysql   help #迁移MySQL# 工具
-
-命令缩写:
-sypctl service -&gt; syps
-sypctl toolkit -&gt; sypt
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext"># Linux<br>$ curl -sS http://gitlab.idata.mobi/syp-apps/sypctl/raw/dev-0.1-master/env.sh | bash<br># Darwin<br>$ curl -sS http://gitlab.idata.mobi/syp-apps/sypctl/raw/dev-0.1-master/darwin-env.sh | bash<br></code></pre></td></tr></table></figure>
 
 
-  mmmm m     m mmmmm    mmm mmmmmmm m
- #&quot;   &quot; &quot;m m&quot;  #   &quot;# m&quot;   &quot;   #    #
- &quot;#mmm   &quot;#&quot;   #mmm#&quot; #        #    #
-     &quot;#   #    #      #        #    #
- &quot;mmm#&quot;   #    #       &quot;mmm&quot;   #    #mmmmm
+<h2 id="使用手册"><a href="#使用手册" class="headerlink" title="使用手册"></a>使用手册</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">$ sypctl help<br>Usage: sypctl &lt;command&gt; [args]<br><br>常规操作:<br>sypctl help              帮助说明<br>sypctl upgrade           更新源码<br>sypctl upgrade:force     强制更新<br>sypctl deploy            部署服务引导（删除会自动部署）<br>sypctl deployed          查看已部署服务<br>sypctl report            设备/MySQL状态<br>sypctl sync:device       更新重新提交设备信息<br><br>sypctl agent   help      #代理# 配置<br>sypctl toolkit help      #工具# 箱<br>sypctl service help      #服务# 管理<br>sypctl backup:file  help #备份文件# 工具<br>sypctl backup:mysql help #备份MySQL# 工具<br>sypctl sync:mysql   help #迁移MySQL# 工具<br><br>命令缩写:<br>sypctl service -&gt; syps<br>sypctl toolkit -&gt; sypt<br><br><br>  mmmm m     m mmmmm    mmm mmmmmmm m<br> #&quot;   &quot; &quot;m m&quot;  #   &quot;# m&quot;   &quot;   #    #<br> &quot;#mmm   &quot;#&quot;   #mmm#&quot; #        #    #<br>     &quot;#   #    #      #        #    #<br> &quot;mmm#&quot;   #    #       &quot;mmm&quot;   #    #mmmmm<br><br>Current version is 0.2.26/48<br>For full documentation, see: https://gitlab.idata.mobi/syp-apps/sypctl.git<br></code></pre></td></tr></table></figure>
 
-Current version is 0.2.26/48
-For full documentation, see: https://gitlab.idata.mobi/syp-apps/sypctl.git</code></pre>
-<h2 id="备份方案"><a href="#备份方案" class="headerlink" title="备份方案"></a>备份方案</h2><p><img src="/images/SypCtl三级备份方案.png" alt="SypCtl三级备份方案.png"></p>
-<p><em>注: attachments/xmind/SypCtl三级备份方案.xmind</em></p>
-<h2 id="功能结构"><a href="#功能结构" class="headerlink" title="功能结构"></a>功能结构</h2><p><img src="/images/SypCtl功能结构.png" alt="SypCtl功能结构.png"></p>
-<p><em>注: attachments/xmind/SypCtl功能结构.xmind</em></p>
+<h2 id="备份方案"><a href="#备份方案" class="headerlink" title="备份方案"></a>备份方案</h2><p><img src="/images/SypCtl%E4%B8%89%E7%BA%A7%E5%A4%87%E4%BB%BD%E6%96%B9%E6%A1%88.png" alt="SypCtl三级备份方案.png"></p>
+<p><em>注: attachments&#x2F;xmind&#x2F;SypCtl三级备份方案.xmind</em></p>
+<h2 id="功能结构"><a href="#功能结构" class="headerlink" title="功能结构"></a>功能结构</h2><p><img src="/images/SypCtl%E5%8A%9F%E8%83%BD%E7%BB%93%E6%9E%84.png" alt="SypCtl功能结构.png"></p>
+<p><em>注: attachments&#x2F;xmind&#x2F;SypCtl功能结构.xmind</em></p>
 <h2 id="SypCtl-体系"><a href="#SypCtl-体系" class="headerlink" title="SypCtl 体系:"></a>SypCtl 体系:</h2><ul>
-<li><a href="https://gitlab.idata.mobi/syp-apps/sypctl" target="_blank" rel="noopener">sypctl</a></li>
-<li><a href="https://gitlab.idata.mobi/syp-apps/sypctl-server" target="_blank" rel="noopener">sypctl server</a></li>
-<li><a href="https://gitlab.idata.mobi/syp-apps/sypctl/tree/dev-backup-script" target="_blank" rel="noopener">sypctl sync</a></li>
+<li><a target="_blank" rel="noopener" href="https://gitlab.idata.mobi/syp-apps/sypctl">sypctl</a></li>
+<li><a target="_blank" rel="noopener" href="https://gitlab.idata.mobi/syp-apps/sypctl-server">sypctl server</a></li>
+<li><a target="_blank" rel="noopener" href="https://gitlab.idata.mobi/syp-apps/sypctl/tree/dev-backup-script">sypctl sync</a></li>
 </ul>
 <h3 id="SypCtl-服务器"><a href="#SypCtl-服务器" class="headerlink" title="SypCtl 服务器"></a>SypCtl 服务器</h3><p>配置档备份列表及下载入口：<br><img src="/images/SypCtlServer-BackupFile.png" alt="SypCtlServer-BackupFile.png"></p>
 <p>数据库备份列表及下载入口：<br><img src="/images/SypCtlServer-BackupMySQL.png" alt="SypCtlServer-BackupMySQL.png"></p>
-<p>服务/进程查看界面：<br><img src="/images/SypCtlServer-ServiceStatus.png" alt="SypCtlServer-ServiceStatus.png"></p>
+<p>服务&#x2F;进程查看界面：<br><img src="/images/SypCtlServer-ServiceStatus.png" alt="SypCtlServer-ServiceStatus.png"></p>
 <p>命令行查看服务状态：<br><img src="/images/SypCtl-ServiceStatus.png" alt="SypCtl-ServiceStatus.png"></p>
 <p>代理端日志查看界面：<br><img src="/images/SypCtlServer-AgentLog.png" alt="SypCtlServer-AgentLog.png"></p>
-<h3 id="SypCtl-恢复-GitLab"><a href="#SypCtl-恢复-GitLab" class="headerlink" title="SypCtl 恢复 GitLab"></a>SypCtl 恢复 GitLab</h3><p><img src="/images/SypCtlSync演示.png" alt="SypCtlSync演示.png"></p>
-<h3 id="SypEtl-监控-日志"><a href="#SypEtl-监控-日志" class="headerlink" title="SypEtl 监控/日志"></a>SypEtl 监控/日志</h3><p><img src="/images/SypEtl-MonitorLog.png" alt="SypEtl-MonitorLog.png"></p>
+<h3 id="SypCtl-恢复-GitLab"><a href="#SypCtl-恢复-GitLab" class="headerlink" title="SypCtl 恢复 GitLab"></a>SypCtl 恢复 GitLab</h3><p><img src="/images/SypCtlSync%E6%BC%94%E7%A4%BA.png" alt="SypCtlSync演示.png"></p>
+<h3 id="SypEtl-监控-x2F-日志"><a href="#SypEtl-监控-x2F-日志" class="headerlink" title="SypEtl 监控&#x2F;日志"></a>SypEtl 监控&#x2F;日志</h3><p><img src="/images/SypEtl-MonitorLog.png" alt="SypEtl-MonitorLog.png"></p>
 
   
   
@@ -396,7 +398,9 @@ For full documentation, see: https://gitlab.idata.mobi/syp-apps/sypctl.git</code
 
     <!-- search -->
     <link href="//code.bdstatic.com/npm/docsearch.js@1.5.0/dist/cdn/docsearch.min.css" rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/css/search.css">
+    
+<link rel="stylesheet" href="/css/search.css">
+
     <script src="//code.bdstatic.com/npm/docsearch.js@1.5.0/dist/cdn/docsearch.min.js"></script>
     <script>
     [

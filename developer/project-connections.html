@@ -1,8 +1,7 @@
-
-
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
+    
     <title>源码体系 — 胜因学院</title>
     <meta charset="utf-8">
     <meta name="description" content="Vue.js - The Progressive JavaScript Framework">
@@ -32,7 +31,9 @@
     <link href="//code.bdstatic.com/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- main page styles -->
-    <link rel="stylesheet" href="/css/page.css">
+    
+<link rel="stylesheet" href="/css/page.css">
+
 
     <!-- this needs to be loaded before guide's inline scripts -->
     <script src="/js/vue.js"></script>
@@ -40,7 +41,7 @@
       Vue.config.productionTip = false
       window.PAGE_TYPE = "源码体系"
     </script>
-  </head>
+  <meta name="generator" content="Hexo 6.3.0"></head>
   <body class="docs">
     <div id="mobile-bar" >
       <a class="menu-button"></a>
@@ -133,14 +134,31 @@
   </ul>
 </li>
 
-<li>
-  <a href="https://www.intfocus.com" target="_blank" class="nav-link team">官网</a>
-</li>
 
+<li class="nav-dropdown-container learn">
+  <a class="nav-link">外链导航</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li>
+    <a href="https://www.intfocus.com" target="_blank" class="nav-link team">胜因官网</a>
+    </li>
+    <li>
+    <a href="javascript:void(0)" onclick="Resume.open()" class="nav-link team">我的简历</a>
+    </li>
+  </ul>
+</li>
+<script>
+window.Resume = {
+  open: function() {
+    window.location.href = (window.innerWidth > window.innerHeight ? '//jaden.tech/resume-landscape-672cfe02a8443258f4892d518a61a963.pdf' : '//jaden.tech/resume-vertical-e8520975ff8f7ece244b97a5f3ad9494.pdf');
+  }
+}
+</script>
   </ul>
 </div>
 
     
+    
+
     
       <div id="main" class="fix-sidebar">
         
@@ -229,10 +247,25 @@
   </ul>
 </li>
 
-<li>
-  <a href="https://www.intfocus.com" target="_blank" class="nav-link team">官网</a>
-</li>
 
+<li class="nav-dropdown-container learn">
+  <a class="nav-link">外链导航</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li>
+    <a href="https://www.intfocus.com" target="_blank" class="nav-link team">胜因官网</a>
+    </li>
+    <li>
+    <a href="javascript:void(0)" onclick="Resume.open()" class="nav-link team">我的简历</a>
+    </li>
+  </ul>
+</li>
+<script>
+window.Resume = {
+  open: function() {
+    window.location.href = (window.innerWidth > window.innerHeight ? '//jaden.tech/resume-landscape-672cfe02a8443258f4892d518a61a963.pdf' : '//jaden.tech/resume-vertical-e8520975ff8f7ece244b97a5f3ad9494.pdf');
+  }
+}
+</script>
     </ul>
     <div class="list">
       
@@ -303,57 +336,53 @@
   
 
   
-    <h2 id="思维导图"><a href="#思维导图" class="headerlink" title="思维导图"></a>思维导图</h2><p><img src="/images/源码体系.png" alt="源码体系"></p>
-<p><em>注: attachments/xmind/源码体系.xmind</em></p>
+    <h2 id="思维导图"><a href="#思维导图" class="headerlink" title="思维导图"></a>思维导图</h2><p><img src="/images/%E6%BA%90%E7%A0%81%E4%BD%93%E7%B3%BB.png" alt="源码体系"></p>
+<p><em>注: attachments&#x2F;xmind&#x2F;源码体系.xmind</em></p>
 <h2 id="数据库运维"><a href="#数据库运维" class="headerlink" title="数据库运维"></a>数据库运维</h2><p>运维流程:</p>
 <ol start="0">
-<li>项目源码 <a href="https://gitlab.idata.mobi/shengyiplus/syp-model-scripts" target="_blank" rel="noopener">ModelScripts</a></li>
+<li>项目源码 <a target="_blank" rel="noopener" href="https://gitlab.idata.mobi/shengyiplus/syp-model-scripts">ModelScripts</a></li>
 <li>定位模块对应的运维脚本，若没有请联系管理员</li>
 <li>在业务数据库测试确认功能运行正常</li>
 <li>运维到脚本中的<strong>代码可重复被执行</strong>，即运维脚本可重复执行</li>
 <li>运维脚本中<strong>不允许出现业务数据库名称</strong>，若有疑惑请联系管理员</li>
 <li>使用 <a href="/developer/style-guide/gitlab.html">GAP 规范</a> 提交代码</li>
-<li>在 <a href="/developer/style-guide/gitlab.html#Gitlab-请求合并">Gitlab发起请求合并</a></li>
+<li>在 <a href="/developer/style-guide/gitlab.html#Gitlab-%E8%AF%B7%E6%B1%82%E5%90%88%E5%B9%B6">Gitlab发起请求合并</a></li>
 </ol>
 <h2 id="业务项目"><a href="#业务项目" class="headerlink" title="业务项目"></a>业务项目</h2><p><strong>注意:</strong> 需要开发团队成员了解业务项目源码之间的关联、本地启动等操作，具备各项目基本的源码阅读能力。</p>
 <ul>
-<li><a href="https://gitlab.idata.mobi/shengyiplus/syp-java-admin" target="_blank" rel="noopener">JavaAdmin</a></li>
-<li><a href="https://gitlab.idata.mobi/shengyiplus/syp-api-server" target="_blank" rel="noopener">JavaAPI</a></li>
-<li><a href="https://gitlab.idata.mobi/shengyiplus/syp-model-scripts" target="_blank" rel="noopener">ModelScript</a></li>
-<li><a href="https://gitlab.idata.mobi/shengyiplus/syp-wxmp" target="_blank" rel="noopener">WXMP</a></li>
-<li><a href="https://gitlab.idata.mobi/shengyiplus/syp-web-portal" target="_blank" rel="noopener">WebPortal</a></li>
-<li><a href="https://gitlab.idata.mobi/shengyiplus/syp-report-portal" target="_blank" rel="noopener">ReportPortal</a>(过期)</li>
-<li><a href="https://gitlab.idata.mobi/shengyiplus/syp-data-dictionary-portal" target="_blank" rel="noopener">DataDictionaryPortal</a>(过期)</li>
-<li><a href="https://gitlab.idata.mobi/shengyiplus/syp-android-tv" target="_blank" rel="noopener">AndroidTv</a></li>
-<li><a href="https://gitlab.idata.mobi/allergan/allerganScripts" target="_blank" rel="noopener">allerganScripts</a></li>
+<li><a target="_blank" rel="noopener" href="https://gitlab.idata.mobi/shengyiplus/syp-java-admin">JavaAdmin</a></li>
+<li><a target="_blank" rel="noopener" href="https://gitlab.idata.mobi/shengyiplus/syp-api-server">JavaAPI</a></li>
+<li><a target="_blank" rel="noopener" href="https://gitlab.idata.mobi/shengyiplus/syp-model-scripts">ModelScript</a></li>
+<li><a target="_blank" rel="noopener" href="https://gitlab.idata.mobi/shengyiplus/syp-wxmp">WXMP</a></li>
+<li><a target="_blank" rel="noopener" href="https://gitlab.idata.mobi/shengyiplus/syp-web-portal">WebPortal</a></li>
+<li><a target="_blank" rel="noopener" href="https://gitlab.idata.mobi/shengyiplus/syp-report-portal">ReportPortal</a>(过期)</li>
+<li><a target="_blank" rel="noopener" href="https://gitlab.idata.mobi/shengyiplus/syp-data-dictionary-portal">DataDictionaryPortal</a>(过期)</li>
+<li><a target="_blank" rel="noopener" href="https://gitlab.idata.mobi/shengyiplus/syp-android-tv">AndroidTv</a></li>
+<li><a target="_blank" rel="noopener" href="https://gitlab.idata.mobi/allergan/allerganScripts">allerganScripts</a></li>
 </ul>
 <p><em>项目<code>README.md</code>中会说明开发分支、访问域名等信息。</em></p>
 <p><img src="/images/readme-domain-guides.png" alt="readme-domain-guides"></p>
 <h2 id="辅助项目"><a href="#辅助项目" class="headerlink" title="辅助项目"></a>辅助项目</h2><ul>
-<li><a href="https://gitlab.idata.mobi/syp-apps/sypctl" target="_blank" rel="noopener">SypCtl</a></li>
-<li><a href="https://gitlab.idata.mobi/shengyiplus/syp-utils" target="_blank" rel="noopener">SypUtils</a></li>
-<li><a href="https://gitlab.idata.mobi/shengyiplus/GitAutoPush" target="_blank" rel="noopener">GitAutoPush</a></li>
-<li><a href="https://gitlab.idata.mobi/shengyiplus/syp-documents" target="_blank" rel="noopener">SypDocument</a></li>
-<li><a href="https://gitlab.idata.mobi/shengyiplus/syp-webassets" target="_blank" rel="noopener">SypWebassets</a></li>
-<li><a href="https://gitlab.idata.mobi/shengyiplus/DdpScript" target="_blank" rel="noopener">DdpScript</a></li>
+<li><a target="_blank" rel="noopener" href="https://gitlab.idata.mobi/syp-apps/sypctl">SypCtl</a></li>
+<li><a target="_blank" rel="noopener" href="https://gitlab.idata.mobi/shengyiplus/syp-utils">SypUtils</a></li>
+<li><a target="_blank" rel="noopener" href="https://gitlab.idata.mobi/shengyiplus/GitAutoPush">GitAutoPush</a></li>
+<li><a target="_blank" rel="noopener" href="https://gitlab.idata.mobi/shengyiplus/syp-documents">SypDocument</a></li>
+<li><a target="_blank" rel="noopener" href="https://gitlab.idata.mobi/shengyiplus/syp-webassets">SypWebassets</a></li>
+<li><a target="_blank" rel="noopener" href="https://gitlab.idata.mobi/shengyiplus/DdpScript">DdpScript</a></li>
 </ul>
-<h2 id="域名-API"><a href="#域名-API" class="headerlink" title="域名/API"></a>域名/API</h2><ol>
+<h2 id="域名-x2F-API"><a href="#域名-x2F-API" class="headerlink" title="域名&#x2F;API"></a>域名&#x2F;API</h2><ol>
 <li>所有域名均为 <code>*.idata.mobi</code> 二级域名</li>
 <li>所有域名均使用 <code>https</code> 协议</li>
-<li>域名分配规范<ol>
+<li>域名分配规范</li>
 <li>CDN 域名 <code>cdn.idata.mobi</code>，过期域名<del>syp-cdn.idata.mobi</del></li>
 <li>API 域名 <code>api.idata.mobi</code>，过期域名<del>syp.idata.mobi</del></li>
 <li>Admin 域名 <code>admin.idata.mobi</code>, 过期域名<del>syp.idata.mobi</del></li>
 <li>Portal 域名 <code>portal.idata.mobi</code>, 过期域名<del>syp-cdn.idata.mobi</del></li>
 <li>开发环境追加 <code>-dev</code>，例 <code>api-dev.idata.mobi</code></li>
-</ol>
-</li>
-<li>API 开发规范<ol>
+<li>API 开发规范</li>
 <li>API 路由禁止出现项目<code>工程名称</code></li>
 <li>API 路由使用<strong>横线命名</strong>规范</li>
 <li><a href="/developer/api-design-guide.html">更多 API 设计规范</a></li>
-</ol>
-</li>
 </ol>
 <h2 id="菜单字段"><a href="#菜单字段" class="headerlink" title="菜单字段"></a>菜单字段</h2><p><a href="/developer/menu-guide.html">业务菜单规范</a></p>
 
@@ -392,7 +421,9 @@
 
     <!-- search -->
     <link href="//code.bdstatic.com/npm/docsearch.js@1.5.0/dist/cdn/docsearch.min.css" rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/css/search.css">
+    
+<link rel="stylesheet" href="/css/search.css">
+
     <script src="//code.bdstatic.com/npm/docsearch.js@1.5.0/dist/cdn/docsearch.min.js"></script>
     <script>
     [

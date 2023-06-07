@@ -1,8 +1,7 @@
-
-
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
+    
     <title>CDN 运维规范 — 胜因学院</title>
     <meta charset="utf-8">
     <meta name="description" content="Vue.js - The Progressive JavaScript Framework">
@@ -32,7 +31,9 @@
     <link href="//code.bdstatic.com/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- main page styles -->
-    <link rel="stylesheet" href="/css/page.css">
+    
+<link rel="stylesheet" href="/css/page.css">
+
 
     <!-- this needs to be loaded before guide's inline scripts -->
     <script src="/js/vue.js"></script>
@@ -40,7 +41,7 @@
       Vue.config.productionTip = false
       window.PAGE_TYPE = "CDN 运维规范"
     </script>
-  </head>
+  <meta name="generator" content="Hexo 6.3.0"></head>
   <body class="docs">
     <div id="mobile-bar" >
       <a class="menu-button"></a>
@@ -133,14 +134,31 @@
   </ul>
 </li>
 
-<li>
-  <a href="https://www.intfocus.com" target="_blank" class="nav-link team">官网</a>
-</li>
 
+<li class="nav-dropdown-container learn">
+  <a class="nav-link current">外链导航</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li>
+    <a href="https://www.intfocus.com" target="_blank" class="nav-link team">胜因官网</a>
+    </li>
+    <li>
+    <a href="javascript:void(0)" onclick="Resume.open()" class="nav-link team">我的简历</a>
+    </li>
+  </ul>
+</li>
+<script>
+window.Resume = {
+  open: function() {
+    window.location.href = (window.innerWidth > window.innerHeight ? '//jaden.tech/resume-landscape-672cfe02a8443258f4892d518a61a963.pdf' : '//jaden.tech/resume-vertical-e8520975ff8f7ece244b97a5f3ad9494.pdf');
+  }
+}
+</script>
   </ul>
 </div>
 
     
+    
+
     
       <div id="main" class="fix-sidebar">
         
@@ -229,10 +247,25 @@
   </ul>
 </li>
 
-<li>
-  <a href="https://www.intfocus.com" target="_blank" class="nav-link team">官网</a>
-</li>
 
+<li class="nav-dropdown-container learn">
+  <a class="nav-link current">外链导航</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li>
+    <a href="https://www.intfocus.com" target="_blank" class="nav-link team">胜因官网</a>
+    </li>
+    <li>
+    <a href="javascript:void(0)" onclick="Resume.open()" class="nav-link team">我的简历</a>
+    </li>
+  </ul>
+</li>
+<script>
+window.Resume = {
+  open: function() {
+    window.location.href = (window.innerWidth > window.innerHeight ? '//jaden.tech/resume-landscape-672cfe02a8443258f4892d518a61a963.pdf' : '//jaden.tech/resume-vertical-e8520975ff8f7ece244b97a5f3ad9494.pdf');
+  }
+}
+</script>
     </ul>
     <div class="list">
       
@@ -309,93 +342,56 @@
 <li>非通用资源-维护方式</li>
 </ul>
 <h2 id="域名分配"><a href="#域名分配" class="headerlink" title="域名分配"></a>域名分配</h2><ul>
-<li>胜因学院正式环境: <a href="https://cdn.idata.mobi" target="_blank" rel="noopener">https://cdn.idata.mobi</a></li>
-<li>胜因学院开发环境: <a href="https://cdn-dev.idata.mobi" target="_blank" rel="noopener">https://cdn-dev.idata.mobi</a></li>
+<li>胜因学院正式环境: <a target="_blank" rel="noopener" href="https://cdn.idata.mobi/">https://cdn.idata.mobi</a></li>
+<li>胜因学院开发环境: <a target="_blank" rel="noopener" href="https://cdn-dev.idata.mobi/">https://cdn-dev.idata.mobi</a></li>
 </ul>
-<h2 id="通用资源-维护方式"><a href="#通用资源-维护方式" class="headerlink" title="通用资源-维护方式"></a>通用资源-维护方式</h2><p>Webassets项目链接: <a href="https://gitlab.idata.mobi/shengyiplus/syp-webassets" target="_blank" rel="noopener">https://gitlab.idata.mobi/shengyiplus/syp-webassets</a></p>
+<h2 id="通用资源-维护方式"><a href="#通用资源-维护方式" class="headerlink" title="通用资源-维护方式"></a>通用资源-维护方式</h2><p>Webassets项目链接: <a target="_blank" rel="noopener" href="https://gitlab.idata.mobi/shengyiplus/syp-webassets">https://gitlab.idata.mobi/shengyiplus/syp-webassets</a></p>
 <ol>
 <li>下载静态资源，合规命名(文件名称、版本号)</li>
 <li>维护静态资源至对应目录</li>
 <li>使用CDN链接访问在线资源</li>
 </ol>
-<h3 id="路由-文件命名规范"><a href="#路由-文件命名规范" class="headerlink" title="路由/文件命名规范"></a>路由/文件命名规范</h3><p>路径规范后的目标:</p>
+<h3 id="路由-x2F-文件命名规范"><a href="#路由-x2F-文件命名规范" class="headerlink" title="路由&#x2F;文件命名规范"></a>路由&#x2F;文件命名规范</h3><p>路径规范后的目标:</p>
 <ol>
 <li>统一管理、监控、同步、备份</li>
 <li>统一 CDN访问链接</li>
 </ol>
-<p>路由/文件命名规范:</p>
+<p>路由&#x2F;文件命名规范:</p>
 <ul>
 <li>目录命名使用复数(数据库业务表命名同理)</li>
 <li>路由或文件命名中空格使用横线, 比如 wxmp-icons</li>
-<li>组合词不需要分割，比如 <code>webassets</code>/<code>datasource</code></li>
+<li>组合词不需要分割，比如 <code>webassets</code>&#x2F;<code>datasource</code></li>
 </ul>
-<p>路由/路径分类：</p>
+<p>路由&#x2F;路径分类：</p>
 <ol>
 <li>菜单图标统一维护(各平台中访问菜单图标的在线链接)</li>
-<li>小程序/TV/Pc/App应用内图标，分别维护(方便独立升级)</li>
+<li>小程序&#x2F;TV&#x2F;Pc&#x2F;App应用内图标，分别维护(方便独立升级)</li>
 <li>头像</li>
 </ol>
-<pre><code class="hljs undefined"># 目录分配
-/data/work/www/webassets/
-├── javascripts // javascript 文件
-├── stylesheets // css/fonts 文件
-├── enterprises // 企业命名空间
-├── gravatars // 头像
-├── feedbacks // 问题反馈截图或视频
-├── menu-icons // 菜单图标
-├── app-icons // app 应用图标
-├── pc-icons // pc 应用图标
-├── tv-icons // tv 应用图标
-└── wxmp-icons // 微信小程序图标</code></pre>
-<h3 id="CDN-amp-HTTP-HTTPS"><a href="#CDN-amp-HTTP-HTTPS" class="headerlink" title="CDN &amp; HTTP/HTTPS"></a>CDN &amp; HTTP/HTTPS</h3><ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext"># 目录分配<br>/data/work/www/webassets/<br>├── javascripts // javascript 文件<br>├── stylesheets // css/fonts 文件<br>├── enterprises // 企业命名空间<br>├── gravatars // 头像<br>├── feedbacks // 问题反馈截图或视频<br>├── menu-icons // 菜单图标<br>├── app-icons // app 应用图标<br>├── pc-icons // pc 应用图标<br>├── tv-icons // tv 应用图标<br>└── wxmp-icons // 微信小程序图标<br></code></pre></td></tr></table></figure>
+
+<h3 id="CDN-amp-HTTP-x2F-HTTPS"><a href="#CDN-amp-HTTP-x2F-HTTPS" class="headerlink" title="CDN &amp; HTTP&#x2F;HTTPS"></a>CDN &amp; HTTP&#x2F;HTTPS</h3><ol>
 <li>所有服务默认支持 HTTPS, 即使用 HTTPS 线上测试</li>
 <li>禁止使用外部资源，统一维护在本项目内</li>
 </ol>
 <ul>
-<li><a href="https://cdn.idata.mobi/webassets.html" target="_blank" rel="noopener">胜因学院-静态资源</a></li>
-<li><a href="https://cdn-dev.idata.mobi/webassets.html" target="_blank" rel="noopener">胜因研发室-静态资源</a></li>
+<li><a target="_blank" rel="noopener" href="https://cdn.idata.mobi/webassets.html">胜因学院-静态资源</a></li>
+<li><a target="_blank" rel="noopener" href="https://cdn-dev.idata.mobi/webassets.html">胜因研发室-静态资源</a></li>
 </ul>
-<h3 id="代码提交规范"><a href="#代码提交规范" class="headerlink" title="代码提交规范"></a>代码提交规范</h3><pre><code class="hljs undefined">$ ./tool.sh gap -h
-示例:
-$ ./tool.sh gap &lt;type&gt; &lt;module&gt; &lt;message&gt;</code></pre>
+<h3 id="代码提交规范"><a href="#代码提交规范" class="headerlink" title="代码提交规范"></a>代码提交规范</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">$ ./tool.sh gap -h<br>示例:<br>$ ./tool.sh gap &lt;type&gt; &lt;module&gt; &lt;message&gt;<br></code></pre></td></tr></table></figure>
+
 <h2 id="非通用资源-维护方式"><a href="#非通用资源-维护方式" class="headerlink" title="非通用资源-维护方式"></a>非通用资源-维护方式</h2><ol>
 <li><p><code>https://cdn.idata.mobi</code> 对应的根目录: <code>/data/work/www</code></p>
-<p> 示例: /data/work/www/webassets/wxmp-icons/btn_inf.png 对应的访问链接: <a href="https://cdn.idata.mobi/webassets/wxmp-icons/btn_inf.png" target="_blank" rel="noopener">https://cdn.idata.mobi/webassets/wxmp-icons/btn_inf.png</a></p>
+<p> 示例: &#x2F;data&#x2F;work&#x2F;www&#x2F;webassets&#x2F;wxmp-icons&#x2F;btn_inf.png 对应的访问链接: <a target="_blank" rel="noopener" href="https://cdn.idata.mobi/webassets/wxmp-icons/btn_inf.png">https://cdn.idata.mobi/webassets/wxmp-icons/btn_inf.png</a></p>
 </li>
-<li><p>静态资源(图片/字段/javascript/stylesheets) 对应存储目录: <code>/data/work/www/webassets</code></p>
+<li><p>静态资源(图片&#x2F;字段&#x2F;javascript&#x2F;stylesheets) 对应存储目录: <code>/data/work/www/webassets</code></p>
 <p> 与 <code>webassets</code> 并列的是其他 Web 项目：</p>
- <pre><code class="hljs undefined">$tree -L 1 /data/work/www/
-/data/work/www/
-├── webassets
-├── frontend-apps
-├── index.html
-├── providerAPI
-├── tomcatAPI
-├── tomcatSuperAdmin
-├── vapelab -&gt; /data/work/www/frontend-apps/repository/vapelab@0.1.23
-└── web-portal -&gt; /data/work/www/frontend-apps/repository/web-portal@0.2.10
-`</code></pre>
-</li>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">    $tree -L 1 /data/work/www/<br>    /data/work/www/<br>    ├── webassets<br>    ├── frontend-apps<br>    ├── index.html<br>    ├── providerAPI<br>    ├── tomcatAPI<br>    ├── tomcatSuperAdmin<br>    ├── vapelab -&gt; /data/work/www/frontend-apps/repository/vapelab@0.1.23<br>    └── web-portal -&gt; /data/work/www/frontend-apps/repository/web-portal@0.2.10<br>    ````<br><br>## 运维规范(webassets)-上传操作<br><br></code></pre></td></tr></table></figure></li>
 </ol>
-<h2 id="运维规范-webassets-上传操作"><a href="#运维规范-webassets-上传操作" class="headerlink" title="运维规范(webassets)-上传操作"></a>运维规范(webassets)-上传操作</h2><pre><code class="hljs undefined">$ tree -L 1 /data/work/www/webassets
-/data/work/www/webassets
-├── enterprises
-├── gravatars
-├── menu-icons
-├── vapelab // VapeLab 平台静态资源
-└── wxmp-icons
-
-$ tree -N -L 1 /data/work/www/webassets/vapelab/
-/data/work/www/webassets/vapelab/
-├── ALD
-├── CERALL-CL6-CL7
-├── DM
-└── EXEEK-XK</code></pre>
-<ol>
-<li>VapeLab 平台静态资源上传至目录 /data/work/www/webassets/vapelab/</li>
-<li>目录、文件名称间不要有空格、<code>&amp;|\</code> 等特殊符号</li>
-<li><p>上传命令</p>
- <pre><code class="hljs undefined"># Mac 本机
+<p>$ tree -L 1 &#x2F;data&#x2F;work&#x2F;www&#x2F;webassets<br>&#x2F;data&#x2F;work&#x2F;www&#x2F;webassets<br>├── enterprises<br>├── gravatars<br>├── menu-icons<br>├── vapelab &#x2F;&#x2F; VapeLab 平台静态资源<br>└── wxmp-icons</p>
+<p>$ tree -N -L 1 &#x2F;data&#x2F;work&#x2F;www&#x2F;webassets&#x2F;vapelab&#x2F;<br>&#x2F;data&#x2F;work&#x2F;www&#x2F;webassets&#x2F;vapelab&#x2F;<br>├── ALD<br>├── CERALL-CL6-CL7<br>├── DM<br>└── EXEEK-XK</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext"><br>1. VapeLab 平台静态资源上传至目录 /data/work/www/webassets/vapelab/<br>2. 目录、文件名称间不要有空格、`&amp;|\` 等特殊符号<br>3. 上传命令<br><br></code></pre></td></tr></table></figure>
+<pre><code># Mac 本机
 $ rsync --progress -ar CERALL-CL6-CL7 sy-devops-user@syp.idata.mobi:/data/work/www/webassets/vapelab
 # Syp-Pro
 $ find  /data/work/www/webassets/vapelab/CERALL-CL6-CL7/ -type f         
@@ -405,8 +401,9 @@ $ find  /data/work/www/webassets/vapelab/CERALL-CL6-CL7/ -type f
 # 访问链接
 https://cdn.idata.mobi/webassets/vapelab/CERALL-CL6-CL7/详情图/画板-1.png     
 https://cdn.idata.mobi/webassets/vapelab/CERALL-CL6-CL7/详情图/画板-2.png    
-https://cdn.idata.mobi/webassets/vapelab/CERALL-CL6-CL7/详情图/画板-3.png</code></pre></li>
-</ol>
+https://cdn.idata.mobi/webassets/vapelab/CERALL-CL6-CL7/详情图/画板-3.png  
+```
+</code></pre>
 
   
   
@@ -443,7 +440,9 @@ https://cdn.idata.mobi/webassets/vapelab/CERALL-CL6-CL7/详情图/画板-3.png</
 
     <!-- search -->
     <link href="//code.bdstatic.com/npm/docsearch.js@1.5.0/dist/cdn/docsearch.min.css" rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/css/search.css">
+    
+<link rel="stylesheet" href="/css/search.css">
+
     <script src="//code.bdstatic.com/npm/docsearch.js@1.5.0/dist/cdn/docsearch.min.js"></script>
     <script>
     [

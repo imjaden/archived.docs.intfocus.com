@@ -1,8 +1,7 @@
-
-
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
+    
     <title>团队协作 — 胜因学院</title>
     <meta charset="utf-8">
     <meta name="description" content="Vue.js - The Progressive JavaScript Framework">
@@ -32,7 +31,9 @@
     <link href="//code.bdstatic.com/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- main page styles -->
-    <link rel="stylesheet" href="/css/page.css">
+    
+<link rel="stylesheet" href="/css/page.css">
+
 
     <!-- this needs to be loaded before guide's inline scripts -->
     <script src="/js/vue.js"></script>
@@ -40,7 +41,7 @@
       Vue.config.productionTip = false
       window.PAGE_TYPE = "团队协作"
     </script>
-  </head>
+  <meta name="generator" content="Hexo 6.3.0"></head>
   <body class="docs">
     <div id="mobile-bar" >
       <a class="menu-button"></a>
@@ -133,14 +134,31 @@
   </ul>
 </li>
 
-<li>
-  <a href="https://www.intfocus.com" target="_blank" class="nav-link team">官网</a>
-</li>
 
+<li class="nav-dropdown-container learn">
+  <a class="nav-link">外链导航</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li>
+    <a href="https://www.intfocus.com" target="_blank" class="nav-link team">胜因官网</a>
+    </li>
+    <li>
+    <a href="javascript:void(0)" onclick="Resume.open()" class="nav-link team">我的简历</a>
+    </li>
+  </ul>
+</li>
+<script>
+window.Resume = {
+  open: function() {
+    window.location.href = (window.innerWidth > window.innerHeight ? '//jaden.tech/resume-landscape-672cfe02a8443258f4892d518a61a963.pdf' : '//jaden.tech/resume-vertical-e8520975ff8f7ece244b97a5f3ad9494.pdf');
+  }
+}
+</script>
   </ul>
 </div>
 
     
+    
+
     
       <div id="main" class="fix-sidebar">
         
@@ -229,10 +247,25 @@
   </ul>
 </li>
 
-<li>
-  <a href="https://www.intfocus.com" target="_blank" class="nav-link team">官网</a>
-</li>
 
+<li class="nav-dropdown-container learn">
+  <a class="nav-link">外链导航</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li>
+    <a href="https://www.intfocus.com" target="_blank" class="nav-link team">胜因官网</a>
+    </li>
+    <li>
+    <a href="javascript:void(0)" onclick="Resume.open()" class="nav-link team">我的简历</a>
+    </li>
+  </ul>
+</li>
+<script>
+window.Resume = {
+  open: function() {
+    window.location.href = (window.innerWidth > window.innerHeight ? '//jaden.tech/resume-landscape-672cfe02a8443258f4892d518a61a963.pdf' : '//jaden.tech/resume-vertical-e8520975ff8f7ece244b97a5f3ad9494.pdf');
+  }
+}
+</script>
     </ul>
     <div class="list">
       
@@ -304,12 +337,12 @@
 
   
     <h2 id="Mac-工具推荐"><a href="#Mac-工具推荐" class="headerlink" title="Mac 工具推荐"></a>Mac 工具推荐</h2><h3 id="KeyCastr"><a href="#KeyCastr" class="headerlink" title="KeyCastr"></a>KeyCastr</h3><p>功能亮点: 实时显示键盘的点击按钮，在外连 Window布局键盘时 预防混淆 <code>Command</code> <code>Ctl</code> 等按键</p>
-<p>下载链接: <a href="https://github.com/keycastr/keycastr/releases" target="_blank" rel="noopener">github: keycastr/keycastr</a></p>
+<p>下载链接: <a target="_blank" rel="noopener" href="https://github.com/keycastr/keycastr/releases">github: keycastr&#x2F;keycastr</a></p>
 <h3 id="CheatSheet"><a href="#CheatSheet" class="headerlink" title="CheatSheet"></a>CheatSheet</h3><p>功能亮点: 使用任何工具时，忘记了快捷键<strong>常按 <code>Command</code> 键</strong>即可展示该工具的快捷命令图谱</p>
-<p>下载链接: <a href="https://cheatsheet-mac.en.softonic.com/mac" target="_blank" rel="noopener">CheatSheet</a></p>
+<p>下载链接: <a target="_blank" rel="noopener" href="https://cheatsheet-mac.en.softonic.com/mac">CheatSheet</a></p>
 <h3 id="Dash"><a href="#Dash" class="headerlink" title="Dash"></a>Dash</h3><p>功能亮点: 集成了几乎所有开发语言或工具的说明文档(也支持自主补充说明文档)</p>
-<p>下载链接: <a href="https://kapeli.com/dash" target="_blank" rel="noopener">Dash for Mac</a></p>
-<h2 id="Markdown"><a href="#Markdown" class="headerlink" title="Markdown"></a>Markdown</h2><h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><p><a href="http://www.markdown.cn/" target="_blank" rel="noopener">Markdown</a> 是一个 Web 上使用的文本到HTML的转换工具，可以通过简单、易读易写的文本格式生成结构化的HTML文档。目前 github、Stackoverflow 等网站均支持这种格式。</p>
+<p>下载链接: <a target="_blank" rel="noopener" href="https://kapeli.com/dash">Dash for Mac</a></p>
+<h2 id="Markdown"><a href="#Markdown" class="headerlink" title="Markdown"></a>Markdown</h2><h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><p><a target="_blank" rel="noopener" href="http://www.markdown.cn/">Markdown</a> 是一个 Web 上使用的文本到HTML的转换工具，可以通过简单、易读易写的文本格式生成结构化的HTML文档。目前 github、Stackoverflow 等网站均支持这种格式。</p>
 <p>Markdown 的目标是实现<strong>「易读易写」</strong>。</p>
 <table>
 <thead>
@@ -318,26 +351,25 @@
 <th>Markdown 语法</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>H1</td>
-<td># 一级标题            </td>
+<td># 一级标题</td>
 </tr>
 <tr>
 <td>H2</td>
-<td>## 二级标题             </td>
+<td>## 二级标题</td>
 </tr>
 <tr>
 <td>H3</td>
-<td>### 三级标题           </td>
+<td>### 三级标题</td>
 </tr>
 <tr>
-<td><a href="https://doc.idata.mobi/" target="_blank" rel="noopener">Link</a></td>
-<td>[Link](<a href="https://doc.idata.mobi" target="_blank" rel="noopener">https://doc.idata.mobi</a>)    </td>
+<td><a target="_blank" rel="noopener" href="https://doc.idata.mobi/">Link</a></td>
+<td>[Link](<a target="_blank" rel="noopener" href="https://doc.idata.mobi/">https://doc.idata.mobi</a>)</td>
 </tr>
 <tr>
 <td><code>Inline Code</code></td>
-<td>`Inline Code`              </td>
+<td>`Inline Code`</td>
 </tr>
 <tr>
 <td>code block</td>
@@ -345,38 +377,37 @@
 </tr>
 <tr>
 <td><img src="/images/logo-100x50.png" alt="alt"></td>
-<td>![alt](/images/logo-100x50.png) </td>
+<td>![alt](&#x2F;images&#x2F;logo-100x50.png)</td>
 </tr>
 <tr>
 <td><strong>Bold</strong></td>
-<td>**text**          </td>
+<td>**text**</td>
 </tr>
 <tr>
 <td><em>Emphasize</em></td>
-<td>*text*              </td>
+<td>*text*</td>
 </tr>
 <tr>
 <td><del>Strike-through</del></td>
-<td>~~ text ~~        </td>
+<td>~~ text ~~</td>
 </tr>
 <tr>
 <td>List without order</td>
-<td>* item               </td>
+<td>* item</td>
 </tr>
 <tr>
 <td>List with order</td>
-<td>1. item              </td>
+<td>1. item</td>
 </tr>
 <tr>
 <td>Blockquote</td>
-<td>&gt; quote               </td>
+<td>&gt; quote</td>
 </tr>
 <tr>
 <td>HR</td>
-<td>—–                 </td>
+<td>—–</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <h3 id="规范"><a href="#规范" class="headerlink" title="规范"></a>规范</h3><p>Markdown 语法是对错问题，Markdown 规范是内部协作整理文字时的默认的文字规范。</p>
 <ol>
 <li>不同标签间使用空行隔开（空一行即可）。</li>
@@ -384,7 +415,9 @@
 <li>多级列表时，子级结束时使用空行隔开</li>
 </ol>
 <h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><h4 id="示例四级标题"><a href="#示例四级标题" class="headerlink" title="示例四级标题"></a>示例四级标题</h4><p>下面是一段代码块:</p>
-<pre><code class="hljs undefined">puts &quot;markdown style guide!&quot;</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">puts &quot;markdown style guide!&quot;<br></code></pre></td></tr></table></figure>
+
+
 <p>下面是一段列表:</p>
 <ul>
 <li><p>列表1</p>
@@ -395,38 +428,13 @@
 </li>
 <li><p>列表2</p>
 </li>
-<li>列表3</li>
+<li><p>列表3</p>
+</li>
 </ul>
-<h3 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h3><pre><code class="hljs undefined">#### 示例四级标题
- 
-下面是一段代码块:
+<h3 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">#### 示例四级标题<br> <br>下面是一段代码块:<br><br>\`\`\`<br>puts &quot;markdown style guide!&quot;<br>\`\`\`<br><br><br>下面是一段列表:<br><br>- 列表1<br>  - 列表1.1<br>  - 列表1.2<br><br>- 列表2<br>- 列表3<br></code></pre></td></tr></table></figure>
 
-\`\`\`
-puts &quot;markdown style guide!&quot;
-\`\`\`
+<h2 id="工作日志"><a href="#工作日志" class="headerlink" title="工作日志"></a>工作日志</h2><h3 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">### 2017年3月23日 13 星期四 下午4:45<br><br>- DOING<br>    - 正做事项二<br><br>- TODO<br>    - 待做事项三<br>        \`\`\`<br>        question code block<br>        \`\`\`<br>- DONE<br>    - 完成事项一<br>        &lt;完成事项一&gt; 解释说明...<br></code></pre></td></tr></table></figure>
 
-
-下面是一段列表:
-
-- 列表1
-  - 列表1.1
-  - 列表1.2
-
-- 列表2
-- 列表3</code></pre>
-<h2 id="工作日志"><a href="#工作日志" class="headerlink" title="工作日志"></a>工作日志</h2><h3 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h3><pre><code class="hljs undefined">### 2017年3月23日 13 星期四 下午4:45
-
-- DOING
-    - 正做事项二
-
-- TODO
-    - 待做事项三
-        \`\`\`
-        question code block
-        \`\`\`
-- DONE
-    - 完成事项一
-        &lt;完成事项一&gt; 解释说明...</code></pre>
 <p>小建议：<strong>日期与时间可以使用快捷键快速插入</strong></p>
 <h3 id="规范-1"><a href="#规范-1" class="headerlink" title="规范"></a>规范</h3><ul>
 <li>工作日志按<strong>时间逆序</strong>。</li>
@@ -438,39 +446,37 @@ puts &quot;markdown style guide!&quot;
 <li>历史工作日志中只应有 <code>DONE</code>, 长期 <code>TODO</code> 的事项放入近期任务。</li>
 </ul>
 <h2 id="交流规范"><a href="#交流规范" class="headerlink" title="交流规范"></a>交流规范</h2><h3 id="印象笔记"><a href="#印象笔记" class="headerlink" title="印象笔记"></a>印象笔记</h3><ol>
-<li>家庭作业的交付是 md/pdf 两个文档，具体见<a href="/corporate-culture/workplace-cognition.html#培训交付规范">培训交付规范</a></li>
-<li>业务相关的协作交流使用<a href="https://www.yinxiang.com/" target="_blank" rel="noopener">印象笔记</a></li>
+<li><p>家庭作业的交付是 md&#x2F;pdf 两个文档，具体见<a href="/corporate-culture/workplace-cognition.html#%E5%9F%B9%E8%AE%AD%E4%BA%A4%E4%BB%98%E8%A7%84%E8%8C%83">培训交付规范</a></p>
+</li>
+<li><p>业务相关的协作交流使用<a target="_blank" rel="noopener" href="https://www.yinxiang.com/">印象笔记</a></p>
+</li>
 <li><p>设置字体类型、大小；取消勾选自动创建列表、直线等功能</p>
-<p> <img src="/images/印象笔记-工作日志-偏好设置.png" alt="印象笔记-工作日志-偏好设置"></p>
+<p> <img src="/images/%E5%8D%B0%E8%B1%A1%E7%AC%94%E8%AE%B0-%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%97-%E5%81%8F%E5%A5%BD%E8%AE%BE%E7%BD%AE.png" alt="印象笔记-工作日志-偏好设置"></p>
 </li>
 <li><p>印象笔记的使用最佳配置: 文件夹列表使用[侧列表视图]视野开阔; 文档标题保留[标题][已更新时间]；右键标题栏即可配置；拖动标题栏可调整顺序</p>
-<p> <img src="/images/印象笔记-工作日志-布局规范.png" alt="印象笔记-工作日志-布局规范"><br> <img src="/images/印象笔记-工作日志-标题栏规范.png" alt="印象笔记-工作日志-标题栏规范"></p>
+<p> <img src="/images/%E5%8D%B0%E8%B1%A1%E7%AC%94%E8%AE%B0-%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%97-%E5%B8%83%E5%B1%80%E8%A7%84%E8%8C%83.png" alt="印象笔记-工作日志-布局规范"><br> <img src="/images/%E5%8D%B0%E8%B1%A1%E7%AC%94%E8%AE%B0-%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%97-%E6%A0%87%E9%A2%98%E6%A0%8F%E8%A7%84%E8%8C%83.png" alt="印象笔记-工作日志-标题栏规范"></p>
 </li>
 </ol>
-<h3 id="微信交流"><a href="#微信交流" class="headerlink" title="微信交流"></a>微信交流</h3><p><em>注: 针对微信/企业微信/QQ等实时交流工具中的交流规范</em>。</p>
-<p>参考: <a href="/corporate-culture/workplace-ceremony.html#协作规范">职场共识 - 协作规范</a></p>
+<h3 id="微信交流"><a href="#微信交流" class="headerlink" title="微信交流"></a>微信交流</h3><p><em>注: 针对微信&#x2F;企业微信&#x2F;QQ等实时交流工具中的交流规范</em>。</p>
+<p>参考: <a href="/corporate-culture/workplace-ceremony.html#%E5%8D%8F%E4%BD%9C%E8%A7%84%E8%8C%83">职场共识 - 协作规范</a></p>
 <h3 id="邮件交流"><a href="#邮件交流" class="headerlink" title="邮件交流"></a>邮件交流</h3><p>Dear All，</p>
 <p>我们用邮件是正式的商务沟通，发送邮件注意基本礼仪规范：</p>
 <ol>
 <li>标题（点明主旨，方便收件人在列表中查看）</li>
-<li>收件人<ol>
+<li>收件人</li>
 <li>主收件人</li>
 <li>抄送人（只为通知到）</li>
 <li>密件抄送（你需要通知的人，又不想让其他收件人知道）</li>
-</ol>
-</li>
 <li>附件</li>
-<li>正文<ol>
+<li>正文</li>
 <li>称呼</li>
 <li>事项描述，尽量用列表清单，有附件的，也要在正文中说明。</li>
 <li>签名</li>
 </ol>
-</li>
-</ol>
 <p>Thanks.</p>
-<p><strong>Albert Li 李昊</strong><br><a href="http://www.intfocus.com" target="_blank" rel="noopener">上海胜因软件技术有限公司</a><br><strong><em>让人和机器可以合作完成更酷的工作</em></strong><br>上海市闵行区顾戴路2337号B座6楼 201110<br>Tel: 86 21 51876038 | Mob: 135 8569 7734<br>Mail: <a href="mailto:albert_li@intfocus.com" target="_blank" rel="noopener">albert_li@intfocus.com</a> | <a href="http://www.intfocus.com" target="_blank" rel="noopener">www.intfocus.com</a></p>
-<h2 id="功能说明文档"><a href="#功能说明文档" class="headerlink" title="功能说明文档"></a>功能说明文档</h2><h3 id="业务功能文档"><a href="#业务功能文档" class="headerlink" title="业务功能文档"></a>业务功能文档</h3><p><img src="/images/功能说明文档规范.png" alt="功能说明文档规范.png"></p>
-<p><em>注: attachments/xmind/功能说明文档规范.xmind</em></p>
+<p><strong>Albert Li 李昊</strong><br><a target="_blank" rel="noopener" href="http://www.intfocus.com/">上海胜因软件技术有限公司</a><br><em><strong>让人和机器可以合作完成更酷的工作</strong></em><br>上海市闵行区顾戴路2337号B座6楼 201110<br>Tel: 86 21 51876038 | Mob: 135 8569 7734<br>Mail: <a href="mailto:&#97;&#108;&#x62;&#101;&#114;&#x74;&#95;&#108;&#105;&#x40;&#x69;&#x6e;&#x74;&#102;&#111;&#99;&#117;&#115;&#46;&#99;&#x6f;&#109;">&#97;&#108;&#x62;&#101;&#114;&#x74;&#95;&#108;&#105;&#x40;&#x69;&#x6e;&#x74;&#102;&#111;&#99;&#117;&#115;&#46;&#99;&#x6f;&#109;</a> | <a target="_blank" rel="noopener" href="http://www.intfocus.com/">www.intfocus.com</a></p>
+<h2 id="功能说明文档"><a href="#功能说明文档" class="headerlink" title="功能说明文档"></a>功能说明文档</h2><h3 id="业务功能文档"><a href="#业务功能文档" class="headerlink" title="业务功能文档"></a>业务功能文档</h3><p><img src="/images/%E5%8A%9F%E8%83%BD%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3%E8%A7%84%E8%8C%83.png" alt="功能说明文档规范.png"></p>
+<p><em>注: attachments&#x2F;xmind&#x2F;功能说明文档规范.xmind</em></p>
 <h3 id="工具说明文档"><a href="#工具说明文档" class="headerlink" title="工具说明文档"></a>工具说明文档</h3><ol>
 <li>场景需求说明(为什么写该文档？)</li>
 <li>按序号、步骤整理说明文字</li>
@@ -478,8 +484,8 @@ puts &quot;markdown style guide!&quot;
 <li>完整的可执行Demo实例附件</li>
 <li>必要步骤的特殊说明文字</li>
 </ol>
-<h2 id="交付规范"><a href="#交付规范" class="headerlink" title="交付规范"></a>交付规范</h2><h3 id="思维脑图"><a href="#思维脑图" class="headerlink" title="思维脑图"></a>思维脑图</h3><p><img src="/images/培训总结交付规范-01.png" alt="培训交付规范"></p>
-<p><em>注: attachments/xmind/培训总结交付规范.xmind</em></p>
+<h2 id="交付规范"><a href="#交付规范" class="headerlink" title="交付规范"></a>交付规范</h2><h3 id="思维脑图"><a href="#思维脑图" class="headerlink" title="思维脑图"></a>思维脑图</h3><p><img src="/images/%E5%9F%B9%E8%AE%AD%E6%80%BB%E7%BB%93%E4%BA%A4%E4%BB%98%E8%A7%84%E8%8C%83-01.png" alt="培训交付规范"></p>
+<p><em>注: attachments&#x2F;xmind&#x2F;培训总结交付规范.xmind</em></p>
 <h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ol>
 <li>明确交付主题，创建<strong>主题名称的目录</strong></li>
 <li>图片文件命名以<strong>主题为前缀</strong>，以<strong>序号为后缀</strong></li>
@@ -489,36 +495,25 @@ puts &quot;markdown style guide!&quot;
 <li>打包 <code>zip</code> 压缩文档作为交付文档</li>
 </ol>
 <h3 id="交付示例"><a href="#交付示例" class="headerlink" title="交付示例"></a>交付示例</h3><ol>
-<li><p><em>示例文档</em>目录结构</p>
-<pre><code class="hljs undefined">$ tree Desktop/
-
-Desktop/
-├── 交付文档示例
-│   ├── images
-│   │   ├── 交付文档示例-01.jpeg
-│   │   └── 交付文档示例-02.png
-│   ├── 交付文档示例.md
-│   └── 交付文档示例.pdf
-└── 交付文档示例.zip // 交付文档</code></pre>
-</li>
-<li><p>图片引用示例</p>
-</li>
+<li><em>示例文档</em>目录结构</li>
 </ol>
-<pre><code class="hljs undefined">## 交付文档示例
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">$ tree Desktop/<br><br>Desktop/<br>├── 交付文档示例<br>│   ├── images<br>│   │   ├── 交付文档示例-01.jpeg<br>│   │   └── 交付文档示例-02.png<br>│   ├── 交付文档示例.md<br>│   └── 交付文档示例.pdf<br>└── 交付文档示例.zip // 交付文档<br></code></pre></td></tr></table></figure>
 
-![交付文档示例-01](images/交付文档示例-01.jpeg)
-![交付文档示例-02](images/交付文档示例-02.png)</code></pre>
 <ol start="2">
-<li><p>配置 <code>.md</code> 文档默认使用 MacDown 软件打开</p>
-<p><img src="/images/培训总结交付规范-02.png" alt="培训总结交付规范"></p>
-</li>
+<li>图片引用示例</li>
 </ol>
-<h2 id="Gitlab-协作"><a href="#Gitlab-协作" class="headerlink" title="Gitlab 协作"></a>Gitlab 协作</h2><h3 id="思维导图"><a href="#思维导图" class="headerlink" title="思维导图"></a>思维导图</h3><p><img src="/images/Gitlab协作规范.png" alt="Gitlab协作规范"></p>
-<p><em>注: attachments/xmind/Gitlab协作规范.xmind</em></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">## 交付文档示例<br><br>![交付文档示例-01](images/交付文档示例-01.jpeg)<br>![交付文档示例-02](images/交付文档示例-02.png)<br></code></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>配置 <code>.md</code> 文档默认使用 MacDown 软件打开</li>
+</ol>
+<p>  <img src="/images/%E5%9F%B9%E8%AE%AD%E6%80%BB%E7%BB%93%E4%BA%A4%E4%BB%98%E8%A7%84%E8%8C%83-02.png" alt="培训总结交付规范"></p>
+<h2 id="Gitlab-协作"><a href="#Gitlab-协作" class="headerlink" title="Gitlab 协作"></a>Gitlab 协作</h2><h3 id="思维导图"><a href="#思维导图" class="headerlink" title="思维导图"></a>思维导图</h3><p><img src="/images/Gitlab%E5%8D%8F%E4%BD%9C%E8%A7%84%E8%8C%83.png" alt="Gitlab协作规范"></p>
+<p><em>注: attachments&#x2F;xmind&#x2F;Gitlab协作规范.xmind</em></p>
 <h3 id="提交格式"><a href="#提交格式" class="headerlink" title="提交格式"></a>提交格式</h3><blockquote>
 <p>type@version(scope): subject</p>
 </blockquote>
-<p>示例：<a href="mailto:`style@0.1.1" target="_blank" rel="noopener">`style@0.1.1</a>/1(commit): 声明团队提交规范`<br>字段解释：</p>
+<p>示例：<code>style@0.1.1/1(commit): 声明团队提交规范</code><br>字段解释：</p>
 <ul>
 <li><p>type: 必写，可用下述标签: </p>
 <ul>
@@ -529,10 +524,10 @@ Desktop/
 <li>refactor：重构（即不是新增功能，也不是修改 bug 的代码变动） </li>
 <li>perf：性能改善（A code change that improves performance）</li>
 <li>test：增加测试 </li>
-<li>chore：构建过程或辅助工具的变动 </li>
+<li>chore：构建过程或辅助工具的变动</li>
 </ul>
 </li>
-<li><p>version: 版本号，例 0.1.2/3</p>
+<li><p>version: 版本号，例 0.1.2&#x2F;3</p>
 <ul>
 <li>0: 产品版本，默认 0</li>
 <li>1: 阶段版本，默认 1</li>
@@ -542,7 +537,8 @@ Desktop/
 </li>
 <li><p>scope: 模块，本次提交代码关联的模块名称</p>
 </li>
-<li>subject: 日志，本次提交的业务说明，多条日志时使用分号 <code>;</code> 分隔</li>
+<li><p>subject: 日志，本次提交的业务说明，多条日志时使用分号 <code>;</code> 分隔</p>
+</li>
 </ul>
 <h3 id="项目应用"><a href="#项目应用" class="headerlink" title="项目应用"></a>项目应用</h3><p>项目根目录下会版本记录文件：<code>version.js</code> 或 <code>version.json</code>。</p>
 <ul>
@@ -552,67 +548,54 @@ Desktop/
 <h3 id="gap-git-auto-push-命令"><a href="#gap-git-auto-push-命令" class="headerlink" title="gap(git-auto-push) 命令"></a><code>gap</code>(git-auto-push) 命令</h3><ol>
 <li>所有项目源码根目录下都有版本配置档 <code>version.json</code></li>
 </ol>
-<pre><code class="hljs undefined">&#123;
-    &quot;name&quot;: &quot;胜因学院在线文档&quot;,
-    &quot;major:description&quot;: &quot;产品版本&quot;,
-    &quot;minor:description&quot;: &quot;业务版本&quot;,
-    &quot;tiny:description&quot;: &quot;线上版本，每次发布上线时 +1&quot;,
-    &quot;commit:description&quot;: &quot;开发版本，每次 commit 时 +1&quot;,
-    &quot;major&quot;: 0,
-    &quot;minor&quot;: 1,
-    &quot;tiny&quot;: 1,
-    &quot;commit&quot;: 3,
-    &quot;pro_mini_version&quot;: &quot;0.1.1&quot;,
-    &quot;pro_version&quot;: &quot;0.1.1/3&quot;,
-    &quot;dev_version&quot;: &quot;0.1.3&quot;
-&#125;</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">&#123;<br>    &quot;name&quot;: &quot;胜因学院在线文档&quot;,<br>    &quot;major:description&quot;: &quot;产品版本&quot;,<br>    &quot;minor:description&quot;: &quot;业务版本&quot;,<br>    &quot;tiny:description&quot;: &quot;线上版本，每次发布上线时 +1&quot;,<br>    &quot;commit:description&quot;: &quot;开发版本，每次 commit 时 +1&quot;,<br>    &quot;major&quot;: 0,<br>    &quot;minor&quot;: 1,<br>    &quot;tiny&quot;: 1,<br>    &quot;commit&quot;: 3,<br>    &quot;pro_mini_version&quot;: &quot;0.1.1&quot;,<br>    &quot;pro_version&quot;: &quot;0.1.1/3&quot;,<br>    &quot;dev_version&quot;: &quot;0.1.3&quot;<br>&#125;<br></code></pre></td></tr></table></figure>
+
 <ol start="2">
 <li>使用 <code>gap</code> 操作的 commit 行为都会修改 <code>version.json</code> 中 <code>commit</code> +1</li>
 <li>所有项目都支持 <code>gap</code> 命令 <code>./tool.sh gap &lt;type&gt; &lt;module&gt; &lt;message&gt;</code></li>
 <li>若项目中未支持 <code>gap</code> 请联系管理员</li>
 </ol>
 <h3 id="请求合并"><a href="#请求合并" class="headerlink" title="请求合并"></a>请求合并</h3><ul>
-<li>进入团队Gitlab<a href="https://gitlab.idata.mobi/" target="_blank" rel="noopener">项目页面</a></li>
-<li>创建请求合并(New merge request)</li>
-<li>源分支(Source Branch) 选择自己的开发分支</li>
-<li>目标分支(Target Branch) 选择项目的主分支(dev-0.*-master)</li>
-<li>标题(Title) 格式为: <code>merge@version(scope): message</code></li>
+<li><p>进入团队Gitlab<a target="_blank" rel="noopener" href="https://gitlab.idata.mobi/">项目页面</a></p>
+</li>
+<li><p>创建请求合并(New merge request)</p>
+</li>
+<li><p>源分支(Source Branch) 选择自己的开发分支</p>
+</li>
+<li><p>目标分支(Target Branch) 选择项目的主分支(dev-0.*-master)</p>
+</li>
+<li><p>标题(Title) 格式为: <code>merge@version(scope): message</code></p>
+</li>
 <li><p>描述(Description) 格式为:</p>
-<pre><code class="hljs undefined">XYZ 申请合并:
-1. 本次提交涉及N份源码文件，M份其他文档，已测试运行成功
-2. 已检测代码编程规范符合要求
-3. 已查阅说明文档(readme.md)符合预期</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">XYZ 申请合并:<br>1. 本次提交涉及N份源码文件，M份其他文档，已测试运行成功<br>2. 已检测代码编程规范符合要求<br>3. 已查阅说明文档(readme.md)符合预期<br></code></pre></td></tr></table></figure>
 </li>
 <li><p>审核人(Assignee) 选择项目管理员</p>
 </li>
-<li>提交合并审核(Submit merge request)</li>
+<li><p>提交合并审核(Submit merge request)</p>
+</li>
 </ul>
 <p>若提示提交的代码有冲突，则需要<strong>取消合并申请</strong>，在本地合并主分支代码、并测试无误后重新提交代码，再请求合并(merge request)。</p>
-<p><strong>代码冲突</strong>提示如下：*<br><img src="/images/gitlab-merge-request-conflicts.png" alt=""></p>
+<p><strong>代码冲突</strong>提示如下：*<br><img src="/images/gitlab-merge-request-conflicts.png"></p>
 <p><em>本地合并主分支的代码命令:</em></p>
-<pre><code class="hljs bash"><span class="hljs-comment"># 1. 合并主分支代码，根据具体主分支名称调整命令</span>
-$ git pull origin dev-0.1-master
-<span class="hljs-comment"># 2. 运行代码，测试确认合并后代码 运行正常</span>
-<span class="hljs-comment"># 3. 本地提交代码</span>
-<span class="hljs-comment"># 4. 线上提交合并申请</span>
-<span class="hljs-comment"># 5. 若有代码冲突，说明在1-4步骤期间其他同事有提交代码，继续进入步骤1</span></code></pre>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 1. 合并主分支代码，根据具体主分支名称调整命令</span><br>$ git pull origin dev-0.1-master<br><span class="hljs-comment"># 2. 运行代码，测试确认合并后代码 运行正常</span><br><span class="hljs-comment"># 3. 本地提交代码</span><br><span class="hljs-comment"># 4. 线上提交合并申请</span><br><span class="hljs-comment"># 5. 若有代码冲突，说明在1-4步骤期间其他同事有提交代码，继续进入步骤1</span><br></code></pre></td></tr></table></figure>
+
 <h2 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具"></a>开发工具</h2><ul>
-<li><a href="https://www.yinxiang.com/" target="_blank" rel="noopener">印象笔记</a></li>
-<li><a href="https://macdown.uranusjr.com/" target="_blank" rel="noopener">MacDown</a></li>
-<li><a href="https://weixin.qq.com" target="_blank" rel="noopener">微信</a></li>
-<li><a href="https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html" target="_blank" rel="noopener">微信小程序开发工具</a></li>
-<li><a href="https://www.google.cn/chrome/index.html" target="_blank" rel="noopener">Google Chrome</a></li>
-<li><a href="https://github.com/uglide/RedisDesktopManager/releases" target="_blank" rel="noopener">RDM - RedisDesktopManager</a></li>
-<li><a href="https://www.navicat.com.cn/products" target="_blank" rel="noopener">Navicat</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.yinxiang.com/">印象笔记</a></li>
+<li><a target="_blank" rel="noopener" href="https://macdown.uranusjr.com/">MacDown</a></li>
+<li><a target="_blank" rel="noopener" href="https://weixin.qq.com/">微信</a></li>
+<li><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html">微信小程序开发工具</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.google.cn/chrome/index.html">Google Chrome</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/uglide/RedisDesktopManager/releases">RDM - RedisDesktopManager</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.navicat.com.cn/products">Navicat</a></li>
 <li>Sublime Text</li>
-<li><a href="https://www.xmind.cn/" target="_blank" rel="noopener">XMind</a></li>
-<li><a href="https://www.axure.com/download" target="_blank" rel="noopener">Axure</a></li>
-<li><a href="https://www.iterm2.com/" target="_blank" rel="noopener">Iterm2</a>/<a href="https://ohmyz.sh/" target="_blank" rel="noopener">OhMyZsh</a></li>
-<li><a href="https://www.realvnc.com/en/connect/download/viewer/" target="_blank" rel="noopener">VNC Viewer</a></li>
-<li><a href="http://www.jetbrains.com/idea/download/#section=mac" target="_blank" rel="noopener">IntelliJ IDEA</a></li>
-<li><a href="http://www.android-studio.org/index.php/download" target="_blank" rel="noopener">Android Studio</a></li>
-<li><a href="http://mirror.bit.edu.cn/pentaho/Data%20Integration/7.1/" target="_blank" rel="noopener">Kettle/Data-Integration</a></li>
-<li><a href="http://app.powerbi.com" target="_blank" rel="noopener">PowerBI</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.xmind.cn/">XMind</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.axure.com/download">Axure</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.iterm2.com/">Iterm2</a>&#x2F;<a target="_blank" rel="noopener" href="https://ohmyz.sh/">OhMyZsh</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.realvnc.com/en/connect/download/viewer/">VNC Viewer</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.jetbrains.com/idea/download/#section=mac">IntelliJ IDEA</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.android-studio.org/index.php/download">Android Studio</a></li>
+<li><a target="_blank" rel="noopener" href="http://mirror.bit.edu.cn/pentaho/Data%20Integration/7.1/">Kettle&#x2F;Data-Integration</a></li>
+<li><a target="_blank" rel="noopener" href="http://app.powerbi.com/">PowerBI</a></li>
 </ul>
 
   
@@ -650,7 +633,9 @@ $ git pull origin dev-0.1-master
 
     <!-- search -->
     <link href="//code.bdstatic.com/npm/docsearch.js@1.5.0/dist/cdn/docsearch.min.css" rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/css/search.css">
+    
+<link rel="stylesheet" href="/css/search.css">
+
     <script src="//code.bdstatic.com/npm/docsearch.js@1.5.0/dist/cdn/docsearch.min.js"></script>
     <script>
     [
