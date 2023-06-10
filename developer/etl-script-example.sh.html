@@ -278,21 +278,7 @@ window.Resume = {
     <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">#!/bin/bash<br>#<br># 开发人员: Aaron<br># 更新日期: 2019-10-29<br># 客户名称: 艾尔建<br># 业务模块: 用户行为数据同步<br># 对接团队: 齐数ETOCRM<br># 定时任务: 30 19 * * *<br># 业务描述: <br># 代码步骤:<br>#   1. 通过邮件接收压缩文档的解压密钥<br>#   2. 解压压缩文档<br>#   3. 移动数据文档至ETL流读取目录<br>#   4. 执行 ETL 流<br>#   5. 备份归档数据压缩文档、密钥文档<br>#   6. 清理解压后的数据<br>#<br>set -e # 遇错即中止<br>function logger() &#123; echo &quot;$(date +&#x27;%y/%m/%d %H:%M:%S&#x27;) - $1&quot;; &#125;<br><br>logger &quot;1. 通过邮件接收压缩文档的解压密钥&quot;<br>/bin/ruby /data/work/kettle/scripts/etocrm_encrypt_automator.rb<br><br>logger &quot;2. 解压压缩文档&quot;<br>datestr=$(date -d &quot;0 day ago&quot; &quot;+%Y%m%d&quot;)<br>entrypt=$(cat $&#123;allergan_members_path&#125;/etocrmdata/encrypt.pw)<br>echo &quot;unzip x -P$&#123;entrypt&#125; -o $&#123;allergan_members_path&#125;/etocrmdata/$&#123;datestr&#125;.zip&quot;<br>unzip -P$&#123;entrypt&#125; -o $&#123;allergan_members_path&#125;/etocrmdata/$&#123;datestr&#125;.zip<br><br>logger &quot;3. 移动数据文档至ETL流读取目录&quot;<br>mv $&#123;allergan_members_path&#125;/etocrmdata/$&#123;datestr&#125;.csv $&#123;allergan_members_path&#125;/etocrmdata/user_behaviors.csv<br><br>logger &quot;4. 执行 ETL 流&quot;<br>/bin/kitchen -file=/data/work/kettle/jobs/user_behavior.kjb<br><br>logger &quot;4. 备份归档数据压缩文档、密钥文档&quot;<br>cp -p $&#123;allergan_members_path&#125;/etocrmdata/encrypt.pw $&#123;allergan_members_path&#125;/executed_file/$&#123;datestr&#125;.pw<br>mv $&#123;allergan_members_path&#125;/etocrmdata/$&#123;datestr&#125;.zip $&#123;allergan_members_path&#125;/executed_file/$&#123;datestr&#125;.zip<br><br>logger &quot;6. 清理解压后的数据&quot;<br>rm -rf $&#123;allergan_members_path&#125;/etocrmdata/user_behaviors.csv<br><br>exit 0 # 仪式感退出<br></code></pre></td></tr></table></figure>
 
   
-  
-  <div class="footer" style="display:none;">
-      <script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
-<div class="bsa-cpc"></div>
-<script>
-  (function(){
-    if(typeof _bsa !== 'undefined' && _bsa) {
-    _bsa.init('default', 'CKYD62QM', 'placement:vuejsorg', {
-      target: '.bsa-cpc',
-      align: 'horizontal',
-      disable_css: 'true'
-    });
-      }
-  })();
-</script>
+
 
     发现错误？想参与编辑？
     <a href="https://github.com/vuejs/cn.vuejs.org/blob/master/src/developer/etl-script-example.sh.md" target="_blank">
