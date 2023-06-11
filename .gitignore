@@ -11,3 +11,7 @@ package-lock.json
 syp-documents
 src/pdf/*
 yarn.lock
+fonts
+images
+assets
+developer

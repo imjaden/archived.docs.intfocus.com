@@ -13,17 +13,18 @@ start)
     ;;
 build)
     npm run build
-    ;;
-deploy)
-    npm run deploy
-    ;;
-cleaner)
-    npm run build
+    echo "builded public"
 
+    echo "removed .DS_Store"
     find . -name '.DS_Store' | xargs -I fn rm fn
+
+    echo "replaced buysellads"
     for filepath in $(grep -lrn 'buysellads' public); do
         python3 replace.py "${filepath}"
     done
+    ;;
+deploy)
+    npm run deploy
     ;;
 *)
     echo "Error - 未知参数:"

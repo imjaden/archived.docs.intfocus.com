@@ -25,21 +25,17 @@
     <meta name="msapplication-config" content="browserconfig.xml">
     <link rel="manifest" href="/manifest.json">
 
-    <!-- <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono' rel='stylesheet' type='text/css'> -->
-    <!-- <link href='//fonts.googleapis.com/css?family=Dosis:500&text=Vue.js' rel='stylesheet' type='text/css'> -->
-
     <link href="//code.bdstatic.com/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-    <!-- main page styles -->
     <%- css(isIndex ? 'css/index' : 'css/page') %>
 
-    <!-- this needs to be loaded before guide's inline scripts -->
     <script src="<%- url_for("/js/vue.js") %>"></script>
     <script>
-      Vue.config.productionTip = false
-      window.PAGE_TYPE = "<%- page.type %>"
+      Vue.config.productionTip = false;
+      window.PAGE_TYPE = "<%- page.type %>";
     </script>
   </head>
+  
   <body class="<%- isIndex ? '' : 'docs' -%>">
     <div id="mobile-bar" <%- isIndex ? 'class="top"' : '' %>>
       <a class="menu-button"></a>
@@ -64,11 +60,9 @@
       <%- body %>
     <% } %>
 
-    <!-- main custom script for sidebars, version selects etc. -->
     <script src="<%- url_for("/js/css.escape.js") %>"></script>
     <script src="<%- url_for("/js/common.js") %>"></script>
 
-    <!-- search -->
     <link href="//code.bdstatic.com/npm/docsearch.js@1.5.0/dist/cdn/docsearch.min.css" rel='stylesheet' type='text/css'>
     <%- css('css/search') %>
     <script src="//code.bdstatic.com/npm/docsearch.js@1.5.0/dist/cdn/docsearch.min.js"></script>
