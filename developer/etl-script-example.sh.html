@@ -25,23 +25,19 @@
     <meta name="msapplication-config" content="browserconfig.xml">
     <link rel="manifest" href="/manifest.json">
 
-    <!-- <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono' rel='stylesheet' type='text/css'> -->
-    <!-- <link href='//fonts.googleapis.com/css?family=Dosis:500&text=Vue.js' rel='stylesheet' type='text/css'> -->
-
     <link href="//code.bdstatic.com/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-    <!-- main page styles -->
     
 <link rel="stylesheet" href="/css/page.css">
 
 
-    <!-- this needs to be loaded before guide's inline scripts -->
     <script src="/js/vue.js"></script>
     <script>
-      Vue.config.productionTip = false
-      window.PAGE_TYPE = ""
+      Vue.config.productionTip = false;
+      window.PAGE_TYPE = "";
     </script>
   <meta name="generator" content="Hexo 6.3.0"></head>
+  
   <body class="docs">
     <div id="mobile-bar" >
       <a class="menu-button"></a>
@@ -142,17 +138,11 @@
     <a href="https://www.intfocus.com" target="_blank" class="nav-link team">胜因官网</a>
     </li>
     <li>
-    <a href="javascript:void(0)" onclick="Resume.open()" class="nav-link team">我的简历</a>
+    <a target="_blank" rel="noopener" href="//jaden.tech/resume?t=1686451604220" class="nav-link team">我的简历</a>
     </li>
   </ul>
 </li>
-<script>
-window.Resume = {
-  open: function() {
-    window.location.href = (window.innerWidth > window.innerHeight ? '//jaden.tech/resume-landscape-672cfe02a8443258f4892d518a61a963.pdf' : '//jaden.tech/resume-vertical-e8520975ff8f7ece244b97a5f3ad9494.pdf');
-  }
-}
-</script>
+
   </ul>
 </div>
 
@@ -254,17 +244,11 @@ window.Resume = {
     <a href="https://www.intfocus.com" target="_blank" class="nav-link team">胜因官网</a>
     </li>
     <li>
-    <a href="javascript:void(0)" onclick="Resume.open()" class="nav-link team">我的简历</a>
+    <a target="_blank" rel="noopener" href="//jaden.tech/resume?t=1686451604220" class="nav-link team">我的简历</a>
     </li>
   </ul>
 </li>
-<script>
-window.Resume = {
-  open: function() {
-    window.location.href = (window.innerWidth > window.innerHeight ? '//jaden.tech/resume-landscape-672cfe02a8443258f4892d518a61a963.pdf' : '//jaden.tech/resume-vertical-e8520975ff8f7ece244b97a5f3ad9494.pdf');
-  }
-}
-</script>
+
     </ul>
   </div>
 
@@ -278,13 +262,8 @@ window.Resume = {
     <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">#!/bin/bash<br>#<br># 开发人员: Aaron<br># 更新日期: 2019-10-29<br># 客户名称: 艾尔建<br># 业务模块: 用户行为数据同步<br># 对接团队: 齐数ETOCRM<br># 定时任务: 30 19 * * *<br># 业务描述: <br># 代码步骤:<br>#   1. 通过邮件接收压缩文档的解压密钥<br>#   2. 解压压缩文档<br>#   3. 移动数据文档至ETL流读取目录<br>#   4. 执行 ETL 流<br>#   5. 备份归档数据压缩文档、密钥文档<br>#   6. 清理解压后的数据<br>#<br>set -e # 遇错即中止<br>function logger() &#123; echo &quot;$(date +&#x27;%y/%m/%d %H:%M:%S&#x27;) - $1&quot;; &#125;<br><br>logger &quot;1. 通过邮件接收压缩文档的解压密钥&quot;<br>/bin/ruby /data/work/kettle/scripts/etocrm_encrypt_automator.rb<br><br>logger &quot;2. 解压压缩文档&quot;<br>datestr=$(date -d &quot;0 day ago&quot; &quot;+%Y%m%d&quot;)<br>entrypt=$(cat $&#123;allergan_members_path&#125;/etocrmdata/encrypt.pw)<br>echo &quot;unzip x -P$&#123;entrypt&#125; -o $&#123;allergan_members_path&#125;/etocrmdata/$&#123;datestr&#125;.zip&quot;<br>unzip -P$&#123;entrypt&#125; -o $&#123;allergan_members_path&#125;/etocrmdata/$&#123;datestr&#125;.zip<br><br>logger &quot;3. 移动数据文档至ETL流读取目录&quot;<br>mv $&#123;allergan_members_path&#125;/etocrmdata/$&#123;datestr&#125;.csv $&#123;allergan_members_path&#125;/etocrmdata/user_behaviors.csv<br><br>logger &quot;4. 执行 ETL 流&quot;<br>/bin/kitchen -file=/data/work/kettle/jobs/user_behavior.kjb<br><br>logger &quot;4. 备份归档数据压缩文档、密钥文档&quot;<br>cp -p $&#123;allergan_members_path&#125;/etocrmdata/encrypt.pw $&#123;allergan_members_path&#125;/executed_file/$&#123;datestr&#125;.pw<br>mv $&#123;allergan_members_path&#125;/etocrmdata/$&#123;datestr&#125;.zip $&#123;allergan_members_path&#125;/executed_file/$&#123;datestr&#125;.zip<br><br>logger &quot;6. 清理解压后的数据&quot;<br>rm -rf $&#123;allergan_members_path&#125;/etocrmdata/user_behaviors.csv<br><br>exit 0 # 仪式感退出<br></code></pre></td></tr></table></figure>
 
   
-
-
-    发现错误？想参与编辑？
-    <a href="https://github.com/vuejs/cn.vuejs.org/blob/master/src/developer/etl-script-example.sh.md" target="_blank">
-      在 GitHub 上编辑此页！
-    </a>
-  </div>
+  
+  
 </div>
 
         
@@ -292,11 +271,9 @@ window.Resume = {
       <script src="/js/smooth-scroll.min.js"></script>
     
 
-    <!-- main custom script for sidebars, version selects etc. -->
     <script src="/js/css.escape.js"></script>
     <script src="/js/common.js"></script>
 
-    <!-- search -->
     <link href="//code.bdstatic.com/npm/docsearch.js@1.5.0/dist/cdn/docsearch.min.css" rel='stylesheet' type='text/css'>
     
 <link rel="stylesheet" href="/css/search.css">
