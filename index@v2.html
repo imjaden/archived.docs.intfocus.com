@@ -178,21 +178,21 @@
                 <div class="inner max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div class="point bg-tech-dark/80 p-6 rounded-xl border border-tech-blue/30 shadow-neon-blue card-hover">
                         <div class="text-tech-blue text-4xl mb-4">
-                            <i class="fa fa-refresh fa-spin fa-2x fa-fw"></i>
+                            <i class="fa fa-refresh"></i>
                         </div>
                         <h2 class="text-2xl font-bold mb-3 text-white">生命力</h2>
                         <p class="text-gray-400">每周三定期发布各模块的新版本</p>
                     </div>
                     <div class="point bg-tech-dark/80 p-6 rounded-xl border border-tech-cyan/30 shadow-neon-cyan card-hover">
                         <div class="text-tech-cyan text-4xl mb-4">
-                            <i class="fa fa-cog fa-spin fa-2x"></i>
+                            <i class="fa fa-feather"></i>
                         </div>
                         <h2 class="text-2xl font-bold mb-3 text-white">轻量</h2>
                         <p class="text-gray-400">简洁、高效的用户体验方式</p>
                     </div>
                     <div class="point bg-tech-dark/80 p-6 rounded-xl border border-tech-purple/30 shadow-neon-purple card-hover">
                         <div class="text-tech-purple text-4xl mb-4">
-                            <i class="fa fa-pie-chart fa-spin fa-2x"></i>
+                            <i class="fa fa-line-chart"></i>
                         </div>
                         <h2 class="text-2xl font-bold mb-3 text-white">可视化</h2>
                         <p class="text-gray-400">一切运营的数据可视化</p>
@@ -551,44 +551,6 @@
             });
         });
     }
-    </script>
-    <script>
-    window.Param = {
-      parse: function() {
-        var params = {},
-            search = window.location.search.substring(1),
-            parts = search.split('&'),
-            pairs = [];
-
-        for(var i = 0, len = parts.length; i < len; i++) {
-          pairs = parts[i].split('=');
-          if(pairs[0] === '') continue
-          params[pairs[0]] = (pairs.length > 1 ? pairs[1] : null);
-        }
-
-        return params;
-      },
-      toString: function(paramsHash) {
-        var pairs = [];
-        for(var key in paramsHash) {
-          pairs.push(key + "=" + paramsHash[key]);
-        }
-        
-        return window.location.href.split("?")[0] + "?" + pairs.join("&");
-      },
-      redirectTo: function(paramsHash) {
-        window.location.href = window.Param.toString(paramsHash);
-      }
-    }
-
-    var params = Param.parse()
-    var t = params.t
-    if (typeof(t) === 'undefined' || (Date.now() - t) > 60*60*1000) {
-      params.t = Date.now()
-      Param.redirectTo(params)
-    }
-
-
     </script>
 </body>
 
