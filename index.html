@@ -19,6 +19,7 @@
     <meta name="theme-color" content="#4fc08d">
     <meta name="msapplication-config" content="browserconfig.xml">
     <link rel="manifest" href="/manifest.json">
+    <!-- https://fontawesome.com/v4/icons/ -->
     <link href="//code.bdstatic.com/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <script src="/js/vue.js"></script>
     <script>
@@ -132,7 +133,10 @@
         }
     }
     .mb-16 {
-        margin-bottom: 3em!important;
+        margin-bottom: 1em!important;
+    }
+    .mb-6 {
+        margin-bottom: 0.5em!important;
     }
     .logo img, /* 移动端logo */
     #logo img, /* 顶部导航logo */
@@ -157,7 +161,7 @@
         <!-- 第一屏：首页 -->
         <div class="screen">
             <!-- 方案特点介绍 -->
-            <div id="hero" class="py-24 px-4 text-center">
+            <div id="hero" class="py-24 px-4 text-center" style="padding-top:1rem;padding-bottom:1rem">
                 <div class="inner max-w-5xl mx-auto">
                     <div class="left inline-block mb-6">
                         <img class="hero-logo" src="/images/logo.png" alt="vue logo" style="height:auto; max-height:160px;">
@@ -209,7 +213,7 @@
         <!-- 第二屏：菜单导航页 -->
         <div id="menu-screen" class="screen pt-8" style="padding-top:0px;">
             <!-- 主菜单区域 - 科技感平铺展示 -->
-            <div class="menu-grid py-8 px-4 max-w-7xl mx-auto">
+            <div class="menu-grid py-8 px-4 max-w-7xl mx-auto" style="padding-top:0px;">
                 <h2 class="text-3xl font-bold mb-10 text-center text-white" style="display: none;">
                     <span class="relative inline-block">
                         导航菜单
@@ -553,42 +557,40 @@
     }
     </script>
     <script>
-    window.Param = {
-      parse: function() {
-        var params = {},
-            search = window.location.search.substring(1),
-            parts = search.split('&'),
-            pairs = [];
+        window.Param = {
+          parse: function() {
+            var params = {},
+                search = window.location.search.substring(1),
+                parts = search.split('&'),
+                pairs = [];
 
-        for(var i = 0, len = parts.length; i < len; i++) {
-          pairs = parts[i].split('=');
-          if(pairs[0] === '') continue
-          params[pairs[0]] = (pairs.length > 1 ? pairs[1] : null);
+            for(var i = 0, len = parts.length; i < len; i++) {
+              pairs = parts[i].split('=');
+              if(pairs[0] === '') continue
+              params[pairs[0]] = (pairs.length > 1 ? pairs[1] : null);
+            }
+
+            return params;
+          },
+          toString: function(paramsHash) {
+            var pairs = [];
+            for(var key in paramsHash) {
+              pairs.push(key + "=" + paramsHash[key]);
+            }
+            
+            return window.location.href.split("?")[0] + "?" + pairs.join("&");
+          },
+          redirectTo: function(paramsHash) {
+            window.location.href = window.Param.toString(paramsHash);
+          }
         }
 
-        return params;
-      },
-      toString: function(paramsHash) {
-        var pairs = [];
-        for(var key in paramsHash) {
-          pairs.push(key + "=" + paramsHash[key]);
+        var params = Param.parse()
+        var t = params.t
+        if (typeof(t) === 'undefined' || (Date.now() - t) > 60*60*1000) {
+          params.t = Date.now()
+          Param.redirectTo(params)
         }
-        
-        return window.location.href.split("?")[0] + "?" + pairs.join("&");
-      },
-      redirectTo: function(paramsHash) {
-        window.location.href = window.Param.toString(paramsHash);
-      }
-    }
-
-    var params = Param.parse()
-    var t = params.t
-    if (typeof(t) === 'undefined' || (Date.now() - t) > 60*60*1000) {
-      params.t = Date.now()
-      Param.redirectTo(params)
-    }
-
-
     </script>
 </body>
 
