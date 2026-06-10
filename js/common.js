@@ -572,4 +572,49 @@
         return result
     }
   }
+
+  /**
+   * 时间戳缓存破坏机制
+   * 统一为所有页面添加 ?t={timestamp} 参数，解决浏览器缓存问题
+   * 每小时自动刷新一次时间戳
+   */
+  function initCacheBuster() {
+    window.Param = {
+      parse: function() {
+        var params = {},
+            search = window.location.search.substring(1),
+            parts = search.split('&'),
+            pairs = [];
+
+        for(var i = 0, len = parts.length; i < len; i++) {
+          pairs = parts[i].split('=');
+          if(pairs[0] === '') continue;
+          params[pairs[0]] = (pairs.length > 1 ? pairs[1] : null);
+        }
+
+        return params;
+      },
+      toString: function(paramsHash) {
+        var pairs = [];
+        for(var key in paramsHash) {
+          pairs.push(key + "=" + paramsHash[key]);
+        }
+        
+        return window.location.href.split("?")[0] + "?" + pairs.join("&");
+      },
+      redirectTo: function(paramsHash) {
+        window.location.href = window.Param.toString(paramsHash);
+      }
+    };
+
+    var params = Param.parse();
+    var t = params.t;
+    if (typeof(t) === 'undefined' || (Date.now() - t) > 60*60*1000) {
+      params.t = Date.now();
+      Param.redirectTo(params);
+    }
+  }
+
+  // 初始化时间戳缓存破坏
+  initCacheBuster();
 })()
