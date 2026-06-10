@@ -1,280 +1,270 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
-    
-    <title>运营平台添加模块 — 胜因学院</title>
-    <meta charset="utf-8">
-    <meta name="description" content="Vue.js - The Progressive JavaScript Framework">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="运营平台添加模块 — Vue.js">
-    <meta property="og:description" content="Vue.js - The Progressive JavaScript Framework">
-    <meta property="og:image" content="https://cn.vuejs.org//images/logo.png">
-
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="运营平台添加模块 — Vue.js">
-    <meta name="twitter:description" content="Vue.js - The Progressive JavaScript Framework">
-    <meta name="twitter:image" content="https://cn.vuejs.org/images/logo.png">
-
-    <link rel="icon" href="/images/intfocus.png" type="image/png">
-
-    <meta name="msapplication-TileColor" content="#4fc08d">
-    <meta name="theme-color" content="#4fc08d">
-
-    <meta name="msapplication-config" content="browserconfig.xml">
-    <link rel="manifest" href="/manifest.json">
-
-    <link href="//code.bdstatic.com/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-    
-<link rel="stylesheet" href="/css/page.css">
-
-
-    <script src="/js/vue.js"></script>
-    <script>
-      Vue.config.productionTip = false;
+    <head>
+        <title>运营平台添加模块 — 胜因学院</title>
+        <meta charset="utf-8">
+        <meta name="description" content="胜因学院内部开发门户：技术文档中心、开发规范指南与企业文化平台">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="运营平台添加模块 — Vue.js">
+        <meta property="og:description" content="胜因学院内部开发门户：技术文档中心、开发规范指南与企业文化平台">
+        <meta property="og:image" content="/images/intfocus.png">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="运营平台添加模块 — Vue.js">
+        <meta name="twitter:description" content="胜因学院内部开发门户：技术文档中心、开发规范指南与企业文化平台">
+        <meta name="twitter:image" content="/images/intfocus.png">
+        <link rel="icon" href="/images/intfocus.png" type="image/png">
+        <meta name="msapplication-TileColor" content="#165DFF">
+        <meta name="theme-color" content="#165DFF">
+        <meta name="msapplication-config" content="browserconfig.xml">
+        <link rel="manifest" href="/manifest.json">
+        <link href="//code.bdstatic.com/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="/css/page.css">
+        <script src="/js/vue.min.js"></script>
+        <script>
+            Vue.config.productionTip = false;
       window.PAGE_TYPE = "运营平台添加模块";
     </script>
-  <meta name="generator" content="Hexo 6.3.0"></head>
-  
-  <body class="docs">
-    <div id="mobile-bar" >
-      <a class="menu-button"></a>
-      <a class="logo" href="/"></a>
-    </div>
-    <div id="header">
-  <a id="logo" href="/">
-    <img src="/images/logo.png" alt="vue logo">
-    <span>Intfocus</span>
-  </a>
-  <ul id="nav">
-    <li>
-  <form id="search-form">
-    <input type="text" id="search-query-nav" class="search-query st-default-search-input">
-  </form>
-</li>
-<li class="nav-dropdown-container learn">
-  <a class="nav-link">生态系统</a><span class="arrow"></span>
-  <ul class="nav-dropdown">
-    <li><h4>应用实例</h4></li>
-    <li>
-      <ul>
-        <li><a href="/application/syp-wxmp.html" class="nav-link">胜因学院<small>(小程序)</small></a></li>
-        <li><a href="/application/syp-android-tv.html" class="nav-link">胜因盒子<small>(TV大屏)</small></a></li>
-      </ul>
-    </li>
-  </ul>
-</li>
+        <meta name="generator" content="Hexo 6.3.0">
+    </head>
 
-<li class="nav-dropdown-container learn">
-  <a class="nav-link">开发文档</a><span class="arrow"></span>
-  <ul class="nav-dropdown">
-    <li><a href="/developer/guide.html" class="nav-link current">规范指南</a></li>
-    <li><h4>编程规范</h4></li>
-    <li>
-      <ul>
-        <li><a href="/developer/style-guide/gitlab.html" class="nav-link">Gitlab</a></li>
-        <li><a href="/developer/style-guide/java.html" class="nav-link">Java</a></li>
-        <li><a href="/developer/style-guide/mysql.html" class="nav-link">MySQL</a></li>
-        <li><a href="/developer/style-guide/javascript.html" class="nav-link">Javascript</a></li>
-        <li><a href="/developer/style-guide/cdn.html" class="nav-link">CDN 运维</a></li>
-      </ul>
-    </li>
-    <li><h4>开发规范</h4></li>
-    <li>
-      <ul>
-        <li><a href="/developer/environment-guide.html" class="nav-link">环境规范<small></small></a></li>
-        <li><a href="/developer/etl-devops-guide.html" class="nav-link">ETL 运维<small></small></a></li>
-        <li><a href="/developer/api-design-guide.html" class="nav-link">API 设计<small></small></a></li>
-        <li><a href="/developer/rdc-guide.html" class="nav-link">RDC 接口<small></small></a></li>
-        <li><a href="/developer/menu-guide.html" class="nav-link">业务菜单<small></small></a></li>
-      </ul>
-    </li>
-    <li><h4>接口文档</h4></li>
-    <li>
-      <ul>
-        <li><a href="/developer/api-guide/syp-wxmp.html" class="nav-link">胜因学院<small>(小程序)</small></a></li>
-        <li><a href="/developer/api-guide/datav-report.html" class="nav-link">DataV报表<small>(大屏)</small></a></li>
-        <li><a href="/developer/api-guide/java-admin-add-module.html" class="nav-link">添加模块<small>(运营平台)</small></a></li>
-      </ul>
-    </li>
-    <li><h4>项目源码</h4></li>
-    <li>
-      <ul>
-        <li><a href="/developer/project-connections.html" class="nav-link">源码体系</a></li>
-        <li><a href="/developer/sypctl-readme.html" class="nav-link">SypCtl 工具</a></li>
-        <li><a href="/developer/jenkins-deploy.html" class="nav-link">Jenkins 部署</a></li>
-      </ul>
-    </li>
-  </ul>
-</li>
-
-<li class="nav-dropdown-container learn">
-  <a class="nav-link">企业文化</a><span class="arrow"></span>
-  <ul class="nav-dropdown">
-    <li><h4>职场培训</h4></li>
-    <li>
-      <ul>
-        <li><a href="/corporate-culture/workplace-ceremony.html" class="nav-link">职场共识</a></li>
-        <li><a href="/corporate-culture/teamwork.html" class="nav-link">职场协作</a></li>
-      </ul>
-    </li>
-    <li><h4>生命力</h4></li>
-    <li>
-      <ul>
-        <li><a href="/corporate-culture/online-documents.html" class="nav-link">在线文档</a></li>
-        <li><a href="/corporate-culture/weekly-publication.html" class="nav-link">胜因周刊</a></li>
-      </ul>
-    </li>
-  </ul>
-</li>
-
-
-<li class="nav-dropdown-container learn">
-  <a class="nav-link">外链导航</a><span class="arrow"></span>
-  <ul class="nav-dropdown">
-    <li>
-    <a href="https://www.intfocus.com" target="_blank" class="nav-link team">胜因官网</a>
-    </li>
-    <li>
-    <a target="_blank" rel="noopener" href="//jaden.tech/resume?t=1686451604220" class="nav-link team">我的简历</a>
-    </li>
-  </ul>
-</li>
-
-  </ul>
-</div>
-
-    
-    
-
-    
-      <div id="main" class="fix-sidebar">
-        
-          
-  <div class="sidebar">
-  <div class="sidebar-inner">
-    <ul class="main-menu">
-      <li>
-  <form id="search-form">
-    <input type="text" id="search-query-sidebar" class="search-query st-default-search-input">
-  </form>
-</li>
-<li class="nav-dropdown-container learn">
-  <a class="nav-link">生态系统</a><span class="arrow"></span>
-  <ul class="nav-dropdown">
-    <li><h4>应用实例</h4></li>
-    <li>
-      <ul>
-        <li><a href="/application/syp-wxmp.html" class="nav-link">胜因学院<small>(小程序)</small></a></li>
-        <li><a href="/application/syp-android-tv.html" class="nav-link">胜因盒子<small>(TV大屏)</small></a></li>
-      </ul>
-    </li>
-  </ul>
-</li>
-
-<li class="nav-dropdown-container learn">
-  <a class="nav-link">开发文档</a><span class="arrow"></span>
-  <ul class="nav-dropdown">
-    <li><a href="/developer/guide.html" class="nav-link current">规范指南</a></li>
-    <li><h4>编程规范</h4></li>
-    <li>
-      <ul>
-        <li><a href="/developer/style-guide/gitlab.html" class="nav-link">Gitlab</a></li>
-        <li><a href="/developer/style-guide/java.html" class="nav-link">Java</a></li>
-        <li><a href="/developer/style-guide/mysql.html" class="nav-link">MySQL</a></li>
-        <li><a href="/developer/style-guide/javascript.html" class="nav-link">Javascript</a></li>
-        <li><a href="/developer/style-guide/cdn.html" class="nav-link">CDN 运维</a></li>
-      </ul>
-    </li>
-    <li><h4>开发规范</h4></li>
-    <li>
-      <ul>
-        <li><a href="/developer/environment-guide.html" class="nav-link">环境规范<small></small></a></li>
-        <li><a href="/developer/etl-devops-guide.html" class="nav-link">ETL 运维<small></small></a></li>
-        <li><a href="/developer/api-design-guide.html" class="nav-link">API 设计<small></small></a></li>
-        <li><a href="/developer/rdc-guide.html" class="nav-link">RDC 接口<small></small></a></li>
-        <li><a href="/developer/menu-guide.html" class="nav-link">业务菜单<small></small></a></li>
-      </ul>
-    </li>
-    <li><h4>接口文档</h4></li>
-    <li>
-      <ul>
-        <li><a href="/developer/api-guide/syp-wxmp.html" class="nav-link">胜因学院<small>(小程序)</small></a></li>
-        <li><a href="/developer/api-guide/datav-report.html" class="nav-link">DataV报表<small>(大屏)</small></a></li>
-        <li><a href="/developer/api-guide/java-admin-add-module.html" class="nav-link">添加模块<small>(运营平台)</small></a></li>
-      </ul>
-    </li>
-    <li><h4>项目源码</h4></li>
-    <li>
-      <ul>
-        <li><a href="/developer/project-connections.html" class="nav-link">源码体系</a></li>
-        <li><a href="/developer/sypctl-readme.html" class="nav-link">SypCtl 工具</a></li>
-        <li><a href="/developer/jenkins-deploy.html" class="nav-link">Jenkins 部署</a></li>
-      </ul>
-    </li>
-  </ul>
-</li>
-
-<li class="nav-dropdown-container learn">
-  <a class="nav-link">企业文化</a><span class="arrow"></span>
-  <ul class="nav-dropdown">
-    <li><h4>职场培训</h4></li>
-    <li>
-      <ul>
-        <li><a href="/corporate-culture/workplace-ceremony.html" class="nav-link">职场共识</a></li>
-        <li><a href="/corporate-culture/teamwork.html" class="nav-link">职场协作</a></li>
-      </ul>
-    </li>
-    <li><h4>生命力</h4></li>
-    <li>
-      <ul>
-        <li><a href="/corporate-culture/online-documents.html" class="nav-link">在线文档</a></li>
-        <li><a href="/corporate-culture/weekly-publication.html" class="nav-link">胜因周刊</a></li>
-      </ul>
-    </li>
-  </ul>
-</li>
-
-
-<li class="nav-dropdown-container learn">
-  <a class="nav-link">外链导航</a><span class="arrow"></span>
-  <ul class="nav-dropdown">
-    <li>
-    <a href="https://www.intfocus.com" target="_blank" class="nav-link team">胜因官网</a>
-    </li>
-    <li>
-    <a target="_blank" rel="noopener" href="//jaden.tech/resume?t=1686451604220" class="nav-link team">我的简历</a>
-    </li>
-  </ul>
-</li>
-
-    </ul>
-    <div class="list">
-      
-      
-        <h2>
-          
-          
-          
-        </h2>
-        <ul class="menu-root">
-  
-    
-    
-    <li>
-      <a href="/developer/api-guide/java-admin-add-module.html" class="sidebar-link current">运营平台添加模块</a>
-    </li>
-  
-</ul>
-
-      
-    </div>
-  </div>
-</div>
-
-<!--
+    <body class="docs">
+        <div id="mobile-bar">
+            <a class="menu-button"></a>
+            <a class="logo" href="/"></a>
+        </div>
+        <div id="header">
+            <a id="logo" href="/">
+                <img src="/images/logo.png" alt="vue logo">
+                <span>Intfocus</span>
+            </a>
+            <ul id="nav">
+                <li>
+                    <form id="search-form">
+                        <input type="text" id="search-query-nav" class="search-query st-default-search-input">
+                    </form>
+                </li>
+                <li class="nav-dropdown-container learn">
+                    <a class="nav-link">生态系统</a><span class="arrow"></span>
+                    <ul class="nav-dropdown">
+                        <li>
+                            <h4>应用实例</h4>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><a href="/application/syp-wxmp.html" class="nav-link">胜因学院<small>(小程序)</small></a></li>
+                                <li><a href="/application/syp-android-tv.html" class="nav-link">胜因盒子<small>(TV大屏)</small></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-dropdown-container learn">
+                    <a class="nav-link">开发文档</a><span class="arrow"></span>
+                    <ul class="nav-dropdown">
+                        <li><a href="/developer/guide.html" class="nav-link current">规范指南</a></li>
+                        <li>
+                            <h4>编程规范</h4>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><a href="/developer/style-guide/gitlab.html" class="nav-link">Gitlab</a></li>
+                                <li><a href="/developer/style-guide/java.html" class="nav-link">Java</a></li>
+                                <li><a href="/developer/style-guide/mysql.html" class="nav-link">MySQL</a></li>
+                                <li><a href="/developer/style-guide/javascript.html" class="nav-link">Javascript</a></li>
+                                <li><a href="/developer/style-guide/cdn.html" class="nav-link">CDN 运维</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h4>开发规范</h4>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><a href="/developer/environment-guide.html" class="nav-link">环境规范<small></small></a></li>
+                                <li><a href="/developer/etl-devops-guide.html" class="nav-link">ETL 运维<small></small></a></li>
+                                <li><a href="/developer/api-design-guide.html" class="nav-link">API 设计<small></small></a></li>
+                                <li><a href="/developer/rdc-guide.html" class="nav-link">RDC 接口<small></small></a></li>
+                                <li><a href="/developer/menu-guide.html" class="nav-link">业务菜单<small></small></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h4>接口文档</h4>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><a href="/developer/api-guide/syp-wxmp.html" class="nav-link">胜因学院<small>(小程序)</small></a></li>
+                                <li><a href="/developer/api-guide/datav-report.html" class="nav-link">DataV报表<small>(大屏)</small></a></li>
+                                <li><a href="/developer/api-guide/java-admin-add-module.html" class="nav-link">添加模块<small>(运营平台)</small></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h4>项目源码</h4>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><a href="/developer/project-connections.html" class="nav-link">源码体系</a></li>
+                                <li><a href="/developer/sypctl-readme.html" class="nav-link">SypCtl 工具</a></li>
+                                <li><a href="/developer/jenkins-deploy.html" class="nav-link">Jenkins 部署</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-dropdown-container learn">
+                    <a class="nav-link">企业文化</a><span class="arrow"></span>
+                    <ul class="nav-dropdown">
+                        <li>
+                            <h4>职场培训</h4>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><a href="/corporate-culture/workplace-ceremony.html" class="nav-link">职场共识</a></li>
+                                <li><a href="/corporate-culture/teamwork.html" class="nav-link">职场协作</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h4>生命力</h4>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><a href="/corporate-culture/online-documents.html" class="nav-link">在线文档</a></li>
+                                <li><a href="/corporate-culture/weekly-publication.html" class="nav-link">胜因周刊</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-dropdown-container learn">
+                    <a class="nav-link">外链导航</a><span class="arrow"></span>
+                    <ul class="nav-dropdown">
+                        <li>
+                            <a href="https://www.intfocus.com" target="_blank" class="nav-link team">胜因官网</a>
+                        </li>
+                        <li>
+                            <a target="_blank" rel="noopener" href="//jaden.tech" class="nav-link team">我的主页</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div id="main" class="fix-sidebar">
+            <div class="sidebar">
+                <div class="sidebar-inner">
+                    <ul class="main-menu">
+                        <li>
+                            <form id="search-form">
+                                <input type="text" id="search-query-sidebar" class="search-query st-default-search-input">
+                            </form>
+                        </li>
+                        <li class="nav-dropdown-container learn">
+                            <a class="nav-link">生态系统</a><span class="arrow"></span>
+                            <ul class="nav-dropdown">
+                                <li>
+                                    <h4>应用实例</h4>
+                                </li>
+                                <li>
+                                    <ul>
+                                        <li><a href="/application/syp-wxmp.html" class="nav-link">胜因学院<small>(小程序)</small></a></li>
+                                        <li><a href="/application/syp-android-tv.html" class="nav-link">胜因盒子<small>(TV大屏)</small></a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-dropdown-container learn">
+                            <a class="nav-link">开发文档</a><span class="arrow"></span>
+                            <ul class="nav-dropdown">
+                                <li><a href="/developer/guide.html" class="nav-link current">规范指南</a></li>
+                                <li>
+                                    <h4>编程规范</h4>
+                                </li>
+                                <li>
+                                    <ul>
+                                        <li><a href="/developer/style-guide/gitlab.html" class="nav-link">Gitlab</a></li>
+                                        <li><a href="/developer/style-guide/java.html" class="nav-link">Java</a></li>
+                                        <li><a href="/developer/style-guide/mysql.html" class="nav-link">MySQL</a></li>
+                                        <li><a href="/developer/style-guide/javascript.html" class="nav-link">Javascript</a></li>
+                                        <li><a href="/developer/style-guide/cdn.html" class="nav-link">CDN 运维</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h4>开发规范</h4>
+                                </li>
+                                <li>
+                                    <ul>
+                                        <li><a href="/developer/environment-guide.html" class="nav-link">环境规范<small></small></a></li>
+                                        <li><a href="/developer/etl-devops-guide.html" class="nav-link">ETL 运维<small></small></a></li>
+                                        <li><a href="/developer/api-design-guide.html" class="nav-link">API 设计<small></small></a></li>
+                                        <li><a href="/developer/rdc-guide.html" class="nav-link">RDC 接口<small></small></a></li>
+                                        <li><a href="/developer/menu-guide.html" class="nav-link">业务菜单<small></small></a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h4>接口文档</h4>
+                                </li>
+                                <li>
+                                    <ul>
+                                        <li><a href="/developer/api-guide/syp-wxmp.html" class="nav-link">胜因学院<small>(小程序)</small></a></li>
+                                        <li><a href="/developer/api-guide/datav-report.html" class="nav-link">DataV报表<small>(大屏)</small></a></li>
+                                        <li><a href="/developer/api-guide/java-admin-add-module.html" class="nav-link">添加模块<small>(运营平台)</small></a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h4>项目源码</h4>
+                                </li>
+                                <li>
+                                    <ul>
+                                        <li><a href="/developer/project-connections.html" class="nav-link">源码体系</a></li>
+                                        <li><a href="/developer/sypctl-readme.html" class="nav-link">SypCtl 工具</a></li>
+                                        <li><a href="/developer/jenkins-deploy.html" class="nav-link">Jenkins 部署</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-dropdown-container learn">
+                            <a class="nav-link">企业文化</a><span class="arrow"></span>
+                            <ul class="nav-dropdown">
+                                <li>
+                                    <h4>职场培训</h4>
+                                </li>
+                                <li>
+                                    <ul>
+                                        <li><a href="/corporate-culture/workplace-ceremony.html" class="nav-link">职场共识</a></li>
+                                        <li><a href="/corporate-culture/teamwork.html" class="nav-link">职场协作</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h4>生命力</h4>
+                                </li>
+                                <li>
+                                    <ul>
+                                        <li><a href="/corporate-culture/online-documents.html" class="nav-link">在线文档</a></li>
+                                        <li><a href="/corporate-culture/weekly-publication.html" class="nav-link">胜因周刊</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-dropdown-container learn">
+                            <a class="nav-link">外链导航</a><span class="arrow"></span>
+                            <ul class="nav-dropdown">
+                                <li>
+                                    <a href="https://www.intfocus.com" target="_blank" class="nav-link team">胜因官网</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" rel="noopener" href="//jaden.tech" class="nav-link team">我的主页</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="list">
+                        <h2>
+                        </h2>
+                        <ul class="menu-root">
+                            <li>
+                                <a href="/developer/api-guide/java-admin-add-module.html" class="sidebar-link current">运营平台添加模块</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--
 <div id="sidebar-sponsors-platinum-right">
   <div class="main-sponsor">
     <span>白金赞助商</span>
@@ -305,130 +295,194 @@
 </div>
 
 -->
+            <div class="content 运营平台添加模块 with-sidebar ">
+                <h1>运营平台添加模块</h1>
+                <h2 id="企业朔源码"><a href="#企业朔源码" class="headerlink" title="企业朔源码"></a>企业朔源码</h2>
+                <ol>
+                    <li>溯源码是一个独立的模块（后面会详讲），该码会绑定企业信息</li>
+                    <li>用户注册流程中，就是通过扫描溯源码（与码绑定的业务信息无关，仅需要企业信息）绑定企业信息</li>
+                    <li>并非所有企业都有溯源码的模块需求，但所有企业的新用户注册流程中都需要扫码</li>
+                    <li>在运营平台企业管理列表中添加展示溯源码（没有则创建一个）</li>
+                    <li>业务同事根据用户需求，打印或邮件发该企业的溯源码</li>
+                </ol>
+                <h2 id="企业管理菜单"><a href="#企业管理菜单" class="headerlink" title="企业管理菜单"></a>企业管理菜单</h2>
+                <h3 id="添加溯源码列"><a href="#添加溯源码列" class="headerlink" title="添加溯源码列"></a>添加溯源码列</h3>
+                <ul>
+                    <li>
+                        <p>修改 SaasEnterpriseMapper.xml 文件中id为 queryList 的SQL语句，添加查询结果字段 qrCodeUuid 以及添加对应的关联表 </p>
+                        <figure class="highlight sql">
+                            <table>
+                                <tr>
+                                    <td class="code">
+                                        <pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span>  ae.<span class="hljs-operator">*</span>, ar.role_name ,<br>  ag.group_name ,<br>  sqced.uuid <span class="hljs-keyword">AS</span> qrCodeUuid<br><span class="hljs-keyword">FROM</span> sup_enterprises <span class="hljs-keyword">AS</span> ae<br><span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> app_roles <span class="hljs-keyword">AS</span> ar <span class="hljs-keyword">ON</span> ar.id <span class="hljs-operator">=</span> ae.role_id<br><span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> app_groups <span class="hljs-keyword">AS</span> ag <span class="hljs-keyword">ON</span> ag.group_id <span class="hljs-operator">=</span> ae.group_id<br><span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span>(<br>  <span class="hljs-keyword">SELECT</span><br>    <span class="hljs-built_in">max</span>(uuid) <span class="hljs-keyword">AS</span> uuid ,<br>    enterprise_uuid<br>  <span class="hljs-keyword">FROM</span><br>    sup_qr_code_business_data<br>  <span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span><br>    enterprise_uuid<br>) <span class="hljs-keyword">AS</span> sqced <span class="hljs-keyword">ON</span> sqced.enterprise_uuid <span class="hljs-operator">=</span> ae.uuid<br><span class="hljs-keyword">WHERE</span> ae.is_delete <span class="hljs-operator">=</span> <span class="hljs-number">0</span><br>.....<br></code></pre>
+                                    </td>
+                                </tr>
+                            </table>
+                        </figure>
+                    </li>
+                    <li>
+                        <p>在saasenterprise.js中添企业朔源码列</p>
+                        <figure class="highlight javascript">
+                            <table>
+                                <tr>
+                                    <td class="code">
+                                        <pre><code class="hljs javascript">&#123;<br>  <span class="hljs-attr">label</span>: <span class="hljs-string">&#x27;企业朔源码&#x27;</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;qrCodeUuid&#x27;</span>, <span class="hljs-attr">index</span>: <span class="hljs-string">&#x27;qrCodeUuid&#x27;</span>, <span class="hljs-attr">width</span>: <span class="hljs-number">60</span>,<br>&#125;<br></code></pre>
+                                    </td>
+                                </tr>
+                            </table>
+                        </figure>
+                    </li>
+                </ul>
+                <h3 id="检查朔源码按钮"><a href="#检查朔源码按钮" class="headerlink" title="检查朔源码按钮"></a>检查朔源码按钮</h3>
+                <ul>
+                    <li>
+                        <p>在 SaasEnterpriseMapper.xml 中添加 id 为queryListByNoParams 的SQL，实现无参数获取企业信息</p>
+                        <figure class="highlight sql">
+                            <table>
+                                <tr>
+                                    <td class="code">
+                                        <pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span>  ae.<span class="hljs-operator">*</span>, ar.role_name ,<br>  ag.group_name ,<br>  sqced.uuid <span class="hljs-keyword">AS</span> qrCodeUuid<br><span class="hljs-keyword">FROM</span> sup_enterprises <span class="hljs-keyword">AS</span> ae<br><span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> app_roles <span class="hljs-keyword">AS</span> ar <span class="hljs-keyword">ON</span> ar.id <span class="hljs-operator">=</span> ae.role_id<br><span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> app_groups <span class="hljs-keyword">AS</span> ag <span class="hljs-keyword">ON</span> ag.group_id <span class="hljs-operator">=</span> ae.group_id<br><span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span>(<br>  <span class="hljs-keyword">SELECT</span><br>    <span class="hljs-built_in">max</span>(uuid) <span class="hljs-keyword">AS</span> uuid ,<br>    enterprise_uuid<br>  <span class="hljs-keyword">FROM</span><br>    sup_qr_code_business_data<br>  <span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span><br>    enterprise_uuid<br>) <span class="hljs-keyword">AS</span> sqced <span class="hljs-keyword">ON</span> sqced.enterprise_uuid <span class="hljs-operator">=</span> ae.uuid<br><span class="hljs-keyword">WHERE</span> ae.is_delete <span class="hljs-operator">=</span> <span class="hljs-number">0</span><br></code></pre>
+                                    </td>
+                                </tr>
+                            </table>
+                        </figure>
+                    </li>
+                    <li>
+                        <p>在 SaasEnterpriseMapper.xml 中添加 id 为 insertQrCodeUuid 的SQL，向朔源码信息表 sup_qr_code_business_data 中添加 qrCodeUuid 以及对应的企业信息</p>
+                        <figure class="highlight sql">
+                            <table>
+                                <tr>
+                                    <td class="code">
+                                        <pre><code class="hljs sql"><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> sup_qr_code_business_data(<br>            uuid ,<br>            enterprise_name ,<br>            enterprise_code ,<br>            enterprise_uuid ,<br>            target_url ,<br>            data_json ,<br>            remark ,<br>            create_user ,<br>            update_user<br>        )<br><span class="hljs-keyword">VALUES</span> (<br>            #&#123;param1&#125; ,<br>            #&#123;param2&#125; ,<br>            #&#123;param3&#125; ,<br>            #&#123;param4&#125; ,<br>            <span class="hljs-keyword">null</span> ,<br>            #&#123;param5&#125; ,<br>            <span class="hljs-keyword">null</span> ,<br>            #&#123;param6&#125; ,<br>            <span class="hljs-keyword">null</span><br>        )<br></code></pre>
+                                    </td>
+                                </tr>
+                            </table>
+                        </figure>
+                    </li>
+                    <li>
+                        <p>在 SaasEnterpriseService、SaasEnterpriseServiceImpl和SaasEnterpriseMapper.java 中添加对应的 queryEnterpriseService 和 insertQrCodeuuid 方法</p>
+                    </li>
+                    <li>
+                        <p>在 SaasEnterpriseController 中添加 createEnterpriseTackingCode(String createUser) 方法</p>
+                        <ul>
+                            <li>调用 <code>saasEnterpriseService.queryListByNoParams()</code> 获得企业信息列表 saasEnterpriseList</li>
+                            <li>遍历 saasEnterpriseList ，每次遍历单体对象是 saasEnterprise</li>
+                            <li>判断 saasEnterprise.getQrCodeUuid() 是否为空，为空则生成qrCodeUuid<ul>
+                                    <li>调用 <code>RandomNumString.getCheckUuid(System.currentTimeMillis()) + RandomNumString.randomStringCheck32Uuid(10) + RandomNumString.getRandomNumber(100000)</code> 生成32位字符串 dataUuid</li>
+                                    <li>将企业信息 saasEnterprise 转为JSON字符串 dataJson</li>
+                                    <li>调用 <code>saasEnterpriseService.insertQrCodeUuid(dataUuid, saasEnterprise.getName(),saasEnterprise.getCode(), saasEnterprise.getUuid(), dataJson, createUser)</code> 向朔源码信息表中插入新添加的数据</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>saasenterprise.js 中添加 createEnterpriseTackingCode 方法，需要传入参数 createUser ，通过弹窗输入值，方法调用 <code>../saas-enterprise/tracking-code/createEnterpriseTackingCode</code> 接口，补全所有企业朔源码，成功后刷新页面列表</p>
+                        <figure class="highlight javascript">
+                            <table>
+                                <tr>
+                                    <td class="code">
+                                        <pre><code class="hljs javascript">methods&#123;<br>    <span class="hljs-attr">createEnterpriseTackingCode</span>: <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>            <span class="hljs-keyword">var</span> htmlStr = <span class="hljs-string">&#x27;&lt;span style=&quot;color: red; text-align: center;display:block;&quot;&gt;生成企业朔源码，请耐心等待&lt;/span&gt;&#x27;</span>;<br>            htmlStr = htmlStr + <span class="hljs-string">&#x27;&lt;input type=&quot;text&quot; id=&quot;createUser&quot; style=&quot;text-align: center; width: 280px;&quot; placeholder=&quot;请输入创建人：小明（15200000000）&quot;/&gt;&#x27;</span>;<br><br>            <span class="hljs-keyword">var</span> indexConfirm = layer.<span class="hljs-title function_">confirm</span>(htmlStr, &#123;<br>                <span class="hljs-attr">btn</span>: [<br>                    <span class="hljs-string">&#x27;确认&#x27;</span>, <span class="hljs-string">&#x27;取消&#x27;</span><br>                ],<br>                <span class="hljs-attr">btnAlign</span>: <span class="hljs-string">&#x27;c&#x27;</span>,<br>                <span class="hljs-attr">title</span>: <span class="hljs-string">&quot;批量添加企业朔源码&quot;</span><br>            &#125;, <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>                <span class="hljs-keyword">var</span> createUser = $(<span class="hljs-string">&quot;#createUser&quot;</span>).<span class="hljs-title function_">val</span>();<br>                    $.<span class="hljs-title function_">ajax</span>(&#123;<br>                        <span class="hljs-attr">type</span>: <span class="hljs-string">&quot;GET&quot;</span>,<br>                        <span class="hljs-attr">url</span>: <span class="hljs-string">&quot;../saas-enterprise/tracking-code/createEnterpriseTackingCode&quot;</span>,<br>                        <span class="hljs-attr">data</span>: &#123;<br>                            <span class="hljs-attr">createUser</span>: createUser<br>                        &#125;,<br>                        <span class="hljs-attr">success</span>: <span class="hljs-keyword">function</span> (<span class="hljs-params">r</span>) &#123;<br>                            <span class="hljs-keyword">if</span> (r.<span class="hljs-property">code</span> == <span class="hljs-number">0</span>) &#123;<br>                                <span class="hljs-title function_">alert</span>(<span class="hljs-string">&#x27;操作成功&#x27;</span>, <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;   $(<span class="hljs-string">&quot;#jqGrid&quot;</span>).<span class="hljs-title function_">trigger</span>(<span class="hljs-string">&quot;reloadGrid&quot;</span>);<br>                                &#125;);<br>                                vm.<span class="hljs-title function_">reload</span>();<br>                            &#125; <span class="hljs-keyword">else</span> &#123;<br>                                <span class="hljs-title function_">alert</span>(r.<span class="hljs-property">msg</span>);<br>                            &#125;<br>                        &#125;<br>                    &#125;);<br>                layer.<span class="hljs-title function_">close</span>(indexConfirm);<br>            &#125;, <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>                layer.<span class="hljs-title function_">close</span>(indexConfirm);<br>            &#125;);<br>        &#125;,<br>&#125;<br></code></pre>
+                                    </td>
+                                </tr>
+                            </table>
+                        </figure>
+                    </li>
+                    <li>
+                        <p>在 saasenterprise.html 中添加一个点击事件</p>
+                        <figure class="highlight html">
+                            <table>
+                                <tr>
+                                    <td class="code">
+                                        <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn btn-primary&quot;</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">&quot;createEnterpriseTackingCode&quot;</span>&gt;</span>补全朔源码<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><br></code></pre>
+                                    </td>
+                                </tr>
+                            </table>
+                        </figure>
+                    </li>
+                </ul>
+                <h3 id="查看朔源码按钮"><a href="#查看朔源码按钮" class="headerlink" title="查看朔源码按钮"></a>查看朔源码按钮</h3>
+                <ul>
+                    <li>
+                        <p>在 SaasEnterpriseController 中添加 show 方法，需要参数 id ，这个 id 是页面展示的行id</p>
+                        <ul>
+                            <li>调用 <code>saasEnterpriseService.queryListByNoParams()</code> 方法获得企业信息列表 saasEnterpriseList</li>
+                            <li>遍历 saasEnterpriseList ，每一次遍历单体对象是 saasEnterprise</li>
+                            <li>判断 saasEnterprise.getId() 是否和参数 id 相等，相等则通过 saasEnterprise.getQrCodeUuid() 获得 qrCodeUuid </li>
+                            <li>如果 qrCodeUuid 为空<ul>
+                                    <li>调用 <code>RandomNumString.getCheckUuid(System.currentTimeMillis()) + RandomNumString.randomStringCheck32Uuid(10) + RandomNumString.getRandomNumber(100000)</code> 生成 dataUuid </li>
+                                    <li>将企业信息 saasEnterprise 转为JSON字符串 dataJson</li>
+                                    <li>调用 <code>saasEnterpriseService.insertQrCodeUuid(dataUuid, saasEnterprise.getName(),saasEnterprise.getCode(), saasEnterprise.getUuid(), dataJson, createUser)</code> 向朔源码信息表中插入新添加的数据</li>
+                                    <li>将 dataUuid 赋值给 qrCodeUuid</li>
+                                </ul>
+                            </li>
+                            <li>返回实体信息中封装 qrCodeUuid 并返回</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>在 saasenterprise.js 中添加 showTackingCode 方法，在 data 下 添加参数 qrCodeuuid:””</p>
+                        <figure class="highlight javascript">
+                            <table>
+                                <tr>
+                                    <td class="code">
+                                        <pre><code class="hljs javascript">&lt;!--添加参数变量--&gt;<br><span class="hljs-attr">data</span>:&#123;<br>  <span class="hljs-attr">showList</span>: <span class="hljs-literal">true</span>,<br>  <span class="hljs-attr">show</span>: <span class="hljs-number">1</span>,<br>  <span class="hljs-attr">title</span>: <span class="hljs-literal">null</span>,<br>  <span class="hljs-attr">saasEnterprise</span>: &#123;&#125;,<br>  <span class="hljs-attr">qrCodeUuid</span>: <span class="hljs-string">&quot;&quot;</span><br>&#125;<br><br>&lt;!--添加方法--&gt;<br><span class="hljs-attr">methods</span>:&#123;<span class="hljs-attr">showTackingCode</span>: <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>            <span class="hljs-keyword">var</span> id = <span class="hljs-title function_">getSelectedRow</span>();<br>            $.<span class="hljs-title function_">get</span>(<span class="hljs-string">&quot;../saas-enterprise/show/&quot;</span> + id, <span class="hljs-keyword">function</span> (<span class="hljs-params">r</span>) &#123;<br>                vm.<span class="hljs-property">qrCodeUuid</span> = r.<span class="hljs-property">qrCodeUuid</span>;<br>                <span class="hljs-keyword">if</span> (vm.<span class="hljs-property">qrCodeUuid</span> == <span class="hljs-literal">null</span> || <span class="hljs-string">&quot;&quot;</span>==vm.<span class="hljs-property">qrCodeUuid</span>) &#123;<br>                    <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;<br>                &#125; <span class="hljs-keyword">else</span> &#123;<br>                    <span class="hljs-title function_">alert</span>(<span class="hljs-string">&quot;&lt;img src=&#x27;http://qr.topscan.com/api.php?&amp;w=300&amp;text=&quot;</span> + vm.<span class="hljs-property">qrCodeUuid</span> + <span class="hljs-string">&quot;&#x27;/&gt;&quot;</span>);<br>                &#125;<br>            &#125;);<br>        &#125;,<br>        &#125;<br></code></pre>
+                                    </td>
+                                </tr>
+                            </table>
+                        </figure>
+                    </li>
+                    <li>
+                        <p>在 saasenterprise.html 中添加单击事件</p>
+                        <figure class="highlight html">
+                            <table>
+                                <tr>
+                                    <td class="code">
+                                        <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn btn-primary&quot;</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">&quot;showTackingCode&quot;</span>&gt;</span>查看朔源码<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><br></code></pre>
+                                    </td>
+                                </tr>
+                            </table>
+                        </figure>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <script src="/js/smooth-scroll.min.js"></script>
+        <script src="/js/css.escape.js"></script>
+        <script src="/js/common.js"></script>
+        <link href="//code.bdstatic.com/npm/docsearch.js@1.5.0/dist/cdn/docsearch.min.css" rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="/css/search.css">
+        <script src="//code.bdstatic.com/npm/docsearch.js@1.5.0/dist/cdn/docsearch.min.js"></script>
+        <script>
+        [
+          '#search-query-nav',
+          '#search-query-sidebar',
+          '#search-query-menu'
+        ].forEach(function(selector) {
+          if (!document.querySelector(selector)) return
+          // search index defaults to v2
+          var match = window.location.pathname.match(/^\/(v\d+)/)
+          var version = match ? match[1] : 'v2'
+          docsearch({
+            appId: 'BH4D9OD16A',
+            apiKey: '5638280abff9d207417bb03be05f0b25',
+            indexName: 'vuejs_cn2',
+            inputSelector: selector,
+            algoliaOptions: {
+              facetFilters: ["version:" + version]
+            },
+            autocompleteOptions: {
+              hint: false,
+              appendTo: 'body'
+            }
+          })
+        })
+        </script>
+        <!-- fastclick -->
+        <script src="//code.bdstatic.com/npm/fastclick@1.0.6/lib/fastclick.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          FastClick.attach(document.body)
+        }, false)
+        </script>
+    </body>
 
-
-<div class="content 运营平台添加模块 with-sidebar ">
-  
-    
-      
-    
-  
-  
-    <h1>运营平台添加模块</h1>
-  
-
-  
-
-  
-    <h2 id="企业朔源码"><a href="#企业朔源码" class="headerlink" title="企业朔源码"></a>企业朔源码</h2><ol>
-<li>溯源码是一个独立的模块（后面会详讲），该码会绑定企业信息</li>
-<li>用户注册流程中，就是通过扫描溯源码（与码绑定的业务信息无关，仅需要企业信息）绑定企业信息</li>
-<li>并非所有企业都有溯源码的模块需求，但所有企业的新用户注册流程中都需要扫码</li>
-<li>在运营平台企业管理列表中添加展示溯源码（没有则创建一个）</li>
-<li>业务同事根据用户需求，打印或邮件发该企业的溯源码</li>
-</ol>
-<h2 id="企业管理菜单"><a href="#企业管理菜单" class="headerlink" title="企业管理菜单"></a>企业管理菜单</h2><h3 id="添加溯源码列"><a href="#添加溯源码列" class="headerlink" title="添加溯源码列"></a>添加溯源码列</h3><ul>
-<li><p>修改 SaasEnterpriseMapper.xml 文件中id为 queryList 的SQL语句，添加查询结果字段 qrCodeUuid 以及添加对应的关联表 </p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span>  ae.<span class="hljs-operator">*</span>, ar.role_name ,<br>  ag.group_name ,<br>  sqced.uuid <span class="hljs-keyword">AS</span> qrCodeUuid<br><span class="hljs-keyword">FROM</span> sup_enterprises <span class="hljs-keyword">AS</span> ae<br><span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> app_roles <span class="hljs-keyword">AS</span> ar <span class="hljs-keyword">ON</span> ar.id <span class="hljs-operator">=</span> ae.role_id<br><span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> app_groups <span class="hljs-keyword">AS</span> ag <span class="hljs-keyword">ON</span> ag.group_id <span class="hljs-operator">=</span> ae.group_id<br><span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span>(<br>  <span class="hljs-keyword">SELECT</span><br>    <span class="hljs-built_in">max</span>(uuid) <span class="hljs-keyword">AS</span> uuid ,<br>    enterprise_uuid<br>  <span class="hljs-keyword">FROM</span><br>    sup_qr_code_business_data<br>  <span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span><br>    enterprise_uuid<br>) <span class="hljs-keyword">AS</span> sqced <span class="hljs-keyword">ON</span> sqced.enterprise_uuid <span class="hljs-operator">=</span> ae.uuid<br><span class="hljs-keyword">WHERE</span> ae.is_delete <span class="hljs-operator">=</span> <span class="hljs-number">0</span><br>.....<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>在saasenterprise.js中添企业朔源码列</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript">&#123;<br>  <span class="hljs-attr">label</span>: <span class="hljs-string">&#x27;企业朔源码&#x27;</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;qrCodeUuid&#x27;</span>, <span class="hljs-attr">index</span>: <span class="hljs-string">&#x27;qrCodeUuid&#x27;</span>, <span class="hljs-attr">width</span>: <span class="hljs-number">60</span>,<br>&#125;<br></code></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="检查朔源码按钮"><a href="#检查朔源码按钮" class="headerlink" title="检查朔源码按钮"></a>检查朔源码按钮</h3><ul>
-<li><p>在 SaasEnterpriseMapper.xml 中添加 id 为queryListByNoParams 的SQL，实现无参数获取企业信息</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span>  ae.<span class="hljs-operator">*</span>, ar.role_name ,<br>  ag.group_name ,<br>  sqced.uuid <span class="hljs-keyword">AS</span> qrCodeUuid<br><span class="hljs-keyword">FROM</span> sup_enterprises <span class="hljs-keyword">AS</span> ae<br><span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> app_roles <span class="hljs-keyword">AS</span> ar <span class="hljs-keyword">ON</span> ar.id <span class="hljs-operator">=</span> ae.role_id<br><span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> app_groups <span class="hljs-keyword">AS</span> ag <span class="hljs-keyword">ON</span> ag.group_id <span class="hljs-operator">=</span> ae.group_id<br><span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span>(<br>  <span class="hljs-keyword">SELECT</span><br>    <span class="hljs-built_in">max</span>(uuid) <span class="hljs-keyword">AS</span> uuid ,<br>    enterprise_uuid<br>  <span class="hljs-keyword">FROM</span><br>    sup_qr_code_business_data<br>  <span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span><br>    enterprise_uuid<br>) <span class="hljs-keyword">AS</span> sqced <span class="hljs-keyword">ON</span> sqced.enterprise_uuid <span class="hljs-operator">=</span> ae.uuid<br><span class="hljs-keyword">WHERE</span> ae.is_delete <span class="hljs-operator">=</span> <span class="hljs-number">0</span><br></code></pre></td></tr></table></figure>
-</li>
-<li><p>在 SaasEnterpriseMapper.xml 中添加 id 为 insertQrCodeUuid 的SQL，向朔源码信息表 sup_qr_code_business_data 中添加 qrCodeUuid 以及对应的企业信息</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> sup_qr_code_business_data(<br>            uuid ,<br>            enterprise_name ,<br>            enterprise_code ,<br>            enterprise_uuid ,<br>            target_url ,<br>            data_json ,<br>            remark ,<br>            create_user ,<br>            update_user<br>        )<br><span class="hljs-keyword">VALUES</span> (<br>            #&#123;param1&#125; ,<br>            #&#123;param2&#125; ,<br>            #&#123;param3&#125; ,<br>            #&#123;param4&#125; ,<br>            <span class="hljs-keyword">null</span> ,<br>            #&#123;param5&#125; ,<br>            <span class="hljs-keyword">null</span> ,<br>            #&#123;param6&#125; ,<br>            <span class="hljs-keyword">null</span><br>        )<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>在 SaasEnterpriseService、SaasEnterpriseServiceImpl和SaasEnterpriseMapper.java 中添加对应的 queryEnterpriseService 和 insertQrCodeuuid 方法</p>
-</li>
-<li><p>在 SaasEnterpriseController 中添加 createEnterpriseTackingCode(String createUser) 方法</p>
-<ul>
-<li>调用 <code>saasEnterpriseService.queryListByNoParams()</code> 获得企业信息列表 saasEnterpriseList</li>
-<li>遍历 saasEnterpriseList ，每次遍历单体对象是 saasEnterprise</li>
-<li>判断 saasEnterprise.getQrCodeUuid() 是否为空，为空则生成qrCodeUuid<ul>
-<li>调用 <code>RandomNumString.getCheckUuid(System.currentTimeMillis()) + RandomNumString.randomStringCheck32Uuid(10) + RandomNumString.getRandomNumber(100000)</code> 生成32位字符串 dataUuid</li>
-<li>将企业信息 saasEnterprise 转为JSON字符串 dataJson</li>
-<li>调用 <code>saasEnterpriseService.insertQrCodeUuid(dataUuid, saasEnterprise.getName(),saasEnterprise.getCode(), saasEnterprise.getUuid(), dataJson, createUser)</code> 向朔源码信息表中插入新添加的数据</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>saasenterprise.js 中添加 createEnterpriseTackingCode 方法，需要传入参数 createUser ，通过弹窗输入值，方法调用 <code>../saas-enterprise/tracking-code/createEnterpriseTackingCode</code> 接口，补全所有企业朔源码，成功后刷新页面列表</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript">methods&#123;<br>    <span class="hljs-attr">createEnterpriseTackingCode</span>: <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>            <span class="hljs-keyword">var</span> htmlStr = <span class="hljs-string">&#x27;&lt;span style=&quot;color: red; text-align: center;display:block;&quot;&gt;生成企业朔源码，请耐心等待&lt;/span&gt;&#x27;</span>;<br>            htmlStr = htmlStr + <span class="hljs-string">&#x27;&lt;input type=&quot;text&quot; id=&quot;createUser&quot; style=&quot;text-align: center; width: 280px;&quot; placeholder=&quot;请输入创建人：小明（15200000000）&quot;/&gt;&#x27;</span>;<br><br>            <span class="hljs-keyword">var</span> indexConfirm = layer.<span class="hljs-title function_">confirm</span>(htmlStr, &#123;<br>                <span class="hljs-attr">btn</span>: [<br>                    <span class="hljs-string">&#x27;确认&#x27;</span>, <span class="hljs-string">&#x27;取消&#x27;</span><br>                ],<br>                <span class="hljs-attr">btnAlign</span>: <span class="hljs-string">&#x27;c&#x27;</span>,<br>                <span class="hljs-attr">title</span>: <span class="hljs-string">&quot;批量添加企业朔源码&quot;</span><br>            &#125;, <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>                <span class="hljs-keyword">var</span> createUser = $(<span class="hljs-string">&quot;#createUser&quot;</span>).<span class="hljs-title function_">val</span>();<br>                    $.<span class="hljs-title function_">ajax</span>(&#123;<br>                        <span class="hljs-attr">type</span>: <span class="hljs-string">&quot;GET&quot;</span>,<br>                        <span class="hljs-attr">url</span>: <span class="hljs-string">&quot;../saas-enterprise/tracking-code/createEnterpriseTackingCode&quot;</span>,<br>                        <span class="hljs-attr">data</span>: &#123;<br>                            <span class="hljs-attr">createUser</span>: createUser<br>                        &#125;,<br>                        <span class="hljs-attr">success</span>: <span class="hljs-keyword">function</span> (<span class="hljs-params">r</span>) &#123;<br>                            <span class="hljs-keyword">if</span> (r.<span class="hljs-property">code</span> == <span class="hljs-number">0</span>) &#123;<br>                                <span class="hljs-title function_">alert</span>(<span class="hljs-string">&#x27;操作成功&#x27;</span>, <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;   $(<span class="hljs-string">&quot;#jqGrid&quot;</span>).<span class="hljs-title function_">trigger</span>(<span class="hljs-string">&quot;reloadGrid&quot;</span>);<br>                                &#125;);<br>                                vm.<span class="hljs-title function_">reload</span>();<br>                            &#125; <span class="hljs-keyword">else</span> &#123;<br>                                <span class="hljs-title function_">alert</span>(r.<span class="hljs-property">msg</span>);<br>                            &#125;<br>                        &#125;<br>                    &#125;);<br>                layer.<span class="hljs-title function_">close</span>(indexConfirm);<br>            &#125;, <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>                layer.<span class="hljs-title function_">close</span>(indexConfirm);<br>            &#125;);<br>        &#125;,<br>&#125;<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>在 saasenterprise.html 中添加一个点击事件</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn btn-primary&quot;</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">&quot;createEnterpriseTackingCode&quot;</span>&gt;</span>补全朔源码<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><br></code></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="查看朔源码按钮"><a href="#查看朔源码按钮" class="headerlink" title="查看朔源码按钮"></a>查看朔源码按钮</h3><ul>
-<li><p>在 SaasEnterpriseController 中添加 show 方法，需要参数 id ，这个 id 是页面展示的行id</p>
-<ul>
-<li>调用 <code>saasEnterpriseService.queryListByNoParams()</code> 方法获得企业信息列表 saasEnterpriseList</li>
-<li>遍历 saasEnterpriseList ，每一次遍历单体对象是 saasEnterprise</li>
-<li>判断 saasEnterprise.getId() 是否和参数 id 相等，相等则通过 saasEnterprise.getQrCodeUuid() 获得 qrCodeUuid </li>
-<li>如果 qrCodeUuid 为空<ul>
-<li>调用 <code>RandomNumString.getCheckUuid(System.currentTimeMillis()) + RandomNumString.randomStringCheck32Uuid(10) + RandomNumString.getRandomNumber(100000)</code> 生成 dataUuid </li>
-<li>将企业信息 saasEnterprise 转为JSON字符串 dataJson</li>
-<li>调用 <code>saasEnterpriseService.insertQrCodeUuid(dataUuid, saasEnterprise.getName(),saasEnterprise.getCode(), saasEnterprise.getUuid(), dataJson, createUser)</code> 向朔源码信息表中插入新添加的数据</li>
-<li>将 dataUuid 赋值给 qrCodeUuid</li>
-</ul>
-</li>
-<li>返回实体信息中封装 qrCodeUuid 并返回</li>
-</ul>
-</li>
-<li><p>在 saasenterprise.js 中添加 showTackingCode 方法，在 data 下 添加参数 qrCodeuuid:””</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript">&lt;!--添加参数变量--&gt;<br><span class="hljs-attr">data</span>:&#123;<br>  <span class="hljs-attr">showList</span>: <span class="hljs-literal">true</span>,<br>  <span class="hljs-attr">show</span>: <span class="hljs-number">1</span>,<br>  <span class="hljs-attr">title</span>: <span class="hljs-literal">null</span>,<br>  <span class="hljs-attr">saasEnterprise</span>: &#123;&#125;,<br>  <span class="hljs-attr">qrCodeUuid</span>: <span class="hljs-string">&quot;&quot;</span><br>&#125;<br><br>&lt;!--添加方法--&gt;<br><span class="hljs-attr">methods</span>:&#123;<span class="hljs-attr">showTackingCode</span>: <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>            <span class="hljs-keyword">var</span> id = <span class="hljs-title function_">getSelectedRow</span>();<br>            $.<span class="hljs-title function_">get</span>(<span class="hljs-string">&quot;../saas-enterprise/show/&quot;</span> + id, <span class="hljs-keyword">function</span> (<span class="hljs-params">r</span>) &#123;<br>                vm.<span class="hljs-property">qrCodeUuid</span> = r.<span class="hljs-property">qrCodeUuid</span>;<br>                <span class="hljs-keyword">if</span> (vm.<span class="hljs-property">qrCodeUuid</span> == <span class="hljs-literal">null</span> || <span class="hljs-string">&quot;&quot;</span>==vm.<span class="hljs-property">qrCodeUuid</span>) &#123;<br>                    <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;<br>                &#125; <span class="hljs-keyword">else</span> &#123;<br>                    <span class="hljs-title function_">alert</span>(<span class="hljs-string">&quot;&lt;img src=&#x27;http://qr.topscan.com/api.php?&amp;w=300&amp;text=&quot;</span> + vm.<span class="hljs-property">qrCodeUuid</span> + <span class="hljs-string">&quot;&#x27;/&gt;&quot;</span>);<br>                &#125;<br>            &#125;);<br>        &#125;,<br>        &#125;<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>在 saasenterprise.html 中添加单击事件</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn btn-primary&quot;</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">&quot;showTackingCode&quot;</span>&gt;</span>查看朔源码<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><br></code></pre></td></tr></table></figure></li>
-</ul>
-
-  
-  
-  
-</div>
-
-        
-      </div>
-      <script src="/js/smooth-scroll.min.js"></script>
-    
-
-    <script src="/js/css.escape.js"></script>
-    <script src="/js/common.js"></script>
-
-    <link href="//code.bdstatic.com/npm/docsearch.js@1.5.0/dist/cdn/docsearch.min.css" rel='stylesheet' type='text/css'>
-    
-<link rel="stylesheet" href="/css/search.css">
-
-    <script src="//code.bdstatic.com/npm/docsearch.js@1.5.0/dist/cdn/docsearch.min.js"></script>
-    <script>
-    [
-      '#search-query-nav',
-      '#search-query-sidebar',
-      '#search-query-menu'
-    ].forEach(function (selector) {
-      if (!document.querySelector(selector)) return
-      // search index defaults to v2
-      var match = window.location.pathname.match(/^\/(v\d+)/)
-      var version = match ? match[1] : 'v2'
-      docsearch({
-      appId: 'BH4D9OD16A',
-      apiKey: '5638280abff9d207417bb03be05f0b25',
-      indexName: 'vuejs_cn2',
-      inputSelector: selector,
-      algoliaOptions: { facetFilters: ["version:" + version] },
-      autocompleteOptions: { hint: false, appendTo: 'body'}
-      })
-    })
-    </script>
-
-    <!-- fastclick -->
-    <script src="//code.bdstatic.com/npm/fastclick@1.0.6/lib/fastclick.js"></script>
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      FastClick.attach(document.body)
-    }, false)
-    </script>
-  </body>
 </html>

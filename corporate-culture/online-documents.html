@@ -1,280 +1,270 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
-    
-    <title>在线文档 — 胜因学院</title>
-    <meta charset="utf-8">
-    <meta name="description" content="Vue.js - The Progressive JavaScript Framework">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="在线文档 — Vue.js">
-    <meta property="og:description" content="Vue.js - The Progressive JavaScript Framework">
-    <meta property="og:image" content="https://cn.vuejs.org//images/logo.png">
+    <head>
+        <title>在线文档 — 胜因学院</title>
+        <meta charset="utf-8">
+        <meta name="description" content="胜因学院内部开发门户：技术文档中心、开发规范指南与企业文化平台">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="在线文档 — Vue.js">
+        <meta property="og:description" content="胜因学院内部开发门户：技术文档中心、开发规范指南与企业文化平台">
+        <meta property="og:image" content="/images/intfocus.png">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="在线文档 — Vue.js">
+        <meta name="twitter:description" content="胜因学院内部开发门户：技术文档中心、开发规范指南与企业文化平台">
+        <meta name="twitter:image" content="/images/intfocus.png">
+        <link rel="icon" href="/images/intfocus.png" type="image/png">
+        <meta name="msapplication-TileColor" content="#165DFF">
+        <meta name="theme-color" content="#165DFF">
+        <meta name="msapplication-config" content="browserconfig.xml">
+        <link rel="manifest" href="/manifest.json">
+        <link href="//code.bdstatic.com/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="/css/page.css">
+        <script src="/js/vue.min.js"></script>
+        <script>
+            Vue.config.productionTip = false;
+            window.PAGE_TYPE = "在线文档";
+        </script>
+        <meta name="generator" content="Hexo 6.3.0">
+    </head>
 
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="在线文档 — Vue.js">
-    <meta name="twitter:description" content="Vue.js - The Progressive JavaScript Framework">
-    <meta name="twitter:image" content="https://cn.vuejs.org/images/logo.png">
-
-    <link rel="icon" href="/images/intfocus.png" type="image/png">
-
-    <meta name="msapplication-TileColor" content="#4fc08d">
-    <meta name="theme-color" content="#4fc08d">
-
-    <meta name="msapplication-config" content="browserconfig.xml">
-    <link rel="manifest" href="/manifest.json">
-
-    <link href="//code.bdstatic.com/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-    
-<link rel="stylesheet" href="/css/page.css">
-
-
-    <script src="/js/vue.js"></script>
-    <script>
-      Vue.config.productionTip = false;
-      window.PAGE_TYPE = "在线文档";
-    </script>
-  <meta name="generator" content="Hexo 6.3.0"></head>
-  
-  <body class="docs">
-    <div id="mobile-bar" >
-      <a class="menu-button"></a>
-      <a class="logo" href="/"></a>
-    </div>
-    <div id="header">
-  <a id="logo" href="/">
-    <img src="/images/logo.png" alt="vue logo">
-    <span>Intfocus</span>
-  </a>
-  <ul id="nav">
-    <li>
-  <form id="search-form">
-    <input type="text" id="search-query-nav" class="search-query st-default-search-input">
-  </form>
-</li>
-<li class="nav-dropdown-container learn">
-  <a class="nav-link">生态系统</a><span class="arrow"></span>
-  <ul class="nav-dropdown">
-    <li><h4>应用实例</h4></li>
-    <li>
-      <ul>
-        <li><a href="/application/syp-wxmp.html" class="nav-link">胜因学院<small>(小程序)</small></a></li>
-        <li><a href="/application/syp-android-tv.html" class="nav-link">胜因盒子<small>(TV大屏)</small></a></li>
-      </ul>
-    </li>
-  </ul>
-</li>
-
-<li class="nav-dropdown-container learn">
-  <a class="nav-link">开发文档</a><span class="arrow"></span>
-  <ul class="nav-dropdown">
-    <li><a href="/developer/guide.html" class="nav-link">规范指南</a></li>
-    <li><h4>编程规范</h4></li>
-    <li>
-      <ul>
-        <li><a href="/developer/style-guide/gitlab.html" class="nav-link">Gitlab</a></li>
-        <li><a href="/developer/style-guide/java.html" class="nav-link">Java</a></li>
-        <li><a href="/developer/style-guide/mysql.html" class="nav-link">MySQL</a></li>
-        <li><a href="/developer/style-guide/javascript.html" class="nav-link">Javascript</a></li>
-        <li><a href="/developer/style-guide/cdn.html" class="nav-link">CDN 运维</a></li>
-      </ul>
-    </li>
-    <li><h4>开发规范</h4></li>
-    <li>
-      <ul>
-        <li><a href="/developer/environment-guide.html" class="nav-link">环境规范<small></small></a></li>
-        <li><a href="/developer/etl-devops-guide.html" class="nav-link">ETL 运维<small></small></a></li>
-        <li><a href="/developer/api-design-guide.html" class="nav-link">API 设计<small></small></a></li>
-        <li><a href="/developer/rdc-guide.html" class="nav-link">RDC 接口<small></small></a></li>
-        <li><a href="/developer/menu-guide.html" class="nav-link">业务菜单<small></small></a></li>
-      </ul>
-    </li>
-    <li><h4>接口文档</h4></li>
-    <li>
-      <ul>
-        <li><a href="/developer/api-guide/syp-wxmp.html" class="nav-link">胜因学院<small>(小程序)</small></a></li>
-        <li><a href="/developer/api-guide/datav-report.html" class="nav-link">DataV报表<small>(大屏)</small></a></li>
-        <li><a href="/developer/api-guide/java-admin-add-module.html" class="nav-link">添加模块<small>(运营平台)</small></a></li>
-      </ul>
-    </li>
-    <li><h4>项目源码</h4></li>
-    <li>
-      <ul>
-        <li><a href="/developer/project-connections.html" class="nav-link">源码体系</a></li>
-        <li><a href="/developer/sypctl-readme.html" class="nav-link">SypCtl 工具</a></li>
-        <li><a href="/developer/jenkins-deploy.html" class="nav-link">Jenkins 部署</a></li>
-      </ul>
-    </li>
-  </ul>
-</li>
-
-<li class="nav-dropdown-container learn">
-  <a class="nav-link">企业文化</a><span class="arrow"></span>
-  <ul class="nav-dropdown">
-    <li><h4>职场培训</h4></li>
-    <li>
-      <ul>
-        <li><a href="/corporate-culture/workplace-ceremony.html" class="nav-link">职场共识</a></li>
-        <li><a href="/corporate-culture/teamwork.html" class="nav-link">职场协作</a></li>
-      </ul>
-    </li>
-    <li><h4>生命力</h4></li>
-    <li>
-      <ul>
-        <li><a href="/corporate-culture/online-documents.html" class="nav-link current">在线文档</a></li>
-        <li><a href="/corporate-culture/weekly-publication.html" class="nav-link">胜因周刊</a></li>
-      </ul>
-    </li>
-  </ul>
-</li>
-
-
-<li class="nav-dropdown-container learn">
-  <a class="nav-link">外链导航</a><span class="arrow"></span>
-  <ul class="nav-dropdown">
-    <li>
-    <a href="https://www.intfocus.com" target="_blank" class="nav-link team">胜因官网</a>
-    </li>
-    <li>
-    <a target="_blank" rel="noopener" href="//jaden.tech/resume?t=1686451604220" class="nav-link team">我的简历</a>
-    </li>
-  </ul>
-</li>
-
-  </ul>
-</div>
-
-    
-    
-
-    
-      <div id="main" class="fix-sidebar">
-        
-          
-  <div class="sidebar">
-  <div class="sidebar-inner">
-    <ul class="main-menu">
-      <li>
-  <form id="search-form">
-    <input type="text" id="search-query-sidebar" class="search-query st-default-search-input">
-  </form>
-</li>
-<li class="nav-dropdown-container learn">
-  <a class="nav-link">生态系统</a><span class="arrow"></span>
-  <ul class="nav-dropdown">
-    <li><h4>应用实例</h4></li>
-    <li>
-      <ul>
-        <li><a href="/application/syp-wxmp.html" class="nav-link">胜因学院<small>(小程序)</small></a></li>
-        <li><a href="/application/syp-android-tv.html" class="nav-link">胜因盒子<small>(TV大屏)</small></a></li>
-      </ul>
-    </li>
-  </ul>
-</li>
-
-<li class="nav-dropdown-container learn">
-  <a class="nav-link">开发文档</a><span class="arrow"></span>
-  <ul class="nav-dropdown">
-    <li><a href="/developer/guide.html" class="nav-link">规范指南</a></li>
-    <li><h4>编程规范</h4></li>
-    <li>
-      <ul>
-        <li><a href="/developer/style-guide/gitlab.html" class="nav-link">Gitlab</a></li>
-        <li><a href="/developer/style-guide/java.html" class="nav-link">Java</a></li>
-        <li><a href="/developer/style-guide/mysql.html" class="nav-link">MySQL</a></li>
-        <li><a href="/developer/style-guide/javascript.html" class="nav-link">Javascript</a></li>
-        <li><a href="/developer/style-guide/cdn.html" class="nav-link">CDN 运维</a></li>
-      </ul>
-    </li>
-    <li><h4>开发规范</h4></li>
-    <li>
-      <ul>
-        <li><a href="/developer/environment-guide.html" class="nav-link">环境规范<small></small></a></li>
-        <li><a href="/developer/etl-devops-guide.html" class="nav-link">ETL 运维<small></small></a></li>
-        <li><a href="/developer/api-design-guide.html" class="nav-link">API 设计<small></small></a></li>
-        <li><a href="/developer/rdc-guide.html" class="nav-link">RDC 接口<small></small></a></li>
-        <li><a href="/developer/menu-guide.html" class="nav-link">业务菜单<small></small></a></li>
-      </ul>
-    </li>
-    <li><h4>接口文档</h4></li>
-    <li>
-      <ul>
-        <li><a href="/developer/api-guide/syp-wxmp.html" class="nav-link">胜因学院<small>(小程序)</small></a></li>
-        <li><a href="/developer/api-guide/datav-report.html" class="nav-link">DataV报表<small>(大屏)</small></a></li>
-        <li><a href="/developer/api-guide/java-admin-add-module.html" class="nav-link">添加模块<small>(运营平台)</small></a></li>
-      </ul>
-    </li>
-    <li><h4>项目源码</h4></li>
-    <li>
-      <ul>
-        <li><a href="/developer/project-connections.html" class="nav-link">源码体系</a></li>
-        <li><a href="/developer/sypctl-readme.html" class="nav-link">SypCtl 工具</a></li>
-        <li><a href="/developer/jenkins-deploy.html" class="nav-link">Jenkins 部署</a></li>
-      </ul>
-    </li>
-  </ul>
-</li>
-
-<li class="nav-dropdown-container learn">
-  <a class="nav-link">企业文化</a><span class="arrow"></span>
-  <ul class="nav-dropdown">
-    <li><h4>职场培训</h4></li>
-    <li>
-      <ul>
-        <li><a href="/corporate-culture/workplace-ceremony.html" class="nav-link">职场共识</a></li>
-        <li><a href="/corporate-culture/teamwork.html" class="nav-link">职场协作</a></li>
-      </ul>
-    </li>
-    <li><h4>生命力</h4></li>
-    <li>
-      <ul>
-        <li><a href="/corporate-culture/online-documents.html" class="nav-link current">在线文档</a></li>
-        <li><a href="/corporate-culture/weekly-publication.html" class="nav-link">胜因周刊</a></li>
-      </ul>
-    </li>
-  </ul>
-</li>
-
-
-<li class="nav-dropdown-container learn">
-  <a class="nav-link">外链导航</a><span class="arrow"></span>
-  <ul class="nav-dropdown">
-    <li>
-    <a href="https://www.intfocus.com" target="_blank" class="nav-link team">胜因官网</a>
-    </li>
-    <li>
-    <a target="_blank" rel="noopener" href="//jaden.tech/resume?t=1686451604220" class="nav-link team">我的简历</a>
-    </li>
-  </ul>
-</li>
-
-    </ul>
-    <div class="list">
-      
-      
-        <h2>
-          
-          
-          
-        </h2>
-        <ul class="menu-root">
-  
-    
-    
-    <li>
-      <a href="/corporate-culture/online-documents.html" class="sidebar-link current">在线文档</a>
-    </li>
-  
-</ul>
-
-      
-    </div>
-  </div>
-</div>
-
-<!--
+    <body class="docs">
+        <div id="mobile-bar">
+            <a class="menu-button"></a>
+            <a class="logo" href="/"></a>
+        </div>
+        <div id="header">
+            <a id="logo" href="/">
+                <img src="/images/logo.png" alt="vue logo">
+                <span>Intfocus</span>
+            </a>
+            <ul id="nav">
+                <li>
+                    <form id="search-form">
+                        <input type="text" id="search-query-nav" class="search-query st-default-search-input">
+                    </form>
+                </li>
+                <li class="nav-dropdown-container learn">
+                    <a class="nav-link">生态系统</a><span class="arrow"></span>
+                    <ul class="nav-dropdown">
+                        <li>
+                            <h4>应用实例</h4>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><a href="/application/syp-wxmp.html" class="nav-link">胜因学院<small>(小程序)</small></a></li>
+                                <li><a href="/application/syp-android-tv.html" class="nav-link">胜因盒子<small>(TV大屏)</small></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-dropdown-container learn">
+                    <a class="nav-link">开发文档</a><span class="arrow"></span>
+                    <ul class="nav-dropdown">
+                        <li><a href="/developer/guide.html" class="nav-link">规范指南</a></li>
+                        <li>
+                            <h4>编程规范</h4>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><a href="/developer/style-guide/gitlab.html" class="nav-link">Gitlab</a></li>
+                                <li><a href="/developer/style-guide/java.html" class="nav-link">Java</a></li>
+                                <li><a href="/developer/style-guide/mysql.html" class="nav-link">MySQL</a></li>
+                                <li><a href="/developer/style-guide/javascript.html" class="nav-link">Javascript</a></li>
+                                <li><a href="/developer/style-guide/cdn.html" class="nav-link">CDN 运维</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h4>开发规范</h4>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><a href="/developer/environment-guide.html" class="nav-link">环境规范<small></small></a></li>
+                                <li><a href="/developer/etl-devops-guide.html" class="nav-link">ETL 运维<small></small></a></li>
+                                <li><a href="/developer/api-design-guide.html" class="nav-link">API 设计<small></small></a></li>
+                                <li><a href="/developer/rdc-guide.html" class="nav-link">RDC 接口<small></small></a></li>
+                                <li><a href="/developer/menu-guide.html" class="nav-link">业务菜单<small></small></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h4>接口文档</h4>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><a href="/developer/api-guide/syp-wxmp.html" class="nav-link">胜因学院<small>(小程序)</small></a></li>
+                                <li><a href="/developer/api-guide/datav-report.html" class="nav-link">DataV报表<small>(大屏)</small></a></li>
+                                <li><a href="/developer/api-guide/java-admin-add-module.html" class="nav-link">添加模块<small>(运营平台)</small></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h4>项目源码</h4>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><a href="/developer/project-connections.html" class="nav-link">源码体系</a></li>
+                                <li><a href="/developer/sypctl-readme.html" class="nav-link">SypCtl 工具</a></li>
+                                <li><a href="/developer/jenkins-deploy.html" class="nav-link">Jenkins 部署</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-dropdown-container learn">
+                    <a class="nav-link">企业文化</a><span class="arrow"></span>
+                    <ul class="nav-dropdown">
+                        <li>
+                            <h4>职场培训</h4>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><a href="/corporate-culture/workplace-ceremony.html" class="nav-link">职场共识</a></li>
+                                <li><a href="/corporate-culture/teamwork.html" class="nav-link">职场协作</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h4>生命力</h4>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><a href="/corporate-culture/online-documents.html" class="nav-link current">在线文档</a></li>
+                                <li><a href="/corporate-culture/weekly-publication.html" class="nav-link">胜因周刊</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-dropdown-container learn">
+                    <a class="nav-link">外链导航</a><span class="arrow"></span>
+                    <ul class="nav-dropdown">
+                        <li>
+                            <a href="https://www.intfocus.com" target="_blank" class="nav-link team">胜因官网</a>
+                        </li>
+                        <li>
+                            <a target="_blank" rel="noopener" href="//jaden.tech" class="nav-link team">我的主页</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div id="main" class="fix-sidebar">
+            <div class="sidebar">
+                <div class="sidebar-inner">
+                    <ul class="main-menu">
+                        <li>
+                            <form id="search-form">
+                                <input type="text" id="search-query-sidebar" class="search-query st-default-search-input">
+                            </form>
+                        </li>
+                        <li class="nav-dropdown-container learn">
+                            <a class="nav-link">生态系统</a><span class="arrow"></span>
+                            <ul class="nav-dropdown">
+                                <li>
+                                    <h4>应用实例</h4>
+                                </li>
+                                <li>
+                                    <ul>
+                                        <li><a href="/application/syp-wxmp.html" class="nav-link">胜因学院<small>(小程序)</small></a></li>
+                                        <li><a href="/application/syp-android-tv.html" class="nav-link">胜因盒子<small>(TV大屏)</small></a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-dropdown-container learn">
+                            <a class="nav-link">开发文档</a><span class="arrow"></span>
+                            <ul class="nav-dropdown">
+                                <li><a href="/developer/guide.html" class="nav-link">规范指南</a></li>
+                                <li>
+                                    <h4>编程规范</h4>
+                                </li>
+                                <li>
+                                    <ul>
+                                        <li><a href="/developer/style-guide/gitlab.html" class="nav-link">Gitlab</a></li>
+                                        <li><a href="/developer/style-guide/java.html" class="nav-link">Java</a></li>
+                                        <li><a href="/developer/style-guide/mysql.html" class="nav-link">MySQL</a></li>
+                                        <li><a href="/developer/style-guide/javascript.html" class="nav-link">Javascript</a></li>
+                                        <li><a href="/developer/style-guide/cdn.html" class="nav-link">CDN 运维</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h4>开发规范</h4>
+                                </li>
+                                <li>
+                                    <ul>
+                                        <li><a href="/developer/environment-guide.html" class="nav-link">环境规范<small></small></a></li>
+                                        <li><a href="/developer/etl-devops-guide.html" class="nav-link">ETL 运维<small></small></a></li>
+                                        <li><a href="/developer/api-design-guide.html" class="nav-link">API 设计<small></small></a></li>
+                                        <li><a href="/developer/rdc-guide.html" class="nav-link">RDC 接口<small></small></a></li>
+                                        <li><a href="/developer/menu-guide.html" class="nav-link">业务菜单<small></small></a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h4>接口文档</h4>
+                                </li>
+                                <li>
+                                    <ul>
+                                        <li><a href="/developer/api-guide/syp-wxmp.html" class="nav-link">胜因学院<small>(小程序)</small></a></li>
+                                        <li><a href="/developer/api-guide/datav-report.html" class="nav-link">DataV报表<small>(大屏)</small></a></li>
+                                        <li><a href="/developer/api-guide/java-admin-add-module.html" class="nav-link">添加模块<small>(运营平台)</small></a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h4>项目源码</h4>
+                                </li>
+                                <li>
+                                    <ul>
+                                        <li><a href="/developer/project-connections.html" class="nav-link">源码体系</a></li>
+                                        <li><a href="/developer/sypctl-readme.html" class="nav-link">SypCtl 工具</a></li>
+                                        <li><a href="/developer/jenkins-deploy.html" class="nav-link">Jenkins 部署</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-dropdown-container learn">
+                            <a class="nav-link">企业文化</a><span class="arrow"></span>
+                            <ul class="nav-dropdown">
+                                <li>
+                                    <h4>职场培训</h4>
+                                </li>
+                                <li>
+                                    <ul>
+                                        <li><a href="/corporate-culture/workplace-ceremony.html" class="nav-link">职场共识</a></li>
+                                        <li><a href="/corporate-culture/teamwork.html" class="nav-link">职场协作</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h4>生命力</h4>
+                                </li>
+                                <li>
+                                    <ul>
+                                        <li><a href="/corporate-culture/online-documents.html" class="nav-link current">在线文档</a></li>
+                                        <li><a href="/corporate-culture/weekly-publication.html" class="nav-link">胜因周刊</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-dropdown-container learn">
+                            <a class="nav-link">外链导航</a><span class="arrow"></span>
+                            <ul class="nav-dropdown">
+                                <li>
+                                    <a href="https://www.intfocus.com" target="_blank" class="nav-link team">胜因官网</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" rel="noopener" href="//jaden.tech" class="nav-link team">我的主页</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="list">
+                        <h2>
+                        </h2>
+                        <ul class="menu-root">
+                            <li>
+                                <a href="/corporate-culture/online-documents.html" class="sidebar-link current">在线文档</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--
 <div id="sidebar-sponsors-platinum-right">
   <div class="main-sponsor">
     <span>白金赞助商</span>
@@ -305,99 +295,98 @@
 </div>
 
 -->
+            <div class="content 在线文档 with-sidebar ">
+                <h1>在线文档</h1>
+                <h2 id="文档说明"><a href="#文档说明" class="headerlink" title="文档说明"></a>文档说明</h2>
+                <p>该站点基于 <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> 构建而成。网站内容在 <code>src</code> 文件夹内，格式为 Markdown。欢迎 issue 或 pull request。</p>
+                <p>在线地址：<a target="_blank" rel="noopener" href="https://docs.idata.mobi/">doc.idata.mobi</a></p>
+                <h2 id="贡献内容"><a href="#贡献内容" class="headerlink" title="贡献内容"></a>贡献内容</h2>
+                <ul>
+                    <li>步骤1: 注册 <a target="_blank" rel="noopener" href="https://gitlab.idata.mobi/">团队gitlab</a></li>
+                    <li>步骤2: 向团队申请<a target="_blank" rel="noopener" href="https://gitlab.idata.mobi/shengyiplus/syp-documents">项目 syp-documents</a> 开发权限</li>
+                    <li>步骤3: 本地生成 sshkey</li>
+                    <li>步骤4: 在 gitlab 账号 ssh 设置项中添加本地 sshkey</li>
+                    <li>步骤5: 拉取 syp-documents 项目源码</li>
+                    <li>步骤6: 贡献内容</li>
+                    <li>步骤7: 使用 <a href="/developer/style-guide/gitlab.html">gap 规范</a> 提交</li>
+                    <li>步骤8: 申请合并</li>
+                    <li>步骤9: 管理员审核通过、并发布内容</li>
+                    <li>步骤10: 在线文档<a target="_blank" rel="noopener" href="https://docs.idata.mobi/">doc.idata.mobi</a> 中查看自己的贡献内容</li>
+                </ul>
+                <figure class="highlight bash">
+                    <table>
+                        <tr>
+                            <td class="code">
+                                <pre><code class="hljs bash">$ git <span class="hljs-built_in">clone</span> git@gitlab.idata.mobi:shengyiplus/syp-documents.git<br><br>$ <span class="hljs-built_in">cd</span> syp-documents<br>$ npm install<br>$ npm run start <span class="hljs-comment"># 本地浏览: http://localhost:4000</span><br><br><span class="hljs-comment"># 编译文章</span><br>$ npm run build<br><br><span class="hljs-comment"># 提交代码</span><br>$ npm run gap &lt;<span class="hljs-built_in">type</span>&gt; &lt;module&gt; &lt;message&gt;<br><br><span class="hljs-comment"># 提交 pull-request</span><br></code></pre>
+                            </td>
+                        </tr>
+                    </table>
+                </figure>
+                <h2 id="图片说明"><a href="#图片说明" class="headerlink" title="图片说明"></a>图片说明</h2>
+                <p>为了更直观的表述自己的想法、理念，往往一图胜千言，为了保持思维导图的沉淀式更新，需要注意以下几点:</p>
+                <ol>
+                    <li>图片存放在本项目内 <code>src/images/</code></li>
+                    <li>图片名称与业务描述相关，方便维护、清理</li>
+                    <li>图片原型(xmind&#x2F;axure&#x2F;或其他)维护在 <code>attachments/&#123;xmind,axure&#125;</code></li>
+                </ol>
+                <p>示意效果图:<br><img src="/images/%E5%9B%BE%E7%89%87%E5%8E%9F%E5%9E%8B%E8%B7%AF%E5%BE%84%E8%AF%B4%E6%98%8E.png" alt="图片原型路径说明"></p>
+                <h2 id="gap-命令"><a href="#gap-命令" class="headerlink" title="gap 命令"></a><code>gap</code> 命令</h2>
+                <ol>
+                    <li>所有项目源码根目录下都有版本配置档 <code>version.json</code></li>
+                </ol>
+                <figure class="highlight plaintext">
+                    <table>
+                        <tr>
+                            <td class="code">
+                                <pre><code class="hljs plaintext">&#123;<br>    &quot;name&quot;: &quot;胜因学院在线文档&quot;,<br>    &quot;major:description&quot;: &quot;产品版本&quot;,<br>    &quot;minor:description&quot;: &quot;业务版本&quot;,<br>    &quot;tiny:description&quot;: &quot;线上版本，每次发布上线时 +1&quot;,<br>    &quot;commit:description&quot;: &quot;开发版本，每次 commit 时 +1&quot;,<br>    &quot;major&quot;: 0,<br>    &quot;minor&quot;: 1,<br>    &quot;tiny&quot;: 1,<br>    &quot;commit&quot;: 3,<br>    &quot;pro_mini_version&quot;: &quot;0.1.1&quot;,<br>    &quot;pro_version&quot;: &quot;0.1.1/3&quot;,<br>    &quot;dev_version&quot;: &quot;0.1.3&quot;<br>&#125;<br></code></pre>
+                            </td>
+                        </tr>
+                    </table>
+                </figure>
+                <ol start="2">
+                    <li>使用 <code>gap</code> 操作的 commit 行为都会修改 <code>version.json</code> 中 <code>commit</code> +1</li>
+                    <li><code>gap</code> 命令符合<a href="/developer/style-guide/gitlab.html">Gitlab提交规范</a>, 减少冗余输入</li>
+                </ol>
+            </div>
+        </div>
+        <script src="/js/smooth-scroll.min.js"></script>
+        <script src="/js/css.escape.js"></script>
+        <script src="/js/common.js"></script>
+        <link href="//code.bdstatic.com/npm/docsearch.js@1.5.0/dist/cdn/docsearch.min.css" rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="/css/search.css">
+        <script src="//code.bdstatic.com/npm/docsearch.js@1.5.0/dist/cdn/docsearch.min.js"></script>
+        <script>
+        [
+          '#search-query-nav',
+          '#search-query-sidebar',
+          '#search-query-menu'
+        ].forEach(function(selector) {
+          if (!document.querySelector(selector)) return
+          // search index defaults to v2
+          var match = window.location.pathname.match(/^\/(v\d+)/)
+          var version = match ? match[1] : 'v2'
+          docsearch({
+            appId: 'BH4D9OD16A',
+            apiKey: '5638280abff9d207417bb03be05f0b25',
+            indexName: 'vuejs_cn2',
+            inputSelector: selector,
+            algoliaOptions: {
+              facetFilters: ["version:" + version]
+            },
+            autocompleteOptions: {
+              hint: false,
+              appendTo: 'body'
+            }
+          })
+        })
+        </script>
+        <!-- fastclick -->
+        <script src="//code.bdstatic.com/npm/fastclick@1.0.6/lib/fastclick.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          FastClick.attach(document.body)
+        }, false)
+        </script>
+    </body>
 
-
-<div class="content 在线文档 with-sidebar ">
-  
-    
-      
-    
-  
-  
-    <h1>在线文档</h1>
-  
-
-  
-
-  
-    <h2 id="文档说明"><a href="#文档说明" class="headerlink" title="文档说明"></a>文档说明</h2><p>该站点基于 <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> 构建而成。网站内容在 <code>src</code> 文件夹内，格式为 Markdown。欢迎 issue 或 pull request。</p>
-<p>在线地址：<a target="_blank" rel="noopener" href="https://docs.idata.mobi/">doc.idata.mobi</a></p>
-<h2 id="贡献内容"><a href="#贡献内容" class="headerlink" title="贡献内容"></a>贡献内容</h2><ul>
-<li>步骤1: 注册 <a target="_blank" rel="noopener" href="https://gitlab.idata.mobi/">团队gitlab</a></li>
-<li>步骤2: 向团队申请<a target="_blank" rel="noopener" href="https://gitlab.idata.mobi/shengyiplus/syp-documents">项目 syp-documents</a> 开发权限</li>
-<li>步骤3: 本地生成 sshkey</li>
-<li>步骤4: 在 gitlab 账号 ssh 设置项中添加本地 sshkey</li>
-<li>步骤5: 拉取 syp-documents 项目源码</li>
-<li>步骤6: 贡献内容</li>
-<li>步骤7: 使用 <a href="/developer/style-guide/gitlab.html">gap 规范</a> 提交</li>
-<li>步骤8: 申请合并</li>
-<li>步骤9: 管理员审核通过、并发布内容</li>
-<li>步骤10: 在线文档<a target="_blank" rel="noopener" href="https://docs.idata.mobi/">doc.idata.mobi</a> 中查看自己的贡献内容</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ git <span class="hljs-built_in">clone</span> git@gitlab.idata.mobi:shengyiplus/syp-documents.git<br><br>$ <span class="hljs-built_in">cd</span> syp-documents<br>$ npm install<br>$ npm run start <span class="hljs-comment"># 本地浏览: http://localhost:4000</span><br><br><span class="hljs-comment"># 编译文章</span><br>$ npm run build<br><br><span class="hljs-comment"># 提交代码</span><br>$ npm run gap &lt;<span class="hljs-built_in">type</span>&gt; &lt;module&gt; &lt;message&gt;<br><br><span class="hljs-comment"># 提交 pull-request</span><br></code></pre></td></tr></table></figure>
-
-<h2 id="图片说明"><a href="#图片说明" class="headerlink" title="图片说明"></a>图片说明</h2><p>为了更直观的表述自己的想法、理念，往往一图胜千言，为了保持思维导图的沉淀式更新，需要注意以下几点:</p>
-<ol>
-<li>图片存放在本项目内 <code>src/images/</code></li>
-<li>图片名称与业务描述相关，方便维护、清理</li>
-<li>图片原型(xmind&#x2F;axure&#x2F;或其他)维护在 <code>attachments/&#123;xmind,axure&#125;</code></li>
-</ol>
-<p>示意效果图:<br><img src="/images/%E5%9B%BE%E7%89%87%E5%8E%9F%E5%9E%8B%E8%B7%AF%E5%BE%84%E8%AF%B4%E6%98%8E.png" alt="图片原型路径说明"></p>
-<h2 id="gap-命令"><a href="#gap-命令" class="headerlink" title="gap 命令"></a><code>gap</code> 命令</h2><ol>
-<li>所有项目源码根目录下都有版本配置档 <code>version.json</code></li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">&#123;<br>    &quot;name&quot;: &quot;胜因学院在线文档&quot;,<br>    &quot;major:description&quot;: &quot;产品版本&quot;,<br>    &quot;minor:description&quot;: &quot;业务版本&quot;,<br>    &quot;tiny:description&quot;: &quot;线上版本，每次发布上线时 +1&quot;,<br>    &quot;commit:description&quot;: &quot;开发版本，每次 commit 时 +1&quot;,<br>    &quot;major&quot;: 0,<br>    &quot;minor&quot;: 1,<br>    &quot;tiny&quot;: 1,<br>    &quot;commit&quot;: 3,<br>    &quot;pro_mini_version&quot;: &quot;0.1.1&quot;,<br>    &quot;pro_version&quot;: &quot;0.1.1/3&quot;,<br>    &quot;dev_version&quot;: &quot;0.1.3&quot;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>使用 <code>gap</code> 操作的 commit 行为都会修改 <code>version.json</code> 中 <code>commit</code> +1</li>
-<li><code>gap</code> 命令符合<a href="/developer/style-guide/gitlab.html">Gitlab提交规范</a>, 减少冗余输入</li>
-</ol>
-
-  
-  
-  
-</div>
-
-        
-      </div>
-      <script src="/js/smooth-scroll.min.js"></script>
-    
-
-    <script src="/js/css.escape.js"></script>
-    <script src="/js/common.js"></script>
-
-    <link href="//code.bdstatic.com/npm/docsearch.js@1.5.0/dist/cdn/docsearch.min.css" rel='stylesheet' type='text/css'>
-    
-<link rel="stylesheet" href="/css/search.css">
-
-    <script src="//code.bdstatic.com/npm/docsearch.js@1.5.0/dist/cdn/docsearch.min.js"></script>
-    <script>
-    [
-      '#search-query-nav',
-      '#search-query-sidebar',
-      '#search-query-menu'
-    ].forEach(function (selector) {
-      if (!document.querySelector(selector)) return
-      // search index defaults to v2
-      var match = window.location.pathname.match(/^\/(v\d+)/)
-      var version = match ? match[1] : 'v2'
-      docsearch({
-      appId: 'BH4D9OD16A',
-      apiKey: '5638280abff9d207417bb03be05f0b25',
-      indexName: 'vuejs_cn2',
-      inputSelector: selector,
-      algoliaOptions: { facetFilters: ["version:" + version] },
-      autocompleteOptions: { hint: false, appendTo: 'body'}
-      })
-    })
-    </script>
-
-    <!-- fastclick -->
-    <script src="//code.bdstatic.com/npm/fastclick@1.0.6/lib/fastclick.js"></script>
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      FastClick.attach(document.body)
-    }, false)
-    </script>
-  </body>
 </html>

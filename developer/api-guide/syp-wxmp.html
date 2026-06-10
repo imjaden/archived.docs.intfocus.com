@@ -1,280 +1,270 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
-    
-    <title>接口文档(小程序) — 胜因学院</title>
-    <meta charset="utf-8">
-    <meta name="description" content="Vue.js - The Progressive JavaScript Framework">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="接口文档(小程序) — Vue.js">
-    <meta property="og:description" content="Vue.js - The Progressive JavaScript Framework">
-    <meta property="og:image" content="https://cn.vuejs.org//images/logo.png">
-
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="接口文档(小程序) — Vue.js">
-    <meta name="twitter:description" content="Vue.js - The Progressive JavaScript Framework">
-    <meta name="twitter:image" content="https://cn.vuejs.org/images/logo.png">
-
-    <link rel="icon" href="/images/intfocus.png" type="image/png">
-
-    <meta name="msapplication-TileColor" content="#4fc08d">
-    <meta name="theme-color" content="#4fc08d">
-
-    <meta name="msapplication-config" content="browserconfig.xml">
-    <link rel="manifest" href="/manifest.json">
-
-    <link href="//code.bdstatic.com/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-    
-<link rel="stylesheet" href="/css/page.css">
-
-
-    <script src="/js/vue.js"></script>
-    <script>
-      Vue.config.productionTip = false;
+    <head>
+        <title>接口文档(小程序) — 胜因学院</title>
+        <meta charset="utf-8">
+        <meta name="description" content="胜因学院内部开发门户：技术文档中心、开发规范指南与企业文化平台">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="接口文档(小程序) — Vue.js">
+        <meta property="og:description" content="胜因学院内部开发门户：技术文档中心、开发规范指南与企业文化平台">
+        <meta property="og:image" content="/images/intfocus.png">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="接口文档(小程序) — Vue.js">
+        <meta name="twitter:description" content="胜因学院内部开发门户：技术文档中心、开发规范指南与企业文化平台">
+        <meta name="twitter:image" content="/images/intfocus.png">
+        <link rel="icon" href="/images/intfocus.png" type="image/png">
+        <meta name="msapplication-TileColor" content="#165DFF">
+        <meta name="theme-color" content="#165DFF">
+        <meta name="msapplication-config" content="browserconfig.xml">
+        <link rel="manifest" href="/manifest.json">
+        <link href="//code.bdstatic.com/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="/css/page.css">
+        <script src="/js/vue.min.js"></script>
+        <script>
+            Vue.config.productionTip = false;
       window.PAGE_TYPE = "接口文档";
     </script>
-  <meta name="generator" content="Hexo 6.3.0"></head>
-  
-  <body class="docs">
-    <div id="mobile-bar" >
-      <a class="menu-button"></a>
-      <a class="logo" href="/"></a>
-    </div>
-    <div id="header">
-  <a id="logo" href="/">
-    <img src="/images/logo.png" alt="vue logo">
-    <span>Intfocus</span>
-  </a>
-  <ul id="nav">
-    <li>
-  <form id="search-form">
-    <input type="text" id="search-query-nav" class="search-query st-default-search-input">
-  </form>
-</li>
-<li class="nav-dropdown-container learn">
-  <a class="nav-link">生态系统</a><span class="arrow"></span>
-  <ul class="nav-dropdown">
-    <li><h4>应用实例</h4></li>
-    <li>
-      <ul>
-        <li><a href="/application/syp-wxmp.html" class="nav-link">胜因学院<small>(小程序)</small></a></li>
-        <li><a href="/application/syp-android-tv.html" class="nav-link">胜因盒子<small>(TV大屏)</small></a></li>
-      </ul>
-    </li>
-  </ul>
-</li>
+        <meta name="generator" content="Hexo 6.3.0">
+    </head>
 
-<li class="nav-dropdown-container learn">
-  <a class="nav-link">开发文档</a><span class="arrow"></span>
-  <ul class="nav-dropdown">
-    <li><a href="/developer/guide.html" class="nav-link current">规范指南</a></li>
-    <li><h4>编程规范</h4></li>
-    <li>
-      <ul>
-        <li><a href="/developer/style-guide/gitlab.html" class="nav-link">Gitlab</a></li>
-        <li><a href="/developer/style-guide/java.html" class="nav-link">Java</a></li>
-        <li><a href="/developer/style-guide/mysql.html" class="nav-link">MySQL</a></li>
-        <li><a href="/developer/style-guide/javascript.html" class="nav-link">Javascript</a></li>
-        <li><a href="/developer/style-guide/cdn.html" class="nav-link">CDN 运维</a></li>
-      </ul>
-    </li>
-    <li><h4>开发规范</h4></li>
-    <li>
-      <ul>
-        <li><a href="/developer/environment-guide.html" class="nav-link">环境规范<small></small></a></li>
-        <li><a href="/developer/etl-devops-guide.html" class="nav-link">ETL 运维<small></small></a></li>
-        <li><a href="/developer/api-design-guide.html" class="nav-link">API 设计<small></small></a></li>
-        <li><a href="/developer/rdc-guide.html" class="nav-link">RDC 接口<small></small></a></li>
-        <li><a href="/developer/menu-guide.html" class="nav-link">业务菜单<small></small></a></li>
-      </ul>
-    </li>
-    <li><h4>接口文档</h4></li>
-    <li>
-      <ul>
-        <li><a href="/developer/api-guide/syp-wxmp.html" class="nav-link current">胜因学院<small>(小程序)</small></a></li>
-        <li><a href="/developer/api-guide/datav-report.html" class="nav-link current">DataV报表<small>(大屏)</small></a></li>
-        <li><a href="/developer/api-guide/java-admin-add-module.html" class="nav-link current">添加模块<small>(运营平台)</small></a></li>
-      </ul>
-    </li>
-    <li><h4>项目源码</h4></li>
-    <li>
-      <ul>
-        <li><a href="/developer/project-connections.html" class="nav-link">源码体系</a></li>
-        <li><a href="/developer/sypctl-readme.html" class="nav-link">SypCtl 工具</a></li>
-        <li><a href="/developer/jenkins-deploy.html" class="nav-link">Jenkins 部署</a></li>
-      </ul>
-    </li>
-  </ul>
-</li>
-
-<li class="nav-dropdown-container learn">
-  <a class="nav-link">企业文化</a><span class="arrow"></span>
-  <ul class="nav-dropdown">
-    <li><h4>职场培训</h4></li>
-    <li>
-      <ul>
-        <li><a href="/corporate-culture/workplace-ceremony.html" class="nav-link">职场共识</a></li>
-        <li><a href="/corporate-culture/teamwork.html" class="nav-link">职场协作</a></li>
-      </ul>
-    </li>
-    <li><h4>生命力</h4></li>
-    <li>
-      <ul>
-        <li><a href="/corporate-culture/online-documents.html" class="nav-link">在线文档</a></li>
-        <li><a href="/corporate-culture/weekly-publication.html" class="nav-link">胜因周刊</a></li>
-      </ul>
-    </li>
-  </ul>
-</li>
-
-
-<li class="nav-dropdown-container learn">
-  <a class="nav-link">外链导航</a><span class="arrow"></span>
-  <ul class="nav-dropdown">
-    <li>
-    <a href="https://www.intfocus.com" target="_blank" class="nav-link team">胜因官网</a>
-    </li>
-    <li>
-    <a target="_blank" rel="noopener" href="//jaden.tech/resume?t=1686451604220" class="nav-link team">我的简历</a>
-    </li>
-  </ul>
-</li>
-
-  </ul>
-</div>
-
-    
-    
-
-    
-      <div id="main" class="fix-sidebar">
-        
-          
-  <div class="sidebar">
-  <div class="sidebar-inner">
-    <ul class="main-menu">
-      <li>
-  <form id="search-form">
-    <input type="text" id="search-query-sidebar" class="search-query st-default-search-input">
-  </form>
-</li>
-<li class="nav-dropdown-container learn">
-  <a class="nav-link">生态系统</a><span class="arrow"></span>
-  <ul class="nav-dropdown">
-    <li><h4>应用实例</h4></li>
-    <li>
-      <ul>
-        <li><a href="/application/syp-wxmp.html" class="nav-link">胜因学院<small>(小程序)</small></a></li>
-        <li><a href="/application/syp-android-tv.html" class="nav-link">胜因盒子<small>(TV大屏)</small></a></li>
-      </ul>
-    </li>
-  </ul>
-</li>
-
-<li class="nav-dropdown-container learn">
-  <a class="nav-link">开发文档</a><span class="arrow"></span>
-  <ul class="nav-dropdown">
-    <li><a href="/developer/guide.html" class="nav-link current">规范指南</a></li>
-    <li><h4>编程规范</h4></li>
-    <li>
-      <ul>
-        <li><a href="/developer/style-guide/gitlab.html" class="nav-link">Gitlab</a></li>
-        <li><a href="/developer/style-guide/java.html" class="nav-link">Java</a></li>
-        <li><a href="/developer/style-guide/mysql.html" class="nav-link">MySQL</a></li>
-        <li><a href="/developer/style-guide/javascript.html" class="nav-link">Javascript</a></li>
-        <li><a href="/developer/style-guide/cdn.html" class="nav-link">CDN 运维</a></li>
-      </ul>
-    </li>
-    <li><h4>开发规范</h4></li>
-    <li>
-      <ul>
-        <li><a href="/developer/environment-guide.html" class="nav-link">环境规范<small></small></a></li>
-        <li><a href="/developer/etl-devops-guide.html" class="nav-link">ETL 运维<small></small></a></li>
-        <li><a href="/developer/api-design-guide.html" class="nav-link">API 设计<small></small></a></li>
-        <li><a href="/developer/rdc-guide.html" class="nav-link">RDC 接口<small></small></a></li>
-        <li><a href="/developer/menu-guide.html" class="nav-link">业务菜单<small></small></a></li>
-      </ul>
-    </li>
-    <li><h4>接口文档</h4></li>
-    <li>
-      <ul>
-        <li><a href="/developer/api-guide/syp-wxmp.html" class="nav-link current">胜因学院<small>(小程序)</small></a></li>
-        <li><a href="/developer/api-guide/datav-report.html" class="nav-link current">DataV报表<small>(大屏)</small></a></li>
-        <li><a href="/developer/api-guide/java-admin-add-module.html" class="nav-link current">添加模块<small>(运营平台)</small></a></li>
-      </ul>
-    </li>
-    <li><h4>项目源码</h4></li>
-    <li>
-      <ul>
-        <li><a href="/developer/project-connections.html" class="nav-link">源码体系</a></li>
-        <li><a href="/developer/sypctl-readme.html" class="nav-link">SypCtl 工具</a></li>
-        <li><a href="/developer/jenkins-deploy.html" class="nav-link">Jenkins 部署</a></li>
-      </ul>
-    </li>
-  </ul>
-</li>
-
-<li class="nav-dropdown-container learn">
-  <a class="nav-link">企业文化</a><span class="arrow"></span>
-  <ul class="nav-dropdown">
-    <li><h4>职场培训</h4></li>
-    <li>
-      <ul>
-        <li><a href="/corporate-culture/workplace-ceremony.html" class="nav-link">职场共识</a></li>
-        <li><a href="/corporate-culture/teamwork.html" class="nav-link">职场协作</a></li>
-      </ul>
-    </li>
-    <li><h4>生命力</h4></li>
-    <li>
-      <ul>
-        <li><a href="/corporate-culture/online-documents.html" class="nav-link">在线文档</a></li>
-        <li><a href="/corporate-culture/weekly-publication.html" class="nav-link">胜因周刊</a></li>
-      </ul>
-    </li>
-  </ul>
-</li>
-
-
-<li class="nav-dropdown-container learn">
-  <a class="nav-link">外链导航</a><span class="arrow"></span>
-  <ul class="nav-dropdown">
-    <li>
-    <a href="https://www.intfocus.com" target="_blank" class="nav-link team">胜因官网</a>
-    </li>
-    <li>
-    <a target="_blank" rel="noopener" href="//jaden.tech/resume?t=1686451604220" class="nav-link team">我的简历</a>
-    </li>
-  </ul>
-</li>
-
-    </ul>
-    <div class="list">
-      
-      
-        <h2>
-          
-          
-          
-        </h2>
-        <ul class="menu-root">
-  
-    
-    
-    <li>
-      <a href="/developer/api-guide/syp-wxmp.html" class="sidebar-link current">接口文档(小程序)</a>
-    </li>
-  
-</ul>
-
-      
-    </div>
-  </div>
-</div>
-
-<!--
+    <body class="docs">
+        <div id="mobile-bar">
+            <a class="menu-button"></a>
+            <a class="logo" href="/"></a>
+        </div>
+        <div id="header">
+            <a id="logo" href="/">
+                <img src="/images/logo.png" alt="vue logo">
+                <span>Intfocus</span>
+            </a>
+            <ul id="nav">
+                <li>
+                    <form id="search-form">
+                        <input type="text" id="search-query-nav" class="search-query st-default-search-input">
+                    </form>
+                </li>
+                <li class="nav-dropdown-container learn">
+                    <a class="nav-link">生态系统</a><span class="arrow"></span>
+                    <ul class="nav-dropdown">
+                        <li>
+                            <h4>应用实例</h4>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><a href="/application/syp-wxmp.html" class="nav-link">胜因学院<small>(小程序)</small></a></li>
+                                <li><a href="/application/syp-android-tv.html" class="nav-link">胜因盒子<small>(TV大屏)</small></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-dropdown-container learn">
+                    <a class="nav-link">开发文档</a><span class="arrow"></span>
+                    <ul class="nav-dropdown">
+                        <li><a href="/developer/guide.html" class="nav-link current">规范指南</a></li>
+                        <li>
+                            <h4>编程规范</h4>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><a href="/developer/style-guide/gitlab.html" class="nav-link">Gitlab</a></li>
+                                <li><a href="/developer/style-guide/java.html" class="nav-link">Java</a></li>
+                                <li><a href="/developer/style-guide/mysql.html" class="nav-link">MySQL</a></li>
+                                <li><a href="/developer/style-guide/javascript.html" class="nav-link">Javascript</a></li>
+                                <li><a href="/developer/style-guide/cdn.html" class="nav-link">CDN 运维</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h4>开发规范</h4>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><a href="/developer/environment-guide.html" class="nav-link">环境规范<small></small></a></li>
+                                <li><a href="/developer/etl-devops-guide.html" class="nav-link">ETL 运维<small></small></a></li>
+                                <li><a href="/developer/api-design-guide.html" class="nav-link">API 设计<small></small></a></li>
+                                <li><a href="/developer/rdc-guide.html" class="nav-link">RDC 接口<small></small></a></li>
+                                <li><a href="/developer/menu-guide.html" class="nav-link">业务菜单<small></small></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h4>接口文档</h4>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><a href="/developer/api-guide/syp-wxmp.html" class="nav-link current">胜因学院<small>(小程序)</small></a></li>
+                                <li><a href="/developer/api-guide/datav-report.html" class="nav-link current">DataV报表<small>(大屏)</small></a></li>
+                                <li><a href="/developer/api-guide/java-admin-add-module.html" class="nav-link current">添加模块<small>(运营平台)</small></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h4>项目源码</h4>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><a href="/developer/project-connections.html" class="nav-link">源码体系</a></li>
+                                <li><a href="/developer/sypctl-readme.html" class="nav-link">SypCtl 工具</a></li>
+                                <li><a href="/developer/jenkins-deploy.html" class="nav-link">Jenkins 部署</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-dropdown-container learn">
+                    <a class="nav-link">企业文化</a><span class="arrow"></span>
+                    <ul class="nav-dropdown">
+                        <li>
+                            <h4>职场培训</h4>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><a href="/corporate-culture/workplace-ceremony.html" class="nav-link">职场共识</a></li>
+                                <li><a href="/corporate-culture/teamwork.html" class="nav-link">职场协作</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h4>生命力</h4>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><a href="/corporate-culture/online-documents.html" class="nav-link">在线文档</a></li>
+                                <li><a href="/corporate-culture/weekly-publication.html" class="nav-link">胜因周刊</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-dropdown-container learn">
+                    <a class="nav-link">外链导航</a><span class="arrow"></span>
+                    <ul class="nav-dropdown">
+                        <li>
+                            <a href="https://www.intfocus.com" target="_blank" class="nav-link team">胜因官网</a>
+                        </li>
+                        <li>
+                            <a target="_blank" rel="noopener" href="//jaden.tech" class="nav-link team">我的主页</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div id="main" class="fix-sidebar">
+            <div class="sidebar">
+                <div class="sidebar-inner">
+                    <ul class="main-menu">
+                        <li>
+                            <form id="search-form">
+                                <input type="text" id="search-query-sidebar" class="search-query st-default-search-input">
+                            </form>
+                        </li>
+                        <li class="nav-dropdown-container learn">
+                            <a class="nav-link">生态系统</a><span class="arrow"></span>
+                            <ul class="nav-dropdown">
+                                <li>
+                                    <h4>应用实例</h4>
+                                </li>
+                                <li>
+                                    <ul>
+                                        <li><a href="/application/syp-wxmp.html" class="nav-link">胜因学院<small>(小程序)</small></a></li>
+                                        <li><a href="/application/syp-android-tv.html" class="nav-link">胜因盒子<small>(TV大屏)</small></a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-dropdown-container learn">
+                            <a class="nav-link">开发文档</a><span class="arrow"></span>
+                            <ul class="nav-dropdown">
+                                <li><a href="/developer/guide.html" class="nav-link current">规范指南</a></li>
+                                <li>
+                                    <h4>编程规范</h4>
+                                </li>
+                                <li>
+                                    <ul>
+                                        <li><a href="/developer/style-guide/gitlab.html" class="nav-link">Gitlab</a></li>
+                                        <li><a href="/developer/style-guide/java.html" class="nav-link">Java</a></li>
+                                        <li><a href="/developer/style-guide/mysql.html" class="nav-link">MySQL</a></li>
+                                        <li><a href="/developer/style-guide/javascript.html" class="nav-link">Javascript</a></li>
+                                        <li><a href="/developer/style-guide/cdn.html" class="nav-link">CDN 运维</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h4>开发规范</h4>
+                                </li>
+                                <li>
+                                    <ul>
+                                        <li><a href="/developer/environment-guide.html" class="nav-link">环境规范<small></small></a></li>
+                                        <li><a href="/developer/etl-devops-guide.html" class="nav-link">ETL 运维<small></small></a></li>
+                                        <li><a href="/developer/api-design-guide.html" class="nav-link">API 设计<small></small></a></li>
+                                        <li><a href="/developer/rdc-guide.html" class="nav-link">RDC 接口<small></small></a></li>
+                                        <li><a href="/developer/menu-guide.html" class="nav-link">业务菜单<small></small></a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h4>接口文档</h4>
+                                </li>
+                                <li>
+                                    <ul>
+                                        <li><a href="/developer/api-guide/syp-wxmp.html" class="nav-link current">胜因学院<small>(小程序)</small></a></li>
+                                        <li><a href="/developer/api-guide/datav-report.html" class="nav-link current">DataV报表<small>(大屏)</small></a></li>
+                                        <li><a href="/developer/api-guide/java-admin-add-module.html" class="nav-link current">添加模块<small>(运营平台)</small></a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h4>项目源码</h4>
+                                </li>
+                                <li>
+                                    <ul>
+                                        <li><a href="/developer/project-connections.html" class="nav-link">源码体系</a></li>
+                                        <li><a href="/developer/sypctl-readme.html" class="nav-link">SypCtl 工具</a></li>
+                                        <li><a href="/developer/jenkins-deploy.html" class="nav-link">Jenkins 部署</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-dropdown-container learn">
+                            <a class="nav-link">企业文化</a><span class="arrow"></span>
+                            <ul class="nav-dropdown">
+                                <li>
+                                    <h4>职场培训</h4>
+                                </li>
+                                <li>
+                                    <ul>
+                                        <li><a href="/corporate-culture/workplace-ceremony.html" class="nav-link">职场共识</a></li>
+                                        <li><a href="/corporate-culture/teamwork.html" class="nav-link">职场协作</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h4>生命力</h4>
+                                </li>
+                                <li>
+                                    <ul>
+                                        <li><a href="/corporate-culture/online-documents.html" class="nav-link">在线文档</a></li>
+                                        <li><a href="/corporate-culture/weekly-publication.html" class="nav-link">胜因周刊</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-dropdown-container learn">
+                            <a class="nav-link">外链导航</a><span class="arrow"></span>
+                            <ul class="nav-dropdown">
+                                <li>
+                                    <a href="https://www.intfocus.com" target="_blank" class="nav-link team">胜因官网</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" rel="noopener" href="//jaden.tech" class="nav-link team">我的主页</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="list">
+                        <h2>
+                        </h2>
+                        <ul class="menu-root">
+                            <li>
+                                <a href="/developer/api-guide/syp-wxmp.html" class="sidebar-link current">接口文档(小程序)</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--
 <div id="sidebar-sponsors-platinum-right">
   <div class="main-sponsor">
     <span>白金赞助商</span>
@@ -305,606 +295,918 @@
 </div>
 
 -->
+            <div class="content 接口文档 with-sidebar ">
+                <h1>接口文档(小程序)</h1>
+                <h2 id="登录页"><a href="#登录页" class="headerlink" title="登录页"></a>登录页</h2>
+                <h3 id="业务流程图"><a href="#业务流程图" class="headerlink" title="业务流程图"></a>业务流程图</h3>
+                <p><a href="/application/syp-wxmp.html">登录模块业务流程</a></p>
+                <h3 id="手机号登录"><a href="#手机号登录" class="headerlink" title="手机号登录"></a>手机号登录</h3>
+                <ol>
+                    <li>企业列表展示</li>
+                </ol>
+                <figure class="highlight plaintext">
+                    <table>
+                        <tr>
+                            <td class="code">
+                                <pre><code class="hljs plaintext">get /portal/v2/account-number-login/enterprise-list<br>&#123;<br>  mobile: 手机号,<br>  password: 密码(MD5加密)<br>&#125;<br></code></pre>
+                            </td>
+                        </tr>
+                    </table>
+                </figure>
+                <p> 业务流程：</p>
+                <ul>
+                    <li>
+                        <p>参数判断（mobile 和 password 进行判空）</p>
+                    </li>
+                    <li>
+                        <p>获取数据源 portalDataSource</p>
+                    </li>
+                    <li>
+                        <p>判断密码</p>
+                        <ul>
+                            <li>调用 <code>portalV2Service.queryUserInfo(mobile)</code> 方法查询用户密码</li>
+                        </ul>
+                        <figure class="highlight sql">
+                            <table>
+                                <tr>
+                                    <td class="code">
+                                        <pre><code class="hljs sql"><span class="hljs-keyword">select</span> password <br><span class="hljs-keyword">from</span> sup_user <br><span class="hljs-keyword">where</span> mobile <span class="hljs-operator">=</span> #&#123;mobile&#125; <span class="hljs-keyword">and</span> delete_status <span class="hljs-operator">=</span> <span class="hljs-number">0</span> limit <span class="hljs-number">1</span><br></code></pre>
+                                    </td>
+                                </tr>
+                            </table>
+                        </figure>
+                        <ul>
+                            <li>判断userPassword和参数password是否相等，或者根据手机号后六位数(内部排序)经过MD5加密后的字符串是否相等，有一个相等就继续，如果都不相同，返回信息中返回“密码错误”</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>获取企业列表</p>
+                        <ul>
+                            <li>调用 <code>apiPortalV2Service的queryEnterpriseListWithMobile(mobile, password)</code> 获取企业列表 result</li>
+                        </ul>
+                        <figure class="highlight sql">
+                            <table>
+                                <tr>
+                                    <td class="code">
+                                        <pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span><br>  sue.uuid <span class="hljs-keyword">AS</span> userUuid ,<br>  su.user_name <span class="hljs-keyword">AS</span> userName ,<br>  sue.mobile <span class="hljs-keyword">AS</span> userMobile ,<br>  su.email <span class="hljs-keyword">AS</span> userEmail ,<br>  su.user_num <span class="hljs-keyword">AS</span> userNumber ,<br>  sue. STATUS <span class="hljs-keyword">AS</span> userStatus ,<br>  su. PASSWORD ,<br>  su. PASSWORD <span class="hljs-keyword">AS</span> userIdToken ,<br>  sue.token <span class="hljs-keyword">AS</span> userToken ,<br>  se.group_id <span class="hljs-keyword">AS</span> groupId ,<br>  se.role_id <span class="hljs-keyword">AS</span> roleId ,<br>  su.is_delete <span class="hljs-keyword">AS</span> userIsDelete ,<br>  <span class="hljs-string">&#x27;todo&#x27;</span> <span class="hljs-keyword">AS</span> userGravatar ,<br>  <span class="hljs-string">&#x27;todo&#x27;</span> <span class="hljs-keyword">AS</span> groupName ,<br>  <span class="hljs-string">&#x27;todo&#x27;</span> <span class="hljs-keyword">AS</span> roleName ,<br>  se.uuid <span class="hljs-keyword">AS</span> enterpriseUuid ,<br>  se. CODE <span class="hljs-keyword">AS</span> enterpriseCode ,<br>  se. NAME <span class="hljs-keyword">AS</span> enterpriseName ,<br>  se.data_source_id <span class="hljs-keyword">AS</span> dataSourceCode ,<br>  se.role_id <span class="hljs-keyword">AS</span> enterpriseRoleId ,<br>  se.group_id <span class="hljs-keyword">AS</span> enterpriseGroupId ,<br>  se. <span class="hljs-keyword">LANGUAGE</span> <span class="hljs-keyword">AS</span> enterpriseLanguage<br><span class="hljs-keyword">FROM</span><br>  sup_user_enterprises <span class="hljs-keyword">AS</span> sue<br><span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> sup_enterprises <span class="hljs-keyword">AS</span> se <span class="hljs-keyword">ON</span> se.uuid <span class="hljs-operator">=</span> sue.data_enterprise_uuid<br><span class="hljs-keyword">AND</span> sue.data_enterprise_code <span class="hljs-operator">=</span> se. CODE<br><span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> sup_user <span class="hljs-keyword">AS</span> su <span class="hljs-keyword">ON</span> su.mobile <span class="hljs-operator">=</span> sue.mobile<br><span class="hljs-keyword">WHERE</span><br>  sue.mobile <span class="hljs-operator">=</span> #&#123;mobile&#125; <span class="hljs-keyword">and</span> sue.delete_status <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;0&#x27;</span> <span class="hljs-keyword">and</span> sue.status <span class="hljs-operator">=</span> <span class="hljs-number">1</span><br><br><span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span><br>  sue.uuid<br></code></pre>
+                                    </td>
+                                </tr>
+                            </table>
+                        </figure>
+                    </li>
+                    <li>
+                        <p>查询用户角色</p>
+                        <ul>
+                            <li>循环遍历企业列表 result ，每次遍历的单体对象是 map ，调用 <code>apiPortalV2Service.queryUserRoleUuidList(userUuid,portalDataSource)</code> 查询用户角色uuid得到 roleList</li>
+                        </ul>
+                        <figure class="highlight sql">
+                            <table>
+                                <tr>
+                                    <td class="code">
+                                        <pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span><br>  aur.uuid <span class="hljs-keyword">AS</span> roleUuid ,<br>  aur.role_name <span class="hljs-keyword">AS</span> roleName<br><span class="hljs-keyword">FROM</span><br>  sup_user_roles <span class="hljs-keyword">AS</span> sur<br><span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> app_user_roles <span class="hljs-keyword">AS</span> aur <span class="hljs-keyword">ON</span> aur.uuid <span class="hljs-operator">=</span> sur.role_uuid<br><span class="hljs-keyword">AND</span> sur.data_enterprise_uuid <span class="hljs-operator">=</span> aur.data_enterprise_uuid<br><span class="hljs-keyword">WHERE</span><br>  user_uuid <span class="hljs-operator">=</span> #&#123;userUuid&#125;<br><span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span><br>  aur.uuid<br></code></pre>
+                                    </td>
+                                </tr>
+                            </table>
+                        </figure>
+                        <ul>
+                            <li>追加 roleList 给map中的 userUuidList</li>
+                            <li>遍历 roleList，将每一个 roleUuid 用“，”拼接起来赋值给 roleUuids 字符串，然后追加到map中的 roleUuids 中</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>封装结果到返回信息实体中并返回信息实体，用户选择企业进行登录</p>
+                    </li>
+                </ul>
+                <ol start="2">
+                    <li>获取微信用户 openid</li>
+                </ol>
+                <figure class="highlight plaintext">
+                    <table>
+                        <tr>
+                            <td class="code">
+                                <pre><code class="hljs plaintext">post /saas-api/api/portal/wx/query-user-openid <br>&#123;<br>  code: 用户凭证(wx.login获取),<br>  enterpriseUuid: 企业uuid,<br>  mobile: 手机号<br>&#125;<br></code></pre>
+                            </td>
+                        </tr>
+                    </table>
+                </figure>
+                <p> 业务流程：</p>
+                <ul>
+                    <li>
+                        <p>参数判断（code 和 mobile 进行判空）</p>
+                    </li>
+                    <li>
+                        <p>如果 code 不为空，从数据库中重新获取 openid</p>
+                        <ul>
+                            <li>
+                                <p>获取微信小程序配置信息</p>
+                                <ul>
+                                    <li>appId：”weChat.appId”</li>
+                                    <li>secret：”weChat.secret”</li>
+                                    <li>openIdUrl：”weChat.openIdUrl”</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>替换 openIdUrl 中的参数值</p>
+                                <ul>
+                                    <li>用appId、secret、code 分别替换原openIdUrl中的 APP_ID、APP_SECRET、JS_CODE ，得到新的 openIdUrl</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>获取openId返回值</p>
+                                <ul>
+                                    <li>调用微信官方接口返回值 <code>HttpMethodUtil.getGetResult(openIdUrl, null)</code> 得到openIdResult</li>
+                                    <li>判断openIdResult是否是JSON格式，不是则返回 获取用户 openId 接口返回值非JSON格式错误信息</li>
+                                    <li>是JSON格式，则转为JSON对象 json</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>创建一个字段 isBinding&#x3D;0，向 json 中put</p>
+                            </li>
+                            <li>
+                                <p>如果 json 对象不为空，先获取数据源 portalDataSource</p>
+                            </li>
+                            <li>
+                                <p>调用 <code>apiWeChatService的portalQueryUserOpenId(mobilev, enterpriseUuid, portalDataSource)</code> 方法查询用户openId 得到结果集 result（Map集合）</p>
+                            </li>
+                        </ul>
+                        <figure class="highlight sql">
+                            <table>
+                                <tr>
+                                    <td class="code">
+                                        <pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span><br>  wx_unique_token <span class="hljs-keyword">AS</span> openid ,<br>  is_binding<br><span class="hljs-keyword">FROM</span><br>  sup_wx_users<br><span class="hljs-keyword">WHERE</span><br>  mobile <span class="hljs-operator">=</span> #&#123;mobile&#125; <span class="hljs-keyword">and</span> is_binding <span class="hljs-operator">=</span> <span class="hljs-number">1</span> <span class="hljs-keyword">and</span> delete_status <span class="hljs-operator">=</span> <span class="hljs-number">0</span><br><span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span><br>  id <span class="hljs-keyword">DESC</span><br>LIMIT <span class="hljs-number">1</span><br></code></pre>
+                                    </td>
+                                </tr>
+                            </table>
+                        </figure>
+                        <ul>
+                            <li>将结果 result 的 is_binding 字段追加给 json 中</li>
+                            <li>在返回实体对象中封装结果 json 对象，并返回</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>如果 code 为空，则从数据源中取</p>
+                        <ul>
+                            <li>获得数据源对象 portalDataSource</li>
+                            <li>调用 <code>apiWeChatService.portalQueryUserOpenId(mobile,enterpriseUuid,portalDataSource)</code> 方法查询用户openId得到结果 result</li>
+                            <li>在返回实体对象中封装结果 result</li>
+                        </ul>
+                    </li>
+                </ul>
+                <ol start="3">
+                    <li>推送信息</li>
+                </ol>
+                <figure class="highlight plaintext">
+                    <table>
+                        <tr>
+                            <td class="code">
+                                <pre><code class="hljs plaintext">post /saas-api/api/portal/wx/send-template-message<br>&#123;<br>  toUsers: 需要发送的用户的uuid,<br>  template_id: 模板id,<br>  page: 需要跳转的页面（选填）,<br>  data: 微信通知模板数据,<br>  enterpriseUuid: 企业uuid,<br>  emphasis_keyword： 模板需放大关键字可选填）<br>&#125;<br></code></pre>
+                            </td>
+                        </tr>
+                    </table>
+                </figure>
+                <p> 业务流程：</p>
+                <ul>
+                    <li>参数判断（param，data，toUsers，template_id 进行判空）</li>
+                    <li>获取企业信息：根据参数 enterpriseUuid 去查询企业信息得到 portalEnterprise</li>
+                    <li>获取用户openId：根据参数 toUsers 获取，得到openId数组 toUserArray</li>
+                    <li>封装查询参数 query，向其中追加参数 enterpriseUuid、toUsers、dataEnterpriseUuid和dataEnterpriseCode</li>
+                    <li>获取数据源得到 portalDataSource</li>
+                    <li>调用 <code>apiWeChatService的queryUserOpenIdWithUuid(query, portalDataSource)</code> 方法得到openId集合 openIdList</li>
+                </ul>
+                <figure class="highlight sql">
+                    <table>
+                        <tr>
+                            <td class="code">
+                                <pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">DISTINCT</span><br>  swu.wx_unique_token <span class="hljs-keyword">AS</span> openId<br><span class="hljs-keyword">FROM</span><br>  sup_user_enterprises <span class="hljs-keyword">AS</span> sue<br><span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> sup_wx_users <span class="hljs-keyword">AS</span> swu <span class="hljs-keyword">ON</span> sue.mobile <span class="hljs-operator">=</span> swu.mobile<br><span class="hljs-keyword">WHERE</span><br>  sue.delete_status <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;0&#x27;</span><br><span class="hljs-keyword">AND</span> swu.wx_unique_token <span class="hljs-keyword">IS</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span><br><span class="hljs-keyword">AND</span> swu.wx_unique_token <span class="hljs-operator">!=</span> <span class="hljs-string">&#x27;&#x27;</span><br><span class="hljs-keyword">AND</span> sue.data_enterprise_uuid <span class="hljs-operator">=</span> #&#123;dataEnterpriseUuid&#125; <span class="hljs-keyword">and</span> sue.data_enterprise_code <span class="hljs-operator">=</span> #&#123;dataEnterpriseCode&#125;<br><br><span class="hljs-keyword">AND</span> swu.is_binding <span class="hljs-operator">=</span> <span class="hljs-number">1</span><br><span class="hljs-keyword">AND</span> swu.delete_status <span class="hljs-operator">=</span> <span class="hljs-number">0</span><br><span class="hljs-keyword">AND</span> sue.uuid <span class="hljs-keyword">IN</span> <span class="hljs-string">&#x27;遍历#&#123;toUsers&#125;&#x27;</span><br><span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> uuid<br></code></pre>
+                            </td>
+                        </tr>
+                    </table>
+                </figure>
+                <ul>
+                    <li>向参数集合 newParam 中追加 appId、secret、fromUrl、ip、templateId、page、data、empahsis_keyword</li>
+                    <li>循环发送模板信息<ul>
+                            <li>通过 openId 异步获取 formId</li>
+                            <li>向 newParam 中追加 openId 和 formId 给 toUser 和 formId 两个字段</li>
+                            <li>调用自身API去得到结果 sendResult</li>
+                            <li>向结果集合 resultMap 中追加 sendResult</li>
+                        </ul>
+                    </li>
+                    <li>向返回实体信息中封装 resultMap 并返回</li>
+                </ul>
+                <ol start="4">
+                    <li>提交用户偏好</li>
+                </ol>
+                <figure class="highlight plaintext">
+                    <table>
+                        <tr>
+                            <td class="code">
+                                <pre><code class="hljs plaintext">get user/v1/preference<br>&#123;<br>  enterpriseUuid: 企业UUID,<br>  cmobile: 手机号,<br>  platform: 平台<br>&#125;<br></code></pre>
+                            </td>
+                        </tr>
+                    </table>
+                </figure>
+                <p> 业务流程：</p>
+                <ul>
+                    <li>
+                        <p>参数判断（对enterpriseUuid、mobile、platform进行判空）</p>
+                    </li>
+                    <li>
+                        <p>将 mobile、enterpriseUuid、platform 拼接成一个 hashkey</p>
+                    </li>
+                    <li>
+                        <p>大key为 “user：perference”，hashkey为拼接成的 hashkey 去redis中取值 preference</p>
+                    </li>
+                    <li>
+                        <p>如果 preference 是空的</p>
+                        <ul>
+                            <li>将 mobile、enterpriseUuid、platform 依次放进参数 params 中，params是一个map集合</li>
+                            <li>获取数据源 portalDataSource</li>
+                            <li>根据参数 params 和数据源去数据库取 preference</li>
+                        </ul>
+                        <figure class="highlight sql">
+                            <table>
+                                <tr>
+                                    <td class="code">
+                                        <pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span><br>  preference<br><span class="hljs-keyword">FROM</span><br>  sup_user_preferences<br><span class="hljs-keyword">WHERE</span><br>  enterprise_uuid <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;$&#123;enterpriseUuid&#125;&#x27;</span><br><span class="hljs-keyword">AND</span> mobile <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;$&#123;mobile&#125;&#x27;</span><br><span class="hljs-keyword">AND</span> platform <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;$&#123;platform&#125;&#x27;</span><br>LIMIT <span class="hljs-number">1</span>;<br></code></pre>
+                                    </td>
+                                </tr>
+                            </table>
+                        </figure>
+                        <ul>
+                            <li>以 “user：perference” 为大key，拼接的hashkey为 hashksy，preference 为值追加到redis中</li>
+                            <li>返回实体信息中封装 preference 并返回</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>如果 preference 非空，返回实体信息中封装 preference 并返回</p>
+                    </li>
+                </ul>
+                <h3 id="企业号登录"><a href="#企业号登录" class="headerlink" title="企业号登录"></a>企业号登录</h3>
+                <ol>
+                    <li>获取企业</li>
+                </ol>
+                <figure class="highlight plaintext">
+                    <table>
+                        <tr>
+                            <td class="code">
+                                <pre><code class="hljs plaintext">get user/v1/enterprise-info<br>&#123;<br>  request： 请求<br>  enterpriseCode:  企业号<br>&#125;<br></code></pre>
+                            </td>
+                        </tr>
+                    </table>
+                </figure>
+                <p> 业务流程：</p>
+                <ul>
+                    <li>
+                        <p>参数判断（对enterpriseCode进行判空）</p>
+                    </li>
+                    <li>
+                        <p>获取数据源portalDataSource</p>
+                    </li>
+                    <li>
+                        <p>获取企业信息结果集 result</p>
+                        <ul>
+                            <li>调用 <code>apiUserLoginService.weChatAppletWithEnterpriseInfo(enterpriseCode, portalDataSource)</code> 方法获取企业信息 result</li>
+                        </ul>
+                        <figure class="highlight sql">
+                            <table>
+                                <tr>
+                                    <td class="code">
+                                        <pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span><br>  id <span class="hljs-keyword">AS</span> enterpriseId ,<br>  uuid <span class="hljs-keyword">AS</span> enterpriseUuid ,<br>  CODE <span class="hljs-keyword">AS</span> enterpriseCode ,<br>  `<span class="hljs-keyword">language</span>` ,<br>  `name` <span class="hljs-keyword">AS</span> enterpriseName ,<br>  role_id <span class="hljs-keyword">AS</span> enterpriseRoleId ,<br>  group_id <span class="hljs-keyword">AS</span> enterpriseGroupId ,<br>  data_source_id <span class="hljs-keyword">AS</span> enterpriseDataSourceId<br><span class="hljs-keyword">FROM</span><br>  sup_enterprises<br><span class="hljs-keyword">WHERE</span><br>  CODE <span class="hljs-operator">=</span> #&#123;enterpriseCode&#125;<br>LIMIT <span class="hljs-number">1</span><br></code></pre>
+                                    </td>
+                                </tr>
+                            </table>
+                        </figure>
+                    </li>
+                    <li>
+                        <p>result 不为空则向返回信息实体中封装 result 并返回</p>
+                    </li>
+                </ul>
+                <ol start="2">
+                    <li>获取登录用户信息</li>
+                </ol>
+                <figure class="highlight plaintext">
+                    <table>
+                        <tr>
+                            <td class="code">
+                                <pre><code class="hljs plaintext">get user/v1/wx-applet-login<br>&#123;<br>  request：请求<br>  mobile：手机号码<br>  password：MD5机密后的密码<br>  enterpriseUuid：企业UUID<br>&#125;<br></code></pre>
+                            </td>
+                        </tr>
+                    </table>
+                </figure>
+                <p> 业务流程：</p>
+                <ul>
+                    <li>
+                        <p>获取请求头中的enterpriseUuid</p>
+                        <ul>
+                            <li>调用 <code>request.getHeader(&quot;enterpriseUuid&quot;)</code> 得到企业UUID字符串 enterprise</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>参数判断（对 mobile、password、enterpriseUuid 进行判空）</p>
+                    </li>
+                    <li>
+                        <p>验证 enterprise 和 参数 enterpriseUuid 是否想等，如果不相等则返回请求头与请求参数的企业UUID不一致</p>
+                    </li>
+                    <li>
+                        <p>获取企业信息</p>
+                        <ul>
+                            <li>异步调用 <code>asyncUtils.QUERY_ENTERPRISE_INFO(enterprise)</code> 方法得到企业信息 portalEnterprise</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>拼接参数集合 param （Map集合）</p>
+                        <ul>
+                            <li>向 param 中追加键值对 {“mobile”:mobile,”password”:password,”dataEnterpriseUuid”:portalEnterprise.getEnterpriseUuid();”dataEnterpriseCode”:portalEnterprise.getEnterpriseCode()}</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>获取数据源portalDataSource</p>
+                    </li>
+                    <li>
+                        <p>查询企业用户信息</p>
+                        <ul>
+                            <li>调用 <code>apiUserLoginService.weChatAppletWithLogin(param,portalDataSource)</code> 方法得到结果集 result</li>
+                        </ul>
+                        <figure class="highlight sql">
+                            <table>
+                                <tr>
+                                    <td class="code">
+                                        <pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span><br>  sue.uuid <span class="hljs-keyword">AS</span> userUuid ,<br>  su.user_name <span class="hljs-keyword">AS</span> userName ,<br>  su.mobile <span class="hljs-keyword">AS</span> userMobile ,<br>  su.email <span class="hljs-keyword">AS</span> userEmail ,<br>  su.user_num <span class="hljs-keyword">AS</span> userNumber ,<br>  sue. STATUS <span class="hljs-keyword">AS</span> userStatus ,<br>  su. PASSWORD ,<br>  sue.token <span class="hljs-keyword">AS</span> userToken ,<br>  <span class="hljs-string">&#x27;todo&#x27;</span> <span class="hljs-keyword">AS</span> userGravatar ,<br>  sen.group_id <span class="hljs-keyword">AS</span> groupId ,<br>  <span class="hljs-string">&#x27;todo&#x27;</span> <span class="hljs-keyword">AS</span> groupName ,<br>  sen.role_id <span class="hljs-keyword">AS</span> roleId ,<br>  <span class="hljs-string">&#x27;todo&#x27;</span> <span class="hljs-keyword">AS</span> roleName ,<br>  su.is_delete <span class="hljs-keyword">AS</span> userIsDelete<br><span class="hljs-keyword">FROM</span><br>  sup_user_enterprises <span class="hljs-keyword">AS</span> sue<br><span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> sup_user <span class="hljs-keyword">AS</span> su <span class="hljs-keyword">ON</span> sue.mobile <span class="hljs-operator">=</span> su.mobile<br><span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> sup_enterprises <span class="hljs-keyword">AS</span> sen <span class="hljs-keyword">ON</span> sen.uuid <span class="hljs-operator">=</span> sue.data_enterprise_uuid<br><span class="hljs-keyword">WHERE</span><br>  sue.mobile <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;$&#123;mobile&#125;&#x27;</span><br><span class="hljs-keyword">AND</span> su. PASSWORD <span class="hljs-keyword">IS</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span><br><span class="hljs-keyword">AND</span> sue.data_enterprise_uuid <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;$&#123;dataEnterpriseUuid&#125;&#x27;</span><br><span class="hljs-keyword">AND</span> sue.data_enterprise_code <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;$&#123;dataEnterpriseCode&#125;&#x27;</span><br><span class="hljs-keyword">AND</span> sue.delete_status <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;0&#x27;</span><br><span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span><br>  sue.uuid<br>LIMIT <span class="hljs-number">1</span><br></code></pre>
+                                    </td>
+                                </tr>
+                            </table>
+                        </figure>
+                    </li>
+                    <li>
+                        <p>用户信息核对</p>
+                        <ul>
+                            <li>判断用户信息结果集 result 中的USER_STATUS是否等于1，不等则返回该账号已被停用</li>
+                            <li>判断 result 中的PASSWORD 是否等于参数中的 password，不等则返回密码错误</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>获取用户角色列表</p>
+                        <ul>
+                            <li>调用 <code>apiUserLoginService.queryUserRoleUuidList(result.get(&quot;userUuid&quot;).toString(), portalDataSource)</code> 得到 roleList</li>
+                        </ul>
+                        <figure class="highlight sql">
+                            <table>
+                                <tr>
+                                    <td class="code">
+                                        <pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span><br>  aur.uuid <span class="hljs-keyword">AS</span> roleUuid ,<br>  aur.role_name <span class="hljs-keyword">AS</span> roleName<br><span class="hljs-keyword">FROM</span><br>  sup_user_roles <span class="hljs-keyword">AS</span> sur<br><span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> app_user_roles <span class="hljs-keyword">AS</span> aur <span class="hljs-keyword">ON</span> aur.uuid <span class="hljs-operator">=</span> sur.role_uuid<br><span class="hljs-keyword">AND</span> sur.data_enterprise_uuid <span class="hljs-operator">=</span> aur.data_enterprise_uuid<br><span class="hljs-keyword">WHERE</span><br>  user_uuid <span class="hljs-operator">=</span> #&#123;userUuid&#125;<br><span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span><br>  aur.uuid<br></code></pre>
+                                    </td>
+                                </tr>
+                            </table>
+                        </figure>
+                        <ul>
+                            <li>向 result 中追加{“roleUuidList”:roleList,”roleUuids”:””}</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>获取角色UUID</p>
+                        <ul>
+                            <li>循环遍历 roleList ，将角色列表中的每一个角色的 roleUuid 拼接给 roleUuids ，中间用”，”隔开</li>
+                            <li>向 result 中追加 roleUuids</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>返回实体中封装结果集 result 并返回</p>
+                    </li>
+                </ul>
+                <ol start="3">
+                    <li>获取微信用户 openid 、推送消息 、提交用户偏好 三个步骤同 手机号登录 中的3、4、5介绍</li>
+                </ol>
+                <h3 id="微信登录"><a href="#微信登录" class="headerlink" title="微信登录"></a>微信登录</h3>
+                <ol>
+                    <li>
+                        <p>获取企业列表</p>
+                        <figure class="highlight plaintext">
+                            <table>
+                                <tr>
+                                    <td class="code">
+                                        <pre><code class="hljs plaintext">get api/portal/v2/wx-login/enterprise-list-v2<br>&#123;<br> request: 请求，<br> code: 微信小程序中的code值<br>&#125;<br></code></pre>
+                                    </td>
+                                </tr>
+                            </table>
+                        </figure>
+                    </li>
+                </ol>
+                <p> 业务流程：</p>
+                <ul>
+                    <li>
+                        <p>参数判断</p>
+                        <ul>
+                            <li>对 code 进行判空</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>获取 openId</p>
+                        <ul>
+                            <li>
+                                <p>获取微信小程序配置信息</p>
+                                <ul>
+                                    <li>appId：”weChat.appId”</li>
+                                    <li>secret：”weChat.secret”</li>
+                                    <li>openIdUrl：”weChat.openIdUrl”</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>替换 openIdUrl 中的参数值</p>
+                                <ul>
+                                    <li>用appId、secret、code 分别替换原openIdUrl中的 APP_ID、APP_SECRET、JS_CODE ，得到新的 openIdUrl</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>获取openId返回值</p>
+                                <ul>
+                                    <li>调用微信官方接口返回值 <code>HttpMethodUtil.getGetResult(openIdUrl, null)</code> 得到openIdResult</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>判断openIdResult是否是JSON格式</p>
+                                <ul>
+                                    <li>不是则返回 获取用户 openId 接口返回值非JSON格式错误信息</li>
+                                    <li>是JSON格式，则转为JSON对象 json</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>从 json 中去字段 OPEN_ID 的值，得到openId</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>获取企业列表</p>
+                        <ul>
+                            <li>
+                                <p>获取数据源portalDataSource</p>
+                            </li>
+                            <li>
+                                <p>获取企业用户信息结果集</p>
+                                <ul>
+                                    <li>调用 <code>apiPortalV2Service.queryEnterpriseListWithWeChatOpenIdV2(openId,portalDataSource)</code> 方法得到结果集 result （Map集合）</li>
+                                </ul>
+                                <figure class="highlight sql">
+                                    <table>
+                                        <tr>
+                                            <td class="code">
+                                                <pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span><br>  se.uuid <span class="hljs-keyword">AS</span> enterpriseUuid ,<br>  se. CODE <span class="hljs-keyword">AS</span> enterpriseCode ,<br>  se. NAME <span class="hljs-keyword">AS</span> enterpriseName ,<br>  se.data_source_id <span class="hljs-keyword">AS</span> dataSourceCode ,<br>  se.role_id <span class="hljs-keyword">AS</span> enterpriseRoleId ,<br>  se.group_id <span class="hljs-keyword">AS</span> enterpriseGroupId ,<br>  se. <span class="hljs-keyword">LANGUAGE</span> <span class="hljs-keyword">AS</span> enterpriseLanguage ,<br>  swu.wx_avatar <span class="hljs-keyword">AS</span> wxAvatar ,<br>  swu.wx_name <span class="hljs-keyword">AS</span> wxName ,<br>  swu.wx_nick_name <span class="hljs-keyword">AS</span> wxNickName ,<br>  sue.uuid <span class="hljs-keyword">AS</span> userUuid ,<br>  sue.mobile <span class="hljs-keyword">AS</span> userMobile ,<br>  su.user_name <span class="hljs-keyword">AS</span> userName ,<br>  su.email <span class="hljs-keyword">AS</span> userEmail ,<br>  sue.delete_status <span class="hljs-keyword">AS</span> userIsDelete ,<br>  swu.wx_unique_token <span class="hljs-keyword">AS</span> wxUniqueoken ,<br>  sue. STATUS <span class="hljs-keyword">AS</span> userStatus ,<br>  sue.token <span class="hljs-keyword">AS</span> userToken ,<br>  se.group_id <span class="hljs-keyword">AS</span> groupId ,<br>  se.role_id <span class="hljs-keyword">AS</span> roleId ,<br>  <span class="hljs-string">&#x27;todo&#x27;</span> <span class="hljs-keyword">AS</span> userGravatar ,<br>  <span class="hljs-string">&#x27;todo&#x27;</span> <span class="hljs-keyword">AS</span> groupName ,<br>  <span class="hljs-string">&#x27;todo&#x27;</span> <span class="hljs-keyword">AS</span> roleName ,<br>  su. PASSWORD <span class="hljs-keyword">AS</span> userIdToken<br><span class="hljs-keyword">FROM</span><br>  sup_wx_users <span class="hljs-keyword">AS</span> swu<br><span class="hljs-keyword">INNER</span> <span class="hljs-keyword">JOIN</span> sup_user_enterprises <span class="hljs-keyword">AS</span> sue <span class="hljs-keyword">ON</span> sue.mobile <span class="hljs-operator">=</span> swu.mobile<br><span class="hljs-keyword">INNER</span> <span class="hljs-keyword">JOIN</span> sup_enterprises <span class="hljs-keyword">AS</span> se <span class="hljs-keyword">ON</span> sue.data_enterprise_uuid <span class="hljs-operator">=</span> se.uuid<br><span class="hljs-keyword">INNER</span> <span class="hljs-keyword">JOIN</span> sup_user <span class="hljs-keyword">AS</span> su <span class="hljs-keyword">ON</span> su.mobile <span class="hljs-operator">=</span> swu.mobile<br><span class="hljs-keyword">WHERE</span><br>  swu.wx_unique_token <span class="hljs-operator">=</span> #&#123;openId&#125;<br><span class="hljs-keyword">AND</span> sue.delete_status <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;0&#x27;</span><br><span class="hljs-keyword">AND</span> swu.is_binding <span class="hljs-operator">=</span> <span class="hljs-number">1</span><br><span class="hljs-keyword">AND</span> swu.delete_status <span class="hljs-operator">=</span> <span class="hljs-number">0</span><br></code></pre>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </figure>
+                            </li>
+                            <li>
+                                <p>验证结果集数据是否有效</p>
+                                <ul>
+                                    <li>拿出 result 中 USER_STATUS 字段值， 不等于1则返回该账号已被停用错误信息</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>获取用户角色UUID</p>
+                                <ul>
+                                    <li>遍历结果集 result ，每一次遍历的单体是 map </li>
+                                    <li>调用 <code>apiUserLoginService.queryUserRoleUuidList(map.get(&quot;userUuid&quot;).toString(), portalDataSource)</code> 得到 roleList</li>
+                                </ul>
+                                <figure class="highlight sql">
+                                    <table>
+                                        <tr>
+                                            <td class="code">
+                                                <pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span><br>  aur.uuid <span class="hljs-keyword">AS</span> roleUuid ,<br>  aur.role_name <span class="hljs-keyword">AS</span> roleName<br><span class="hljs-keyword">FROM</span><br>  sup_user_roles <span class="hljs-keyword">AS</span> sur<br><span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> app_user_roles <span class="hljs-keyword">AS</span> aur <span class="hljs-keyword">ON</span> aur.uuid <span class="hljs-operator">=</span> sur.role_uuid<br><span class="hljs-keyword">AND</span> sur.data_enterprise_uuid <span class="hljs-operator">=</span> aur.data_enterprise_uuid<br><span class="hljs-keyword">WHERE</span><br>  user_uuid <span class="hljs-operator">=</span> #&#123;userUuid&#125;<br><span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span><br>  aur.uuid<br></code></pre>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </figure>
+                                <ul>
+                                    <li>向 map 中追加{“roleUuidList”:roleList,”roleUuids”:””}</li>
+                                    <li>循环遍历 roleList ，将角色列表中的每一个角色的 roleUuid 拼接给 roleUuids ，中间用”，”隔开</li>
+                                    <li>向 map 中追加 roleUuids</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>返回信息实体中封装结果集 result 并返回</p>
+                    </li>
+                </ul>
+                <h2 id="注册页"><a href="#注册页" class="headerlink" title="注册页"></a>注册页</h2>
+                <h3 id="业务流程图-1"><a href="#业务流程图-1" class="headerlink" title="业务流程图"></a>业务流程图</h3>
+                <p><a href="/application/syp-wxmp.html">注册模块业务流程</a></p>
+                <ol>
+                    <li>获取企业信息</li>
+                </ol>
+                <figure class="highlight plaintext">
+                    <table>
+                        <tr>
+                            <td class="code">
+                                <pre><code class="hljs plaintext">get user/v1/enterprise-info<br>&#123;<br>  enterpriseCode: 企业编码<br>&#125;<br></code></pre>
+                            </td>
+                        </tr>
+                    </table>
+                </figure>
+                <p> 业务流程：</p>
+                <ul>
+                    <li>
+                        <p>参数判断</p>
+                        <ul>
+                            <li>对 enterpriseCode 进行判空</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>获取数据源portalDataSource</p>
+                    </li>
+                    <li>
+                        <p>获取企业信息</p>
+                        <ul>
+                            <li>调用 <code>apiUserLoginService.weChatAppletWithEnterpriseInfo</code> 方法获得企业信息结果集合 result</li>
+                        </ul>
+                        <figure class="highlight sql">
+                            <table>
+                                <tr>
+                                    <td class="code">
+                                        <pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span><br>  id <span class="hljs-keyword">AS</span> enterpriseId ,<br>  uuid <span class="hljs-keyword">AS</span> enterpriseUuid ,<br>  CODE <span class="hljs-keyword">AS</span> enterpriseCode ,<br>  `<span class="hljs-keyword">language</span>` ,<br>  `name` <span class="hljs-keyword">AS</span> enterpriseName ,<br>  role_id <span class="hljs-keyword">AS</span> enterpriseRoleId ,<br>  group_id <span class="hljs-keyword">AS</span> enterpriseGroupId ,<br>  data_source_id <span class="hljs-keyword">AS</span> enterpriseDataSourceId<br><span class="hljs-keyword">FROM</span><br>  sup_enterprises<br><span class="hljs-keyword">WHERE</span><br>  CODE <span class="hljs-operator">=</span> #&#123;enterpriseCode&#125;<br>LIMIT <span class="hljs-number">1</span><br></code></pre>
+                                    </td>
+                                </tr>
+                            </table>
+                        </figure>
+                    </li>
+                    <li>
+                        <p>返回信息实体中封装结果集 result 并返回</p>
+                    </li>
+                </ul>
+                <ol start="2">
+                    <li>扫码查询追踪码明细</li>
+                </ol>
+                <figure class="highlight plaintext">
+                    <table>
+                        <tr>
+                            <td class="code">
+                                <pre><code class="hljs plaintext">get api/portal/wx/tracking-code/select-info<br>&#123;<br>  qrCodeUuid: 追踪码uuid<br>&#125;<br></code></pre>
+                            </td>
+                        </tr>
+                    </table>
+                </figure>
+                <p> 业务流程：</p>
+                <ul>
+                    <li>
+                        <p>参数判断</p>
+                        <ul>
+                            <li>对 qrCodeUuid 进行判空</li>
+                            <li>判断 qrCodeUuid 的长度是否是32位，不是则返回追踪码UUID长度不符合规则</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>从redis获取数据</p>
+                        <ul>
+                            <li>key为 “portal:qr:code” ，hashkey为 “qrCodeUuid” ，得到字符串值 str</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>如果 str 不是空的则转为DataQrCode对象 dataQrCodeSelect ，如果是空的则将null赋值给 dataQrCodeSelect</p>
+                    </li>
+                    <li>
+                        <p>如果 dataQrCodeSelect 为null</p>
+                        <ul>
+                            <li>获取数据源 portalDataSource</li>
+                            <li>调用 <code>apiWeChatService.queryDataQrCodeInfoWithUuid(qrCodeUuid, portalDataSource)</code> 获取结果赋值给 dataQrCodeSelect</li>
+                        </ul>
+                        <figure class="highlight sql">
+                            <table>
+                                <tr>
+                                    <td class="code">
+                                        <pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span><br>  id ,<br>  uuid ,<br>  enterprise_name ,<br>  enterprise_code ,<br>  enterprise_uuid ,<br>  business_uuid ,<br>  business_type ,<br>  business_name ,<br>  target_url ,<br>  data_json ,<br>  remark ,<br>  create_user ,<br>  update_user ,<br>  created_time ,<br>  updated_time<br><span class="hljs-keyword">FROM</span><br>  sup_qr_code_business_data<br><span class="hljs-keyword">WHERE</span><br>  uuid <span class="hljs-operator">=</span> #&#123;uuid&#125;<br></code></pre>
+                                    </td>
+                                </tr>
+                            </table>
+                        </figure>
+                        <ul>
+                            <li>如果 dataQrCodeSelect 不为空，则向redis中追加<ul>
+                                    <li>key为 “portal:qr:code” ，hashkey为 qrCodeUuid，值为 JSONObject.toJSONString(dataQrCodeSelect)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>如果 dataQrCodeSelect 不为null</p>
+                        <ul>
+                            <li>调用 <code>dataQrCodeSelect.setDataJson(StringUtils.replace(dataQrCodeSelect.getDataJson(), &quot;\\&quot;, &quot;&quot;))</code> 方法调整dataQrCodeSelect中dataJson数据格式</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>返回信息实体中封装结果 dataQrCodeSelect 并返回</p>
+                    </li>
+                </ul>
+                <ol start="3">
+                    <li>发送验证码</li>
+                </ol>
+                <figure class="highlight plaintext">
+                    <table>
+                        <tr>
+                            <td class="code">
+                                <pre><code class="hljs plaintext">get user/v1/register-verification-code-v1<br>&#123;<br>  mobile: 手机号<br>&#125;<br></code></pre>
+                            </td>
+                        </tr>
+                    </table>
+                </figure>
+                <p> 业务流程：</p>
+                <ul>
+                    <li>
+                        <p>参数判断</p>
+                        <ul>
+                            <li>对 mobile 进行判空</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>生成四位验证码</p>
+                        <ul>
+                            <li>调用 <code>RandomNumberGenerator.generateNumber()</code> 方法获得 code</li>
+                            <li>向结果集合 result 中追加 code</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>发送短信</p>
+                        <ul>
+                            <li>调用 <code>asyncUtils.SEND_SMS_WITH_REGISTER(mobile, SUCCESS_MSG, SUCCESS)</code></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>保存到redis中</p>
+                        <ul>
+                            <li>key为 (“portal:user:verificationCode:register:%s”,mobile)，值为 code</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>返回信息实体中封装结果集 result 并返回</p>
+                    </li>
+                </ul>
+                <h2 id="报表页"><a href="#报表页" class="headerlink" title="报表页"></a>报表页</h2>
+                <ol>
+                    <li>获取报表项菜单</li>
+                </ol>
+                <figure class="highlight plaintext">
+                    <table>
+                        <tr>
+                            <td class="code">
+                                <pre><code class="hljs plaintext">get api/portal/wx/report-menu<br>&#123;<br>  enterpriseUuid: 企业uuid，<br>  roleUuids: 角色uuid<br>&#125;<br></code></pre>
+                            </td>
+                        </tr>
+                    </table>
+                </figure>
+                <p> ​业务流程：</p>
+                <ul>
+                    <li>
+                        <p>参数判断</p>
+                        <ul>
+                            <li>对roleUuids进行判空</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>从redis中获取报表项菜单列表</p>
+                        <ul>
+                            <li>key为 “portal:role:wx:report-menu”，hashkey为 “role-“ + roleUuids，得到JSON字符创 menuListStr</li>
+                            <li>如果 menuListStr 不为空，将其转为List集合 menuList，如果为空，则给List集合 menuList 赋值 null</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>如果 menuList 为空</p>
+                        <ul>
+                            <li>获取数据源 portalDataSource</li>
+                            <li>调用 <code>apiWeChatService.queryReportMenuByUserRoleUuids(roleUuids, portalDataSource)</code> 获得报表菜单集合 menuList</li>
+                        </ul>
+                        <figure class="highlight sql">
+                            <table>
+                                <tr>
+                                    <td class="code">
+                                        <pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span><br>  smr.id ,<br>  smr.uuid ,<br>  smr.category ,<br>  ifnull(smr.category_order , <span class="hljs-number">0</span>) <span class="hljs-keyword">AS</span> category_order ,<br>  smr.group_name ,<br>  ifnull(smr.group_order , <span class="hljs-number">0</span>) <span class="hljs-keyword">AS</span> group_order ,<br>  smr.obj_title <span class="hljs-keyword">AS</span> `name` ,<br>  ifnull(smr.item_order , <span class="hljs-number">0</span>) <span class="hljs-keyword">AS</span> item_order ,<br>  smr.obj_type ,<br>  smr.obj_id ,<br>  smr.obj_title ,<br>  smr.obj_link ,<br>  smr.obj_cdn ,<br>  smr.obj_version ,<br>  smr.publicly ,<br>  smr.menu_type ,<br>  smr.option_user_num ,<br>  icon <span class="hljs-keyword">AS</span> icon_link ,<br>  <span class="hljs-keyword">CASE</span> smr.obj_type<br><span class="hljs-keyword">WHEN</span> <span class="hljs-string">&#x27;wxmp#config&#x27;</span> <span class="hljs-keyword">THEN</span><br>  smc.home_path<br><span class="hljs-keyword">WHEN</span> <span class="hljs-string">&#x27;wxmp&#x27;</span> <span class="hljs-keyword">THEN</span><br>  smr.home_path<br><span class="hljs-keyword">ELSE</span><br>  <span class="hljs-string">&#x27;&#x27;</span><br><span class="hljs-keyword">END</span> <span class="hljs-keyword">AS</span> home_path ,<br> smr.cdn_module ,<br> smr.cdn_version ,<br> smr.cdn_state ,<br> smr.report_id ,<br> smr.obj_link <span class="hljs-keyword">AS</span> url_path<br><span class="hljs-keyword">FROM</span><br>  sup_menus <span class="hljs-keyword">AS</span> smr<br><span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> sup_module_config <span class="hljs-keyword">AS</span> smc <span class="hljs-keyword">ON</span> smc.module_code <span class="hljs-operator">=</span> smr.obj_id<br><span class="hljs-keyword">WHERE</span><br>  smr.platform <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;wxmp&#x27;</span><br><span class="hljs-keyword">AND</span> menu_category <span class="hljs-operator">=</span> <span class="hljs-number">1</span><br><span class="hljs-keyword">AND</span> smr.uuid <span class="hljs-keyword">IN</span>(<br>  <span class="hljs-keyword">SELECT</span><br>    menu_uuid<br>  <span class="hljs-keyword">FROM</span><br>    app_user_role_resources<br>  <span class="hljs-keyword">WHERE</span><br>    locate(<br>      role_uuid ,<br>      #&#123;roleUuids&#125;) <span class="hljs-operator">&gt;</span> <span class="hljs-number">0</span> <span class="hljs-keyword">and</span> delete_status <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;0&#x27;</span><br>    )<br><span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span><br>  smr.category_order <span class="hljs-keyword">ASC</span> ,<br>  smr.group_order <span class="hljs-keyword">ASC</span> ,<br>  smr.item_order <span class="hljs-keyword">ASC</span><br></code></pre>
+                                    </td>
+                                </tr>
+                            </table>
+                        </figure>
+                        <ul>
+                            <li>如果 menuList 不为空，key为 “portal:role:wx:report-menu”，hashkey为”role-“ + roleUuids，向redis中追加值 JSONObject.toJSONString(menuList)</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>向返回实体信息中封装 menuList 并返回</p>
+                    </li>
+                </ul>
+                <h2 id="工具箱页"><a href="#工具箱页" class="headerlink" title="工具箱页"></a>工具箱页</h2>
+                <ol>
+                    <li>获取工具箱列表</li>
+                </ol>
+                <figure class="highlight plaintext">
+                    <table>
+                        <tr>
+                            <td class="code">
+                                <pre><code class="hljs plaintext">get api/portal/wx/toolbox-menu<br>&#123;<br>  request： 请求，<br>  roleUuids:  用户角色uuid <br>&#125;<br></code></pre>
+                            </td>
+                        </tr>
+                    </table>
+                </figure>
+                <p> 业务流程：</p>
+                <ul>
+                    <li>
+                        <p>参数判断（ roleUuids 进行判空）</p>
+                    </li>
+                    <li>
+                        <p>从redis中获取值 menuListStr</p>
+                        <ul>
+                            <li>key为 “portal:role:wx:toolbox-menu”</li>
+                            <li>hashkey为 “role-“ + roleUuids</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>将 menuListStr 转为菜单 menuList 集合</p>
+                    </li>
+                    <li>
+                        <p>如果 menuList 是空的</p>
+                        <ul>
+                            <li>获取数据源 portalDataSource</li>
+                            <li>调用 <code>apiWeChatService.queryToolboxMenuByUserRoleUuids(roleUuids, portalDataSource)</code> 方法获取工具箱菜单列表 menuList</li>
+                        </ul>
+                        <figure class="highlight sql">
+                            <table>
+                                <tr>
+                                    <td class="code">
+                                        <pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span><br>  smt.id ,<br>  smt.uuid ,<br>  smt.category ,<br>  ifnull(smt.category_order , <span class="hljs-number">0</span>) <span class="hljs-keyword">AS</span> category_order ,<br>  smt.group_name ,<br>  ifnull(smt.group_order , <span class="hljs-number">0</span>) <span class="hljs-keyword">AS</span> group_order ,<br>  smt.obj_title <span class="hljs-keyword">AS</span> `name` ,<br>  ifnull(smt.item_order , <span class="hljs-number">0</span>) <span class="hljs-keyword">AS</span> item_order ,<br>  smt.obj_title ,<br>  smt.menu_type ,<br>  smt.obj_type ,<br>  smt.obj_id ,<br>  smt.obj_link ,<br>  smt.obj_cdn ,<br>  smt.obj_version ,<br>  smt.report_id ,<br>  smt.url_path ,<br>  smt.icon <span class="hljs-keyword">AS</span> icon_link ,<br>  smt.publicly ,<br>  smt.option_user_num ,<br>  <span class="hljs-keyword">CASE</span> smt.obj_type<br><span class="hljs-keyword">WHEN</span> <span class="hljs-string">&#x27;wxmp#config&#x27;</span> <span class="hljs-keyword">THEN</span><br>  smc.home_path<br><span class="hljs-keyword">WHEN</span> <span class="hljs-string">&#x27;wxmp&#x27;</span> <span class="hljs-keyword">THEN</span><br>  smt.home_path<br><span class="hljs-keyword">ELSE</span><br>  <span class="hljs-string">&#x27;&#x27;</span><br><span class="hljs-keyword">END</span> <span class="hljs-keyword">AS</span> home_path ,<br> smt.obj_title <span class="hljs-keyword">AS</span> `name` ,<br> smt.cdn_module ,<br> smt.cdn_version ,<br> smt.cdn_state<br><span class="hljs-keyword">FROM</span><br>  sup_menus <span class="hljs-keyword">AS</span> smt<br><span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> sup_module_config <span class="hljs-keyword">AS</span> smc <span class="hljs-keyword">ON</span> smc.module_code <span class="hljs-operator">=</span> smt.obj_id<br><span class="hljs-keyword">WHERE</span><br>  smt.platform <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;wxmp&#x27;</span><br><span class="hljs-keyword">AND</span> menu_category <span class="hljs-operator">=</span> <span class="hljs-number">0</span><br><span class="hljs-keyword">AND</span> smt.uuid <span class="hljs-keyword">IN</span>(<br>  <span class="hljs-keyword">SELECT</span><br>    menu_uuid<br>  <span class="hljs-keyword">FROM</span><br>    app_user_role_resources<br>  <span class="hljs-keyword">WHERE</span><br>    locate(<br>      role_uuid ,<br>      #&#123;roleUuids&#125;) <span class="hljs-operator">&gt;</span> <span class="hljs-number">0</span> <span class="hljs-keyword">and</span> delete_status <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;0&#x27;</span><br>    )<br><span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span><br>  smt.category_order <span class="hljs-keyword">ASC</span> ,<br>  smt.group_order <span class="hljs-keyword">ASC</span> ,<br>  smt.item_order <span class="hljs-keyword">ASC</span>    <br></code></pre>
+                                    </td>
+                                </tr>
+                            </table>
+                        </figure>
+                        <ul>
+                            <li>解析渲染 menuList 数据</li>
+                            <li>以key为 “portal:role:wx:toolbox-menu” ，hashkey为 “role-“ + roleUuids ，值为 menuList 向redis中追加</li>
+                            <li>返回实体信息中封装 menuList 并返回</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>如果menuList非空，返回实体信息中封装 menuList 并返回</p>
+                    </li>
+                </ul>
+                <h2 id="我的"><a href="#我的" class="headerlink" title="[我的]"></a>[我的]</h2>
+                <h3 id="查询-formId-数量"><a href="#查询-formId-数量" class="headerlink" title="查询 formId 数量"></a>查询 formId 数量</h3>
+                <figure class="highlight plaintext">
+                    <table>
+                        <tr>
+                            <td class="code">
+                                <pre><code class="hljs plaintext">get api/portal/wx/formId-num<br>&#123;<br>  enterpriseUuid: 企业UUID，<br>  mobile: 手机号<br>&#125;<br></code></pre>
+                            </td>
+                        </tr>
+                    </table>
+                </figure>
+                <p> 业务流程：</p>
+                <ul>
+                    <li>
+                        <p>参数判断</p>
+                        <ul>
+                            <li>对 mobile 进行参数判空</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>获取用户信息集合</p>
+                        <ul>
+                            <li>调用 <code>apiWeChatService.portalQueryFormIdByMobile(mobile, selectPortalDataSourceUtils.dynamicSelectPortalDataSource(FUNCTION_F10L, DB_TYPE_SLAVE))</code> 获得用户信息集合 userMap</li>
+                        </ul>
+                        <figure class="highlight sql">
+                            <table>
+                                <tr>
+                                    <td class="code">
+                                        <pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span><br>  wx_avatar <span class="hljs-keyword">AS</span> wxAvatar ,<br>  wx_name <span class="hljs-keyword">AS</span> wxName ,<br>  wx_nick_name <span class="hljs-keyword">AS</span> wxNickName ,<br>  wx_unique_token <span class="hljs-keyword">AS</span> wxUniqueToken ,<br>  mobile ,<br>  enterprise_code <span class="hljs-keyword">AS</span> enterpriseCode ,<br>  enterprise_uuid <span class="hljs-keyword">AS</span> enterpriseUuid ,<br>  is_binding <span class="hljs-keyword">AS</span> isBinding<br><span class="hljs-keyword">FROM</span><br>  sup_wx_users<br><span class="hljs-keyword">WHERE</span><br>  mobile <span class="hljs-operator">=</span> #&#123;mobile&#125; <span class="hljs-keyword">and</span> is_binding <span class="hljs-operator">=</span> <span class="hljs-number">1</span> <span class="hljs-keyword">and</span> delete_status <span class="hljs-operator">=</span> <span class="hljs-number">0</span><br>LIMIT <span class="hljs-number">1</span><br></code></pre>
+                                    </td>
+                                </tr>
+                            </table>
+                        </figure>
+                    </li>
+                    <li>
+                        <p>如果 userMap 不为空</p>
+                        <ul>
+                            <li>取 userMap 中的 “wxuniqueToken” 赋值给字符串 openId</li>
+                            <li>以 “portal:user:wxFormId” 为key从redis中获取集合 map</li>
+                            <li>如果 map 不为空<ul>
+                                    <li>遍历 map ，每一次的遍历单体对象是 entry</li>
+                                    <li>将 entry.getKey() 赋值给 hashKey ，entry.getValue() 赋值给 value </li>
+                                    <li>将 hashKey 用 “@” 切割得到字符串数据 hashKeys</li>
+                                    <li>如果 hashKeys 长度大于1，且数组第一个元素和 openId 相等，获取当前时间毫秒值 nowTime </li>
+                                    <li>如果 nowTime 小于 hashKeys 第二个元素的值或者 value 值不等于 “the formId is a mock one” ，计数器 count++ ，formIdArray添加值 value ，否则从redis中移除掉 key为 “portal:user:wxFormId” , hashKey为 entry.getKey() 的数据</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>向 userMap 中 put (“userFormIdNum”, count) 和 (“formIdArray”, formIdArray)</p>
+                    </li>
+                    <li>
+                        <p>在返回信息实体中封装 userMap 并返回</p>
+                    </li>
+                </ul>
+                <h3 id="获取企业管理列表"><a href="#获取企业管理列表" class="headerlink" title="获取企业管理列表"></a>获取企业管理列表</h3>
+                <figure class="highlight plaintext">
+                    <table>
+                        <tr>
+                            <td class="code">
+                                <pre><code class="hljs plaintext">get api/portal/wx/enterprise-menu-list<br>&#123;<br>  enterpriseUuid：企业UUID，<br>  roleUuids: 角色UUID<br>&#125;<br></code></pre>
+                            </td>
+                        </tr>
+                    </table>
+                </figure>
+                <p> 业务流程：</p>
+                <ul>
+                    <li>
+                        <p>参数判断</p>
+                        <ul>
+                            <li>对roleUuids进行判空</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>获取数据源 portalDataSource</p>
+                    </li>
+                    <li>
+                        <p>获取企业管理列表</p>
+                        <ul>
+                            <li>调用 <code>apiWeChatService.queryEnterpriseMenuList(roleUuids, f10lSlaveDataSource)</code> 获得企业管理列表 menuList</li>
+                        </ul>
+                        <figure class="highlight sql">
+                            <table>
+                                <tr>
+                                    <td class="code">
+                                        <pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span><br>  t1.id ,<br>  t1.`name` <span class="hljs-keyword">AS</span> title ,<br>  t1.description ,<br>  t1.group_name ,<br>  t1.obj_id ,<br>  t1.obj_type ,<br>  <span class="hljs-keyword">CASE</span> t1.group_name<br><span class="hljs-keyword">WHEN</span> <span class="hljs-string">&#x27;基本信息&#x27;</span> <span class="hljs-keyword">THEN</span><br>  <span class="hljs-string">&#x27;sa&#x27;</span><br><span class="hljs-keyword">WHEN</span> <span class="hljs-string">&#x27;业务权限设置&#x27;</span> <span class="hljs-keyword">THEN</span><br>  <span class="hljs-string">&#x27;sb&#x27;</span><br><span class="hljs-keyword">ELSE</span><br>  <span class="hljs-string">&#x27;sc&#x27;</span><br><span class="hljs-keyword">END</span> <span class="hljs-keyword">AS</span> pid ,<br> <span class="hljs-keyword">CASE</span><br><span class="hljs-keyword">WHEN</span> t1.group_name <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;业务权限设置&#x27;</span> <span class="hljs-keyword">THEN</span><br>  t1.parent_menu_uuid<br><span class="hljs-keyword">ELSE</span><br>  <span class="hljs-string">&#x27;&#x27;</span><br><span class="hljs-keyword">END</span> <span class="hljs-keyword">AS</span> uuid ,<br> <span class="hljs-keyword">CASE</span> t1.obj_type<br><span class="hljs-keyword">WHEN</span> <span class="hljs-string">&#x27;wxmp#config&#x27;</span> <span class="hljs-keyword">THEN</span><br>  t3.home_path<br><span class="hljs-keyword">WHEN</span> <span class="hljs-string">&#x27;wxmp&#x27;</span> <span class="hljs-keyword">THEN</span><br>  t1.home_path<br><span class="hljs-keyword">ELSE</span><br>  <span class="hljs-string">&#x27;&#x27;</span><br><span class="hljs-keyword">END</span> <span class="hljs-keyword">AS</span> home_path<br><span class="hljs-keyword">FROM</span><br>  sup_menus <span class="hljs-keyword">AS</span> t1<br><span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> app_user_role_resources <span class="hljs-keyword">AS</span> t2 <span class="hljs-keyword">ON</span> t1.uuid <span class="hljs-operator">=</span> t2.menu_uuid<br><span class="hljs-keyword">AND</span> t2.delete_status <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;0&#x27;</span><br><span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> sup_module_config <span class="hljs-keyword">AS</span> t3 <span class="hljs-keyword">ON</span> t3.module_code <span class="hljs-operator">=</span> t1.obj_id<br><span class="hljs-keyword">WHERE</span><br>  t1.menu_category <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;2&#x27;</span><br><span class="hljs-keyword">AND</span> FIND_IN_SET(<br>  t2.role_uuid ,<br>  #&#123;roleUuids&#125;)<br><br><span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span><br>  t1.group_name ,<br>  t1.`name`<br><span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span><br>  pid ,<br>  t1.id<br></code></pre>
+                                    </td>
+                                </tr>
+                            </table>
+                        </figure>
+                    </li>
+                    <li>
+                        <p>如果 menuList 不为空</p>
+                        <ul>
+                            <li>调用 <code>apiWeChatService.queryModulePageConfigList(f10lSlaveDataSource)</code> 获得页面设置列表 configList</li>
+                        </ul>
+                        <figure class="highlight sql">
+                            <table>
+                                <tr>
+                                    <td class="code">
+                                        <pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span><br>  module_code ,<br>  page_code ,<br>  page_type ,<br>  version<br><span class="hljs-keyword">FROM</span><br>  sup_module_page_config<br><span class="hljs-keyword">WHERE</span><br>  module_code <span class="hljs-keyword">IS</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span><br><span class="hljs-keyword">AND</span> page_code <span class="hljs-keyword">IS</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span><br><span class="hljs-keyword">AND</span> page_type <span class="hljs-keyword">IS</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span><br><span class="hljs-keyword">AND</span> version <span class="hljs-keyword">IS</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span><br></code></pre>
+                                    </td>
+                                </tr>
+                            </table>
+                        </figure>
+                        <ul>
+                            <li>
+                                <p>遍历 menuList ，每一次遍历单体对象是 data ，如果 data.get(“obj_id”) 值为空，则向 objId 赋值为空，如果不为空，则将 data.get(“obj_id)” 转为字符串赋值给 objId </p>
+                            </li>
+                            <li>
+                                <p>如果 configList 不为空，遍历它，每一次遍历单体对象是 ocnfig </p>
+                                <ul>
+                                    <li>如果 <code>config.get(&quot;module_code&quot;).toString().equals(objId)</code> ，就像hashMap中put (config.get(“page_code”).toString(), config.get(“page_type”) + “:” + config.get(“version”))</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>向 data 中put (“obj_config”, hashMap)</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>向返回实体对象中 封装 menuList 并返回</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <script src="/js/smooth-scroll.min.js"></script>
+        <script src="/js/css.escape.js"></script>
+        <script src="/js/common.js"></script>
+        <link href="//code.bdstatic.com/npm/docsearch.js@1.5.0/dist/cdn/docsearch.min.css" rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="/css/search.css">
+        <script src="//code.bdstatic.com/npm/docsearch.js@1.5.0/dist/cdn/docsearch.min.js"></script>
+        <script>
+        [
+          '#search-query-nav',
+          '#search-query-sidebar',
+          '#search-query-menu'
+        ].forEach(function(selector) {
+          if (!document.querySelector(selector)) return
+          // search index defaults to v2
+          var match = window.location.pathname.match(/^\/(v\d+)/)
+          var version = match ? match[1] : 'v2'
+          docsearch({
+            appId: 'BH4D9OD16A',
+            apiKey: '5638280abff9d207417bb03be05f0b25',
+            indexName: 'vuejs_cn2',
+            inputSelector: selector,
+            algoliaOptions: {
+              facetFilters: ["version:" + version]
+            },
+            autocompleteOptions: {
+              hint: false,
+              appendTo: 'body'
+            }
+          })
+        })
+        </script>
+        <!-- fastclick -->
+        <script src="//code.bdstatic.com/npm/fastclick@1.0.6/lib/fastclick.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          FastClick.attach(document.body)
+        }, false)
+        </script>
+    </body>
 
-
-<div class="content 接口文档 with-sidebar ">
-  
-    
-      
-    
-  
-  
-    <h1>接口文档(小程序)</h1>
-  
-
-  
-
-  
-    <h2 id="登录页"><a href="#登录页" class="headerlink" title="登录页"></a>登录页</h2><h3 id="业务流程图"><a href="#业务流程图" class="headerlink" title="业务流程图"></a>业务流程图</h3><p><a href="/application/syp-wxmp.html">登录模块业务流程</a></p>
-<h3 id="手机号登录"><a href="#手机号登录" class="headerlink" title="手机号登录"></a>手机号登录</h3><ol>
-<li>企业列表展示</li>
-</ol>
-  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">get /portal/v2/account-number-login/enterprise-list<br>&#123;<br>  mobile: 手机号,<br>  password: 密码(MD5加密)<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>  业务流程：</p>
-<ul>
-<li><p>参数判断（mobile 和 password 进行判空）</p>
-</li>
-<li><p>获取数据源 portalDataSource</p>
-</li>
-<li><p>判断密码</p>
-<ul>
-<li>调用 <code>portalV2Service.queryUserInfo(mobile)</code> 方法查询用户密码</li>
-</ul>
-<figure class="highlight sql"><table><tr><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">select</span> password <br><span class="hljs-keyword">from</span> sup_user <br><span class="hljs-keyword">where</span> mobile <span class="hljs-operator">=</span> #&#123;mobile&#125; <span class="hljs-keyword">and</span> delete_status <span class="hljs-operator">=</span> <span class="hljs-number">0</span> limit <span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
-
-<ul>
-<li>判断userPassword和参数password是否相等，或者根据手机号后六位数(内部排序)经过MD5加密后的字符串是否相等，有一个相等就继续，如果都不相同，返回信息中返回“密码错误”</li>
-</ul>
-</li>
-<li><p>获取企业列表</p>
-<ul>
-<li>调用 <code>apiPortalV2Service的queryEnterpriseListWithMobile(mobile, password)</code> 获取企业列表 result</li>
-</ul>
-<figure class="highlight sql"><table><tr><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span><br>  sue.uuid <span class="hljs-keyword">AS</span> userUuid ,<br>  su.user_name <span class="hljs-keyword">AS</span> userName ,<br>  sue.mobile <span class="hljs-keyword">AS</span> userMobile ,<br>  su.email <span class="hljs-keyword">AS</span> userEmail ,<br>  su.user_num <span class="hljs-keyword">AS</span> userNumber ,<br>  sue. STATUS <span class="hljs-keyword">AS</span> userStatus ,<br>  su. PASSWORD ,<br>  su. PASSWORD <span class="hljs-keyword">AS</span> userIdToken ,<br>  sue.token <span class="hljs-keyword">AS</span> userToken ,<br>  se.group_id <span class="hljs-keyword">AS</span> groupId ,<br>  se.role_id <span class="hljs-keyword">AS</span> roleId ,<br>  su.is_delete <span class="hljs-keyword">AS</span> userIsDelete ,<br>  <span class="hljs-string">&#x27;todo&#x27;</span> <span class="hljs-keyword">AS</span> userGravatar ,<br>  <span class="hljs-string">&#x27;todo&#x27;</span> <span class="hljs-keyword">AS</span> groupName ,<br>  <span class="hljs-string">&#x27;todo&#x27;</span> <span class="hljs-keyword">AS</span> roleName ,<br>  se.uuid <span class="hljs-keyword">AS</span> enterpriseUuid ,<br>  se. CODE <span class="hljs-keyword">AS</span> enterpriseCode ,<br>  se. NAME <span class="hljs-keyword">AS</span> enterpriseName ,<br>  se.data_source_id <span class="hljs-keyword">AS</span> dataSourceCode ,<br>  se.role_id <span class="hljs-keyword">AS</span> enterpriseRoleId ,<br>  se.group_id <span class="hljs-keyword">AS</span> enterpriseGroupId ,<br>  se. <span class="hljs-keyword">LANGUAGE</span> <span class="hljs-keyword">AS</span> enterpriseLanguage<br><span class="hljs-keyword">FROM</span><br>  sup_user_enterprises <span class="hljs-keyword">AS</span> sue<br><span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> sup_enterprises <span class="hljs-keyword">AS</span> se <span class="hljs-keyword">ON</span> se.uuid <span class="hljs-operator">=</span> sue.data_enterprise_uuid<br><span class="hljs-keyword">AND</span> sue.data_enterprise_code <span class="hljs-operator">=</span> se. CODE<br><span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> sup_user <span class="hljs-keyword">AS</span> su <span class="hljs-keyword">ON</span> su.mobile <span class="hljs-operator">=</span> sue.mobile<br><span class="hljs-keyword">WHERE</span><br>  sue.mobile <span class="hljs-operator">=</span> #&#123;mobile&#125; <span class="hljs-keyword">and</span> sue.delete_status <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;0&#x27;</span> <span class="hljs-keyword">and</span> sue.status <span class="hljs-operator">=</span> <span class="hljs-number">1</span><br><br><span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span><br>  sue.uuid<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>查询用户角色</p>
-<ul>
-<li>循环遍历企业列表 result ，每次遍历的单体对象是 map ，调用 <code>apiPortalV2Service.queryUserRoleUuidList(userUuid,portalDataSource)</code> 查询用户角色uuid得到 roleList</li>
-</ul>
-<figure class="highlight sql"><table><tr><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span><br>  aur.uuid <span class="hljs-keyword">AS</span> roleUuid ,<br>  aur.role_name <span class="hljs-keyword">AS</span> roleName<br><span class="hljs-keyword">FROM</span><br>  sup_user_roles <span class="hljs-keyword">AS</span> sur<br><span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> app_user_roles <span class="hljs-keyword">AS</span> aur <span class="hljs-keyword">ON</span> aur.uuid <span class="hljs-operator">=</span> sur.role_uuid<br><span class="hljs-keyword">AND</span> sur.data_enterprise_uuid <span class="hljs-operator">=</span> aur.data_enterprise_uuid<br><span class="hljs-keyword">WHERE</span><br>  user_uuid <span class="hljs-operator">=</span> #&#123;userUuid&#125;<br><span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span><br>  aur.uuid<br></code></pre></td></tr></table></figure>
-
-<ul>
-<li>追加 roleList 给map中的 userUuidList</li>
-<li>遍历 roleList，将每一个 roleUuid 用“，”拼接起来赋值给 roleUuids 字符串，然后追加到map中的 roleUuids 中</li>
-</ul>
-</li>
-<li><p>封装结果到返回信息实体中并返回信息实体，用户选择企业进行登录</p>
-</li>
-</ul>
-<ol start="2">
-<li>获取微信用户 openid</li>
-</ol>
-  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">post /saas-api/api/portal/wx/query-user-openid <br>&#123;<br>  code: 用户凭证(wx.login获取),<br>  enterpriseUuid: 企业uuid,<br>  mobile: 手机号<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>  业务流程：</p>
-<ul>
-<li><p>参数判断（code 和 mobile 进行判空）</p>
-</li>
-<li><p>如果 code 不为空，从数据库中重新获取 openid</p>
-<ul>
-<li><p>获取微信小程序配置信息</p>
-<ul>
-<li>appId：”weChat.appId”</li>
-<li>secret：”weChat.secret”</li>
-<li>openIdUrl：”weChat.openIdUrl”</li>
-</ul>
-</li>
-<li><p>替换 openIdUrl 中的参数值</p>
-<ul>
-<li>用appId、secret、code 分别替换原openIdUrl中的 APP_ID、APP_SECRET、JS_CODE ，得到新的 openIdUrl</li>
-</ul>
-</li>
-<li><p>获取openId返回值</p>
-<ul>
-<li>调用微信官方接口返回值 <code>HttpMethodUtil.getGetResult(openIdUrl, null)</code> 得到openIdResult</li>
-<li>判断openIdResult是否是JSON格式，不是则返回 获取用户 openId 接口返回值非JSON格式错误信息</li>
-<li>是JSON格式，则转为JSON对象 json</li>
-</ul>
-</li>
-<li><p>创建一个字段 isBinding&#x3D;0，向 json 中put</p>
-</li>
-<li><p>如果 json 对象不为空，先获取数据源 portalDataSource</p>
-</li>
-<li><p>调用 <code>apiWeChatService的portalQueryUserOpenId(mobilev, enterpriseUuid, portalDataSource)</code> 方法查询用户openId 得到结果集 result（Map集合）</p>
-</li>
-</ul>
-<figure class="highlight sql"><table><tr><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span><br>  wx_unique_token <span class="hljs-keyword">AS</span> openid ,<br>  is_binding<br><span class="hljs-keyword">FROM</span><br>  sup_wx_users<br><span class="hljs-keyword">WHERE</span><br>  mobile <span class="hljs-operator">=</span> #&#123;mobile&#125; <span class="hljs-keyword">and</span> is_binding <span class="hljs-operator">=</span> <span class="hljs-number">1</span> <span class="hljs-keyword">and</span> delete_status <span class="hljs-operator">=</span> <span class="hljs-number">0</span><br><span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span><br>  id <span class="hljs-keyword">DESC</span><br>LIMIT <span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
-
-<ul>
-<li>将结果 result 的 is_binding 字段追加给 json 中</li>
-<li>在返回实体对象中封装结果 json 对象，并返回</li>
-</ul>
-</li>
-<li><p>如果 code 为空，则从数据源中取</p>
-<ul>
-<li>获得数据源对象 portalDataSource</li>
-<li>调用 <code>apiWeChatService.portalQueryUserOpenId(mobile,enterpriseUuid,portalDataSource)</code> 方法查询用户openId得到结果 result</li>
-<li>在返回实体对象中封装结果 result</li>
-</ul>
-</li>
-</ul>
-<ol start="3">
-<li>推送信息</li>
-</ol>
-  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">post /saas-api/api/portal/wx/send-template-message<br>&#123;<br>  toUsers: 需要发送的用户的uuid,<br>  template_id: 模板id,<br>  page: 需要跳转的页面（选填）,<br>  data: 微信通知模板数据,<br>  enterpriseUuid: 企业uuid,<br>  emphasis_keyword： 模板需放大关键字可选填）<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>  业务流程：</p>
-<ul>
-<li>参数判断（param，data，toUsers，template_id 进行判空）</li>
-<li>获取企业信息：根据参数 enterpriseUuid 去查询企业信息得到 portalEnterprise</li>
-<li>获取用户openId：根据参数 toUsers 获取，得到openId数组 toUserArray</li>
-<li>封装查询参数 query，向其中追加参数 enterpriseUuid、toUsers、dataEnterpriseUuid和dataEnterpriseCode</li>
-<li>获取数据源得到 portalDataSource</li>
-<li>调用 <code>apiWeChatService的queryUserOpenIdWithUuid(query, portalDataSource)</code> 方法得到openId集合 openIdList</li>
-</ul>
-  <figure class="highlight sql"><table><tr><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">DISTINCT</span><br>  swu.wx_unique_token <span class="hljs-keyword">AS</span> openId<br><span class="hljs-keyword">FROM</span><br>  sup_user_enterprises <span class="hljs-keyword">AS</span> sue<br><span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> sup_wx_users <span class="hljs-keyword">AS</span> swu <span class="hljs-keyword">ON</span> sue.mobile <span class="hljs-operator">=</span> swu.mobile<br><span class="hljs-keyword">WHERE</span><br>  sue.delete_status <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;0&#x27;</span><br><span class="hljs-keyword">AND</span> swu.wx_unique_token <span class="hljs-keyword">IS</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span><br><span class="hljs-keyword">AND</span> swu.wx_unique_token <span class="hljs-operator">!=</span> <span class="hljs-string">&#x27;&#x27;</span><br><span class="hljs-keyword">AND</span> sue.data_enterprise_uuid <span class="hljs-operator">=</span> #&#123;dataEnterpriseUuid&#125; <span class="hljs-keyword">and</span> sue.data_enterprise_code <span class="hljs-operator">=</span> #&#123;dataEnterpriseCode&#125;<br><br><span class="hljs-keyword">AND</span> swu.is_binding <span class="hljs-operator">=</span> <span class="hljs-number">1</span><br><span class="hljs-keyword">AND</span> swu.delete_status <span class="hljs-operator">=</span> <span class="hljs-number">0</span><br><span class="hljs-keyword">AND</span> sue.uuid <span class="hljs-keyword">IN</span> <span class="hljs-string">&#x27;遍历#&#123;toUsers&#125;&#x27;</span><br><span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> uuid<br></code></pre></td></tr></table></figure>
-
-<ul>
-<li>向参数集合 newParam 中追加 appId、secret、fromUrl、ip、templateId、page、data、empahsis_keyword</li>
-<li>循环发送模板信息<ul>
-<li>通过 openId 异步获取 formId</li>
-<li>向 newParam 中追加 openId 和 formId 给 toUser 和 formId 两个字段</li>
-<li>调用自身API去得到结果 sendResult</li>
-<li>向结果集合 resultMap 中追加 sendResult</li>
-</ul>
-</li>
-<li>向返回实体信息中封装 resultMap 并返回</li>
-</ul>
-<ol start="4">
-<li>提交用户偏好</li>
-</ol>
-  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">get user/v1/preference<br>&#123;<br>  enterpriseUuid: 企业UUID,<br>  cmobile: 手机号,<br>  platform: 平台<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>  业务流程：</p>
-<ul>
-<li><p>参数判断（对enterpriseUuid、mobile、platform进行判空）</p>
-</li>
-<li><p>将 mobile、enterpriseUuid、platform 拼接成一个 hashkey</p>
-</li>
-<li><p>大key为 “user：perference”，hashkey为拼接成的 hashkey 去redis中取值 preference</p>
-</li>
-<li><p>如果 preference 是空的</p>
-<ul>
-<li>将 mobile、enterpriseUuid、platform 依次放进参数 params 中，params是一个map集合</li>
-<li>获取数据源 portalDataSource</li>
-<li>根据参数 params 和数据源去数据库取 preference</li>
-</ul>
-<figure class="highlight sql"><table><tr><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span><br>  preference<br><span class="hljs-keyword">FROM</span><br>  sup_user_preferences<br><span class="hljs-keyword">WHERE</span><br>  enterprise_uuid <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;$&#123;enterpriseUuid&#125;&#x27;</span><br><span class="hljs-keyword">AND</span> mobile <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;$&#123;mobile&#125;&#x27;</span><br><span class="hljs-keyword">AND</span> platform <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;$&#123;platform&#125;&#x27;</span><br>LIMIT <span class="hljs-number">1</span>;<br></code></pre></td></tr></table></figure>
-
-<ul>
-<li>以 “user：perference” 为大key，拼接的hashkey为 hashksy，preference 为值追加到redis中</li>
-<li>返回实体信息中封装 preference 并返回</li>
-</ul>
-</li>
-<li><p>如果 preference 非空，返回实体信息中封装 preference 并返回</p>
-</li>
-</ul>
-<h3 id="企业号登录"><a href="#企业号登录" class="headerlink" title="企业号登录"></a>企业号登录</h3><ol>
-<li>获取企业</li>
-</ol>
-  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">get user/v1/enterprise-info<br>&#123;<br>  request： 请求<br>  enterpriseCode:  企业号<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>  业务流程：</p>
-<ul>
-<li><p>参数判断（对enterpriseCode进行判空）</p>
-</li>
-<li><p>获取数据源portalDataSource</p>
-</li>
-<li><p>获取企业信息结果集 result</p>
-<ul>
-<li>调用 <code>apiUserLoginService.weChatAppletWithEnterpriseInfo(enterpriseCode, portalDataSource)</code> 方法获取企业信息 result</li>
-</ul>
-<figure class="highlight sql"><table><tr><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span><br>  id <span class="hljs-keyword">AS</span> enterpriseId ,<br>  uuid <span class="hljs-keyword">AS</span> enterpriseUuid ,<br>  CODE <span class="hljs-keyword">AS</span> enterpriseCode ,<br>  `<span class="hljs-keyword">language</span>` ,<br>  `name` <span class="hljs-keyword">AS</span> enterpriseName ,<br>  role_id <span class="hljs-keyword">AS</span> enterpriseRoleId ,<br>  group_id <span class="hljs-keyword">AS</span> enterpriseGroupId ,<br>  data_source_id <span class="hljs-keyword">AS</span> enterpriseDataSourceId<br><span class="hljs-keyword">FROM</span><br>  sup_enterprises<br><span class="hljs-keyword">WHERE</span><br>  CODE <span class="hljs-operator">=</span> #&#123;enterpriseCode&#125;<br>LIMIT <span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
-</li>
-<li><p>result 不为空则向返回信息实体中封装 result 并返回</p>
-</li>
-</ul>
-<ol start="2">
-<li>获取登录用户信息</li>
-</ol>
-  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">get user/v1/wx-applet-login<br>&#123;<br>  request：请求<br>  mobile：手机号码<br>  password：MD5机密后的密码<br>  enterpriseUuid：企业UUID<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>  业务流程：</p>
-<ul>
-<li><p>获取请求头中的enterpriseUuid</p>
-<ul>
-<li>调用 <code>request.getHeader(&quot;enterpriseUuid&quot;)</code> 得到企业UUID字符串 enterprise</li>
-</ul>
-</li>
-<li><p>参数判断（对 mobile、password、enterpriseUuid 进行判空）</p>
-</li>
-<li><p>验证 enterprise 和 参数 enterpriseUuid 是否想等，如果不相等则返回请求头与请求参数的企业UUID不一致</p>
-</li>
-<li><p>获取企业信息</p>
-<ul>
-<li>异步调用 <code>asyncUtils.QUERY_ENTERPRISE_INFO(enterprise)</code> 方法得到企业信息 portalEnterprise</li>
-</ul>
-</li>
-<li><p>拼接参数集合 param （Map集合）</p>
-<ul>
-<li>向 param 中追加键值对 {“mobile”:mobile,”password”:password,”dataEnterpriseUuid”:portalEnterprise.getEnterpriseUuid();”dataEnterpriseCode”:portalEnterprise.getEnterpriseCode()}</li>
-</ul>
-</li>
-<li><p>获取数据源portalDataSource</p>
-</li>
-<li><p>查询企业用户信息</p>
-<ul>
-<li>调用 <code>apiUserLoginService.weChatAppletWithLogin(param,portalDataSource)</code> 方法得到结果集 result</li>
-</ul>
-<figure class="highlight sql"><table><tr><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span><br>  sue.uuid <span class="hljs-keyword">AS</span> userUuid ,<br>  su.user_name <span class="hljs-keyword">AS</span> userName ,<br>  su.mobile <span class="hljs-keyword">AS</span> userMobile ,<br>  su.email <span class="hljs-keyword">AS</span> userEmail ,<br>  su.user_num <span class="hljs-keyword">AS</span> userNumber ,<br>  sue. STATUS <span class="hljs-keyword">AS</span> userStatus ,<br>  su. PASSWORD ,<br>  sue.token <span class="hljs-keyword">AS</span> userToken ,<br>  <span class="hljs-string">&#x27;todo&#x27;</span> <span class="hljs-keyword">AS</span> userGravatar ,<br>  sen.group_id <span class="hljs-keyword">AS</span> groupId ,<br>  <span class="hljs-string">&#x27;todo&#x27;</span> <span class="hljs-keyword">AS</span> groupName ,<br>  sen.role_id <span class="hljs-keyword">AS</span> roleId ,<br>  <span class="hljs-string">&#x27;todo&#x27;</span> <span class="hljs-keyword">AS</span> roleName ,<br>  su.is_delete <span class="hljs-keyword">AS</span> userIsDelete<br><span class="hljs-keyword">FROM</span><br>  sup_user_enterprises <span class="hljs-keyword">AS</span> sue<br><span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> sup_user <span class="hljs-keyword">AS</span> su <span class="hljs-keyword">ON</span> sue.mobile <span class="hljs-operator">=</span> su.mobile<br><span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> sup_enterprises <span class="hljs-keyword">AS</span> sen <span class="hljs-keyword">ON</span> sen.uuid <span class="hljs-operator">=</span> sue.data_enterprise_uuid<br><span class="hljs-keyword">WHERE</span><br>  sue.mobile <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;$&#123;mobile&#125;&#x27;</span><br><span class="hljs-keyword">AND</span> su. PASSWORD <span class="hljs-keyword">IS</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span><br><span class="hljs-keyword">AND</span> sue.data_enterprise_uuid <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;$&#123;dataEnterpriseUuid&#125;&#x27;</span><br><span class="hljs-keyword">AND</span> sue.data_enterprise_code <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;$&#123;dataEnterpriseCode&#125;&#x27;</span><br><span class="hljs-keyword">AND</span> sue.delete_status <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;0&#x27;</span><br><span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span><br>  sue.uuid<br>LIMIT <span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
-</li>
-<li><p>用户信息核对</p>
-<ul>
-<li>判断用户信息结果集 result 中的USER_STATUS是否等于1，不等则返回该账号已被停用</li>
-<li>判断 result 中的PASSWORD 是否等于参数中的 password，不等则返回密码错误</li>
-</ul>
-</li>
-<li><p>获取用户角色列表</p>
-<ul>
-<li>调用 <code>apiUserLoginService.queryUserRoleUuidList(result.get(&quot;userUuid&quot;).toString(), portalDataSource)</code> 得到 roleList</li>
-</ul>
-<figure class="highlight sql"><table><tr><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span><br>  aur.uuid <span class="hljs-keyword">AS</span> roleUuid ,<br>  aur.role_name <span class="hljs-keyword">AS</span> roleName<br><span class="hljs-keyword">FROM</span><br>  sup_user_roles <span class="hljs-keyword">AS</span> sur<br><span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> app_user_roles <span class="hljs-keyword">AS</span> aur <span class="hljs-keyword">ON</span> aur.uuid <span class="hljs-operator">=</span> sur.role_uuid<br><span class="hljs-keyword">AND</span> sur.data_enterprise_uuid <span class="hljs-operator">=</span> aur.data_enterprise_uuid<br><span class="hljs-keyword">WHERE</span><br>  user_uuid <span class="hljs-operator">=</span> #&#123;userUuid&#125;<br><span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span><br>  aur.uuid<br></code></pre></td></tr></table></figure>
-
-<ul>
-<li>向 result 中追加{“roleUuidList”:roleList,”roleUuids”:””}</li>
-</ul>
-</li>
-<li><p>获取角色UUID</p>
-<ul>
-<li>循环遍历 roleList ，将角色列表中的每一个角色的 roleUuid 拼接给 roleUuids ，中间用”，”隔开</li>
-<li>向 result 中追加 roleUuids</li>
-</ul>
-</li>
-<li><p>返回实体中封装结果集 result 并返回</p>
-</li>
-</ul>
-<ol start="3">
-<li>获取微信用户 openid 、推送消息 、提交用户偏好 三个步骤同 手机号登录 中的3、4、5介绍</li>
-</ol>
-<h3 id="微信登录"><a href="#微信登录" class="headerlink" title="微信登录"></a>微信登录</h3><ol>
-<li><p>获取企业列表</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">get api/portal/v2/wx-login/enterprise-list-v2<br>&#123;<br> request: 请求，<br> code: 微信小程序中的code值<br>&#125;<br></code></pre></td></tr></table></figure></li>
-</ol>
-<p>  业务流程：</p>
-<ul>
-<li><p>参数判断</p>
-<ul>
-<li>对 code 进行判空</li>
-</ul>
-</li>
-<li><p>获取 openId</p>
-<ul>
-<li><p>获取微信小程序配置信息</p>
-<ul>
-<li>appId：”weChat.appId”</li>
-<li>secret：”weChat.secret”</li>
-<li>openIdUrl：”weChat.openIdUrl”</li>
-</ul>
-</li>
-<li><p>替换 openIdUrl 中的参数值</p>
-<ul>
-<li>用appId、secret、code 分别替换原openIdUrl中的 APP_ID、APP_SECRET、JS_CODE ，得到新的 openIdUrl</li>
-</ul>
-</li>
-<li><p>获取openId返回值</p>
-<ul>
-<li>调用微信官方接口返回值 <code>HttpMethodUtil.getGetResult(openIdUrl, null)</code> 得到openIdResult</li>
-</ul>
-</li>
-<li><p>判断openIdResult是否是JSON格式</p>
-<ul>
-<li>不是则返回 获取用户 openId 接口返回值非JSON格式错误信息</li>
-<li>是JSON格式，则转为JSON对象 json</li>
-</ul>
-</li>
-<li><p>从 json 中去字段 OPEN_ID 的值，得到openId</p>
-</li>
-</ul>
-</li>
-<li><p>获取企业列表</p>
-<ul>
-<li><p>获取数据源portalDataSource</p>
-</li>
-<li><p>获取企业用户信息结果集</p>
-<ul>
-<li>调用 <code>apiPortalV2Service.queryEnterpriseListWithWeChatOpenIdV2(openId,portalDataSource)</code> 方法得到结果集 result （Map集合）</li>
-</ul>
-<figure class="highlight sql"><table><tr><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span><br>  se.uuid <span class="hljs-keyword">AS</span> enterpriseUuid ,<br>  se. CODE <span class="hljs-keyword">AS</span> enterpriseCode ,<br>  se. NAME <span class="hljs-keyword">AS</span> enterpriseName ,<br>  se.data_source_id <span class="hljs-keyword">AS</span> dataSourceCode ,<br>  se.role_id <span class="hljs-keyword">AS</span> enterpriseRoleId ,<br>  se.group_id <span class="hljs-keyword">AS</span> enterpriseGroupId ,<br>  se. <span class="hljs-keyword">LANGUAGE</span> <span class="hljs-keyword">AS</span> enterpriseLanguage ,<br>  swu.wx_avatar <span class="hljs-keyword">AS</span> wxAvatar ,<br>  swu.wx_name <span class="hljs-keyword">AS</span> wxName ,<br>  swu.wx_nick_name <span class="hljs-keyword">AS</span> wxNickName ,<br>  sue.uuid <span class="hljs-keyword">AS</span> userUuid ,<br>  sue.mobile <span class="hljs-keyword">AS</span> userMobile ,<br>  su.user_name <span class="hljs-keyword">AS</span> userName ,<br>  su.email <span class="hljs-keyword">AS</span> userEmail ,<br>  sue.delete_status <span class="hljs-keyword">AS</span> userIsDelete ,<br>  swu.wx_unique_token <span class="hljs-keyword">AS</span> wxUniqueoken ,<br>  sue. STATUS <span class="hljs-keyword">AS</span> userStatus ,<br>  sue.token <span class="hljs-keyword">AS</span> userToken ,<br>  se.group_id <span class="hljs-keyword">AS</span> groupId ,<br>  se.role_id <span class="hljs-keyword">AS</span> roleId ,<br>  <span class="hljs-string">&#x27;todo&#x27;</span> <span class="hljs-keyword">AS</span> userGravatar ,<br>  <span class="hljs-string">&#x27;todo&#x27;</span> <span class="hljs-keyword">AS</span> groupName ,<br>  <span class="hljs-string">&#x27;todo&#x27;</span> <span class="hljs-keyword">AS</span> roleName ,<br>  su. PASSWORD <span class="hljs-keyword">AS</span> userIdToken<br><span class="hljs-keyword">FROM</span><br>  sup_wx_users <span class="hljs-keyword">AS</span> swu<br><span class="hljs-keyword">INNER</span> <span class="hljs-keyword">JOIN</span> sup_user_enterprises <span class="hljs-keyword">AS</span> sue <span class="hljs-keyword">ON</span> sue.mobile <span class="hljs-operator">=</span> swu.mobile<br><span class="hljs-keyword">INNER</span> <span class="hljs-keyword">JOIN</span> sup_enterprises <span class="hljs-keyword">AS</span> se <span class="hljs-keyword">ON</span> sue.data_enterprise_uuid <span class="hljs-operator">=</span> se.uuid<br><span class="hljs-keyword">INNER</span> <span class="hljs-keyword">JOIN</span> sup_user <span class="hljs-keyword">AS</span> su <span class="hljs-keyword">ON</span> su.mobile <span class="hljs-operator">=</span> swu.mobile<br><span class="hljs-keyword">WHERE</span><br>  swu.wx_unique_token <span class="hljs-operator">=</span> #&#123;openId&#125;<br><span class="hljs-keyword">AND</span> sue.delete_status <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;0&#x27;</span><br><span class="hljs-keyword">AND</span> swu.is_binding <span class="hljs-operator">=</span> <span class="hljs-number">1</span><br><span class="hljs-keyword">AND</span> swu.delete_status <span class="hljs-operator">=</span> <span class="hljs-number">0</span><br></code></pre></td></tr></table></figure>
-</li>
-<li><p>验证结果集数据是否有效</p>
-<ul>
-<li>拿出 result 中 USER_STATUS 字段值， 不等于1则返回该账号已被停用错误信息</li>
-</ul>
-</li>
-<li><p>获取用户角色UUID</p>
-<ul>
-<li>遍历结果集 result ，每一次遍历的单体是 map </li>
-<li>调用 <code>apiUserLoginService.queryUserRoleUuidList(map.get(&quot;userUuid&quot;).toString(), portalDataSource)</code> 得到 roleList</li>
-</ul>
-<figure class="highlight sql"><table><tr><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span><br>  aur.uuid <span class="hljs-keyword">AS</span> roleUuid ,<br>  aur.role_name <span class="hljs-keyword">AS</span> roleName<br><span class="hljs-keyword">FROM</span><br>  sup_user_roles <span class="hljs-keyword">AS</span> sur<br><span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> app_user_roles <span class="hljs-keyword">AS</span> aur <span class="hljs-keyword">ON</span> aur.uuid <span class="hljs-operator">=</span> sur.role_uuid<br><span class="hljs-keyword">AND</span> sur.data_enterprise_uuid <span class="hljs-operator">=</span> aur.data_enterprise_uuid<br><span class="hljs-keyword">WHERE</span><br>  user_uuid <span class="hljs-operator">=</span> #&#123;userUuid&#125;<br><span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span><br>  aur.uuid<br></code></pre></td></tr></table></figure>
-
-<ul>
-<li>向 map 中追加{“roleUuidList”:roleList,”roleUuids”:””}</li>
-<li>循环遍历 roleList ，将角色列表中的每一个角色的 roleUuid 拼接给 roleUuids ，中间用”，”隔开</li>
-<li>向 map 中追加 roleUuids</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>返回信息实体中封装结果集 result 并返回</p>
-</li>
-</ul>
-<h2 id="注册页"><a href="#注册页" class="headerlink" title="注册页"></a>注册页</h2><h3 id="业务流程图-1"><a href="#业务流程图-1" class="headerlink" title="业务流程图"></a>业务流程图</h3><p><a href="/application/syp-wxmp.html">注册模块业务流程</a></p>
-<ol>
-<li>获取企业信息</li>
-</ol>
-  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">get user/v1/enterprise-info<br>&#123;<br>  enterpriseCode: 企业编码<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>  业务流程：</p>
-<ul>
-<li><p>参数判断</p>
-<ul>
-<li>对 enterpriseCode  进行判空</li>
-</ul>
-</li>
-<li><p>获取数据源portalDataSource</p>
-</li>
-<li><p>获取企业信息</p>
-<ul>
-<li>调用 <code>apiUserLoginService.weChatAppletWithEnterpriseInfo</code> 方法获得企业信息结果集合 result</li>
-</ul>
-<figure class="highlight sql"><table><tr><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span><br>  id <span class="hljs-keyword">AS</span> enterpriseId ,<br>  uuid <span class="hljs-keyword">AS</span> enterpriseUuid ,<br>  CODE <span class="hljs-keyword">AS</span> enterpriseCode ,<br>  `<span class="hljs-keyword">language</span>` ,<br>  `name` <span class="hljs-keyword">AS</span> enterpriseName ,<br>  role_id <span class="hljs-keyword">AS</span> enterpriseRoleId ,<br>  group_id <span class="hljs-keyword">AS</span> enterpriseGroupId ,<br>  data_source_id <span class="hljs-keyword">AS</span> enterpriseDataSourceId<br><span class="hljs-keyword">FROM</span><br>  sup_enterprises<br><span class="hljs-keyword">WHERE</span><br>  CODE <span class="hljs-operator">=</span> #&#123;enterpriseCode&#125;<br>LIMIT <span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
-</li>
-<li><p>返回信息实体中封装结果集 result 并返回</p>
-</li>
-</ul>
-<ol start="2">
-<li>扫码查询追踪码明细</li>
-</ol>
-  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">get api/portal/wx/tracking-code/select-info<br>&#123;<br>  qrCodeUuid: 追踪码uuid<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>  业务流程：</p>
-<ul>
-<li><p>参数判断</p>
-<ul>
-<li>对 qrCodeUuid 进行判空</li>
-<li>判断 qrCodeUuid 的长度是否是32位，不是则返回追踪码UUID长度不符合规则</li>
-</ul>
-</li>
-<li><p>从redis获取数据</p>
-<ul>
-<li>key为 “portal:qr:code” ，hashkey为  “qrCodeUuid” ，得到字符串值 str</li>
-</ul>
-</li>
-<li><p>如果 str 不是空的则转为DataQrCode对象 dataQrCodeSelect ，如果是空的则将null赋值给 dataQrCodeSelect</p>
-</li>
-<li><p>如果 dataQrCodeSelect 为null</p>
-<ul>
-<li>获取数据源 portalDataSource</li>
-<li>调用 <code>apiWeChatService.queryDataQrCodeInfoWithUuid(qrCodeUuid, portalDataSource)</code> 获取结果赋值给 dataQrCodeSelect</li>
-</ul>
-<figure class="highlight sql"><table><tr><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span><br>  id ,<br>  uuid ,<br>  enterprise_name ,<br>  enterprise_code ,<br>  enterprise_uuid ,<br>  business_uuid ,<br>  business_type ,<br>  business_name ,<br>  target_url ,<br>  data_json ,<br>  remark ,<br>  create_user ,<br>  update_user ,<br>  created_time ,<br>  updated_time<br><span class="hljs-keyword">FROM</span><br>  sup_qr_code_business_data<br><span class="hljs-keyword">WHERE</span><br>  uuid <span class="hljs-operator">=</span> #&#123;uuid&#125;<br></code></pre></td></tr></table></figure>
-
-<ul>
-<li>如果 dataQrCodeSelect 不为空，则向redis中追加<ul>
-<li>key为 “portal:qr:code” ，hashkey为 qrCodeUuid，值为 JSONObject.toJSONString(dataQrCodeSelect)</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>如果 dataQrCodeSelect 不为null</p>
-<ul>
-<li>调用 <code>dataQrCodeSelect.setDataJson(StringUtils.replace(dataQrCodeSelect.getDataJson(), &quot;\\&quot;, &quot;&quot;))</code> 方法调整dataQrCodeSelect中dataJson数据格式</li>
-</ul>
-</li>
-<li><p>返回信息实体中封装结果 dataQrCodeSelect 并返回</p>
-</li>
-</ul>
-<ol start="3">
-<li>发送验证码</li>
-</ol>
-  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">get user/v1/register-verification-code-v1<br>&#123;<br>  mobile: 手机号<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>  业务流程：</p>
-<ul>
-<li><p>参数判断</p>
-<ul>
-<li>对 mobile 进行判空</li>
-</ul>
-</li>
-<li><p>生成四位验证码</p>
-<ul>
-<li>调用 <code>RandomNumberGenerator.generateNumber()</code> 方法获得 code</li>
-<li>向结果集合 result 中追加 code</li>
-</ul>
-</li>
-<li><p>发送短信</p>
-<ul>
-<li>调用 <code>asyncUtils.SEND_SMS_WITH_REGISTER(mobile, SUCCESS_MSG, SUCCESS)</code></li>
-</ul>
-</li>
-<li><p>保存到redis中</p>
-<ul>
-<li>key为 (“portal:user:verificationCode:register:%s”,mobile)，值为 code</li>
-</ul>
-</li>
-<li><p>返回信息实体中封装结果集 result 并返回</p>
-</li>
-</ul>
-<h2 id="报表页"><a href="#报表页" class="headerlink" title="报表页"></a>报表页</h2><ol>
-<li>获取报表项菜单</li>
-</ol>
-  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">get api/portal/wx/report-menu<br>&#123;<br>  enterpriseUuid: 企业uuid，<br>  roleUuids: 角色uuid<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>  ​业务流程：</p>
-<ul>
-<li><p>参数判断</p>
-<ul>
-<li>对roleUuids进行判空</li>
-</ul>
-</li>
-<li><p>从redis中获取报表项菜单列表</p>
-<ul>
-<li>key为 “portal:role:wx:report-menu”，hashkey为 “role-“ + roleUuids，得到JSON字符创 menuListStr</li>
-<li>如果 menuListStr 不为空，将其转为List集合 menuList，如果为空，则给List集合 menuList 赋值 null</li>
-</ul>
-</li>
-<li><p>如果 menuList 为空</p>
-<ul>
-<li>获取数据源 portalDataSource</li>
-<li>调用 <code>apiWeChatService.queryReportMenuByUserRoleUuids(roleUuids, portalDataSource)</code> 获得报表菜单集合 menuList</li>
-</ul>
-<figure class="highlight sql"><table><tr><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span><br>  smr.id ,<br>  smr.uuid ,<br>  smr.category ,<br>  ifnull(smr.category_order , <span class="hljs-number">0</span>) <span class="hljs-keyword">AS</span> category_order ,<br>  smr.group_name ,<br>  ifnull(smr.group_order , <span class="hljs-number">0</span>) <span class="hljs-keyword">AS</span> group_order ,<br>  smr.obj_title <span class="hljs-keyword">AS</span> `name` ,<br>  ifnull(smr.item_order , <span class="hljs-number">0</span>) <span class="hljs-keyword">AS</span> item_order ,<br>  smr.obj_type ,<br>  smr.obj_id ,<br>  smr.obj_title ,<br>  smr.obj_link ,<br>  smr.obj_cdn ,<br>  smr.obj_version ,<br>  smr.publicly ,<br>  smr.menu_type ,<br>  smr.option_user_num ,<br>  icon <span class="hljs-keyword">AS</span> icon_link ,<br>  <span class="hljs-keyword">CASE</span> smr.obj_type<br><span class="hljs-keyword">WHEN</span> <span class="hljs-string">&#x27;wxmp#config&#x27;</span> <span class="hljs-keyword">THEN</span><br>  smc.home_path<br><span class="hljs-keyword">WHEN</span> <span class="hljs-string">&#x27;wxmp&#x27;</span> <span class="hljs-keyword">THEN</span><br>  smr.home_path<br><span class="hljs-keyword">ELSE</span><br>  <span class="hljs-string">&#x27;&#x27;</span><br><span class="hljs-keyword">END</span> <span class="hljs-keyword">AS</span> home_path ,<br> smr.cdn_module ,<br> smr.cdn_version ,<br> smr.cdn_state ,<br> smr.report_id ,<br> smr.obj_link <span class="hljs-keyword">AS</span> url_path<br><span class="hljs-keyword">FROM</span><br>  sup_menus <span class="hljs-keyword">AS</span> smr<br><span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> sup_module_config <span class="hljs-keyword">AS</span> smc <span class="hljs-keyword">ON</span> smc.module_code <span class="hljs-operator">=</span> smr.obj_id<br><span class="hljs-keyword">WHERE</span><br>  smr.platform <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;wxmp&#x27;</span><br><span class="hljs-keyword">AND</span> menu_category <span class="hljs-operator">=</span> <span class="hljs-number">1</span><br><span class="hljs-keyword">AND</span> smr.uuid <span class="hljs-keyword">IN</span>(<br>  <span class="hljs-keyword">SELECT</span><br>    menu_uuid<br>  <span class="hljs-keyword">FROM</span><br>    app_user_role_resources<br>  <span class="hljs-keyword">WHERE</span><br>    locate(<br>      role_uuid ,<br>      #&#123;roleUuids&#125;) <span class="hljs-operator">&gt;</span> <span class="hljs-number">0</span> <span class="hljs-keyword">and</span> delete_status <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;0&#x27;</span><br>    )<br><span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span><br>  smr.category_order <span class="hljs-keyword">ASC</span> ,<br>  smr.group_order <span class="hljs-keyword">ASC</span> ,<br>  smr.item_order <span class="hljs-keyword">ASC</span><br></code></pre></td></tr></table></figure>
-
-<ul>
-<li>如果 menuList 不为空，key为 “portal:role:wx:report-menu”，hashkey为”role-“ + roleUuids，向redis中追加值 JSONObject.toJSONString(menuList)</li>
-</ul>
-</li>
-<li><p>向返回实体信息中封装 menuList 并返回</p>
-</li>
-</ul>
-<h2 id="工具箱页"><a href="#工具箱页" class="headerlink" title="工具箱页"></a>工具箱页</h2><ol>
-<li>获取工具箱列表</li>
-</ol>
-  <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">get api/portal/wx/toolbox-menu<br>&#123;<br>  request： 请求，<br>  roleUuids:  用户角色uuid <br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>  业务流程：</p>
-<ul>
-<li><p>参数判断（ roleUuids 进行判空）</p>
-</li>
-<li><p>从redis中获取值 menuListStr</p>
-<ul>
-<li>key为 “portal:role:wx:toolbox-menu”</li>
-<li>hashkey为 “role-“ + roleUuids</li>
-</ul>
-</li>
-<li><p>将 menuListStr 转为菜单 menuList 集合</p>
-</li>
-<li><p>如果 menuList 是空的</p>
-<ul>
-<li>获取数据源 portalDataSource</li>
-<li>调用 <code>apiWeChatService.queryToolboxMenuByUserRoleUuids(roleUuids, portalDataSource)</code> 方法获取工具箱菜单列表 menuList</li>
-</ul>
-<figure class="highlight sql"><table><tr><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span><br>  smt.id ,<br>  smt.uuid ,<br>  smt.category ,<br>  ifnull(smt.category_order , <span class="hljs-number">0</span>) <span class="hljs-keyword">AS</span> category_order ,<br>  smt.group_name ,<br>  ifnull(smt.group_order , <span class="hljs-number">0</span>) <span class="hljs-keyword">AS</span> group_order ,<br>  smt.obj_title <span class="hljs-keyword">AS</span> `name` ,<br>  ifnull(smt.item_order , <span class="hljs-number">0</span>) <span class="hljs-keyword">AS</span> item_order ,<br>  smt.obj_title ,<br>  smt.menu_type ,<br>  smt.obj_type ,<br>  smt.obj_id ,<br>  smt.obj_link ,<br>  smt.obj_cdn ,<br>  smt.obj_version ,<br>  smt.report_id ,<br>  smt.url_path ,<br>  smt.icon <span class="hljs-keyword">AS</span> icon_link ,<br>  smt.publicly ,<br>  smt.option_user_num ,<br>  <span class="hljs-keyword">CASE</span> smt.obj_type<br><span class="hljs-keyword">WHEN</span> <span class="hljs-string">&#x27;wxmp#config&#x27;</span> <span class="hljs-keyword">THEN</span><br>  smc.home_path<br><span class="hljs-keyword">WHEN</span> <span class="hljs-string">&#x27;wxmp&#x27;</span> <span class="hljs-keyword">THEN</span><br>  smt.home_path<br><span class="hljs-keyword">ELSE</span><br>  <span class="hljs-string">&#x27;&#x27;</span><br><span class="hljs-keyword">END</span> <span class="hljs-keyword">AS</span> home_path ,<br> smt.obj_title <span class="hljs-keyword">AS</span> `name` ,<br> smt.cdn_module ,<br> smt.cdn_version ,<br> smt.cdn_state<br><span class="hljs-keyword">FROM</span><br>  sup_menus <span class="hljs-keyword">AS</span> smt<br><span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> sup_module_config <span class="hljs-keyword">AS</span> smc <span class="hljs-keyword">ON</span> smc.module_code <span class="hljs-operator">=</span> smt.obj_id<br><span class="hljs-keyword">WHERE</span><br>  smt.platform <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;wxmp&#x27;</span><br><span class="hljs-keyword">AND</span> menu_category <span class="hljs-operator">=</span> <span class="hljs-number">0</span><br><span class="hljs-keyword">AND</span> smt.uuid <span class="hljs-keyword">IN</span>(<br>  <span class="hljs-keyword">SELECT</span><br>    menu_uuid<br>  <span class="hljs-keyword">FROM</span><br>    app_user_role_resources<br>  <span class="hljs-keyword">WHERE</span><br>    locate(<br>      role_uuid ,<br>      #&#123;roleUuids&#125;) <span class="hljs-operator">&gt;</span> <span class="hljs-number">0</span> <span class="hljs-keyword">and</span> delete_status <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;0&#x27;</span><br>    )<br><span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span><br>  smt.category_order <span class="hljs-keyword">ASC</span> ,<br>  smt.group_order <span class="hljs-keyword">ASC</span> ,<br>  smt.item_order <span class="hljs-keyword">ASC</span>    <br></code></pre></td></tr></table></figure>
-
-<ul>
-<li>解析渲染 menuList 数据</li>
-<li>以key为 “portal:role:wx:toolbox-menu” ，hashkey为 “role-“ + roleUuids ，值为 menuList 向redis中追加</li>
-<li>返回实体信息中封装 menuList 并返回</li>
-</ul>
-</li>
-<li><p>如果menuList非空，返回实体信息中封装 menuList 并返回</p>
-</li>
-</ul>
-<h2 id="我的"><a href="#我的" class="headerlink" title="[我的]"></a>[我的]</h2><h3 id="查询-formId-数量"><a href="#查询-formId-数量" class="headerlink" title="查询 formId 数量"></a>查询 formId 数量</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">get api/portal/wx/formId-num<br>&#123;<br>  enterpriseUuid: 企业UUID，<br>  mobile: 手机号<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>  业务流程：</p>
-<ul>
-<li><p>参数判断</p>
-<ul>
-<li>对 mobile 进行参数判空</li>
-</ul>
-</li>
-<li><p>获取用户信息集合</p>
-<ul>
-<li>调用 <code>apiWeChatService.portalQueryFormIdByMobile(mobile, selectPortalDataSourceUtils.dynamicSelectPortalDataSource(FUNCTION_F10L, DB_TYPE_SLAVE))</code> 获得用户信息集合 userMap</li>
-</ul>
-<figure class="highlight sql"><table><tr><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span><br>  wx_avatar <span class="hljs-keyword">AS</span> wxAvatar ,<br>  wx_name <span class="hljs-keyword">AS</span> wxName ,<br>  wx_nick_name <span class="hljs-keyword">AS</span> wxNickName ,<br>  wx_unique_token <span class="hljs-keyword">AS</span> wxUniqueToken ,<br>  mobile ,<br>  enterprise_code <span class="hljs-keyword">AS</span> enterpriseCode ,<br>  enterprise_uuid <span class="hljs-keyword">AS</span> enterpriseUuid ,<br>  is_binding <span class="hljs-keyword">AS</span> isBinding<br><span class="hljs-keyword">FROM</span><br>  sup_wx_users<br><span class="hljs-keyword">WHERE</span><br>  mobile <span class="hljs-operator">=</span> #&#123;mobile&#125; <span class="hljs-keyword">and</span> is_binding <span class="hljs-operator">=</span> <span class="hljs-number">1</span> <span class="hljs-keyword">and</span> delete_status <span class="hljs-operator">=</span> <span class="hljs-number">0</span><br>LIMIT <span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
-</li>
-<li><p>如果 userMap 不为空</p>
-<ul>
-<li>取 userMap 中的 “wxuniqueToken” 赋值给字符串 openId</li>
-<li>以 “portal:user:wxFormId” 为key从redis中获取集合 map</li>
-<li>如果 map 不为空<ul>
-<li>遍历 map ，每一次的遍历单体对象是 entry</li>
-<li>将 entry.getKey() 赋值给 hashKey ，entry.getValue() 赋值给 value </li>
-<li>将 hashKey 用 “@” 切割得到字符串数据 hashKeys</li>
-<li>如果 hashKeys 长度大于1，且数组第一个元素和 openId 相等，获取当前时间毫秒值 nowTime </li>
-<li>如果 nowTime 小于 hashKeys 第二个元素的值或者 value 值不等于 “the formId is a mock one” ，计数器 count++ ，formIdArray添加值 value ，否则从redis中移除掉 key为 “portal:user:wxFormId” , hashKey为 entry.getKey() 的数据</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>向 userMap 中 put  (“userFormIdNum”, count) 和 (“formIdArray”, formIdArray)</p>
-</li>
-<li><p>在返回信息实体中封装 userMap 并返回</p>
-</li>
-</ul>
-<h3 id="获取企业管理列表"><a href="#获取企业管理列表" class="headerlink" title="获取企业管理列表"></a>获取企业管理列表</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">get api/portal/wx/enterprise-menu-list<br>&#123;<br>  enterpriseUuid：企业UUID，<br>  roleUuids: 角色UUID<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>  业务流程：</p>
-<ul>
-<li><p>参数判断</p>
-<ul>
-<li>对roleUuids进行判空</li>
-</ul>
-</li>
-<li><p>获取数据源 portalDataSource</p>
-</li>
-<li><p>获取企业管理列表</p>
-<ul>
-<li>调用 <code>apiWeChatService.queryEnterpriseMenuList(roleUuids, f10lSlaveDataSource)</code> 获得企业管理列表 menuList</li>
-</ul>
-<figure class="highlight sql"><table><tr><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span><br>  t1.id ,<br>  t1.`name` <span class="hljs-keyword">AS</span> title ,<br>  t1.description ,<br>  t1.group_name ,<br>  t1.obj_id ,<br>  t1.obj_type ,<br>  <span class="hljs-keyword">CASE</span> t1.group_name<br><span class="hljs-keyword">WHEN</span> <span class="hljs-string">&#x27;基本信息&#x27;</span> <span class="hljs-keyword">THEN</span><br>  <span class="hljs-string">&#x27;sa&#x27;</span><br><span class="hljs-keyword">WHEN</span> <span class="hljs-string">&#x27;业务权限设置&#x27;</span> <span class="hljs-keyword">THEN</span><br>  <span class="hljs-string">&#x27;sb&#x27;</span><br><span class="hljs-keyword">ELSE</span><br>  <span class="hljs-string">&#x27;sc&#x27;</span><br><span class="hljs-keyword">END</span> <span class="hljs-keyword">AS</span> pid ,<br> <span class="hljs-keyword">CASE</span><br><span class="hljs-keyword">WHEN</span> t1.group_name <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;业务权限设置&#x27;</span> <span class="hljs-keyword">THEN</span><br>  t1.parent_menu_uuid<br><span class="hljs-keyword">ELSE</span><br>  <span class="hljs-string">&#x27;&#x27;</span><br><span class="hljs-keyword">END</span> <span class="hljs-keyword">AS</span> uuid ,<br> <span class="hljs-keyword">CASE</span> t1.obj_type<br><span class="hljs-keyword">WHEN</span> <span class="hljs-string">&#x27;wxmp#config&#x27;</span> <span class="hljs-keyword">THEN</span><br>  t3.home_path<br><span class="hljs-keyword">WHEN</span> <span class="hljs-string">&#x27;wxmp&#x27;</span> <span class="hljs-keyword">THEN</span><br>  t1.home_path<br><span class="hljs-keyword">ELSE</span><br>  <span class="hljs-string">&#x27;&#x27;</span><br><span class="hljs-keyword">END</span> <span class="hljs-keyword">AS</span> home_path<br><span class="hljs-keyword">FROM</span><br>  sup_menus <span class="hljs-keyword">AS</span> t1<br><span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> app_user_role_resources <span class="hljs-keyword">AS</span> t2 <span class="hljs-keyword">ON</span> t1.uuid <span class="hljs-operator">=</span> t2.menu_uuid<br><span class="hljs-keyword">AND</span> t2.delete_status <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;0&#x27;</span><br><span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> sup_module_config <span class="hljs-keyword">AS</span> t3 <span class="hljs-keyword">ON</span> t3.module_code <span class="hljs-operator">=</span> t1.obj_id<br><span class="hljs-keyword">WHERE</span><br>  t1.menu_category <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;2&#x27;</span><br><span class="hljs-keyword">AND</span> FIND_IN_SET(<br>  t2.role_uuid ,<br>  #&#123;roleUuids&#125;)<br><br><span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span><br>  t1.group_name ,<br>  t1.`name`<br><span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span><br>  pid ,<br>  t1.id<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>如果 menuList 不为空</p>
-<ul>
-<li>调用 <code>apiWeChatService.queryModulePageConfigList(f10lSlaveDataSource)</code> 获得页面设置列表 configList</li>
-</ul>
-<figure class="highlight sql"><table><tr><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span><br>  module_code ,<br>  page_code ,<br>  page_type ,<br>  version<br><span class="hljs-keyword">FROM</span><br>  sup_module_page_config<br><span class="hljs-keyword">WHERE</span><br>  module_code <span class="hljs-keyword">IS</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span><br><span class="hljs-keyword">AND</span> page_code <span class="hljs-keyword">IS</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span><br><span class="hljs-keyword">AND</span> page_type <span class="hljs-keyword">IS</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span><br><span class="hljs-keyword">AND</span> version <span class="hljs-keyword">IS</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span><br></code></pre></td></tr></table></figure>
-
-<ul>
-<li><p>遍历 menuList ，每一次遍历单体对象是 data ，如果 data.get(“obj_id”) 值为空，则向 objId 赋值为空，如果不为空，则将 data.get(“obj_id)” 转为字符串赋值给 objId </p>
-</li>
-<li><p>如果 configList 不为空，遍历它，每一次遍历单体对象是 ocnfig </p>
-<ul>
-<li>如果 <code>config.get(&quot;module_code&quot;).toString().equals(objId)</code>  ，就像hashMap中put (config.get(“page_code”).toString(), config.get(“page_type”) + “:” + config.get(“version”))</li>
-</ul>
-</li>
-<li><p>向 data 中put (“obj_config”, hashMap)</p>
-</li>
-</ul>
-</li>
-<li><p>向返回实体对象中 封装 menuList 并返回</p>
-</li>
-</ul>
-
-  
-  
-  
-</div>
-
-        
-      </div>
-      <script src="/js/smooth-scroll.min.js"></script>
-    
-
-    <script src="/js/css.escape.js"></script>
-    <script src="/js/common.js"></script>
-
-    <link href="//code.bdstatic.com/npm/docsearch.js@1.5.0/dist/cdn/docsearch.min.css" rel='stylesheet' type='text/css'>
-    
-<link rel="stylesheet" href="/css/search.css">
-
-    <script src="//code.bdstatic.com/npm/docsearch.js@1.5.0/dist/cdn/docsearch.min.js"></script>
-    <script>
-    [
-      '#search-query-nav',
-      '#search-query-sidebar',
-      '#search-query-menu'
-    ].forEach(function (selector) {
-      if (!document.querySelector(selector)) return
-      // search index defaults to v2
-      var match = window.location.pathname.match(/^\/(v\d+)/)
-      var version = match ? match[1] : 'v2'
-      docsearch({
-      appId: 'BH4D9OD16A',
-      apiKey: '5638280abff9d207417bb03be05f0b25',
-      indexName: 'vuejs_cn2',
-      inputSelector: selector,
-      algoliaOptions: { facetFilters: ["version:" + version] },
-      autocompleteOptions: { hint: false, appendTo: 'body'}
-      })
-    })
-    </script>
-
-    <!-- fastclick -->
-    <script src="//code.bdstatic.com/npm/fastclick@1.0.6/lib/fastclick.js"></script>
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      FastClick.attach(document.body)
-    }, false)
-    </script>
-  </body>
 </html>
