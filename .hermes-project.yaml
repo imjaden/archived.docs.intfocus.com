@@ -1,0 +1,14 @@
+project: intfocus-archived
+website: https://intfocus.archived.jaden.tech
+profiles:
+- name: dev
+sessions:
+- role: ops
+  profile: ops
+  title: intfocus-archived-ops
+- role: review
+  profile: review
+  title: intfocus-archived-review
+- role: dev
+  profile: dev
+  title: intfocus-archived-dev
